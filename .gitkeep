@@ -1,0 +1,4 @@
+# Create .gitkeep files to preserve directory structure in Git
+type nul > data\raw\.gitkeep
+type nul > data\processed\.gitkeep
+type nul > data\archive\.gitkeep

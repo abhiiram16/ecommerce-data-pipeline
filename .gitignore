@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+venv/
+env/
+
+# Data files (never commit large data to Git)
+data/raw/*
+data/processed/*
+data/archive/*
+*.csv
+*.xlsx
+*.parquet
+
+# Logs
+logs/*
+*.log
+
+# Environment variables (contains secrets)
+.env
+*.env
+
+# IDE
+.vscode/
+.idea/
+
+# Docker
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Outputs
+outputs/*
+
+# Keep folder structure (but ignore contents)
+!.gitkeep
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/archive/.gitkeep
