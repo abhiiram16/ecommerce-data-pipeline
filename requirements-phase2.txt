@@ -1,0 +1,9 @@
+# Phase 2: Data Generation Libraries
+# These are 100% compatible with Python 3.14
+
+faker==30.8.2
+pandas==2.2.3
+numpy==2.2.0
+python-dateutil==2.9.0.post0
+python-dotenv==1.0.1
+loguru==0.7.3
