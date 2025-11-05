@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15
+    container_name: ecommerce-postgres
+    environment:
+      POSTGRES_USER: dataengineer
+      POSTGRES_PASSWORD: securepass123
+      POSTGRES_DB: ecommerce_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - data-pipeline-network
+
+  # PgAdmin (Database GUI)
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: ecommerce-pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin123
+    ports:
+      - "5050:80"
+    networks:
+      - data-pipeline-network
+
+volumes:
+  postgres-data:
+
+networks:
+  data-pipeline-network:
+    driver: bridge
