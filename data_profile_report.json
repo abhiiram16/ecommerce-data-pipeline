@@ -1,0 +1,989 @@
+{
+  "customers": {
+    "table_name": "customers",
+    "row_count": 10000,
+    "column_count": 12,
+    "columns": {
+      "customer_id": {
+        "dtype": "int64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 10000,
+        "uniqueness_percentage": 100.0,
+        "min": 1001.0,
+        "max": 11000.0,
+        "mean": 6000.5
+      },
+      "first_name": {
+        "dtype": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 531,
+        "uniqueness_percentage": 5.31,
+        "top_5_values": {
+          "Krishna": 43,
+          "Odika": 34,
+          "Sai": 33,
+          "Harish": 33,
+          "Peter": 31
+        }
+      },
+      "last_name": {
+        "dtype": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 538,
+        "uniqueness_percentage": 5.38,
+        "top_5_values": {
+          "Dhar": 43,
+          "Kala": 43,
+          "Bora": 38,
+          "Keer": 36,
+          "Dugar": 35
+        }
+      },
+      "email": {
+        "dtype": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 10000,
+        "uniqueness_percentage": 100.0,
+        "top_5_values": {
+          "raghav.seth917@yahoo.com": 1,
+          "chandani.wadhwa449@outlook.com": 1,
+          "ethan.devan78@gmail.com": 1,
+          "turvi.yohannan455@hotmail.com": 1,
+          "ekbal.sastry920@gmail.com": 1
+        }
+      },
+      "phone": {
+        "dtype": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 10000,
+        "uniqueness_percentage": 100.0,
+        "top_5_values": {
+          "+91-6932901824": 1,
+          "+91-9897164969": 1,
+          "+91-8614792200": 1,
+          "+91-7903282213": 1,
+          "+91-7930688248": 1
+        }
+      },
+      "city": {
+        "dtype": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 10,
+        "uniqueness_percentage": 0.1,
+        "top_5_values": {
+          "Lucknow": 1059,
+          "Ahmedabad": 1047,
+          "Chennai": 1042,
+          "Pune": 1027,
+          "Bangalore": 1005
+        }
+      },
+      "state": {
+        "dtype": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 9,
+        "uniqueness_percentage": 0.09,
+        "top_5_values": {
+          "Maharashtra": 1988,
+          "Uttar Pradesh": 1059,
+          "Gujarat": 1047,
+          "Tamil Nadu": 1042,
+          "Karnataka": 1005
+        }
+      },
+      "pincode": {
+        "dtype": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 10,
+        "uniqueness_percentage": 0.1,
+        "top_5_values": {
+          "226001": 1059,
+          "380001": 1047,
+          "600001": 1042,
+          "411001": 1027,
+          "560001": 1005
+        }
+      },
+      "registration_date": {
+        "dtype": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 731,
+        "uniqueness_percentage": 7.31,
+        "top_5_values": {
+          "2024-05-25": 26,
+          "2024-05-16": 26,
+          "2023-12-05": 25,
+          "2024-06-18": 25,
+          "2023-11-27": 24
+        }
+      },
+      "age": {
+        "dtype": "int64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 53,
+        "uniqueness_percentage": 0.53,
+        "min": 18.0,
+        "max": 70.0,
+        "mean": 44.02
+      },
+      "gender": {
+        "dtype": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 3,
+        "uniqueness_percentage": 0.03,
+        "top_5_values": {
+          "Female": 3376,
+          "Male": 3352,
+          "Other": 3272
+        }
+      },
+      "created_at": {
+        "dtype": "datetime64[ns]",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 10,
+        "uniqueness_percentage": 0.1
+      }
+    },
+    "completeness_score": 100.0
+  },
+  "products": {
+    "table_name": "products",
+    "row_count": 495,
+    "column_count": 10,
+    "columns": {
+      "product_id": {
+        "dtype": "int64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 495,
+        "uniqueness_percentage": 100.0,
+        "min": 2001.0,
+        "max": 2495.0,
+        "mean": 2248.0
+      },
+      "product_name": {
+        "dtype": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 394,
+        "uniqueness_percentage": 79.6,
+        "top_5_values": {
+          "Wall Clock": 4,
+          "Amazon Fire Pro": 4,
+          "Mixer Grinder Classic": 3,
+          "JBL Lite": 3,
+          "Rack Premium": 3
+        }
+      },
+      "category": {
+        "dtype": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 3,
+        "uniqueness_percentage": 0.61,
+        "top_5_values": {
+          "Electronics": 165,
+          "Fashion": 165,
+          "Home & Kitchen": 165
+        }
+      },
+      "subcategory": {
+        "dtype": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 15,
+        "uniqueness_percentage": 3.03,
+        "top_5_values": {
+          "Smartphones": 33,
+          "Laptops": 33,
+          "Tablets": 33,
+          "Headphones": 33,
+          "Smart Watches": 33
+        }
+      },
+      "brand": {
+        "dtype": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 81,
+        "uniqueness_percentage": 16.36,
+        "top_5_values": {
+          "Kids": 33,
+          "Lenovo": 18,
+          "Samsung": 13,
+          "Noise": 13,
+          "OnePlus": 12
+        }
+      },
+      "price": {
+        "dtype": "float64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 495,
+        "uniqueness_percentage": 100.0,
+        "min": 282.76,
+        "max": 137211.03,
+        "mean": 20313.05
+      },
+      "cost": {
+        "dtype": "float64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 495,
+        "uniqueness_percentage": 100.0,
+        "min": 218.07,
+        "max": 110202.17,
+        "mean": 15765.53
+      },
+      "stock_quantity": {
+        "dtype": "int64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 275,
+        "uniqueness_percentage": 55.56,
+        "min": 20.0,
+        "max": 495.0,
+        "mean": 186.04
+      },
+      "supplier": {
+        "dtype": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 9,
+        "uniqueness_percentage": 1.82,
+        "top_5_values": {
+          "Kitchen World": 68,
+          "Elite Electronics": 67,
+          "Smart Solutions Ltd": 60,
+          "Prime Products": 54,
+          "Tech Supplies India": 54
+        }
+      },
+      "created_at": {
+        "dtype": "datetime64[ns]",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 1,
+        "uniqueness_percentage": 0.2
+      }
+    },
+    "completeness_score": 100.0
+  },
+  "orders": {
+    "table_name": "orders",
+    "row_count": 50000,
+    "column_count": 12,
+    "columns": {
+      "order_id": {
+        "dtype": "int64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 50000,
+        "uniqueness_percentage": 100.0,
+        "min": 3001.0,
+        "max": 53000.0,
+        "mean": 28000.5
+      },
+      "customer_id": {
+        "dtype": "int64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 9365,
+        "uniqueness_percentage": 18.73,
+        "min": 1001.0,
+        "max": 11000.0,
+        "mean": 4154.38
+      },
+      "product_id": {
+        "dtype": "int64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 495,
+        "uniqueness_percentage": 0.99,
+        "min": 2001.0,
+        "max": 2495.0,
+        "mean": 2248.65
+      },
+      "order_date": {
+        "dtype": "datetime64[ns]",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 49900,
+        "uniqueness_percentage": 99.8
+      },
+      "quantity": {
+        "dtype": "int64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 5,
+        "uniqueness_percentage": 0.01,
+        "min": 1.0,
+        "max": 5.0,
+        "mean": 1.47
+      },
+      "unit_price": {
+        "dtype": "float64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 495,
+        "uniqueness_percentage": 0.99,
+        "min": 282.76,
+        "max": 137211.03,
+        "mean": 20285.64
+      },
+      "total_amount": {
+        "dtype": "float64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 49360,
+        "uniqueness_percentage": 98.72,
+        "min": 199.4,
+        "max": 605594.19,
+        "mean": 25300.73
+      },
+      "discount_applied": {
+        "dtype": "float64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 46665,
+        "uniqueness_percentage": 93.33,
+        "min": 0.06,
+        "max": 192626.09,
+        "mean": 4300.42
+      },
+      "payment_method": {
+        "dtype": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 5,
+        "uniqueness_percentage": 0.01,
+        "top_5_values": {
+          "UPI": 24997,
+          "Credit Card": 9946,
+          "Debit Card": 7470,
+          "Cash on Delivery": 5007,
+          "Net Banking": 2580
+        }
+      },
+      "order_status": {
+        "dtype": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 4,
+        "uniqueness_percentage": 0.01,
+        "top_5_values": {
+          "Delivered": 37486,
+          "Shipped": 7501,
+          "Cancelled": 2508,
+          "Processing": 2505
+        }
+      },
+      "shipping_city": {
+        "dtype": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 10,
+        "uniqueness_percentage": 0.02,
+        "top_5_values": {
+          "Kolkata": 5171,
+          "Lucknow": 5108,
+          "Chennai": 5075,
+          "Pune": 5059,
+          "Ahmedabad": 4977
+        }
+      },
+      "created_at": {
+        "dtype": "datetime64[ns]",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 50,
+        "uniqueness_percentage": 0.1
+      }
+    },
+    "completeness_score": 100.0
+  },
+  "customer_summary": {
+    "table_name": "customer_summary",
+    "row_count": 8893,
+    "column_count": 14,
+    "columns": {
+      "customer_id": {
+        "dtype": "int64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 8893,
+        "uniqueness_percentage": 100.0,
+        "min": 1001.0,
+        "max": 11000.0,
+        "mean": 5687.16
+      },
+      "customer_name": {
+        "dtype": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 8743,
+        "uniqueness_percentage": 98.31,
+        "top_5_values": {
+          "Girindra Sha": 3,
+          "Sanaya Kala": 3,
+          "Udarsh Batta": 3,
+          "Avni Ramaswamy": 2,
+          "Radha Lata": 2
+        }
+      },
+      "email": {
+        "dtype": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 8893,
+        "uniqueness_percentage": 100.0,
+        "top_5_values": {
+          "darika.sehgal638@gmail.com": 1,
+          "kiaan.sridhar621@yahoo.com": 1,
+          "anjali.sengupta902@yahoo.com": 1,
+          "anita.manda506@hotmail.com": 1,
+          "bhanumati.brar394@hotmail.com": 1
+        }
+      },
+      "city": {
+        "dtype": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 10,
+        "uniqueness_percentage": 0.11,
+        "top_5_values": {
+          "Ahmedabad": 934,
+          "Lucknow": 927,
+          "Chennai": 922,
+          "Pune": 917,
+          "Bangalore": 906
+        }
+      },
+      "state": {
+        "dtype": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 9,
+        "uniqueness_percentage": 0.1,
+        "top_5_values": {
+          "Maharashtra": 1778,
+          "Gujarat": 934,
+          "Uttar Pradesh": 927,
+          "Tamil Nadu": 922,
+          "Karnataka": 906
+        }
+      },
+      "total_orders": {
+        "dtype": "int64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 21,
+        "uniqueness_percentage": 0.24,
+        "min": 1.0,
+        "max": 21.0,
+        "mean": 4.22
+      },
+      "total_spent": {
+        "dtype": "float64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 8889,
+        "uniqueness_percentage": 99.96,
+        "min": 250.77,
+        "max": 1220716.34,
+        "mean": 106430.1
+      },
+      "avg_order_value": {
+        "dtype": "float64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 8889,
+        "uniqueness_percentage": 99.96,
+        "min": 250.77,
+        "max": 605594.19,
+        "mean": 26462.83
+      },
+      "first_order_date": {
+        "dtype": "datetime64[ns]",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 8886,
+        "uniqueness_percentage": 99.92
+      },
+      "last_order_date": {
+        "dtype": "datetime64[ns]",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 8888,
+        "uniqueness_percentage": 99.94
+      },
+      "days_since_last_order": {
+        "dtype": "int64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 181,
+        "uniqueness_percentage": 2.04,
+        "min": 1.0,
+        "max": 181.0,
+        "mean": 50.11
+      },
+      "unique_products_purchased": {
+        "dtype": "int64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 20,
+        "uniqueness_percentage": 0.22,
+        "min": 1.0,
+        "max": 20.0,
+        "mean": 4.19
+      },
+      "customer_status": {
+        "dtype": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 3,
+        "uniqueness_percentage": 0.03,
+        "top_5_values": {
+          "Active": 4039,
+          "At Risk": 3170,
+          "Churned": 1684
+        }
+      },
+      "last_updated": {
+        "dtype": "datetime64[ns, UTC]",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 1,
+        "uniqueness_percentage": 0.01
+      }
+    },
+    "completeness_score": 100.0
+  },
+  "product_summary": {
+    "table_name": "product_summary",
+    "row_count": 495,
+    "column_count": 18,
+    "columns": {
+      "product_id": {
+        "dtype": "int64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 495,
+        "uniqueness_percentage": 100.0,
+        "min": 2001.0,
+        "max": 2495.0,
+        "mean": 2248.0
+      },
+      "product_name": {
+        "dtype": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 394,
+        "uniqueness_percentage": 79.6,
+        "top_5_values": {
+          "Wall Clock": 4,
+          "Amazon Fire Pro": 4,
+          "Lenovo Tab Plus": 3,
+          "MacBook Plus": 3,
+          "Kids Dress - Black - L": 3
+        }
+      },
+      "category": {
+        "dtype": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 3,
+        "uniqueness_percentage": 0.61,
+        "top_5_values": {
+          "Electronics": 165,
+          "Home & Kitchen": 165,
+          "Fashion": 165
+        }
+      },
+      "subcategory": {
+        "dtype": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 15,
+        "uniqueness_percentage": 3.03,
+        "top_5_values": {
+          "Smartphones": 33,
+          "Laptops": 33,
+          "Tablets": 33,
+          "Furniture": 33,
+          "Smart Watches": 33
+        }
+      },
+      "brand": {
+        "dtype": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 81,
+        "uniqueness_percentage": 16.36,
+        "top_5_values": {
+          "Kids": 33,
+          "Lenovo": 18,
+          "Samsung": 13,
+          "Noise": 13,
+          "OnePlus": 12
+        }
+      },
+      "price": {
+        "dtype": "float64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 495,
+        "uniqueness_percentage": 100.0,
+        "min": 282.76,
+        "max": 137211.03,
+        "mean": 20313.05
+      },
+      "cost": {
+        "dtype": "float64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 495,
+        "uniqueness_percentage": 100.0,
+        "min": 218.07,
+        "max": 110202.17,
+        "mean": 15765.53
+      },
+      "times_sold": {
+        "dtype": "int64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 47,
+        "uniqueness_percentage": 9.49,
+        "min": 55.0,
+        "max": 104.0,
+        "mean": 75.73
+      },
+      "total_units_sold": {
+        "dtype": "int64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 71,
+        "uniqueness_percentage": 14.34,
+        "min": 74.0,
+        "max": 159.0,
+        "mean": 111.44
+      },
+      "total_revenue": {
+        "dtype": "float64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 495,
+        "uniqueness_percentage": 100.0,
+        "min": 30502.17,
+        "max": 13699763.35,
+        "mean": 1912086.69
+      },
+      "total_profit": {
+        "dtype": "float64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 495,
+        "uniqueness_percentage": 100.0,
+        "min": 6981.16,
+        "max": 4571794.36,
+        "mean": 503006.16
+      },
+      "avg_quantity_per_order": {
+        "dtype": "float64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 55,
+        "uniqueness_percentage": 11.11,
+        "min": 1.2,
+        "max": 1.78,
+        "mean": 1.47
+      },
+      "avg_order_value": {
+        "dtype": "float64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 495,
+        "uniqueness_percentage": 100.0,
+        "min": 376.57,
+        "max": 173414.73,
+        "mean": 25288.37
+      },
+      "last_sold_date": {
+        "dtype": "datetime64[ns]",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 495,
+        "uniqueness_percentage": 100.0
+      },
+      "first_sold_date": {
+        "dtype": "datetime64[ns]",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 495,
+        "uniqueness_percentage": 100.0
+      },
+      "unique_customers": {
+        "dtype": "int64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 45,
+        "uniqueness_percentage": 9.09,
+        "min": 55.0,
+        "max": 103.0,
+        "mean": 75.28
+      },
+      "profit_margin_pct": {
+        "dtype": "float64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 438,
+        "uniqueness_percentage": 88.48,
+        "min": -1.31,
+        "max": 18.82,
+        "mean": 8.98
+      },
+      "last_updated": {
+        "dtype": "datetime64[ns, UTC]",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 1,
+        "uniqueness_percentage": 0.2
+      }
+    },
+    "completeness_score": 100.0
+  },
+  "daily_sales_summary": {
+    "table_name": "daily_sales_summary",
+    "row_count": 181,
+    "column_count": 10,
+    "columns": {
+      "sale_date": {
+        "dtype": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 181,
+        "uniqueness_percentage": 100.0,
+        "top_5_values": {
+          "2025-11-04": 1,
+          "2025-11-03": 1,
+          "2025-11-02": 1,
+          "2025-11-01": 1,
+          "2025-10-31": 1
+        }
+      },
+      "total_orders": {
+        "dtype": "int64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 55,
+        "uniqueness_percentage": 30.39,
+        "min": 168.0,
+        "max": 241.0,
+        "mean": 207.1
+      },
+      "unique_customers": {
+        "dtype": "int64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 58,
+        "uniqueness_percentage": 32.04,
+        "min": 166.0,
+        "max": 239.0,
+        "mean": 203.86
+      },
+      "total_units_sold": {
+        "dtype": "int64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 80,
+        "uniqueness_percentage": 44.2,
+        "min": 242.0,
+        "max": 374.0,
+        "mean": 304.76
+      },
+      "total_revenue": {
+        "dtype": "float64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 181,
+        "uniqueness_percentage": 100.0,
+        "min": 3626322.72,
+        "max": 7140639.05,
+        "mean": 5229187.36
+      },
+      "avg_order_value": {
+        "dtype": "float64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 181,
+        "uniqueness_percentage": 100.0,
+        "min": 18665.12,
+        "max": 34253.9,
+        "mean": 25258.94
+      },
+      "min_order_value": {
+        "dtype": "float64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 181,
+        "uniqueness_percentage": 100.0,
+        "min": 199.4,
+        "max": 532.82,
+        "mean": 294.49
+      },
+      "max_order_value": {
+        "dtype": "float64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 181,
+        "uniqueness_percentage": 100.0,
+        "min": 113259.8,
+        "max": 605594.19,
+        "mean": 329559.33
+      },
+      "products_sold": {
+        "dtype": "int64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 43,
+        "uniqueness_percentage": 23.76,
+        "min": 142.0,
+        "max": 199.0,
+        "mean": 168.98
+      },
+      "last_updated": {
+        "dtype": "datetime64[ns, UTC]",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 1,
+        "uniqueness_percentage": 0.55
+      }
+    },
+    "completeness_score": 100.0
+  },
+  "monthly_sales_summary": {
+    "table_name": "monthly_sales_summary",
+    "row_count": 7,
+    "column_count": 10,
+    "columns": {
+      "month_start": {
+        "dtype": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 7,
+        "uniqueness_percentage": 100.0,
+        "top_5_values": {
+          "2025-11-01": 1,
+          "2025-10-01": 1,
+          "2025-09-01": 1,
+          "2025-08-01": 1,
+          "2025-07-01": 1
+        }
+      },
+      "month": {
+        "dtype": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 7,
+        "uniqueness_percentage": 100.0,
+        "top_5_values": {
+          "2025-11": 1,
+          "2025-10": 1,
+          "2025-09": 1,
+          "2025-08": 1,
+          "2025-07": 1
+        }
+      },
+      "total_orders": {
+        "dtype": "int64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 7,
+        "uniqueness_percentage": 100.0,
+        "min": 780.0,
+        "max": 6495.0,
+        "mean": 5355.14
+      },
+      "unique_customers": {
+        "dtype": "int64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 7,
+        "uniqueness_percentage": 100.0,
+        "min": 733.0,
+        "max": 4184.0,
+        "mean": 3574.0
+      },
+      "total_units_sold": {
+        "dtype": "int64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 7,
+        "uniqueness_percentage": 100.0,
+        "min": 1195.0,
+        "max": 9484.0,
+        "mean": 7880.29
+      },
+      "total_revenue": {
+        "dtype": "float64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 7,
+        "uniqueness_percentage": 100.0,
+        "min": 20292962.24,
+        "max": 166164180.16,
+        "mean": 135211844.56
+      },
+      "avg_order_value": {
+        "dtype": "float64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 7,
+        "uniqueness_percentage": 100.0,
+        "min": 24329.38,
+        "max": 26032.3,
+        "mean": 25350.7
+      },
+      "products_sold": {
+        "dtype": "int64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 2,
+        "uniqueness_percentage": 28.57,
+        "min": 376.0,
+        "max": 495.0,
+        "mean": 478.0
+      },
+      "revenue_growth_pct": {
+        "dtype": "float64",
+        "null_count": 1,
+        "null_percentage": 14.29,
+        "unique_count": 6,
+        "uniqueness_percentage": 85.71,
+        "min": -87.79,
+        "max": 13.42,
+        "mean": -10.44
+      },
+      "last_updated": {
+        "dtype": "datetime64[ns, UTC]",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 1,
+        "uniqueness_percentage": 14.29
+      }
+    },
+    "completeness_score": 98.57
+  }
+}
