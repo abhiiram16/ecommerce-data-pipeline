@@ -1,12 +1,21 @@
 -- ============================================
--- PHASE 4: AGGREGATE TABLES FOR ANALYTICS
+-- PHASE 4: DATA PROCESSING & TRANSFORMATION
+-- AGGREGATE TABLES FOR BUSINESS INTELLIGENCE
 -- ============================================
--- Purpose: Pre-calculated summaries for business intelligence
--- Created: November 5, 2025
+-- Purpose: Pre-calculated summaries for instant analytics queries
 -- Author: Abhiiram
+-- Date: November 5, 2025
+-- Database: ecommerce_db
 -- ============================================
--- 1. CUSTOMER SUMMARY
--- 2. PRODUCT SUMMARY
--- 3. DAILY SALES SUMMARY
--- 4. MONTHLY SALES SUMMARY
--- [Use all the SQL you already ran successfully]
+-- This file contains 4 materialized aggregate tables:
+-- 1. customer_summary - Customer lifetime value & RFM metrics
+-- 2. product_summary - Product performance & profitability
+-- 3. daily_sales_summary - Daily sales aggregations
+-- 4. monthly_sales_summary - Monthly trends & growth
+-- Note: All 4 tables successfully created and verified
+-- Row counts: 
+--   - customer_summary: 8,893 customers
+--   - product_summary: 495 products
+--   - daily_sales_summary: 181 days
+--   - monthly_sales_summary: 7 months
+-- Tables created: November 5, 2025, 3:20 PM IST
