@@ -1,26 +1,32 @@
 """
-CSV to PostgreSQL Data Loader
-=============================
+CSV to PostgreSQL Data Loader (Incremental Mode with Chunked Reading)
+======================================================================
 
-Loads CSV files (customers, products, orders) into PostgreSQL database.
+Loads CSV files to PostgreSQL with:
+- Incremental append (no truncate)
+- Memory-efficient chunked reading (Option 2)
+- Duplicate handling with UPSERT
+- Cumulative data support
+- Foreign key validation
+- Progress tracking
+- Auto-incrementing random seed
 
 Author: Abhiiram
-Date: November 6, 2025
+Date: November 7, 2025
 """
 
-from src.utils.db_connector import get_connection, truncate_table
-from src.utils.config import Config, get_db_config
-import pandas as pd
+from src.utils.db_connector import get_connection
+from src.utils.config import Config
 import psycopg2
-from psycopg2 import sql
+from psycopg2.extras import execute_values
+import pandas as pd
 import sys
 import os
 from datetime import datetime
 from loguru import logger
+import time
 
-# Add parent directory to path for imports
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../'))
-
 
 # Configure logging
 logger.add(
@@ -28,233 +34,279 @@ logger.add(
     level=Config.LOG_LEVEL
 )
 
-# ========================================
-# CONFIGURATION
-# ========================================
-
-DATA_DIR = Config.DATA_RAW_DIR
-
-CSV_FILES = {
-    'customers': 'customers.csv',
-    'products': 'products.csv',
-    'orders': 'orders.csv'
-}
+# Auto-incrementing seed (changes every run)
+RANDOM_SEED = int(os.getenv('RANDOM_SEED', int(time.time()) % 100000))
 
 # ========================================
-# FUNCTIONS
+# CSV TO POSTGRESQL LOADER (CHUNKED - OPTION 2)
 # ========================================
 
 
-def get_table_row_count(table_name: str) -> int:
-    """Get row count for a specific table."""
+def load_csv_to_table(table_name: str, csv_file: str, batch_size: int = 1000) -> int:
+    """Load CSV in memory-efficient chunks with UPSERT."""
+
+    logger.info(f"📂 Reading CSV file (chunked): {csv_file}")
+    print(f"📂 Reading CSV file (chunked): {csv_file}")
+
     try:
-        query = sql.SQL(
-            "SELECT COUNT(*) FROM {}").format(sql.Identifier(table_name))
+        # Get existing count before loading
         conn = get_connection()
         cursor = conn.cursor()
-        cursor.execute(query)
-        count = cursor.fetchone()[0]
+        cursor.execute(f"SELECT COUNT(*) FROM {table_name}")
+        existing_count = cursor.fetchone()[0]
         cursor.close()
         conn.close()
-        return count
-    except Exception as e:
-        logger.error(f"✗ Row count error: {e}")
-        raise
 
+        logger.info(f"  Current rows in {table_name}: {existing_count:,}")
+        print(f"  Current rows in {table_name}: {existing_count:,}")
 
-def load_csv_to_table(csv_file: str, table_name: str, batch_size: int = 1000) -> int:
-    """Load CSV file into PostgreSQL table using batch inserts."""
-
-    logger.info(f"📂 Reading CSV file: {csv_file}")
-
-    try:
-        # Read CSV
-        df = pd.read_csv(csv_file)
-        logger.info(f"✓ Loaded {len(df):,} rows from CSV")
-        print(f"✓ Loaded {len(df):,} rows from CSV")
-
-        # Get column names
-        columns = df.columns.tolist()
-
-        # Create INSERT query
-        placeholders = ', '.join(['%s'] * len(columns))
-        columns_str = ', '.join([f'"{col}"' for col in columns])
-        insert_query = f"INSERT INTO {table_name} ({columns_str}) VALUES ({placeholders})"
-
-        # Connect and insert
         conn = get_connection()
         cursor = conn.cursor()
 
-        rows_inserted = 0
+        total_inserted = 0
+        chunk_num = 0
 
-        logger.info(f"→ Inserting data in batches of {batch_size}...")
-        print(f"→ Inserting data in batches of {batch_size}...")
+        # Read CSV in chunks - memory efficient (Option 2)
+        logger.info(f"→ Processing data in batches of {batch_size}...")
+        print(f"→ Processing data in batches of {batch_size}...")
 
-        for i in range(0, len(df), batch_size):
-            batch = df.iloc[i:i+batch_size]
-            data = [tuple(row) for row in batch.values]
+        for chunk in pd.read_csv(csv_file, chunksize=batch_size):
+            chunk_num += 1
+            values = [tuple(row) for row in chunk.values]
 
-            cursor.executemany(insert_query, data)
-            conn.commit()
-            rows_inserted += len(batch)
+            placeholders = ', '.join(['%s'] * len(chunk.columns))
+            col_str = ', '.join([f'"{col}"' for col in chunk.columns])
 
-            if (i + batch_size) % 5000 == 0 or i + batch_size >= len(df):
-                progress_pct = (rows_inserted/len(df)*100)
+            # Determine UPSERT logic based on table
+            if table_name == 'customers':
+                conflict_col = 'customer_id'
+                update_cols = ', '.join([
+                    f'"{col}" = EXCLUDED."{col}"'
+                    for col in chunk.columns if col != 'customer_id'
+                ])
+                upsert_clause = f"""
+                ON CONFLICT ({conflict_col}) 
+                DO UPDATE SET {update_cols}
+                """
+
+            elif table_name == 'products':
+                conflict_col = 'product_id'
+                update_cols = ', '.join([
+                    f'"{col}" = EXCLUDED."{col}"'
+                    for col in chunk.columns if col != 'product_id'
+                ])
+                upsert_clause = f"""
+                ON CONFLICT ({conflict_col}) 
+                DO UPDATE SET {update_cols}
+                """
+
+            elif table_name == 'orders':
+                # Orders: skip duplicates (don't update)
+                upsert_clause = """
+                ON CONFLICT (order_id) 
+                DO NOTHING
+                """
+
+            else:
+                upsert_clause = ""
+
+            # Build complete INSERT query with UPSERT
+            query = f"""
+            INSERT INTO {table_name} ({col_str}) 
+            VALUES %s
+            {upsert_clause}
+            """
+
+            try:
+                execute_values(cursor, query, values, page_size=len(values))
+                total_inserted += len(chunk)
+
+                pct = (total_inserted / len(pd.read_csv(csv_file))) * 100
                 logger.info(
-                    f"→ Inserted {rows_inserted:,} / {len(df):,} rows ({progress_pct:.1f}%)")
+                    f"→ Batch {chunk_num}: {total_inserted:,} rows processed")
                 print(
-                    f"→ Inserted {rows_inserted:,} / {len(df):,} rows ({progress_pct:.1f}%)")
+                    f"→ Batch {chunk_num}: {total_inserted:,} rows processed")
 
-        cursor.close()
-        conn.close()
+            except Exception as e:
+                logger.error(f"✗ Batch insert failed: {e}")
+                conn.rollback()
+                raise
+
+        conn.commit()
+
+        # Get final count
+        cursor.execute(f"SELECT COUNT(*) FROM {table_name}")
+        final_count = cursor.fetchone()[0]
+        added = final_count - existing_count
 
         logger.info(
-            f"✓ Successfully loaded {rows_inserted:,} rows into {table_name}")
-        print(
-            f"✓ Successfully loaded {rows_inserted:,} rows into {table_name}")
+            f"✓ Successfully loaded {added:,} NEW rows into {table_name}")
+        logger.info(f"  Total rows in {table_name}: {final_count:,}")
+        print(f"✓ Successfully added {added:,} NEW rows to {table_name}")
+        print(f"  Total rows in {table_name}: {final_count:,}")
 
-        return rows_inserted
+        cursor.close()
+        conn.close()
+
+        return added
 
     except Exception as e:
-        logger.error(f"✗ Error loading data into {table_name}: {e}")
+        logger.error(f"✗ Load failed for {table_name}: {e}")
+        print(f"✗ Load failed for {table_name}: {e}")
         raise
 
 
-def verify_data_load() -> bool:
-    """Verify that data was loaded correctly."""
+def verify_data_load():
+    """Verify data load with cumulative counts and relationships."""
 
     logger.info("=" * 60)
     logger.info("DATA VERIFICATION")
+    logger.info("=" * 60)
+
     print("\n" + "=" * 60)
     print("DATA VERIFICATION")
     print("=" * 60)
 
     try:
-        for table_name in ['customers', 'products', 'orders']:
-            count = get_table_row_count(table_name)
-            logger.info(f"{table_name:15} : {count:,} rows")
-            print(f" {table_name:15} : {count:,} rows")
-
-        # Verify foreign key relationships
-        logger.info("🔗 Checking foreign key relationships...")
-        print("\n🔗 Checking foreign key relationships...")
-
         conn = get_connection()
         cursor = conn.cursor()
 
+        # Get table counts
+        tables = ['customers', 'products', 'orders']
+        counts = {}
+
+        for table in tables:
+            cursor.execute(f"SELECT COUNT(*) FROM {table}")
+            count = cursor.fetchone()[0]
+            counts[table] = count
+            logger.info(f"{table:15s}: {count:,} rows")
+            print(f"{table:15s}: {count:,} rows")
+
+        # Verify foreign keys
+        logger.info("🔗 Checking foreign key relationships...")
+        print("\n🔗 Checking foreign key relationships...")
+
+        # Check orphaned orders (orders with non-existent customer_id)
         cursor.execute("""
-            SELECT COUNT(*) FROM orders o
-            LEFT JOIN customers c ON o.customer_id = c.customer_id
-            WHERE c.customer_id IS NULL
+            SELECT COUNT(*) FROM orders o 
+            WHERE NOT EXISTS (
+                SELECT 1 FROM customers c WHERE c.customer_id = o.customer_id
+            )
         """)
         orphaned_customers = cursor.fetchone()[0]
 
+        if orphaned_customers > 0:
+            logger.warning(
+                f"⚠️ {orphaned_customers} orders with non-existent customers")
+            print(f"⚠️ {orphaned_customers} orders with non-existent customers")
+
+        # Check orphaned products
         cursor.execute("""
-            SELECT COUNT(*) FROM orders o
-            LEFT JOIN products p ON o.product_id = p.product_id
-            WHERE p.product_id IS NULL
+            SELECT COUNT(*) FROM orders o 
+            WHERE NOT EXISTS (
+                SELECT 1 FROM products p WHERE p.product_id = o.product_id
+            )
         """)
         orphaned_products = cursor.fetchone()[0]
+
+        if orphaned_products > 0:
+            logger.warning(
+                f"⚠️ {orphaned_products} orders with non-existent products")
+            print(f"⚠️ {orphaned_products} orders with non-existent products")
+
+        if orphaned_customers == 0 and orphaned_products == 0:
+            logger.info("✓ All foreign key relationships are valid")
+            print("✓ All foreign key relationships are valid")
+
+        # Calculate cumulative revenue
+        cursor.execute("SELECT SUM(total_amount) FROM orders")
+        total_revenue = cursor.fetchone()[0] or 0
+
+        cursor.execute("SELECT COUNT(*) FROM orders")
+        total_orders = cursor.fetchone()[0]
+
+        logger.info(f"💰 Total Revenue: ₹{total_revenue:,.2f}")
+        logger.info(f"📦 Total Orders: {total_orders:,}")
+        print(f"💰 Total Revenue: ₹{total_revenue:,.2f}")
+        print(f"📦 Total Orders: {total_orders:,}")
 
         cursor.close()
         conn.close()
 
-        if orphaned_customers == 0 and orphaned_products == 0:
-            logger.info("✓ All foreign key relationships are valid")
-            print(" ✓ All foreign key relationships are valid")
-            return True
-        else:
-            logger.warning(
-                f"⚠️ Found {orphaned_customers} orders with invalid customer_id")
-            logger.warning(
-                f"⚠️ Found {orphaned_products} orders with invalid product_id")
-            print(
-                f" ⚠️ Found {orphaned_customers} orders with invalid customer_id")
-            print(
-                f" ⚠️ Found {orphaned_products} orders with invalid product_id")
-            return False
-
     except Exception as e:
         logger.error(f"✗ Verification failed: {e}")
+        print(f"✗ Verification failed: {e}")
         raise
 
 
 def main():
-    """Main execution function."""
-
-    start_time = datetime.now()
+    """Main entry point for incremental data loading."""
 
     logger.info("=" * 60)
-    logger.info("CSV TO POSTGRESQL DATA LOADER")
+    logger.info("CSV TO POSTGRESQL DATA LOADER (INCREMENTAL MODE)")
     logger.info("=" * 60)
 
-    print("\n" + "=" * 60)
-    print("CSV TO POSTGRESQL DATA LOADER")
     print("=" * 60)
-    print(f"Start time: {start_time.strftime('%Y-%m-%d %H:%M:%S')}")
+    print("CSV TO POSTGRESQL DATA LOADER (INCREMENTAL MODE)")
+    print("=" * 60)
+    print("Start time:", datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
     print("=" * 60)
 
     try:
-        # Step 1: Truncate tables
-        logger.info("[1/4] TRUNCATING EXISTING DATA")
-        print("\n[1/4] TRUNCATING EXISTING DATA")
+        logger.info("[1/4] LOADING CUSTOMERS (with duplicate handling)")
+        print("\n[1/4] LOADING CUSTOMERS (with duplicate handling)")
         print("-" * 60)
 
-        for table in ['orders', 'products', 'customers']:
-            truncate_table(table)
+        customers_added = load_csv_to_table(
+            'customers',
+            os.path.join(Config.DATA_RAW_DIR, 'customers.csv')
+        )
 
-        # Step 2: Load customers
-        logger.info("[2/4] LOADING CUSTOMERS")
-        print("\n[2/4] LOADING CUSTOMERS")
+        logger.info("[2/4] LOADING PRODUCTS (with duplicate handling)")
+        print("\n[2/4] LOADING PRODUCTS (with duplicate handling)")
         print("-" * 60)
 
-        customers_file = os.path.join(DATA_DIR, CSV_FILES['customers'])
-        load_csv_to_table(customers_file, 'customers')
+        products_added = load_csv_to_table(
+            'products',
+            os.path.join(Config.DATA_RAW_DIR, 'products.csv')
+        )
 
-        # Step 3: Load products
-        logger.info("[3/4] LOADING PRODUCTS")
-        print("\n[3/4] LOADING PRODUCTS")
+        logger.info("[3/4] LOADING ORDERS (appending new orders)")
+        print("\n[3/4] LOADING ORDERS (appending new orders)")
         print("-" * 60)
 
-        products_file = os.path.join(DATA_DIR, CSV_FILES['products'])
-        load_csv_to_table(products_file, 'products')
-
-        # Step 4: Load orders
-        logger.info("[4/4] LOADING ORDERS")
-        print("\n[4/4] LOADING ORDERS")
-        print("-" * 60)
-
-        orders_file = os.path.join(DATA_DIR, CSV_FILES['orders'])
-        load_csv_to_table(orders_file, 'orders')
+        orders_added = load_csv_to_table(
+            'orders',
+            os.path.join(Config.DATA_RAW_DIR, 'orders.csv')
+        )
 
         # Verify
-        verify_data_load()
+        logger.info("[4/4] VERIFYING DATA LOAD")
+        print("\n[4/4] VERIFYING DATA LOAD")
+        print("-" * 60)
 
-        # Summary
-        end_time = datetime.now()
-        duration = (end_time - start_time).total_seconds()
-        total_rows = (get_table_row_count('customers') +
-                      get_table_row_count('products') +
-                      get_table_row_count('orders'))
+        verify_data_load()
 
         logger.info("=" * 60)
         logger.info("✓ DATA LOAD COMPLETE!")
         logger.info("=" * 60)
-        logger.info(f"End time: {end_time.strftime('%Y-%m-%d %H:%M:%S')}")
-        logger.info(f"Duration: {duration:.2f} seconds")
-        logger.info(f"Records loaded: {total_rows:,}")
+        logger.info(f"New records added:")
+        logger.info(f"  - Customers: {customers_added:,}")
+        logger.info(f"  - Products: {products_added:,}")
+        logger.info(f"  - Orders: {orders_added:,}")
+        logger.info(
+            f"End time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
         print("\n" + "=" * 60)
         print("✓ DATA LOAD COMPLETE!")
         print("=" * 60)
-        print(f" End time: {end_time.strftime('%Y-%m-%d %H:%M:%S')}")
-        print(f" Duration: {duration:.2f} seconds")
-        print(f" Records loaded: {total_rows:,}")
+        print(f"New records added:")
+        print(f"  - Customers: {customers_added:,}")
+        print(f"  - Products: {products_added:,}")
+        print(f"  - Orders: {orders_added:,}")
+        print(f"End time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
         print("=" * 60)
 
-    except KeyboardInterrupt:
-        logger.warning("⚠️ Data load interrupted by user")
-        print("\n⚠️ Data load interrupted by user")
     except Exception as e:
         logger.error(f"✗ Data load failed: {e}")
         print(f"\n✗ Data load failed: {e}")
@@ -262,5 +314,4 @@ def main():
 
 
 if __name__ == "__main__":
-    Config.create_directories()
     main()

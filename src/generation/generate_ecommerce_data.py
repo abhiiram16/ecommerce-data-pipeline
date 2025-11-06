@@ -1,11 +1,12 @@
 """
-E-Commerce Data Generator
-=========================
+E-Commerce Data Generator (With Auto-Incrementing Seed & Unique IDs)
+====================================================================
 
 Generates realistic synthetic e-commerce data for testing data pipelines.
+Each run generates DIFFERENT data with UNIQUE IDs for cumulative growth.
 
 Author: Abhiiram
-Date: November 6, 2025
+Date: November 7, 2025
 """
 
 from loguru import logger
@@ -17,10 +18,10 @@ from datetime import datetime, timedelta
 import random
 import os
 import sys
+import time
 
 # Add parent directory to path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../'))
-
 
 # Configure logging
 logger.add(
@@ -29,21 +30,31 @@ logger.add(
 )
 
 # ========================================
-# CONFIGURATION
+# CONFIGURATION WITH AUTO-INCREMENTING SEED
 # ========================================
 
 # Initialize Faker
 fake = Faker('en_IN')
 
-# Use config seed for reproducibility
-Faker.seed(Config.RANDOM_SEED)
-np.random.seed(Config.RANDOM_SEED)
-random.seed(Config.RANDOM_SEED)
+# Auto-incrementing seed based on timestamp (changes every run)
+RANDOM_SEED = int(os.getenv('RANDOM_SEED', int(time.time()) % 100000))
+
+# Apply seed for reproducibility within this run
+Faker.seed(RANDOM_SEED)
+np.random.seed(RANDOM_SEED)
+random.seed(RANDOM_SEED)
 
 # Data generation parameters from config
 NUM_CUSTOMERS = Config.NUM_CUSTOMERS
 NUM_PRODUCTS = Config.NUM_PRODUCTS
 NUM_ORDERS = Config.NUM_ORDERS
+
+# ID OFFSETS BASED ON SEED - Ensures unique IDs each run
+# 0 to 990,000 in steps of 10,000
+CUSTOMER_ID_OFFSET = (RANDOM_SEED % 100) * 10000
+# 0 to 95,000 in steps of 5,000
+PRODUCT_ID_OFFSET = (RANDOM_SEED % 20) * 5000
+ORDER_ID_OFFSET = (RANDOM_SEED % 1000) * 100    # 0 to 99,900 in steps of 100
 
 # Date range
 END_DATE = datetime.now()
@@ -76,6 +87,10 @@ RAW_DATA_DIR = Config.DATA_RAW_DIR
 logger.info("=" * 60)
 logger.info("E-COMMERCE DATA GENERATOR")
 logger.info("=" * 60)
+logger.info(f"Random Seed: {RANDOM_SEED}")
+logger.info(f"Customer ID Offset: {CUSTOMER_ID_OFFSET}")
+logger.info(f"Product ID Offset: {PRODUCT_ID_OFFSET}")
+logger.info(f"Order ID Offset: {ORDER_ID_OFFSET}")
 logger.info(f"Customers: {NUM_CUSTOMERS:,}")
 logger.info(f"Products: {NUM_PRODUCTS:,}")
 logger.info(f"Orders: {NUM_ORDERS:,}")
@@ -86,6 +101,12 @@ print("=" * 60)
 print("E-COMMERCE DATA GENERATOR")
 print("=" * 60)
 print(f"\nConfiguration:")
+print(f" - Random Seed: {RANDOM_SEED}")
+print(
+    f" - Customer ID Range: {CUSTOMER_ID_OFFSET + 1001} to {CUSTOMER_ID_OFFSET + 1001 + NUM_CUSTOMERS - 1}")
+print(
+    f" - Product ID Range: {PRODUCT_ID_OFFSET + 2001} to {PRODUCT_ID_OFFSET + 2001 + NUM_PRODUCTS - 1}")
+print(f" - Order ID Range: {ORDER_ID_OFFSET + 3001} onwards")
 print(f" - Customers: {NUM_CUSTOMERS:,}")
 print(f" - Products: {NUM_PRODUCTS:,}")
 print(f" - Orders: {NUM_ORDERS:,}")
@@ -108,7 +129,8 @@ def generate_customers(num_customers=NUM_CUSTOMERS):
     customers = []
 
     for i in range(num_customers):
-        customer_id = 1001 + i
+        # UNIQUE ID: offset by seed
+        customer_id = CUSTOMER_ID_OFFSET + 1001 + i
         first_name = fake.first_name()
         last_name = fake.last_name()
         email = f"{first_name.lower()}.{last_name.lower()}{random.randint(1, 999)}@{random.choice(['gmail.com', 'yahoo.com', 'outlook.com'])}"
@@ -190,7 +212,8 @@ def generate_products(num_products=NUM_PRODUCTS):
                  'Elite Electronics', 'Style Distributors', 'Kitchen World',
                  'Mega Suppliers', 'Prime Products', 'Smart Solutions Ltd']
 
-    product_id_counter = 2001
+    # UNIQUE ID: offset by seed
+    product_id_counter = PRODUCT_ID_OFFSET + 2001
 
     for category, subcategories in PRODUCT_CATEGORIES.items():
         products_per_category = num_products // len(PRODUCT_CATEGORIES)
@@ -276,7 +299,8 @@ def generate_orders(customers_df, products_df, num_orders=NUM_ORDERS):
 
     random.shuffle(customer_order_distribution)
 
-    order_id_counter = 3001
+    # UNIQUE ID: offset by seed
+    order_id_counter = ORDER_ID_OFFSET + 3001
 
     for i in range(num_orders):
         order_id = order_id_counter

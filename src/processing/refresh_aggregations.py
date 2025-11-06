@@ -1,17 +1,12 @@
 """
-Refresh Aggregation Tables
-===========================
+Refresh Aggregation Tables (Simple Truncate Mode)
+==================================================
 
-Refresh all aggregate tables with latest data from base tables.
-
-Aggregates refreshed:
-- customer_summary: Customer lifetime value & metrics
-- product_summary: Product performance metrics
-- daily_sales_summary: Daily sales trends
-- monthly_sales_summary: Monthly trends with MoM growth
+Refresh all aggregate tables with cumulative data.
+Aggregates are recalculated fresh from base tables.
 
 Author: Abhiiram
-Date: November 6, 2025
+Date: November 7, 2025
 """
 
 from src.utils.db_connector import get_connection
@@ -30,13 +25,9 @@ logger.add(
     level=Config.LOG_LEVEL
 )
 
-# ========================================
-# REFRESH CUSTOMER SUMMARY
-# ========================================
-
 
 def refresh_customer_summary():
-    """Refresh customer summary aggregate table."""
+    """Refresh customer summary - recalculate from base tables."""
 
     logger.info("⏳ Refreshing customer_summary...")
     print("⏳ Refreshing customer_summary...")
@@ -45,10 +36,10 @@ def refresh_customer_summary():
         conn = get_connection()
         cursor = conn.cursor()
 
-        # Truncate existing data
-        cursor.execute("TRUNCATE TABLE customer_summary")
+        # TRUNCATE - clear old aggregates
+        cursor.execute("DELETE FROM customer_summary")
 
-        # Refresh with new data - FIXED: Using first_name || ' ' || last_name
+        # INSERT fresh calculations from ALL base data
         query = """
         INSERT INTO customer_summary 
         SELECT 
@@ -91,13 +82,9 @@ def refresh_customer_summary():
         logger.error(f"✗ customer_summary failed: {e}")
         raise
 
-# ========================================
-# REFRESH PRODUCT SUMMARY
-# ========================================
-
 
 def refresh_product_summary():
-    """Refresh product summary aggregate table."""
+    """Refresh product summary - recalculate from base tables."""
 
     logger.info("⏳ Refreshing product_summary...")
     print("⏳ Refreshing product_summary...")
@@ -106,7 +93,7 @@ def refresh_product_summary():
         conn = get_connection()
         cursor = conn.cursor()
 
-        cursor.execute("TRUNCATE TABLE product_summary")
+        cursor.execute("DELETE FROM product_summary")
 
         query = """
         INSERT INTO product_summary 
@@ -146,13 +133,9 @@ def refresh_product_summary():
         logger.error(f"✗ product_summary failed: {e}")
         raise
 
-# ========================================
-# REFRESH DAILY SALES SUMMARY
-# ========================================
-
 
 def refresh_daily_sales_summary():
-    """Refresh daily sales summary aggregate table."""
+    """Refresh daily sales summary - recalculate from base tables."""
 
     logger.info("⏳ Refreshing daily_sales_summary...")
     print("⏳ Refreshing daily_sales_summary...")
@@ -161,7 +144,7 @@ def refresh_daily_sales_summary():
         conn = get_connection()
         cursor = conn.cursor()
 
-        cursor.execute("TRUNCATE TABLE daily_sales_summary")
+        cursor.execute("DELETE FROM daily_sales_summary")
 
         query = """
         INSERT INTO daily_sales_summary 
@@ -193,13 +176,9 @@ def refresh_daily_sales_summary():
         logger.error(f"✗ daily_sales_summary failed: {e}")
         raise
 
-# ========================================
-# REFRESH MONTHLY SALES SUMMARY
-# ========================================
-
 
 def refresh_monthly_sales_summary():
-    """Refresh monthly sales summary aggregate table."""
+    """Refresh monthly sales summary - recalculate from base tables."""
 
     logger.info("⏳ Refreshing monthly_sales_summary...")
     print("⏳ Refreshing monthly_sales_summary...")
@@ -208,7 +187,7 @@ def refresh_monthly_sales_summary():
         conn = get_connection()
         cursor = conn.cursor()
 
-        cursor.execute("TRUNCATE TABLE monthly_sales_summary")
+        cursor.execute("DELETE FROM monthly_sales_summary")
 
         query = """
         INSERT INTO monthly_sales_summary 
@@ -250,10 +229,6 @@ def refresh_monthly_sales_summary():
         logger.error(f"✗ monthly_sales_summary failed: {e}")
         raise
 
-# ========================================
-# MAIN EXECUTION
-# ========================================
-
 
 def main():
     """Refresh all aggregation tables."""
@@ -276,10 +251,12 @@ def main():
 
         logger.info("=" * 60)
         logger.info("✓ ALL AGGREGATIONS REFRESHED SUCCESSFULLY")
+        logger.info(f"Recalculated from ALL cumulative base data")
         logger.info("=" * 60)
 
         print("=" * 60)
         print("✓ ALL AGGREGATIONS REFRESHED SUCCESSFULLY")
+        print(f"Recalculated from ALL cumulative base data")
         print("=" * 60)
 
     except Exception as e:

@@ -237,3 +237,1499 @@ LINE 7:             c.customer_name,
 2025-11-07 00:32:59.499 | INFO     | __main__:main:435 - ============================================================
 2025-11-07 00:32:59.500 | INFO     | __main__:main:436 - ✓ REPORT GENERATED
 2025-11-07 00:32:59.501 | INFO     | __main__:main:437 - ============================================================
+2025-11-07 00:34:49.430 | INFO     | __main__:main:187 - ============================================================
+2025-11-07 00:34:49.430 | INFO     | __main__:main:188 - CSV TO POSTGRESQL DATA LOADER
+2025-11-07 00:34:49.431 | INFO     | __main__:main:189 - ============================================================
+2025-11-07 00:34:49.433 | INFO     | __main__:main:199 - [1/4] TRUNCATING EXISTING DATA
+2025-11-07 00:34:49.476 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:34:49.528 | INFO     | src.utils.db_connector:truncate_table:219 - ✓ Truncated orders
+2025-11-07 00:34:49.554 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:34:49.602 | INFO     | src.utils.db_connector:truncate_table:219 - ✓ Truncated products
+2025-11-07 00:34:49.628 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:34:49.698 | INFO     | src.utils.db_connector:truncate_table:219 - ✓ Truncated customers
+2025-11-07 00:34:49.699 | INFO     | __main__:main:207 - [2/4] LOADING CUSTOMERS
+2025-11-07 00:34:49.700 | INFO     | __main__:load_csv_to_table:68 - 📂 Reading CSV file: C:\projects\ecommerce-data-pipeline\data\raw\customers.csv
+2025-11-07 00:34:49.784 | INFO     | __main__:load_csv_to_table:73 - ✓ Loaded 10,000 rows from CSV
+2025-11-07 00:34:49.810 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:34:49.811 | INFO     | __main__:load_csv_to_table:90 - → Inserting data in batches of 1000...
+2025-11-07 00:35:00.078 | INFO     | __main__:load_csv_to_table:103 - → Inserted 5,000 / 10,000 rows (50.0%)
+2025-11-07 00:35:11.709 | INFO     | __main__:load_csv_to_table:103 - → Inserted 10,000 / 10,000 rows (100.0%)
+2025-11-07 00:35:11.710 | INFO     | __main__:load_csv_to_table:111 - ✓ Successfully loaded 10,000 rows into customers
+2025-11-07 00:35:11.712 | INFO     | __main__:main:215 - [3/4] LOADING PRODUCTS
+2025-11-07 00:35:11.714 | INFO     | __main__:load_csv_to_table:68 - 📂 Reading CSV file: C:\projects\ecommerce-data-pipeline\data\raw\products.csv
+2025-11-07 00:35:11.742 | INFO     | __main__:load_csv_to_table:73 - ✓ Loaded 495 rows from CSV
+2025-11-07 00:35:11.771 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:35:11.772 | INFO     | __main__:load_csv_to_table:90 - → Inserting data in batches of 1000...
+2025-11-07 00:35:13.006 | INFO     | __main__:load_csv_to_table:103 - → Inserted 495 / 495 rows (100.0%)
+2025-11-07 00:35:13.008 | INFO     | __main__:load_csv_to_table:111 - ✓ Successfully loaded 495 rows into products
+2025-11-07 00:35:13.009 | INFO     | __main__:main:223 - [4/4] LOADING ORDERS
+2025-11-07 00:35:13.011 | INFO     | __main__:load_csv_to_table:68 - 📂 Reading CSV file: C:\projects\ecommerce-data-pipeline\data\raw\orders.csv
+2025-11-07 00:35:13.183 | INFO     | __main__:load_csv_to_table:73 - ✓ Loaded 50,000 rows from CSV
+2025-11-07 00:35:13.215 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:35:13.216 | INFO     | __main__:load_csv_to_table:90 - → Inserting data in batches of 1000...
+2025-11-07 00:35:25.100 | INFO     | __main__:load_csv_to_table:103 - → Inserted 5,000 / 50,000 rows (10.0%)
+2025-11-07 00:35:36.454 | INFO     | __main__:load_csv_to_table:103 - → Inserted 10,000 / 50,000 rows (20.0%)
+2025-11-07 00:35:46.022 | INFO     | __main__:load_csv_to_table:103 - → Inserted 15,000 / 50,000 rows (30.0%)
+2025-11-07 00:35:56.642 | INFO     | __main__:load_csv_to_table:103 - → Inserted 20,000 / 50,000 rows (40.0%)
+2025-11-07 00:36:07.995 | INFO     | __main__:load_csv_to_table:103 - → Inserted 25,000 / 50,000 rows (50.0%)
+2025-11-07 00:36:18.903 | INFO     | __main__:load_csv_to_table:103 - → Inserted 30,000 / 50,000 rows (60.0%)
+2025-11-07 00:36:30.415 | INFO     | __main__:load_csv_to_table:103 - → Inserted 35,000 / 50,000 rows (70.0%)
+2025-11-07 00:36:38.810 | INFO     | __main__:load_csv_to_table:103 - → Inserted 40,000 / 50,000 rows (80.0%)
+2025-11-07 00:36:49.603 | INFO     | __main__:load_csv_to_table:103 - → Inserted 45,000 / 50,000 rows (90.0%)
+2025-11-07 00:37:00.545 | INFO     | __main__:load_csv_to_table:103 - → Inserted 50,000 / 50,000 rows (100.0%)
+2025-11-07 00:37:00.546 | INFO     | __main__:load_csv_to_table:111 - ✓ Successfully loaded 50,000 rows into orders
+2025-11-07 00:37:00.549 | INFO     | __main__:verify_data_load:126 - ============================================================
+2025-11-07 00:37:00.550 | INFO     | __main__:verify_data_load:127 - DATA VERIFICATION
+2025-11-07 00:37:00.581 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:37:00.593 | INFO     | __main__:verify_data_load:135 - customers       : 10,000 rows
+2025-11-07 00:37:00.619 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:37:00.624 | INFO     | __main__:verify_data_load:135 - products        : 495 rows
+2025-11-07 00:37:00.675 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:37:00.689 | INFO     | __main__:verify_data_load:135 - orders          : 50,000 rows
+2025-11-07 00:37:00.690 | INFO     | __main__:verify_data_load:139 - 🔗 Checking foreign key relationships...
+2025-11-07 00:37:00.731 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:37:00.772 | INFO     | __main__:verify_data_load:163 - ✓ All foreign key relationships are valid
+2025-11-07 00:37:00.797 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:37:00.848 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:37:00.891 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:37:00.906 | INFO     | __main__:main:240 - ============================================================
+2025-11-07 00:37:00.906 | INFO     | __main__:main:241 - ✓ DATA LOAD COMPLETE!
+2025-11-07 00:37:00.907 | INFO     | __main__:main:242 - ============================================================
+2025-11-07 00:37:00.908 | INFO     | __main__:main:243 - End time: 2025-11-07 00:37:00
+2025-11-07 00:37:00.909 | INFO     | __main__:main:244 - Duration: 131.34 seconds
+2025-11-07 00:37:00.909 | INFO     | __main__:main:245 - Records loaded: 60,495
+2025-11-07 00:37:01.433 | INFO     | __main__:main:261 - ============================================================
+2025-11-07 00:37:01.434 | INFO     | __main__:main:262 - REFRESH AGGREGATIONS
+2025-11-07 00:37:01.434 | INFO     | __main__:main:263 - Started: 2025-11-07 00:37:01
+2025-11-07 00:37:01.434 | INFO     | __main__:main:264 - ============================================================
+2025-11-07 00:37:01.435 | INFO     | __main__:refresh_customer_summary:41 - ⏳ Refreshing customer_summary...
+2025-11-07 00:37:01.477 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:37:01.742 | INFO     | __main__:refresh_customer_summary:84 - ✓ Refreshed customer_summary: 10000 records
+2025-11-07 00:37:01.743 | INFO     | __main__:refresh_product_summary:102 - ⏳ Refreshing product_summary...
+2025-11-07 00:37:01.774 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:37:01.868 | INFO     | __main__:refresh_product_summary:139 - ✓ Refreshed product_summary: 495 records
+2025-11-07 00:37:01.869 | INFO     | __main__:refresh_daily_sales_summary:157 - ⏳ Refreshing daily_sales_summary...
+2025-11-07 00:37:01.900 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:37:01.996 | INFO     | __main__:refresh_daily_sales_summary:186 - ✓ Refreshed daily_sales_summary: 181 records
+2025-11-07 00:37:01.998 | INFO     | __main__:refresh_monthly_sales_summary:204 - ⏳ Refreshing monthly_sales_summary...
+2025-11-07 00:37:02.047 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:37:02.141 | INFO     | __main__:refresh_monthly_sales_summary:243 - ✓ Refreshed monthly_sales_summary: 7 records
+2025-11-07 00:37:02.142 | INFO     | __main__:main:277 - ============================================================
+2025-11-07 00:37:02.143 | INFO     | __main__:main:278 - ✓ ALL AGGREGATIONS REFRESHED SUCCESSFULLY
+2025-11-07 00:37:02.143 | INFO     | __main__:main:279 - ============================================================
+2025-11-07 00:37:02.444 | INFO     | __main__:main:275 - ============================================================
+2025-11-07 00:37:02.445 | INFO     | __main__:main:276 - DATA VALIDATION
+2025-11-07 00:37:02.445 | INFO     | __main__:main:277 - ============================================================
+2025-11-07 00:37:02.446 | INFO     | __main__:validate_required_fields:42 - 🔍 Validating required fields...
+2025-11-07 00:37:02.470 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:37:02.489 | INFO     | __main__:validate_required_fields:91 - ✓ All required fields are populated
+2025-11-07 00:37:02.490 | INFO     | __main__:validate_data_types:104 - 📝 Validating data types...
+2025-11-07 00:37:02.542 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:37:02.559 | INFO     | __main__:validate_data_types:144 - ✓ All data types are valid
+2025-11-07 00:37:02.561 | INFO     | __main__:validate_foreign_keys:157 - 🔗 Validating foreign keys...
+2025-11-07 00:37:02.609 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:37:02.646 | INFO     | __main__:validate_foreign_keys:196 - ✓ All foreign keys are valid
+2025-11-07 00:37:02.648 | INFO     | __main__:validate_uniqueness:209 - 🔑 Validating uniqueness...
+2025-11-07 00:37:02.674 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:37:02.728 | INFO     | __main__:validate_uniqueness:262 - ✓ All uniqueness constraints satisfied
+2025-11-07 00:37:02.729 | INFO     | __main__:main:293 - ============================================================
+2025-11-07 00:37:02.729 | INFO     | __main__:main:295 - ✓ ALL VALIDATIONS PASSED
+2025-11-07 00:37:02.730 | INFO     | __main__:main:303 - ============================================================
+2025-11-07 00:37:03.808 | INFO     | __main__:__init__:51 - ✓ Anomaly detector initialized
+2025-11-07 00:37:03.809 | INFO     | __main__:run_all_detections:343 - ============================================================
+2025-11-07 00:37:03.809 | INFO     | __main__:run_all_detections:344 - ANOMALY DETECTION
+2025-11-07 00:37:03.810 | INFO     | __main__:run_all_detections:345 - Started: 2025-11-07 00:37:03
+2025-11-07 00:37:03.810 | INFO     | __main__:run_all_detections:346 - ============================================================
+2025-11-07 00:37:03.811 | INFO     | __main__:detect_order_amount_anomalies:86 - 💰 ORDER AMOUNT ANOMALIES
+2025-11-07 00:37:03.838 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:37:04.040 | INFO     | __main__:z_score_outliers:75 - ✓ Z-score analysis: 914 outliers found (threshold=3.0)
+2025-11-07 00:37:04.040 | INFO     | __main__:detect_order_amount_anomalies:108 -  Found 914 unusual order amounts (Z-score > 3.0)
+2025-11-07 00:37:04.043 | INFO     | __main__:detect_order_amount_anomalies:115 -   Order 40853: ₹730,392.50 (Z-score: 10.23)
+2025-11-07 00:37:04.044 | INFO     | __main__:detect_order_amount_anomalies:115 -   Order 35643: ₹722,692.35 (Z-score: 10.11)
+2025-11-07 00:37:04.044 | INFO     | __main__:detect_order_amount_anomalies:115 -   Order 45281: ₹687,899.70 (Z-score: 9.60)
+2025-11-07 00:37:04.045 | INFO     | __main__:detect_order_amount_anomalies:115 -   Order 50263: ₹687,899.70 (Z-score: 9.60)
+2025-11-07 00:37:04.046 | INFO     | __main__:detect_order_amount_anomalies:115 -   Order 4347: ₹676,144.60 (Z-score: 9.43)
+2025-11-07 00:37:04.046 | INFO     | __main__:detect_quantity_anomalies:135 - 📦 ORDER QUANTITY ANOMALIES
+2025-11-07 00:37:04.093 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:37:04.218 | INFO     | __main__:detect_quantity_anomalies:173 -  ✓ No unusual quantities detected
+2025-11-07 00:37:04.220 | INFO     | __main__:detect_customer_spending_anomalies:183 - 👤 CUSTOMER SPENDING ANOMALIES
+2025-11-07 00:37:04.237 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:37:04.380 | INFO     | __main__:z_score_outliers:75 - ✓ Z-score analysis: 341 outliers found (threshold=2.5)
+2025-11-07 00:37:04.380 | INFO     | __main__:detect_customer_spending_anomalies:198 -  Found 341 customers with unusual spending (Z-score > 2.5)
+2025-11-07 00:37:04.383 | INFO     | __main__:detect_customer_spending_anomalies:207 -   Charan Jani: ₹1,512,715.49 (13 orders, Z-score: 7.07)
+2025-11-07 00:37:04.383 | INFO     | __main__:detect_customer_spending_anomalies:207 -   Azaan Som: ₹1,479,261.74 (9 orders, Z-score: 6.89)
+2025-11-07 00:37:04.384 | INFO     | __main__:detect_customer_spending_anomalies:207 -   Anthony Thaman: ₹1,448,829.35 (14 orders, Z-score: 6.74)
+2025-11-07 00:37:04.385 | INFO     | __main__:detect_customer_spending_anomalies:207 -   Advika Murty: ₹1,394,654.21 (17 orders, Z-score: 6.46)
+2025-11-07 00:37:04.386 | INFO     | __main__:detect_customer_spending_anomalies:207 -   Ekaraj Bath: ₹1,385,886.24 (16 orders, Z-score: 6.41)
+2025-11-07 00:37:04.388 | INFO     | __main__:detect_daily_sales_anomalies:227 - 📊 DAILY SALES ANOMALIES
+2025-11-07 00:37:04.428 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:37:04.445 | INFO     | __main__:z_score_outliers:75 - ✓ Z-score analysis: 8 outliers found (threshold=2.0)
+2025-11-07 00:37:04.446 | INFO     | __main__:detect_daily_sales_anomalies:247 -  Found 8 days with unusual sales (Z-score > 2.0)
+2025-11-07 00:37:04.449 | INFO     | __main__:detect_daily_sales_anomalies:255 -   2025-08-02: ₹11,616,410.70 (231 orders, Z-score: 3.33)
+2025-11-07 00:37:04.451 | INFO     | __main__:detect_daily_sales_anomalies:255 -   2025-10-15: ₹10,522,840.28 (223 orders, Z-score: 2.28)
+2025-11-07 00:37:04.453 | INFO     | __main__:detect_daily_sales_anomalies:255 -   2025-09-09: ₹10,518,096.50 (236 orders, Z-score: 2.28)
+2025-11-07 00:37:04.455 | INFO     | __main__:detect_daily_sales_anomalies:255 -   2025-05-14: ₹10,384,455.60 (209 orders, Z-score: 2.15)
+2025-11-07 00:37:04.456 | INFO     | __main__:detect_daily_sales_anomalies:255 -   2025-09-22: ₹6,024,825.47 (210 orders, Z-score: 2.02)
+2025-11-07 00:37:04.458 | INFO     | __main__:detect_business_rule_violations:275 - ⚠️ BUSINESS RULE VIOLATIONS
+2025-11-07 00:37:04.497 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:37:04.508 | WARNING  | __main__:detect_business_rule_violations:294 - ⚠️ 1362 orders exceed ₹2 Lakh (potential review needed)
+2025-11-07 00:37:04.516 | INFO     | __main__:detect_business_rule_violations:322 -  ✓ No zero-revenue orders
+2025-11-07 00:37:04.517 | INFO     | __main__:run_all_detections:361 - ============================================================
+2025-11-07 00:37:04.518 | INFO     | __main__:run_all_detections:362 - ANOMALY SUMMARY
+2025-11-07 00:37:04.519 | INFO     | __main__:run_all_detections:363 - ------------------------------------------------------------
+2025-11-07 00:37:04.522 | INFO     | __main__:run_all_detections:370 - Total anomaly types detected: 4
+2025-11-07 00:37:04.523 | INFO     | __main__:run_all_detections:376 - • Order Amount Outliers: 914 instances (INFO)
+2025-11-07 00:37:04.525 | INFO     | __main__:run_all_detections:376 - • High-Value Customers: 341 instances (INFO)
+2025-11-07 00:37:04.526 | INFO     | __main__:run_all_detections:376 - • Daily Sales Spikes: 8 instances (INFO)
+2025-11-07 00:37:04.526 | INFO     | __main__:run_all_detections:376 - • Business Rule Violations: 1 instances (WARNING)
+2025-11-07 00:37:04.527 | INFO     | __main__:run_all_detections:382 - ============================================================
+2025-11-07 00:37:05.535 | INFO     | __main__:main:419 - ============================================================
+2025-11-07 00:37:05.535 | INFO     | __main__:main:420 - QUALITY REPORT GENERATION
+2025-11-07 00:37:05.536 | INFO     | __main__:main:421 - ============================================================
+2025-11-07 00:37:05.537 | INFO     | __main__:__init__:48 - ✓ Report generator initialized
+2025-11-07 00:37:05.537 | INFO     | __main__:generate_html:87 - 🎨 Generating HTML report...
+2025-11-07 00:37:05.537 | INFO     | __main__:get_table_stats:53 - 📊 Collecting table statistics...
+2025-11-07 00:37:05.564 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:37:05.579 | INFO     | __main__:get_table_stats:72 -   customers: 10000 rows
+2025-11-07 00:37:05.583 | INFO     | __main__:get_table_stats:72 -   products: 495 rows
+2025-11-07 00:37:05.592 | INFO     | __main__:get_table_stats:72 -   orders: 50000 rows
+2025-11-07 00:37:05.601 | INFO     | __main__:get_table_stats:72 -   customer_summary: 10000 rows
+2025-11-07 00:37:05.605 | INFO     | __main__:get_table_stats:72 -   product_summary: 495 rows
+2025-11-07 00:37:05.610 | INFO     | __main__:get_table_stats:72 -   daily_sales_summary: 181 rows
+2025-11-07 00:37:05.614 | INFO     | __main__:get_table_stats:72 -   monthly_sales_summary: 7 rows
+2025-11-07 00:37:05.615 | INFO     | __main__:generate_html:383 - ✓ HTML report generated successfully
+2025-11-07 00:37:05.616 | INFO     | __main__:save_report:393 - 💾 Saving report to file...
+2025-11-07 00:37:05.618 | INFO     | __main__:save_report:405 - ✓ Report saved to C:\projects\ecommerce-data-pipeline\data\processed\quality_report_20251107_003705.html
+2025-11-07 00:37:05.619 | INFO     | __main__:main:435 - ============================================================
+2025-11-07 00:37:05.620 | INFO     | __main__:main:436 - ✓ REPORT GENERATED
+2025-11-07 00:37:05.621 | INFO     | __main__:main:437 - ============================================================
+2025-11-07 01:11:36.645 | INFO     | __main__:main:238 - ============================================================
+2025-11-07 01:11:36.647 | INFO     | __main__:main:239 - CSV TO POSTGRESQL DATA LOADER (INCREMENTAL MODE)
+2025-11-07 01:11:36.647 | INFO     | __main__:main:240 - ============================================================
+2025-11-07 01:11:36.647 | INFO     | __main__:main:249 - [1/4] LOADING CUSTOMERS (with duplicate handling)
+2025-11-07 01:11:36.648 | INFO     | __main__:load_csv_to_table:43 - 📂 Reading CSV file: C:\projects\ecommerce-data-pipeline\data\raw\customers.csv
+2025-11-07 01:11:36.705 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:11:36.770 | INFO     | __main__:load_csv_to_table:53 - ✓ Loaded 10,000 rows from CSV
+2025-11-07 01:11:36.787 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:11:36.787 | INFO     | __main__:load_csv_to_table:59 - → Inserting data in batches of 1000...
+2025-11-07 01:11:36.884 | INFO     | __main__:load_csv_to_table:120 - → Inserted 1,000 / 10,000 rows (10.0%)
+2025-11-07 01:11:36.963 | INFO     | __main__:load_csv_to_table:120 - → Inserted 2,000 / 10,000 rows (20.0%)
+2025-11-07 01:11:37.049 | INFO     | __main__:load_csv_to_table:120 - → Inserted 3,000 / 10,000 rows (30.0%)
+2025-11-07 01:11:37.147 | INFO     | __main__:load_csv_to_table:120 - → Inserted 4,000 / 10,000 rows (40.0%)
+2025-11-07 01:11:37.185 | INFO     | __main__:load_csv_to_table:120 - → Inserted 5,000 / 10,000 rows (50.0%)
+2025-11-07 01:11:37.262 | INFO     | __main__:load_csv_to_table:120 - → Inserted 6,000 / 10,000 rows (60.0%)
+2025-11-07 01:11:37.298 | INFO     | __main__:load_csv_to_table:120 - → Inserted 7,000 / 10,000 rows (70.0%)
+2025-11-07 01:11:37.393 | INFO     | __main__:load_csv_to_table:120 - → Inserted 8,000 / 10,000 rows (80.0%)
+2025-11-07 01:11:37.446 | INFO     | __main__:load_csv_to_table:120 - → Inserted 9,000 / 10,000 rows (90.0%)
+2025-11-07 01:11:37.494 | INFO     | __main__:load_csv_to_table:120 - → Inserted 10,000 / 10,000 rows (100.0%)
+2025-11-07 01:11:37.503 | INFO     | __main__:load_csv_to_table:137 - ✓ Successfully loaded 0 NEW rows into customers
+2025-11-07 01:11:37.503 | INFO     | __main__:load_csv_to_table:139 -   Total rows in customers: 10,000
+2025-11-07 01:11:37.504 | INFO     | __main__:main:258 - [2/4] LOADING PRODUCTS (with duplicate handling)
+2025-11-07 01:11:37.505 | INFO     | __main__:load_csv_to_table:43 - 📂 Reading CSV file: C:\projects\ecommerce-data-pipeline\data\raw\products.csv
+2025-11-07 01:11:37.537 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:11:37.553 | INFO     | __main__:load_csv_to_table:53 - ✓ Loaded 495 rows from CSV
+2025-11-07 01:11:37.567 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:11:37.567 | INFO     | __main__:load_csv_to_table:59 - → Inserting data in batches of 1000...
+2025-11-07 01:11:37.582 | INFO     | __main__:load_csv_to_table:120 - → Inserted 495 / 495 rows (100.0%)
+2025-11-07 01:11:37.587 | INFO     | __main__:load_csv_to_table:137 - ✓ Successfully loaded 0 NEW rows into products
+2025-11-07 01:11:37.588 | INFO     | __main__:load_csv_to_table:139 -   Total rows in products: 495
+2025-11-07 01:11:37.588 | INFO     | __main__:main:267 - [3/4] LOADING ORDERS (appending new orders)
+2025-11-07 01:11:37.588 | INFO     | __main__:load_csv_to_table:43 - 📂 Reading CSV file: C:\projects\ecommerce-data-pipeline\data\raw\orders.csv
+2025-11-07 01:11:37.598 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:11:37.670 | INFO     | __main__:load_csv_to_table:53 - ✓ Loaded 50,000 rows from CSV
+2025-11-07 01:11:37.680 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:11:37.680 | INFO     | __main__:load_csv_to_table:59 - → Inserting data in batches of 1000...
+2025-11-07 01:11:37.701 | INFO     | __main__:load_csv_to_table:120 - → Inserted 1,000 / 50,000 rows (2.0%)
+2025-11-07 01:11:37.720 | INFO     | __main__:load_csv_to_table:120 - → Inserted 2,000 / 50,000 rows (4.0%)
+2025-11-07 01:11:37.803 | INFO     | __main__:load_csv_to_table:120 - → Inserted 3,000 / 50,000 rows (6.0%)
+2025-11-07 01:11:37.883 | INFO     | __main__:load_csv_to_table:120 - → Inserted 4,000 / 50,000 rows (8.0%)
+2025-11-07 01:11:37.959 | INFO     | __main__:load_csv_to_table:120 - → Inserted 5,000 / 50,000 rows (10.0%)
+2025-11-07 01:11:38.041 | INFO     | __main__:load_csv_to_table:120 - → Inserted 6,000 / 50,000 rows (12.0%)
+2025-11-07 01:11:38.134 | INFO     | __main__:load_csv_to_table:120 - → Inserted 7,000 / 50,000 rows (14.0%)
+2025-11-07 01:11:38.222 | INFO     | __main__:load_csv_to_table:120 - → Inserted 8,000 / 50,000 rows (16.0%)
+2025-11-07 01:11:38.301 | INFO     | __main__:load_csv_to_table:120 - → Inserted 9,000 / 50,000 rows (18.0%)
+2025-11-07 01:11:38.379 | INFO     | __main__:load_csv_to_table:120 - → Inserted 10,000 / 50,000 rows (20.0%)
+2025-11-07 01:11:38.461 | INFO     | __main__:load_csv_to_table:120 - → Inserted 11,000 / 50,000 rows (22.0%)
+2025-11-07 01:11:38.535 | INFO     | __main__:load_csv_to_table:120 - → Inserted 12,000 / 50,000 rows (24.0%)
+2025-11-07 01:11:38.624 | INFO     | __main__:load_csv_to_table:120 - → Inserted 13,000 / 50,000 rows (26.0%)
+2025-11-07 01:11:38.729 | INFO     | __main__:load_csv_to_table:120 - → Inserted 14,000 / 50,000 rows (28.0%)
+2025-11-07 01:11:38.808 | INFO     | __main__:load_csv_to_table:120 - → Inserted 15,000 / 50,000 rows (30.0%)
+2025-11-07 01:11:38.901 | INFO     | __main__:load_csv_to_table:120 - → Inserted 16,000 / 50,000 rows (32.0%)
+2025-11-07 01:11:38.987 | INFO     | __main__:load_csv_to_table:120 - → Inserted 17,000 / 50,000 rows (34.0%)
+2025-11-07 01:11:39.062 | INFO     | __main__:load_csv_to_table:120 - → Inserted 18,000 / 50,000 rows (36.0%)
+2025-11-07 01:11:39.150 | INFO     | __main__:load_csv_to_table:120 - → Inserted 19,000 / 50,000 rows (38.0%)
+2025-11-07 01:11:39.238 | INFO     | __main__:load_csv_to_table:120 - → Inserted 20,000 / 50,000 rows (40.0%)
+2025-11-07 01:11:39.333 | INFO     | __main__:load_csv_to_table:120 - → Inserted 21,000 / 50,000 rows (42.0%)
+2025-11-07 01:11:39.412 | INFO     | __main__:load_csv_to_table:120 - → Inserted 22,000 / 50,000 rows (44.0%)
+2025-11-07 01:11:39.484 | INFO     | __main__:load_csv_to_table:120 - → Inserted 23,000 / 50,000 rows (46.0%)
+2025-11-07 01:11:39.571 | INFO     | __main__:load_csv_to_table:120 - → Inserted 24,000 / 50,000 rows (48.0%)
+2025-11-07 01:11:39.654 | INFO     | __main__:load_csv_to_table:120 - → Inserted 25,000 / 50,000 rows (50.0%)
+2025-11-07 01:11:39.741 | INFO     | __main__:load_csv_to_table:120 - → Inserted 26,000 / 50,000 rows (52.0%)
+2025-11-07 01:11:39.830 | INFO     | __main__:load_csv_to_table:120 - → Inserted 27,000 / 50,000 rows (54.0%)
+2025-11-07 01:11:39.906 | INFO     | __main__:load_csv_to_table:120 - → Inserted 28,000 / 50,000 rows (56.0%)
+2025-11-07 01:11:39.992 | INFO     | __main__:load_csv_to_table:120 - → Inserted 29,000 / 50,000 rows (58.0%)
+2025-11-07 01:11:40.072 | INFO     | __main__:load_csv_to_table:120 - → Inserted 30,000 / 50,000 rows (60.0%)
+2025-11-07 01:11:40.162 | INFO     | __main__:load_csv_to_table:120 - → Inserted 31,000 / 50,000 rows (62.0%)
+2025-11-07 01:11:40.239 | INFO     | __main__:load_csv_to_table:120 - → Inserted 32,000 / 50,000 rows (64.0%)
+2025-11-07 01:11:40.323 | INFO     | __main__:load_csv_to_table:120 - → Inserted 33,000 / 50,000 rows (66.0%)
+2025-11-07 01:11:40.414 | INFO     | __main__:load_csv_to_table:120 - → Inserted 34,000 / 50,000 rows (68.0%)
+2025-11-07 01:11:40.501 | INFO     | __main__:load_csv_to_table:120 - → Inserted 35,000 / 50,000 rows (70.0%)
+2025-11-07 01:11:40.573 | INFO     | __main__:load_csv_to_table:120 - → Inserted 36,000 / 50,000 rows (72.0%)
+2025-11-07 01:11:40.649 | INFO     | __main__:load_csv_to_table:120 - → Inserted 37,000 / 50,000 rows (74.0%)
+2025-11-07 01:11:40.742 | INFO     | __main__:load_csv_to_table:120 - → Inserted 38,000 / 50,000 rows (76.0%)
+2025-11-07 01:11:40.830 | INFO     | __main__:load_csv_to_table:120 - → Inserted 39,000 / 50,000 rows (78.0%)
+2025-11-07 01:11:40.918 | INFO     | __main__:load_csv_to_table:120 - → Inserted 40,000 / 50,000 rows (80.0%)
+2025-11-07 01:11:40.992 | INFO     | __main__:load_csv_to_table:120 - → Inserted 41,000 / 50,000 rows (82.0%)
+2025-11-07 01:11:41.083 | INFO     | __main__:load_csv_to_table:120 - → Inserted 42,000 / 50,000 rows (84.0%)
+2025-11-07 01:11:41.169 | INFO     | __main__:load_csv_to_table:120 - → Inserted 43,000 / 50,000 rows (86.0%)
+2025-11-07 01:11:41.238 | INFO     | __main__:load_csv_to_table:120 - → Inserted 44,000 / 50,000 rows (88.0%)
+2025-11-07 01:11:41.316 | INFO     | __main__:load_csv_to_table:120 - → Inserted 45,000 / 50,000 rows (90.0%)
+2025-11-07 01:11:41.399 | INFO     | __main__:load_csv_to_table:120 - → Inserted 46,000 / 50,000 rows (92.0%)
+2025-11-07 01:11:41.493 | INFO     | __main__:load_csv_to_table:120 - → Inserted 47,000 / 50,000 rows (94.0%)
+2025-11-07 01:11:41.566 | INFO     | __main__:load_csv_to_table:120 - → Inserted 48,000 / 50,000 rows (96.0%)
+2025-11-07 01:11:41.653 | INFO     | __main__:load_csv_to_table:120 - → Inserted 49,000 / 50,000 rows (98.0%)
+2025-11-07 01:11:41.743 | INFO     | __main__:load_csv_to_table:120 - → Inserted 50,000 / 50,000 rows (100.0%)
+2025-11-07 01:11:41.755 | INFO     | __main__:load_csv_to_table:137 - ✓ Successfully loaded 0 NEW rows into orders
+2025-11-07 01:11:41.756 | INFO     | __main__:load_csv_to_table:139 -   Total rows in orders: 50,000
+2025-11-07 01:11:41.760 | INFO     | __main__:main:277 - [4/4] VERIFYING DATA LOAD
+2025-11-07 01:11:41.761 | INFO     | __main__:verify_data_load:156 - ============================================================
+2025-11-07 01:11:41.762 | INFO     | __main__:verify_data_load:157 - DATA VERIFICATION
+2025-11-07 01:11:41.763 | INFO     | __main__:verify_data_load:158 - ============================================================
+2025-11-07 01:11:41.795 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:11:41.800 | INFO     | __main__:verify_data_load:176 - customers      : 10,000 rows
+2025-11-07 01:11:41.803 | INFO     | __main__:verify_data_load:176 - products       : 495 rows
+2025-11-07 01:11:41.807 | INFO     | __main__:verify_data_load:176 - orders         : 50,000 rows
+2025-11-07 01:11:41.807 | INFO     | __main__:verify_data_load:180 - 🔗 Checking foreign key relationships...
+2025-11-07 01:11:41.830 | INFO     | __main__:verify_data_load:212 - ✓ All foreign key relationships are valid
+2025-11-07 01:11:41.851 | INFO     | __main__:verify_data_load:222 - 💰 Total Revenue: ₹1,967,120,343.68
+2025-11-07 01:11:41.851 | INFO     | __main__:verify_data_load:223 - 📦 Total Orders: 50,000
+2025-11-07 01:11:41.852 | INFO     | __main__:main:283 - ============================================================
+2025-11-07 01:11:41.852 | INFO     | __main__:main:284 - ✓ DATA LOAD COMPLETE!
+2025-11-07 01:11:41.852 | INFO     | __main__:main:285 - ============================================================
+2025-11-07 01:11:41.853 | INFO     | __main__:main:286 - New records added:
+2025-11-07 01:11:41.854 | INFO     | __main__:main:287 -   - Customers: 0
+2025-11-07 01:11:41.854 | INFO     | __main__:main:288 -   - Products: 0
+2025-11-07 01:11:41.854 | INFO     | __main__:main:289 -   - Orders: 0
+2025-11-07 01:11:41.855 | INFO     | __main__:main:290 - End time: 2025-11-07 01:11:41
+2025-11-07 01:11:42.197 | INFO     | __main__:main:296 - ============================================================
+2025-11-07 01:11:42.198 | INFO     | __main__:main:297 - REFRESH AGGREGATIONS (INCREMENTAL MODE)
+2025-11-07 01:11:42.198 | INFO     | __main__:main:298 - Started: 2025-11-07 01:11:42
+2025-11-07 01:11:42.199 | INFO     | __main__:main:299 - ============================================================
+2025-11-07 01:11:42.199 | INFO     | __main__:refresh_customer_summary:41 - ⏳ Refreshing customer_summary...
+2025-11-07 01:11:42.213 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:11:42.223 | ERROR    | __main__:refresh_customer_summary:100 - ✗ customer_summary failed: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+2025-11-07 01:11:42.224 | ERROR    | __main__:main:323 - ✗ Refresh failed: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+2025-11-07 01:14:24.768 | INFO     | __main__:main:238 - ============================================================
+2025-11-07 01:14:24.769 | INFO     | __main__:main:239 - CSV TO POSTGRESQL DATA LOADER (INCREMENTAL MODE)
+2025-11-07 01:14:24.769 | INFO     | __main__:main:240 - ============================================================
+2025-11-07 01:14:24.769 | INFO     | __main__:main:249 - [1/4] LOADING CUSTOMERS (with duplicate handling)
+2025-11-07 01:14:24.769 | INFO     | __main__:load_csv_to_table:43 - 📂 Reading CSV file: C:\projects\ecommerce-data-pipeline\data\raw\customers.csv
+2025-11-07 01:14:24.782 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:14:24.810 | INFO     | __main__:load_csv_to_table:53 - ✓ Loaded 10,000 rows from CSV
+2025-11-07 01:14:24.819 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:14:24.820 | INFO     | __main__:load_csv_to_table:59 - → Inserting data in batches of 1000...
+2025-11-07 01:14:24.856 | INFO     | __main__:load_csv_to_table:120 - → Inserted 1,000 / 10,000 rows (10.0%)
+2025-11-07 01:14:24.894 | INFO     | __main__:load_csv_to_table:120 - → Inserted 2,000 / 10,000 rows (20.0%)
+2025-11-07 01:14:24.990 | INFO     | __main__:load_csv_to_table:120 - → Inserted 3,000 / 10,000 rows (30.0%)
+2025-11-07 01:14:25.086 | INFO     | __main__:load_csv_to_table:120 - → Inserted 4,000 / 10,000 rows (40.0%)
+2025-11-07 01:14:25.124 | INFO     | __main__:load_csv_to_table:120 - → Inserted 5,000 / 10,000 rows (50.0%)
+2025-11-07 01:14:25.228 | INFO     | __main__:load_csv_to_table:120 - → Inserted 6,000 / 10,000 rows (60.0%)
+2025-11-07 01:14:25.266 | INFO     | __main__:load_csv_to_table:120 - → Inserted 7,000 / 10,000 rows (70.0%)
+2025-11-07 01:14:25.310 | INFO     | __main__:load_csv_to_table:120 - → Inserted 8,000 / 10,000 rows (80.0%)
+2025-11-07 01:14:25.359 | INFO     | __main__:load_csv_to_table:120 - → Inserted 9,000 / 10,000 rows (90.0%)
+2025-11-07 01:14:25.411 | INFO     | __main__:load_csv_to_table:120 - → Inserted 10,000 / 10,000 rows (100.0%)
+2025-11-07 01:14:25.430 | INFO     | __main__:load_csv_to_table:137 - ✓ Successfully loaded 0 NEW rows into customers
+2025-11-07 01:14:25.430 | INFO     | __main__:load_csv_to_table:139 -   Total rows in customers: 10,000
+2025-11-07 01:14:25.431 | INFO     | __main__:main:258 - [2/4] LOADING PRODUCTS (with duplicate handling)
+2025-11-07 01:14:25.433 | INFO     | __main__:load_csv_to_table:43 - 📂 Reading CSV file: C:\projects\ecommerce-data-pipeline\data\raw\products.csv
+2025-11-07 01:14:25.449 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:14:25.458 | INFO     | __main__:load_csv_to_table:53 - ✓ Loaded 495 rows from CSV
+2025-11-07 01:14:25.484 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:14:25.484 | INFO     | __main__:load_csv_to_table:59 - → Inserting data in batches of 1000...
+2025-11-07 01:14:25.506 | INFO     | __main__:load_csv_to_table:120 - → Inserted 495 / 495 rows (100.0%)
+2025-11-07 01:14:25.510 | INFO     | __main__:load_csv_to_table:137 - ✓ Successfully loaded 0 NEW rows into products
+2025-11-07 01:14:25.510 | INFO     | __main__:load_csv_to_table:139 -   Total rows in products: 495
+2025-11-07 01:14:25.511 | INFO     | __main__:main:267 - [3/4] LOADING ORDERS (appending new orders)
+2025-11-07 01:14:25.512 | INFO     | __main__:load_csv_to_table:43 - 📂 Reading CSV file: C:\projects\ecommerce-data-pipeline\data\raw\orders.csv
+2025-11-07 01:14:25.523 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:14:25.577 | INFO     | __main__:load_csv_to_table:53 - ✓ Loaded 50,000 rows from CSV
+2025-11-07 01:14:25.598 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:14:25.598 | INFO     | __main__:load_csv_to_table:59 - → Inserting data in batches of 1000...
+2025-11-07 01:14:25.630 | INFO     | __main__:load_csv_to_table:120 - → Inserted 1,000 / 50,000 rows (2.0%)
+2025-11-07 01:14:25.650 | INFO     | __main__:load_csv_to_table:120 - → Inserted 2,000 / 50,000 rows (4.0%)
+2025-11-07 01:14:25.729 | INFO     | __main__:load_csv_to_table:120 - → Inserted 3,000 / 50,000 rows (6.0%)
+2025-11-07 01:14:25.817 | INFO     | __main__:load_csv_to_table:120 - → Inserted 4,000 / 50,000 rows (8.0%)
+2025-11-07 01:14:25.897 | INFO     | __main__:load_csv_to_table:120 - → Inserted 5,000 / 50,000 rows (10.0%)
+2025-11-07 01:14:25.973 | INFO     | __main__:load_csv_to_table:120 - → Inserted 6,000 / 50,000 rows (12.0%)
+2025-11-07 01:14:26.059 | INFO     | __main__:load_csv_to_table:120 - → Inserted 7,000 / 50,000 rows (14.0%)
+2025-11-07 01:14:26.125 | INFO     | __main__:load_csv_to_table:120 - → Inserted 8,000 / 50,000 rows (16.0%)
+2025-11-07 01:14:26.188 | INFO     | __main__:load_csv_to_table:120 - → Inserted 9,000 / 50,000 rows (18.0%)
+2025-11-07 01:14:26.255 | INFO     | __main__:load_csv_to_table:120 - → Inserted 10,000 / 50,000 rows (20.0%)
+2025-11-07 01:14:26.315 | INFO     | __main__:load_csv_to_table:120 - → Inserted 11,000 / 50,000 rows (22.0%)
+2025-11-07 01:14:26.377 | INFO     | __main__:load_csv_to_table:120 - → Inserted 12,000 / 50,000 rows (24.0%)
+2025-11-07 01:14:26.450 | INFO     | __main__:load_csv_to_table:120 - → Inserted 13,000 / 50,000 rows (26.0%)
+2025-11-07 01:14:26.530 | INFO     | __main__:load_csv_to_table:120 - → Inserted 14,000 / 50,000 rows (28.0%)
+2025-11-07 01:14:26.609 | INFO     | __main__:load_csv_to_table:120 - → Inserted 15,000 / 50,000 rows (30.0%)
+2025-11-07 01:14:26.688 | INFO     | __main__:load_csv_to_table:120 - → Inserted 16,000 / 50,000 rows (32.0%)
+2025-11-07 01:14:26.769 | INFO     | __main__:load_csv_to_table:120 - → Inserted 17,000 / 50,000 rows (34.0%)
+2025-11-07 01:14:26.850 | INFO     | __main__:load_csv_to_table:120 - → Inserted 18,000 / 50,000 rows (36.0%)
+2025-11-07 01:14:26.935 | INFO     | __main__:load_csv_to_table:120 - → Inserted 19,000 / 50,000 rows (38.0%)
+2025-11-07 01:14:27.014 | INFO     | __main__:load_csv_to_table:120 - → Inserted 20,000 / 50,000 rows (40.0%)
+2025-11-07 01:14:27.103 | INFO     | __main__:load_csv_to_table:120 - → Inserted 21,000 / 50,000 rows (42.0%)
+2025-11-07 01:14:27.189 | INFO     | __main__:load_csv_to_table:120 - → Inserted 22,000 / 50,000 rows (44.0%)
+2025-11-07 01:14:27.269 | INFO     | __main__:load_csv_to_table:120 - → Inserted 23,000 / 50,000 rows (46.0%)
+2025-11-07 01:14:27.344 | INFO     | __main__:load_csv_to_table:120 - → Inserted 24,000 / 50,000 rows (48.0%)
+2025-11-07 01:14:27.424 | INFO     | __main__:load_csv_to_table:120 - → Inserted 25,000 / 50,000 rows (50.0%)
+2025-11-07 01:14:27.507 | INFO     | __main__:load_csv_to_table:120 - → Inserted 26,000 / 50,000 rows (52.0%)
+2025-11-07 01:14:27.591 | INFO     | __main__:load_csv_to_table:120 - → Inserted 27,000 / 50,000 rows (54.0%)
+2025-11-07 01:14:27.688 | INFO     | __main__:load_csv_to_table:120 - → Inserted 28,000 / 50,000 rows (56.0%)
+2025-11-07 01:14:27.764 | INFO     | __main__:load_csv_to_table:120 - → Inserted 29,000 / 50,000 rows (58.0%)
+2025-11-07 01:14:27.844 | INFO     | __main__:load_csv_to_table:120 - → Inserted 30,000 / 50,000 rows (60.0%)
+2025-11-07 01:14:27.929 | INFO     | __main__:load_csv_to_table:120 - → Inserted 31,000 / 50,000 rows (62.0%)
+2025-11-07 01:14:28.024 | INFO     | __main__:load_csv_to_table:120 - → Inserted 32,000 / 50,000 rows (64.0%)
+2025-11-07 01:14:28.118 | INFO     | __main__:load_csv_to_table:120 - → Inserted 33,000 / 50,000 rows (66.0%)
+2025-11-07 01:14:28.213 | INFO     | __main__:load_csv_to_table:120 - → Inserted 34,000 / 50,000 rows (68.0%)
+2025-11-07 01:14:28.300 | INFO     | __main__:load_csv_to_table:120 - → Inserted 35,000 / 50,000 rows (70.0%)
+2025-11-07 01:14:28.391 | INFO     | __main__:load_csv_to_table:120 - → Inserted 36,000 / 50,000 rows (72.0%)
+2025-11-07 01:14:28.481 | INFO     | __main__:load_csv_to_table:120 - → Inserted 37,000 / 50,000 rows (74.0%)
+2025-11-07 01:14:28.580 | INFO     | __main__:load_csv_to_table:120 - → Inserted 38,000 / 50,000 rows (76.0%)
+2025-11-07 01:14:28.670 | INFO     | __main__:load_csv_to_table:120 - → Inserted 39,000 / 50,000 rows (78.0%)
+2025-11-07 01:14:28.762 | INFO     | __main__:load_csv_to_table:120 - → Inserted 40,000 / 50,000 rows (80.0%)
+2025-11-07 01:14:28.860 | INFO     | __main__:load_csv_to_table:120 - → Inserted 41,000 / 50,000 rows (82.0%)
+2025-11-07 01:14:28.930 | INFO     | __main__:load_csv_to_table:120 - → Inserted 42,000 / 50,000 rows (84.0%)
+2025-11-07 01:14:29.015 | INFO     | __main__:load_csv_to_table:120 - → Inserted 43,000 / 50,000 rows (86.0%)
+2025-11-07 01:14:29.097 | INFO     | __main__:load_csv_to_table:120 - → Inserted 44,000 / 50,000 rows (88.0%)
+2025-11-07 01:14:29.176 | INFO     | __main__:load_csv_to_table:120 - → Inserted 45,000 / 50,000 rows (90.0%)
+2025-11-07 01:14:29.256 | INFO     | __main__:load_csv_to_table:120 - → Inserted 46,000 / 50,000 rows (92.0%)
+2025-11-07 01:14:29.341 | INFO     | __main__:load_csv_to_table:120 - → Inserted 47,000 / 50,000 rows (94.0%)
+2025-11-07 01:14:29.426 | INFO     | __main__:load_csv_to_table:120 - → Inserted 48,000 / 50,000 rows (96.0%)
+2025-11-07 01:14:29.512 | INFO     | __main__:load_csv_to_table:120 - → Inserted 49,000 / 50,000 rows (98.0%)
+2025-11-07 01:14:29.598 | INFO     | __main__:load_csv_to_table:120 - → Inserted 50,000 / 50,000 rows (100.0%)
+2025-11-07 01:14:29.608 | INFO     | __main__:load_csv_to_table:137 - ✓ Successfully loaded 0 NEW rows into orders
+2025-11-07 01:14:29.608 | INFO     | __main__:load_csv_to_table:139 -   Total rows in orders: 50,000
+2025-11-07 01:14:29.612 | INFO     | __main__:main:277 - [4/4] VERIFYING DATA LOAD
+2025-11-07 01:14:29.613 | INFO     | __main__:verify_data_load:156 - ============================================================
+2025-11-07 01:14:29.614 | INFO     | __main__:verify_data_load:157 - DATA VERIFICATION
+2025-11-07 01:14:29.614 | INFO     | __main__:verify_data_load:158 - ============================================================
+2025-11-07 01:14:29.644 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:14:29.657 | INFO     | __main__:verify_data_load:176 - customers      : 10,000 rows
+2025-11-07 01:14:29.660 | INFO     | __main__:verify_data_load:176 - products       : 495 rows
+2025-11-07 01:14:29.664 | INFO     | __main__:verify_data_load:176 - orders         : 50,000 rows
+2025-11-07 01:14:29.665 | INFO     | __main__:verify_data_load:180 - 🔗 Checking foreign key relationships...
+2025-11-07 01:14:29.690 | INFO     | __main__:verify_data_load:212 - ✓ All foreign key relationships are valid
+2025-11-07 01:14:29.707 | INFO     | __main__:verify_data_load:222 - 💰 Total Revenue: ₹1,967,120,343.68
+2025-11-07 01:14:29.708 | INFO     | __main__:verify_data_load:223 - 📦 Total Orders: 50,000
+2025-11-07 01:14:29.709 | INFO     | __main__:main:283 - ============================================================
+2025-11-07 01:14:29.710 | INFO     | __main__:main:284 - ✓ DATA LOAD COMPLETE!
+2025-11-07 01:14:29.710 | INFO     | __main__:main:285 - ============================================================
+2025-11-07 01:14:29.711 | INFO     | __main__:main:286 - New records added:
+2025-11-07 01:14:29.711 | INFO     | __main__:main:287 -   - Customers: 0
+2025-11-07 01:14:29.712 | INFO     | __main__:main:288 -   - Products: 0
+2025-11-07 01:14:29.712 | INFO     | __main__:main:289 -   - Orders: 0
+2025-11-07 01:14:29.712 | INFO     | __main__:main:290 - End time: 2025-11-07 01:14:29
+2025-11-07 01:14:30.115 | INFO     | __main__:main:236 - ============================================================
+2025-11-07 01:14:30.115 | INFO     | __main__:main:237 - REFRESH AGGREGATIONS
+2025-11-07 01:14:30.115 | INFO     | __main__:main:238 - Started: 2025-11-07 01:14:30
+2025-11-07 01:14:30.115 | INFO     | __main__:main:239 - ============================================================
+2025-11-07 01:14:30.116 | INFO     | __main__:refresh_customer_summary:32 - ⏳ Refreshing customer_summary...
+2025-11-07 01:14:30.129 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:14:30.253 | INFO     | __main__:refresh_customer_summary:75 - ✓ Refreshed customer_summary: 10000 records
+2025-11-07 01:14:30.254 | INFO     | __main__:refresh_product_summary:89 - ⏳ Refreshing product_summary...
+2025-11-07 01:14:30.269 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:14:30.311 | INFO     | __main__:refresh_product_summary:126 - ✓ Refreshed product_summary: 495 records
+2025-11-07 01:14:30.311 | INFO     | __main__:refresh_daily_sales_summary:140 - ⏳ Refreshing daily_sales_summary...
+2025-11-07 01:14:30.324 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:14:30.372 | INFO     | __main__:refresh_daily_sales_summary:169 - ✓ Refreshed daily_sales_summary: 181 records
+2025-11-07 01:14:30.373 | INFO     | __main__:refresh_monthly_sales_summary:183 - ⏳ Refreshing monthly_sales_summary...
+2025-11-07 01:14:30.404 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:14:30.432 | INFO     | __main__:refresh_monthly_sales_summary:222 - ✓ Refreshed monthly_sales_summary: 7 records
+2025-11-07 01:14:30.433 | INFO     | __main__:main:252 - ============================================================
+2025-11-07 01:14:30.433 | INFO     | __main__:main:253 - ✓ ALL AGGREGATIONS REFRESHED SUCCESSFULLY
+2025-11-07 01:14:30.434 | INFO     | __main__:main:254 - Recalculated from ALL cumulative base data
+2025-11-07 01:14:30.434 | INFO     | __main__:main:255 - ============================================================
+2025-11-07 01:16:39.476 | INFO     | __main__:main:238 - ============================================================
+2025-11-07 01:16:39.476 | INFO     | __main__:main:239 - CSV TO POSTGRESQL DATA LOADER (INCREMENTAL MODE)
+2025-11-07 01:16:39.477 | INFO     | __main__:main:240 - ============================================================
+2025-11-07 01:16:39.477 | INFO     | __main__:main:249 - [1/4] LOADING CUSTOMERS (with duplicate handling)
+2025-11-07 01:16:39.477 | INFO     | __main__:load_csv_to_table:43 - 📂 Reading CSV file: C:\projects\ecommerce-data-pipeline\data\raw\customers.csv
+2025-11-07 01:16:39.491 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:16:39.521 | INFO     | __main__:load_csv_to_table:53 - ✓ Loaded 10,000 rows from CSV
+2025-11-07 01:16:39.551 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:16:39.552 | INFO     | __main__:load_csv_to_table:59 - → Inserting data in batches of 1000...
+2025-11-07 01:16:39.600 | INFO     | __main__:load_csv_to_table:120 - → Inserted 1,000 / 10,000 rows (10.0%)
+2025-11-07 01:16:39.692 | INFO     | __main__:load_csv_to_table:120 - → Inserted 2,000 / 10,000 rows (20.0%)
+2025-11-07 01:16:39.778 | INFO     | __main__:load_csv_to_table:120 - → Inserted 3,000 / 10,000 rows (30.0%)
+2025-11-07 01:16:39.882 | INFO     | __main__:load_csv_to_table:120 - → Inserted 4,000 / 10,000 rows (40.0%)
+2025-11-07 01:16:39.928 | INFO     | __main__:load_csv_to_table:120 - → Inserted 5,000 / 10,000 rows (50.0%)
+2025-11-07 01:16:40.026 | INFO     | __main__:load_csv_to_table:120 - → Inserted 6,000 / 10,000 rows (60.0%)
+2025-11-07 01:16:40.056 | INFO     | __main__:load_csv_to_table:120 - → Inserted 7,000 / 10,000 rows (70.0%)
+2025-11-07 01:16:40.091 | INFO     | __main__:load_csv_to_table:120 - → Inserted 8,000 / 10,000 rows (80.0%)
+2025-11-07 01:16:40.124 | INFO     | __main__:load_csv_to_table:120 - → Inserted 9,000 / 10,000 rows (90.0%)
+2025-11-07 01:16:40.169 | INFO     | __main__:load_csv_to_table:120 - → Inserted 10,000 / 10,000 rows (100.0%)
+2025-11-07 01:16:40.199 | INFO     | __main__:load_csv_to_table:137 - ✓ Successfully loaded 0 NEW rows into customers
+2025-11-07 01:16:40.200 | INFO     | __main__:load_csv_to_table:139 -   Total rows in customers: 10,000
+2025-11-07 01:16:40.201 | INFO     | __main__:main:258 - [2/4] LOADING PRODUCTS (with duplicate handling)
+2025-11-07 01:16:40.203 | INFO     | __main__:load_csv_to_table:43 - 📂 Reading CSV file: C:\projects\ecommerce-data-pipeline\data\raw\products.csv
+2025-11-07 01:16:40.227 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:16:40.235 | INFO     | __main__:load_csv_to_table:53 - ✓ Loaded 495 rows from CSV
+2025-11-07 01:16:40.250 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:16:40.251 | INFO     | __main__:load_csv_to_table:59 - → Inserting data in batches of 1000...
+2025-11-07 01:16:40.268 | INFO     | __main__:load_csv_to_table:120 - → Inserted 495 / 495 rows (100.0%)
+2025-11-07 01:16:40.273 | INFO     | __main__:load_csv_to_table:137 - ✓ Successfully loaded 0 NEW rows into products
+2025-11-07 01:16:40.273 | INFO     | __main__:load_csv_to_table:139 -   Total rows in products: 495
+2025-11-07 01:16:40.274 | INFO     | __main__:main:267 - [3/4] LOADING ORDERS (appending new orders)
+2025-11-07 01:16:40.274 | INFO     | __main__:load_csv_to_table:43 - 📂 Reading CSV file: C:\projects\ecommerce-data-pipeline\data\raw\orders.csv
+2025-11-07 01:16:40.283 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:16:40.344 | INFO     | __main__:load_csv_to_table:53 - ✓ Loaded 50,000 rows from CSV
+2025-11-07 01:16:40.358 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:16:40.358 | INFO     | __main__:load_csv_to_table:59 - → Inserting data in batches of 1000...
+2025-11-07 01:16:40.388 | INFO     | __main__:load_csv_to_table:120 - → Inserted 1,000 / 50,000 rows (2.0%)
+2025-11-07 01:16:40.408 | INFO     | __main__:load_csv_to_table:120 - → Inserted 2,000 / 50,000 rows (4.0%)
+2025-11-07 01:16:40.490 | INFO     | __main__:load_csv_to_table:120 - → Inserted 3,000 / 50,000 rows (6.0%)
+2025-11-07 01:16:40.569 | INFO     | __main__:load_csv_to_table:120 - → Inserted 4,000 / 50,000 rows (8.0%)
+2025-11-07 01:16:40.660 | INFO     | __main__:load_csv_to_table:120 - → Inserted 5,000 / 50,000 rows (10.0%)
+2025-11-07 01:16:40.745 | INFO     | __main__:load_csv_to_table:120 - → Inserted 6,000 / 50,000 rows (12.0%)
+2025-11-07 01:16:40.833 | INFO     | __main__:load_csv_to_table:120 - → Inserted 7,000 / 50,000 rows (14.0%)
+2025-11-07 01:16:40.921 | INFO     | __main__:load_csv_to_table:120 - → Inserted 8,000 / 50,000 rows (16.0%)
+2025-11-07 01:16:40.993 | INFO     | __main__:load_csv_to_table:120 - → Inserted 9,000 / 50,000 rows (18.0%)
+2025-11-07 01:16:41.081 | INFO     | __main__:load_csv_to_table:120 - → Inserted 10,000 / 50,000 rows (20.0%)
+2025-11-07 01:16:41.175 | INFO     | __main__:load_csv_to_table:120 - → Inserted 11,000 / 50,000 rows (22.0%)
+2025-11-07 01:16:41.252 | INFO     | __main__:load_csv_to_table:120 - → Inserted 12,000 / 50,000 rows (24.0%)
+2025-11-07 01:16:41.341 | INFO     | __main__:load_csv_to_table:120 - → Inserted 13,000 / 50,000 rows (26.0%)
+2025-11-07 01:16:41.432 | INFO     | __main__:load_csv_to_table:120 - → Inserted 14,000 / 50,000 rows (28.0%)
+2025-11-07 01:16:41.525 | INFO     | __main__:load_csv_to_table:120 - → Inserted 15,000 / 50,000 rows (30.0%)
+2025-11-07 01:16:41.615 | INFO     | __main__:load_csv_to_table:120 - → Inserted 16,000 / 50,000 rows (32.0%)
+2025-11-07 01:16:41.705 | INFO     | __main__:load_csv_to_table:120 - → Inserted 17,000 / 50,000 rows (34.0%)
+2025-11-07 01:16:41.802 | INFO     | __main__:load_csv_to_table:120 - → Inserted 18,000 / 50,000 rows (36.0%)
+2025-11-07 01:16:41.890 | INFO     | __main__:load_csv_to_table:120 - → Inserted 19,000 / 50,000 rows (38.0%)
+2025-11-07 01:16:41.968 | INFO     | __main__:load_csv_to_table:120 - → Inserted 20,000 / 50,000 rows (40.0%)
+2025-11-07 01:16:42.055 | INFO     | __main__:load_csv_to_table:120 - → Inserted 21,000 / 50,000 rows (42.0%)
+2025-11-07 01:16:42.140 | INFO     | __main__:load_csv_to_table:120 - → Inserted 22,000 / 50,000 rows (44.0%)
+2025-11-07 01:16:42.230 | INFO     | __main__:load_csv_to_table:120 - → Inserted 23,000 / 50,000 rows (46.0%)
+2025-11-07 01:16:42.313 | INFO     | __main__:load_csv_to_table:120 - → Inserted 24,000 / 50,000 rows (48.0%)
+2025-11-07 01:16:42.388 | INFO     | __main__:load_csv_to_table:120 - → Inserted 25,000 / 50,000 rows (50.0%)
+2025-11-07 01:16:42.480 | INFO     | __main__:load_csv_to_table:120 - → Inserted 26,000 / 50,000 rows (52.0%)
+2025-11-07 01:16:42.569 | INFO     | __main__:load_csv_to_table:120 - → Inserted 27,000 / 50,000 rows (54.0%)
+2025-11-07 01:16:42.643 | INFO     | __main__:load_csv_to_table:120 - → Inserted 28,000 / 50,000 rows (56.0%)
+2025-11-07 01:16:42.709 | INFO     | __main__:load_csv_to_table:120 - → Inserted 29,000 / 50,000 rows (58.0%)
+2025-11-07 01:16:42.786 | INFO     | __main__:load_csv_to_table:120 - → Inserted 30,000 / 50,000 rows (60.0%)
+2025-11-07 01:16:42.858 | INFO     | __main__:load_csv_to_table:120 - → Inserted 31,000 / 50,000 rows (62.0%)
+2025-11-07 01:16:42.934 | INFO     | __main__:load_csv_to_table:120 - → Inserted 32,000 / 50,000 rows (64.0%)
+2025-11-07 01:16:43.020 | INFO     | __main__:load_csv_to_table:120 - → Inserted 33,000 / 50,000 rows (66.0%)
+2025-11-07 01:16:43.107 | INFO     | __main__:load_csv_to_table:120 - → Inserted 34,000 / 50,000 rows (68.0%)
+2025-11-07 01:16:43.199 | INFO     | __main__:load_csv_to_table:120 - → Inserted 35,000 / 50,000 rows (70.0%)
+2025-11-07 01:16:43.279 | INFO     | __main__:load_csv_to_table:120 - → Inserted 36,000 / 50,000 rows (72.0%)
+2025-11-07 01:16:43.372 | INFO     | __main__:load_csv_to_table:120 - → Inserted 37,000 / 50,000 rows (74.0%)
+2025-11-07 01:16:43.455 | INFO     | __main__:load_csv_to_table:120 - → Inserted 38,000 / 50,000 rows (76.0%)
+2025-11-07 01:16:43.533 | INFO     | __main__:load_csv_to_table:120 - → Inserted 39,000 / 50,000 rows (78.0%)
+2025-11-07 01:16:43.621 | INFO     | __main__:load_csv_to_table:120 - → Inserted 40,000 / 50,000 rows (80.0%)
+2025-11-07 01:16:43.696 | INFO     | __main__:load_csv_to_table:120 - → Inserted 41,000 / 50,000 rows (82.0%)
+2025-11-07 01:16:43.762 | INFO     | __main__:load_csv_to_table:120 - → Inserted 42,000 / 50,000 rows (84.0%)
+2025-11-07 01:16:43.844 | INFO     | __main__:load_csv_to_table:120 - → Inserted 43,000 / 50,000 rows (86.0%)
+2025-11-07 01:16:43.932 | INFO     | __main__:load_csv_to_table:120 - → Inserted 44,000 / 50,000 rows (88.0%)
+2025-11-07 01:16:44.019 | INFO     | __main__:load_csv_to_table:120 - → Inserted 45,000 / 50,000 rows (90.0%)
+2025-11-07 01:16:44.113 | INFO     | __main__:load_csv_to_table:120 - → Inserted 46,000 / 50,000 rows (92.0%)
+2025-11-07 01:16:44.200 | INFO     | __main__:load_csv_to_table:120 - → Inserted 47,000 / 50,000 rows (94.0%)
+2025-11-07 01:16:44.292 | INFO     | __main__:load_csv_to_table:120 - → Inserted 48,000 / 50,000 rows (96.0%)
+2025-11-07 01:16:44.378 | INFO     | __main__:load_csv_to_table:120 - → Inserted 49,000 / 50,000 rows (98.0%)
+2025-11-07 01:16:44.462 | INFO     | __main__:load_csv_to_table:120 - → Inserted 50,000 / 50,000 rows (100.0%)
+2025-11-07 01:16:44.469 | INFO     | __main__:load_csv_to_table:137 - ✓ Successfully loaded 0 NEW rows into orders
+2025-11-07 01:16:44.470 | INFO     | __main__:load_csv_to_table:139 -   Total rows in orders: 50,000
+2025-11-07 01:16:44.473 | INFO     | __main__:main:277 - [4/4] VERIFYING DATA LOAD
+2025-11-07 01:16:44.474 | INFO     | __main__:verify_data_load:156 - ============================================================
+2025-11-07 01:16:44.474 | INFO     | __main__:verify_data_load:157 - DATA VERIFICATION
+2025-11-07 01:16:44.475 | INFO     | __main__:verify_data_load:158 - ============================================================
+2025-11-07 01:16:44.509 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:16:44.521 | INFO     | __main__:verify_data_load:176 - customers      : 10,000 rows
+2025-11-07 01:16:44.524 | INFO     | __main__:verify_data_load:176 - products       : 495 rows
+2025-11-07 01:16:44.530 | INFO     | __main__:verify_data_load:176 - orders         : 50,000 rows
+2025-11-07 01:16:44.531 | INFO     | __main__:verify_data_load:180 - 🔗 Checking foreign key relationships...
+2025-11-07 01:16:44.561 | INFO     | __main__:verify_data_load:212 - ✓ All foreign key relationships are valid
+2025-11-07 01:16:44.573 | INFO     | __main__:verify_data_load:222 - 💰 Total Revenue: ₹1,967,120,343.68
+2025-11-07 01:16:44.574 | INFO     | __main__:verify_data_load:223 - 📦 Total Orders: 50,000
+2025-11-07 01:16:44.574 | INFO     | __main__:main:283 - ============================================================
+2025-11-07 01:16:44.574 | INFO     | __main__:main:284 - ✓ DATA LOAD COMPLETE!
+2025-11-07 01:16:44.575 | INFO     | __main__:main:285 - ============================================================
+2025-11-07 01:16:44.575 | INFO     | __main__:main:286 - New records added:
+2025-11-07 01:16:44.575 | INFO     | __main__:main:287 -   - Customers: 0
+2025-11-07 01:16:44.576 | INFO     | __main__:main:288 -   - Products: 0
+2025-11-07 01:16:44.576 | INFO     | __main__:main:289 -   - Orders: 0
+2025-11-07 01:16:44.577 | INFO     | __main__:main:290 - End time: 2025-11-07 01:16:44
+2025-11-07 01:18:34.064 | INFO     | __main__:main:238 - ============================================================
+2025-11-07 01:18:34.071 | INFO     | __main__:main:239 - CSV TO POSTGRESQL DATA LOADER (INCREMENTAL MODE)
+2025-11-07 01:18:34.071 | INFO     | __main__:main:240 - ============================================================
+2025-11-07 01:18:34.072 | INFO     | __main__:main:249 - [1/4] LOADING CUSTOMERS (with duplicate handling)
+2025-11-07 01:18:34.072 | INFO     | __main__:load_csv_to_table:43 - 📂 Reading CSV file: C:\projects\ecommerce-data-pipeline\data\raw\customers.csv
+2025-11-07 01:18:34.119 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:18:34.174 | INFO     | __main__:load_csv_to_table:53 - ✓ Loaded 10,000 rows from CSV
+2025-11-07 01:18:34.214 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:18:34.215 | INFO     | __main__:load_csv_to_table:59 - → Inserting data in batches of 1000...
+2025-11-07 01:18:34.276 | INFO     | __main__:load_csv_to_table:120 - → Inserted 1,000 / 10,000 rows (10.0%)
+2025-11-07 01:18:34.318 | INFO     | __main__:load_csv_to_table:120 - → Inserted 2,000 / 10,000 rows (20.0%)
+2025-11-07 01:18:34.404 | INFO     | __main__:load_csv_to_table:120 - → Inserted 3,000 / 10,000 rows (30.0%)
+2025-11-07 01:18:34.495 | INFO     | __main__:load_csv_to_table:120 - → Inserted 4,000 / 10,000 rows (40.0%)
+2025-11-07 01:18:34.596 | INFO     | __main__:load_csv_to_table:120 - → Inserted 5,000 / 10,000 rows (50.0%)
+2025-11-07 01:18:34.652 | INFO     | __main__:load_csv_to_table:120 - → Inserted 6,000 / 10,000 rows (60.0%)
+2025-11-07 01:18:34.694 | INFO     | __main__:load_csv_to_table:120 - → Inserted 7,000 / 10,000 rows (70.0%)
+2025-11-07 01:18:34.730 | INFO     | __main__:load_csv_to_table:120 - → Inserted 8,000 / 10,000 rows (80.0%)
+2025-11-07 01:18:34.761 | INFO     | __main__:load_csv_to_table:120 - → Inserted 9,000 / 10,000 rows (90.0%)
+2025-11-07 01:18:34.804 | INFO     | __main__:load_csv_to_table:120 - → Inserted 10,000 / 10,000 rows (100.0%)
+2025-11-07 01:18:34.826 | INFO     | __main__:load_csv_to_table:137 - ✓ Successfully loaded 0 NEW rows into customers
+2025-11-07 01:18:34.827 | INFO     | __main__:load_csv_to_table:139 -   Total rows in customers: 10,000
+2025-11-07 01:18:34.829 | INFO     | __main__:main:258 - [2/4] LOADING PRODUCTS (with duplicate handling)
+2025-11-07 01:18:34.831 | INFO     | __main__:load_csv_to_table:43 - 📂 Reading CSV file: C:\projects\ecommerce-data-pipeline\data\raw\products.csv
+2025-11-07 01:18:34.865 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:18:34.893 | INFO     | __main__:load_csv_to_table:53 - ✓ Loaded 495 rows from CSV
+2025-11-07 01:18:34.908 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:18:34.908 | INFO     | __main__:load_csv_to_table:59 - → Inserting data in batches of 1000...
+2025-11-07 01:18:34.922 | INFO     | __main__:load_csv_to_table:120 - → Inserted 495 / 495 rows (100.0%)
+2025-11-07 01:18:34.930 | INFO     | __main__:load_csv_to_table:137 - ✓ Successfully loaded 0 NEW rows into products
+2025-11-07 01:18:34.931 | INFO     | __main__:load_csv_to_table:139 -   Total rows in products: 495
+2025-11-07 01:18:34.932 | INFO     | __main__:main:267 - [3/4] LOADING ORDERS (appending new orders)
+2025-11-07 01:18:34.934 | INFO     | __main__:load_csv_to_table:43 - 📂 Reading CSV file: C:\projects\ecommerce-data-pipeline\data\raw\orders.csv
+2025-11-07 01:18:34.955 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:18:35.023 | INFO     | __main__:load_csv_to_table:53 - ✓ Loaded 50,000 rows from CSV
+2025-11-07 01:18:35.033 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:18:35.033 | INFO     | __main__:load_csv_to_table:59 - → Inserting data in batches of 1000...
+2025-11-07 01:18:35.055 | INFO     | __main__:load_csv_to_table:120 - → Inserted 1,000 / 50,000 rows (2.0%)
+2025-11-07 01:18:35.072 | INFO     | __main__:load_csv_to_table:120 - → Inserted 2,000 / 50,000 rows (4.0%)
+2025-11-07 01:18:35.157 | INFO     | __main__:load_csv_to_table:120 - → Inserted 3,000 / 50,000 rows (6.0%)
+2025-11-07 01:18:35.242 | INFO     | __main__:load_csv_to_table:120 - → Inserted 4,000 / 50,000 rows (8.0%)
+2025-11-07 01:18:35.326 | INFO     | __main__:load_csv_to_table:120 - → Inserted 5,000 / 50,000 rows (10.0%)
+2025-11-07 01:18:35.406 | INFO     | __main__:load_csv_to_table:120 - → Inserted 6,000 / 50,000 rows (12.0%)
+2025-11-07 01:18:35.493 | INFO     | __main__:load_csv_to_table:120 - → Inserted 7,000 / 50,000 rows (14.0%)
+2025-11-07 01:18:35.588 | INFO     | __main__:load_csv_to_table:120 - → Inserted 8,000 / 50,000 rows (16.0%)
+2025-11-07 01:18:35.684 | INFO     | __main__:load_csv_to_table:120 - → Inserted 9,000 / 50,000 rows (18.0%)
+2025-11-07 01:18:35.773 | INFO     | __main__:load_csv_to_table:120 - → Inserted 10,000 / 50,000 rows (20.0%)
+2025-11-07 01:18:35.863 | INFO     | __main__:load_csv_to_table:120 - → Inserted 11,000 / 50,000 rows (22.0%)
+2025-11-07 01:18:35.954 | INFO     | __main__:load_csv_to_table:120 - → Inserted 12,000 / 50,000 rows (24.0%)
+2025-11-07 01:18:36.035 | INFO     | __main__:load_csv_to_table:120 - → Inserted 13,000 / 50,000 rows (26.0%)
+2025-11-07 01:18:36.122 | INFO     | __main__:load_csv_to_table:120 - → Inserted 14,000 / 50,000 rows (28.0%)
+2025-11-07 01:18:36.214 | INFO     | __main__:load_csv_to_table:120 - → Inserted 15,000 / 50,000 rows (30.0%)
+2025-11-07 01:18:36.290 | INFO     | __main__:load_csv_to_table:120 - → Inserted 16,000 / 50,000 rows (32.0%)
+2025-11-07 01:18:36.384 | INFO     | __main__:load_csv_to_table:120 - → Inserted 17,000 / 50,000 rows (34.0%)
+2025-11-07 01:18:36.472 | INFO     | __main__:load_csv_to_table:120 - → Inserted 18,000 / 50,000 rows (36.0%)
+2025-11-07 01:18:36.556 | INFO     | __main__:load_csv_to_table:120 - → Inserted 19,000 / 50,000 rows (38.0%)
+2025-11-07 01:18:36.643 | INFO     | __main__:load_csv_to_table:120 - → Inserted 20,000 / 50,000 rows (40.0%)
+2025-11-07 01:18:36.734 | INFO     | __main__:load_csv_to_table:120 - → Inserted 21,000 / 50,000 rows (42.0%)
+2025-11-07 01:18:36.828 | INFO     | __main__:load_csv_to_table:120 - → Inserted 22,000 / 50,000 rows (44.0%)
+2025-11-07 01:18:36.912 | INFO     | __main__:load_csv_to_table:120 - → Inserted 23,000 / 50,000 rows (46.0%)
+2025-11-07 01:18:37.010 | INFO     | __main__:load_csv_to_table:120 - → Inserted 24,000 / 50,000 rows (48.0%)
+2025-11-07 01:18:37.106 | INFO     | __main__:load_csv_to_table:120 - → Inserted 25,000 / 50,000 rows (50.0%)
+2025-11-07 01:18:37.188 | INFO     | __main__:load_csv_to_table:120 - → Inserted 26,000 / 50,000 rows (52.0%)
+2025-11-07 01:18:37.274 | INFO     | __main__:load_csv_to_table:120 - → Inserted 27,000 / 50,000 rows (54.0%)
+2025-11-07 01:18:37.364 | INFO     | __main__:load_csv_to_table:120 - → Inserted 28,000 / 50,000 rows (56.0%)
+2025-11-07 01:18:37.449 | INFO     | __main__:load_csv_to_table:120 - → Inserted 29,000 / 50,000 rows (58.0%)
+2025-11-07 01:18:37.543 | INFO     | __main__:load_csv_to_table:120 - → Inserted 30,000 / 50,000 rows (60.0%)
+2025-11-07 01:18:37.635 | INFO     | __main__:load_csv_to_table:120 - → Inserted 31,000 / 50,000 rows (62.0%)
+2025-11-07 01:18:37.724 | INFO     | __main__:load_csv_to_table:120 - → Inserted 32,000 / 50,000 rows (64.0%)
+2025-11-07 01:18:37.801 | INFO     | __main__:load_csv_to_table:120 - → Inserted 33,000 / 50,000 rows (66.0%)
+2025-11-07 01:18:37.869 | INFO     | __main__:load_csv_to_table:120 - → Inserted 34,000 / 50,000 rows (68.0%)
+2025-11-07 01:18:37.944 | INFO     | __main__:load_csv_to_table:120 - → Inserted 35,000 / 50,000 rows (70.0%)
+2025-11-07 01:18:38.022 | INFO     | __main__:load_csv_to_table:120 - → Inserted 36,000 / 50,000 rows (72.0%)
+2025-11-07 01:18:38.117 | INFO     | __main__:load_csv_to_table:120 - → Inserted 37,000 / 50,000 rows (74.0%)
+2025-11-07 01:18:38.204 | INFO     | __main__:load_csv_to_table:120 - → Inserted 38,000 / 50,000 rows (76.0%)
+2025-11-07 01:18:38.298 | INFO     | __main__:load_csv_to_table:120 - → Inserted 39,000 / 50,000 rows (78.0%)
+2025-11-07 01:18:38.384 | INFO     | __main__:load_csv_to_table:120 - → Inserted 40,000 / 50,000 rows (80.0%)
+2025-11-07 01:18:38.475 | INFO     | __main__:load_csv_to_table:120 - → Inserted 41,000 / 50,000 rows (82.0%)
+2025-11-07 01:18:38.566 | INFO     | __main__:load_csv_to_table:120 - → Inserted 42,000 / 50,000 rows (84.0%)
+2025-11-07 01:18:38.653 | INFO     | __main__:load_csv_to_table:120 - → Inserted 43,000 / 50,000 rows (86.0%)
+2025-11-07 01:18:38.736 | INFO     | __main__:load_csv_to_table:120 - → Inserted 44,000 / 50,000 rows (88.0%)
+2025-11-07 01:18:38.822 | INFO     | __main__:load_csv_to_table:120 - → Inserted 45,000 / 50,000 rows (90.0%)
+2025-11-07 01:18:38.925 | INFO     | __main__:load_csv_to_table:120 - → Inserted 46,000 / 50,000 rows (92.0%)
+2025-11-07 01:18:39.014 | INFO     | __main__:load_csv_to_table:120 - → Inserted 47,000 / 50,000 rows (94.0%)
+2025-11-07 01:18:39.093 | INFO     | __main__:load_csv_to_table:120 - → Inserted 48,000 / 50,000 rows (96.0%)
+2025-11-07 01:18:39.171 | INFO     | __main__:load_csv_to_table:120 - → Inserted 49,000 / 50,000 rows (98.0%)
+2025-11-07 01:18:39.251 | INFO     | __main__:load_csv_to_table:120 - → Inserted 50,000 / 50,000 rows (100.0%)
+2025-11-07 01:18:39.261 | INFO     | __main__:load_csv_to_table:137 - ✓ Successfully loaded 0 NEW rows into orders
+2025-11-07 01:18:39.261 | INFO     | __main__:load_csv_to_table:139 -   Total rows in orders: 50,000
+2025-11-07 01:18:39.263 | INFO     | __main__:main:277 - [4/4] VERIFYING DATA LOAD
+2025-11-07 01:18:39.264 | INFO     | __main__:verify_data_load:156 - ============================================================
+2025-11-07 01:18:39.264 | INFO     | __main__:verify_data_load:157 - DATA VERIFICATION
+2025-11-07 01:18:39.265 | INFO     | __main__:verify_data_load:158 - ============================================================
+2025-11-07 01:18:39.285 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:18:39.299 | INFO     | __main__:verify_data_load:176 - customers      : 10,000 rows
+2025-11-07 01:18:39.301 | INFO     | __main__:verify_data_load:176 - products       : 495 rows
+2025-11-07 01:18:39.305 | INFO     | __main__:verify_data_load:176 - orders         : 50,000 rows
+2025-11-07 01:18:39.305 | INFO     | __main__:verify_data_load:180 - 🔗 Checking foreign key relationships...
+2025-11-07 01:18:39.331 | INFO     | __main__:verify_data_load:212 - ✓ All foreign key relationships are valid
+2025-11-07 01:18:39.349 | INFO     | __main__:verify_data_load:222 - 💰 Total Revenue: ₹1,967,120,343.68
+2025-11-07 01:18:39.349 | INFO     | __main__:verify_data_load:223 - 📦 Total Orders: 50,000
+2025-11-07 01:18:39.350 | INFO     | __main__:main:283 - ============================================================
+2025-11-07 01:18:39.350 | INFO     | __main__:main:284 - ✓ DATA LOAD COMPLETE!
+2025-11-07 01:18:39.350 | INFO     | __main__:main:285 - ============================================================
+2025-11-07 01:18:39.351 | INFO     | __main__:main:286 - New records added:
+2025-11-07 01:18:39.351 | INFO     | __main__:main:287 -   - Customers: 0
+2025-11-07 01:18:39.352 | INFO     | __main__:main:288 -   - Products: 0
+2025-11-07 01:18:39.352 | INFO     | __main__:main:289 -   - Orders: 0
+2025-11-07 01:18:39.353 | INFO     | __main__:main:290 - End time: 2025-11-07 01:18:39
+2025-11-07 01:18:39.603 | INFO     | __main__:main:236 - ============================================================
+2025-11-07 01:18:39.605 | INFO     | __main__:main:237 - REFRESH AGGREGATIONS
+2025-11-07 01:18:39.605 | INFO     | __main__:main:238 - Started: 2025-11-07 01:18:39
+2025-11-07 01:18:39.605 | INFO     | __main__:main:239 - ============================================================
+2025-11-07 01:18:39.606 | INFO     | __main__:refresh_customer_summary:32 - ⏳ Refreshing customer_summary...
+2025-11-07 01:18:39.637 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:18:39.763 | INFO     | __main__:refresh_customer_summary:75 - ✓ Refreshed customer_summary: 10000 records
+2025-11-07 01:18:39.764 | INFO     | __main__:refresh_product_summary:89 - ⏳ Refreshing product_summary...
+2025-11-07 01:18:39.775 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:18:39.836 | INFO     | __main__:refresh_product_summary:126 - ✓ Refreshed product_summary: 495 records
+2025-11-07 01:18:39.837 | INFO     | __main__:refresh_daily_sales_summary:140 - ⏳ Refreshing daily_sales_summary...
+2025-11-07 01:18:39.887 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:18:39.923 | INFO     | __main__:refresh_daily_sales_summary:169 - ✓ Refreshed daily_sales_summary: 181 records
+2025-11-07 01:18:39.923 | INFO     | __main__:refresh_monthly_sales_summary:183 - ⏳ Refreshing monthly_sales_summary...
+2025-11-07 01:18:39.964 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:18:40.019 | INFO     | __main__:refresh_monthly_sales_summary:222 - ✓ Refreshed monthly_sales_summary: 7 records
+2025-11-07 01:18:40.020 | INFO     | __main__:main:252 - ============================================================
+2025-11-07 01:18:40.020 | INFO     | __main__:main:253 - ✓ ALL AGGREGATIONS REFRESHED SUCCESSFULLY
+2025-11-07 01:18:40.021 | INFO     | __main__:main:254 - Recalculated from ALL cumulative base data
+2025-11-07 01:18:40.021 | INFO     | __main__:main:255 - ============================================================
+2025-11-07 01:29:15.018 | INFO     | __main__:main:169 - ============================================================
+2025-11-07 01:29:15.018 | INFO     | __main__:main:170 - CSV TO POSTGRESQL DATA LOADER (INCREMENTAL MODE)
+2025-11-07 01:29:15.018 | INFO     | __main__:main:171 - ============================================================
+2025-11-07 01:29:15.019 | INFO     | __main__:main:180 - [1/4] LOADING CUSTOMERS (with duplicate handling)
+2025-11-07 01:29:15.019 | INFO     | __main__:load_csv_to_table:49 - 📂 Reading CSV file (chunked): C:\projects\ecommerce-data-pipeline\data\raw\customers.csv
+2025-11-07 01:29:15.032 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:29:15.065 | ERROR    | __main__:load_csv_to_table:80 - ✗ Load failed: syntax error at or near ".."
+LINE 1: ...Maharashtra',411001,'2024-12-10',18,'Male') ON CONFLICT ... 
+                                                                   ^
+
+2025-11-07 01:29:15.066 | ERROR    | __main__:main:235 - ✗ Data load failed: syntax error at or near ".."
+LINE 1: ...Maharashtra',411001,'2024-12-10',18,'Male') ON CONFLICT ... 
+                                                                   ^
+
+2025-11-07 01:29:15.308 | INFO     | __main__:main:236 - ============================================================
+2025-11-07 01:29:15.309 | INFO     | __main__:main:237 - REFRESH AGGREGATIONS
+2025-11-07 01:29:15.309 | INFO     | __main__:main:238 - Started: 2025-11-07 01:29:15
+2025-11-07 01:29:15.309 | INFO     | __main__:main:239 - ============================================================
+2025-11-07 01:29:15.309 | INFO     | __main__:refresh_customer_summary:32 - ⏳ Refreshing customer_summary...
+2025-11-07 01:29:15.324 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:29:15.460 | INFO     | __main__:refresh_customer_summary:75 - ✓ Refreshed customer_summary: 10000 records
+2025-11-07 01:29:15.461 | INFO     | __main__:refresh_product_summary:89 - ⏳ Refreshing product_summary...
+2025-11-07 01:29:15.472 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:29:15.510 | INFO     | __main__:refresh_product_summary:126 - ✓ Refreshed product_summary: 495 records
+2025-11-07 01:29:15.510 | INFO     | __main__:refresh_daily_sales_summary:140 - ⏳ Refreshing daily_sales_summary...
+2025-11-07 01:29:15.534 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:29:15.564 | INFO     | __main__:refresh_daily_sales_summary:169 - ✓ Refreshed daily_sales_summary: 181 records
+2025-11-07 01:29:15.564 | INFO     | __main__:refresh_monthly_sales_summary:183 - ⏳ Refreshing monthly_sales_summary...
+2025-11-07 01:29:15.575 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:29:15.606 | INFO     | __main__:refresh_monthly_sales_summary:222 - ✓ Refreshed monthly_sales_summary: 7 records
+2025-11-07 01:29:15.607 | INFO     | __main__:main:252 - ============================================================
+2025-11-07 01:29:15.607 | INFO     | __main__:main:253 - ✓ ALL AGGREGATIONS REFRESHED SUCCESSFULLY
+2025-11-07 01:29:15.607 | INFO     | __main__:main:254 - Recalculated from ALL cumulative base data
+2025-11-07 01:29:15.607 | INFO     | __main__:main:255 - ============================================================
+2025-11-07 01:29:16.209 | INFO     | __main__:main:804 - ============================================================
+2025-11-07 01:29:16.210 | INFO     | __main__:main:805 - QUALITY REPORT GENERATION
+2025-11-07 01:29:16.210 | INFO     | __main__:main:806 - ============================================================
+2025-11-07 01:29:16.210 | INFO     | __main__:__init__:47 - ✓ Report generator initialized
+2025-11-07 01:29:16.210 | INFO     | __main__:generate_html:330 - 🎨 Generating HTML report...
+2025-11-07 01:29:16.210 | INFO     | __main__:get_table_stats:52 - 📊 Collecting table statistics...
+2025-11-07 01:29:16.255 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:29:16.269 | INFO     | __main__:get_table_stats:71 -   customers: 10000 rows
+2025-11-07 01:29:16.273 | INFO     | __main__:get_table_stats:71 -   products: 495 rows
+2025-11-07 01:29:16.280 | INFO     | __main__:get_table_stats:71 -   orders: 50000 rows
+2025-11-07 01:29:16.287 | INFO     | __main__:get_table_stats:71 -   customer_summary: 10000 rows
+2025-11-07 01:29:16.290 | INFO     | __main__:get_table_stats:71 -   product_summary: 495 rows
+2025-11-07 01:29:16.293 | INFO     | __main__:get_table_stats:71 -   daily_sales_summary: 181 rows
+2025-11-07 01:29:16.297 | INFO     | __main__:get_table_stats:71 -   monthly_sales_summary: 7 rows
+2025-11-07 01:29:16.298 | INFO     | __main__:detect_null_values:86 - 🔍 Detecting null values...
+2025-11-07 01:29:16.317 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:29:16.328 | INFO     | __main__:detect_duplicates:141 - 🔍 Detecting duplicates...
+2025-11-07 01:29:16.343 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:29:16.364 | INFO     | __main__:detect_data_quality_issues:191 - 🔍 Detecting data quality issues...
+2025-11-07 01:29:16.382 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:29:16.389 | WARNING  | __main__:detect_data_quality_issues:251 -   🟡 WARNING: 353 orders with future dates
+2025-11-07 01:29:16.394 | INFO     | __main__:get_high_value_anomalies:283 - 🔍 Detecting high-value anomalies...
+2025-11-07 01:29:16.404 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:29:16.423 | INFO     | __main__:generate_html:768 - ✓ HTML report generated successfully
+2025-11-07 01:29:16.424 | INFO     | __main__:save_report:778 - 💾 Saving report to file...
+2025-11-07 01:29:16.425 | INFO     | __main__:save_report:790 - ✓ Report saved to C:\projects\ecommerce-data-pipeline\data\processed\quality_report_20251107_012916.html
+2025-11-07 01:29:16.426 | INFO     | __main__:main:820 - ============================================================
+2025-11-07 01:29:16.426 | INFO     | __main__:main:821 - ✓ REPORT GENERATED
+2025-11-07 01:29:16.426 | INFO     | __main__:main:822 - ============================================================
+2025-11-07 01:32:44.042 | INFO     | __main__:main:245 - ============================================================
+2025-11-07 01:32:44.043 | INFO     | __main__:main:246 - CSV TO POSTGRESQL DATA LOADER (INCREMENTAL MODE)
+2025-11-07 01:32:44.043 | INFO     | __main__:main:247 - ============================================================
+2025-11-07 01:32:44.043 | INFO     | __main__:main:256 - [1/4] LOADING CUSTOMERS (with duplicate handling)
+2025-11-07 01:32:44.044 | INFO     | __main__:load_csv_to_table:48 - 📂 Reading CSV file (chunked): C:\projects\ecommerce-data-pipeline\data\raw\customers.csv
+2025-11-07 01:32:44.058 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:32:44.061 | INFO     | __main__:load_csv_to_table:60 -   Current rows in customers: 10,000
+2025-11-07 01:32:44.072 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:32:44.072 | INFO     | __main__:load_csv_to_table:70 - → Processing data in batches of 1000...
+2025-11-07 01:32:44.138 | INFO     | __main__:load_csv_to_table:125 - → Batch 1: 1,000 rows processed
+2025-11-07 01:32:44.212 | INFO     | __main__:load_csv_to_table:125 - → Batch 2: 2,000 rows processed
+2025-11-07 01:32:44.363 | INFO     | __main__:load_csv_to_table:125 - → Batch 3: 3,000 rows processed
+2025-11-07 01:32:44.425 | INFO     | __main__:load_csv_to_table:125 - → Batch 4: 4,000 rows processed
+2025-11-07 01:32:44.530 | INFO     | __main__:load_csv_to_table:125 - → Batch 5: 5,000 rows processed
+2025-11-07 01:32:44.647 | INFO     | __main__:load_csv_to_table:125 - → Batch 6: 6,000 rows processed
+2025-11-07 01:32:44.777 | INFO     | __main__:load_csv_to_table:125 - → Batch 7: 7,000 rows processed
+2025-11-07 01:32:44.864 | INFO     | __main__:load_csv_to_table:125 - → Batch 8: 8,000 rows processed
+2025-11-07 01:32:44.958 | INFO     | __main__:load_csv_to_table:125 - → Batch 9: 9,000 rows processed
+2025-11-07 01:32:45.036 | INFO     | __main__:load_csv_to_table:125 - → Batch 10: 10,000 rows processed
+2025-11-07 01:32:45.058 | INFO     | __main__:load_csv_to_table:142 - ✓ Successfully loaded 0 NEW rows into customers
+2025-11-07 01:32:45.059 | INFO     | __main__:load_csv_to_table:144 -   Total rows in customers: 10,000
+2025-11-07 01:32:45.061 | INFO     | __main__:main:265 - [2/4] LOADING PRODUCTS (with duplicate handling)
+2025-11-07 01:32:45.062 | INFO     | __main__:load_csv_to_table:48 - 📂 Reading CSV file (chunked): C:\projects\ecommerce-data-pipeline\data\raw\products.csv
+2025-11-07 01:32:45.097 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:32:45.103 | INFO     | __main__:load_csv_to_table:60 -   Current rows in products: 495
+2025-11-07 01:32:45.123 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:32:45.124 | INFO     | __main__:load_csv_to_table:70 - → Processing data in batches of 1000...
+2025-11-07 01:32:45.184 | INFO     | __main__:load_csv_to_table:125 - → Batch 1: 495 rows processed
+2025-11-07 01:32:45.189 | INFO     | __main__:load_csv_to_table:142 - ✓ Successfully loaded 0 NEW rows into products
+2025-11-07 01:32:45.190 | INFO     | __main__:load_csv_to_table:144 -   Total rows in products: 495
+2025-11-07 01:32:45.191 | INFO     | __main__:main:274 - [3/4] LOADING ORDERS (appending new orders)
+2025-11-07 01:32:45.192 | INFO     | __main__:load_csv_to_table:48 - 📂 Reading CSV file (chunked): C:\projects\ecommerce-data-pipeline\data\raw\orders.csv
+2025-11-07 01:32:45.215 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:32:45.221 | INFO     | __main__:load_csv_to_table:60 -   Current rows in orders: 50,000
+2025-11-07 01:32:45.236 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:32:45.237 | INFO     | __main__:load_csv_to_table:70 - → Processing data in batches of 1000...
+2025-11-07 01:32:45.358 | INFO     | __main__:load_csv_to_table:125 - → Batch 1: 1,000 rows processed
+2025-11-07 01:32:45.436 | INFO     | __main__:load_csv_to_table:125 - → Batch 2: 2,000 rows processed
+2025-11-07 01:32:45.566 | INFO     | __main__:load_csv_to_table:125 - → Batch 3: 3,000 rows processed
+2025-11-07 01:32:45.703 | INFO     | __main__:load_csv_to_table:125 - → Batch 4: 4,000 rows processed
+2025-11-07 01:32:45.831 | INFO     | __main__:load_csv_to_table:125 - → Batch 5: 5,000 rows processed
+2025-11-07 01:32:45.966 | INFO     | __main__:load_csv_to_table:125 - → Batch 6: 6,000 rows processed
+2025-11-07 01:32:46.111 | INFO     | __main__:load_csv_to_table:125 - → Batch 7: 7,000 rows processed
+2025-11-07 01:32:46.274 | INFO     | __main__:load_csv_to_table:125 - → Batch 8: 8,000 rows processed
+2025-11-07 01:32:46.416 | INFO     | __main__:load_csv_to_table:125 - → Batch 9: 9,000 rows processed
+2025-11-07 01:32:46.574 | INFO     | __main__:load_csv_to_table:125 - → Batch 10: 10,000 rows processed
+2025-11-07 01:32:46.714 | INFO     | __main__:load_csv_to_table:125 - → Batch 11: 11,000 rows processed
+2025-11-07 01:32:46.852 | INFO     | __main__:load_csv_to_table:125 - → Batch 12: 12,000 rows processed
+2025-11-07 01:32:46.981 | INFO     | __main__:load_csv_to_table:125 - → Batch 13: 13,000 rows processed
+2025-11-07 01:32:47.109 | INFO     | __main__:load_csv_to_table:125 - → Batch 14: 14,000 rows processed
+2025-11-07 01:32:47.239 | INFO     | __main__:load_csv_to_table:125 - → Batch 15: 15,000 rows processed
+2025-11-07 01:32:47.372 | INFO     | __main__:load_csv_to_table:125 - → Batch 16: 16,000 rows processed
+2025-11-07 01:32:47.522 | INFO     | __main__:load_csv_to_table:125 - → Batch 17: 17,000 rows processed
+2025-11-07 01:32:47.674 | INFO     | __main__:load_csv_to_table:125 - → Batch 18: 18,000 rows processed
+2025-11-07 01:32:47.835 | INFO     | __main__:load_csv_to_table:125 - → Batch 19: 19,000 rows processed
+2025-11-07 01:32:47.949 | INFO     | __main__:load_csv_to_table:125 - → Batch 20: 20,000 rows processed
+2025-11-07 01:32:48.067 | INFO     | __main__:load_csv_to_table:125 - → Batch 21: 21,000 rows processed
+2025-11-07 01:32:48.212 | INFO     | __main__:load_csv_to_table:125 - → Batch 22: 22,000 rows processed
+2025-11-07 01:32:48.325 | INFO     | __main__:load_csv_to_table:125 - → Batch 23: 23,000 rows processed
+2025-11-07 01:32:48.472 | INFO     | __main__:load_csv_to_table:125 - → Batch 24: 24,000 rows processed
+2025-11-07 01:32:48.591 | INFO     | __main__:load_csv_to_table:125 - → Batch 25: 25,000 rows processed
+2025-11-07 01:32:48.739 | INFO     | __main__:load_csv_to_table:125 - → Batch 26: 26,000 rows processed
+2025-11-07 01:32:48.900 | INFO     | __main__:load_csv_to_table:125 - → Batch 27: 27,000 rows processed
+2025-11-07 01:32:49.085 | INFO     | __main__:load_csv_to_table:125 - → Batch 28: 28,000 rows processed
+2025-11-07 01:32:49.250 | INFO     | __main__:load_csv_to_table:125 - → Batch 29: 29,000 rows processed
+2025-11-07 01:32:49.436 | INFO     | __main__:load_csv_to_table:125 - → Batch 30: 30,000 rows processed
+2025-11-07 01:32:49.568 | INFO     | __main__:load_csv_to_table:125 - → Batch 31: 31,000 rows processed
+2025-11-07 01:32:49.732 | INFO     | __main__:load_csv_to_table:125 - → Batch 32: 32,000 rows processed
+2025-11-07 01:32:49.887 | INFO     | __main__:load_csv_to_table:125 - → Batch 33: 33,000 rows processed
+2025-11-07 01:32:50.036 | INFO     | __main__:load_csv_to_table:125 - → Batch 34: 34,000 rows processed
+2025-11-07 01:32:50.194 | INFO     | __main__:load_csv_to_table:125 - → Batch 35: 35,000 rows processed
+2025-11-07 01:32:50.356 | INFO     | __main__:load_csv_to_table:125 - → Batch 36: 36,000 rows processed
+2025-11-07 01:32:50.494 | INFO     | __main__:load_csv_to_table:125 - → Batch 37: 37,000 rows processed
+2025-11-07 01:32:50.686 | INFO     | __main__:load_csv_to_table:125 - → Batch 38: 38,000 rows processed
+2025-11-07 01:32:50.846 | INFO     | __main__:load_csv_to_table:125 - → Batch 39: 39,000 rows processed
+2025-11-07 01:32:51.008 | INFO     | __main__:load_csv_to_table:125 - → Batch 40: 40,000 rows processed
+2025-11-07 01:32:51.178 | INFO     | __main__:load_csv_to_table:125 - → Batch 41: 41,000 rows processed
+2025-11-07 01:32:51.337 | INFO     | __main__:load_csv_to_table:125 - → Batch 42: 42,000 rows processed
+2025-11-07 01:32:51.483 | INFO     | __main__:load_csv_to_table:125 - → Batch 43: 43,000 rows processed
+2025-11-07 01:32:51.635 | INFO     | __main__:load_csv_to_table:125 - → Batch 44: 44,000 rows processed
+2025-11-07 01:32:51.782 | INFO     | __main__:load_csv_to_table:125 - → Batch 45: 45,000 rows processed
+2025-11-07 01:32:51.916 | INFO     | __main__:load_csv_to_table:125 - → Batch 46: 46,000 rows processed
+2025-11-07 01:32:52.069 | INFO     | __main__:load_csv_to_table:125 - → Batch 47: 47,000 rows processed
+2025-11-07 01:32:52.197 | INFO     | __main__:load_csv_to_table:125 - → Batch 48: 48,000 rows processed
+2025-11-07 01:32:52.334 | INFO     | __main__:load_csv_to_table:125 - → Batch 49: 49,000 rows processed
+2025-11-07 01:32:52.482 | INFO     | __main__:load_csv_to_table:125 - → Batch 50: 50,000 rows processed
+2025-11-07 01:32:52.489 | INFO     | __main__:load_csv_to_table:142 - ✓ Successfully loaded 0 NEW rows into orders
+2025-11-07 01:32:52.490 | INFO     | __main__:load_csv_to_table:144 -   Total rows in orders: 50,000
+2025-11-07 01:32:52.490 | INFO     | __main__:main:284 - [4/4] VERIFYING DATA LOAD
+2025-11-07 01:32:52.492 | INFO     | __main__:verify_data_load:162 - ============================================================
+2025-11-07 01:32:52.492 | INFO     | __main__:verify_data_load:163 - DATA VERIFICATION
+2025-11-07 01:32:52.493 | INFO     | __main__:verify_data_load:164 - ============================================================
+2025-11-07 01:32:52.511 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:32:52.517 | INFO     | __main__:verify_data_load:182 - customers      : 10,000 rows
+2025-11-07 01:32:52.519 | INFO     | __main__:verify_data_load:182 - products       : 495 rows
+2025-11-07 01:32:52.523 | INFO     | __main__:verify_data_load:182 - orders         : 50,000 rows
+2025-11-07 01:32:52.523 | INFO     | __main__:verify_data_load:186 - 🔗 Checking foreign key relationships...
+2025-11-07 01:32:52.539 | INFO     | __main__:verify_data_load:218 - ✓ All foreign key relationships are valid
+2025-11-07 01:32:52.549 | INFO     | __main__:verify_data_load:228 - 💰 Total Revenue: ₹1,967,120,343.68
+2025-11-07 01:32:52.549 | INFO     | __main__:verify_data_load:229 - 📦 Total Orders: 50,000
+2025-11-07 01:32:52.550 | INFO     | __main__:main:290 - ============================================================
+2025-11-07 01:32:52.550 | INFO     | __main__:main:291 - ✓ DATA LOAD COMPLETE!
+2025-11-07 01:32:52.550 | INFO     | __main__:main:292 - ============================================================
+2025-11-07 01:32:52.550 | INFO     | __main__:main:293 - New records added:
+2025-11-07 01:32:52.551 | INFO     | __main__:main:294 -   - Customers: 0
+2025-11-07 01:32:52.551 | INFO     | __main__:main:295 -   - Products: 0
+2025-11-07 01:32:52.552 | INFO     | __main__:main:296 -   - Orders: 0
+2025-11-07 01:32:52.553 | INFO     | __main__:main:297 - End time: 2025-11-07 01:32:52
+2025-11-07 01:32:52.790 | INFO     | __main__:main:236 - ============================================================
+2025-11-07 01:32:52.790 | INFO     | __main__:main:237 - REFRESH AGGREGATIONS
+2025-11-07 01:32:52.790 | INFO     | __main__:main:238 - Started: 2025-11-07 01:32:52
+2025-11-07 01:32:52.790 | INFO     | __main__:main:239 - ============================================================
+2025-11-07 01:32:52.791 | INFO     | __main__:refresh_customer_summary:32 - ⏳ Refreshing customer_summary...
+2025-11-07 01:32:52.828 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:32:52.969 | INFO     | __main__:refresh_customer_summary:75 - ✓ Refreshed customer_summary: 10000 records
+2025-11-07 01:32:52.969 | INFO     | __main__:refresh_product_summary:89 - ⏳ Refreshing product_summary...
+2025-11-07 01:32:52.979 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:32:53.042 | INFO     | __main__:refresh_product_summary:126 - ✓ Refreshed product_summary: 495 records
+2025-11-07 01:32:53.043 | INFO     | __main__:refresh_daily_sales_summary:140 - ⏳ Refreshing daily_sales_summary...
+2025-11-07 01:32:53.059 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:32:53.100 | INFO     | __main__:refresh_daily_sales_summary:169 - ✓ Refreshed daily_sales_summary: 181 records
+2025-11-07 01:32:53.101 | INFO     | __main__:refresh_monthly_sales_summary:183 - ⏳ Refreshing monthly_sales_summary...
+2025-11-07 01:32:53.116 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:32:53.157 | INFO     | __main__:refresh_monthly_sales_summary:222 - ✓ Refreshed monthly_sales_summary: 7 records
+2025-11-07 01:32:53.158 | INFO     | __main__:main:252 - ============================================================
+2025-11-07 01:32:53.158 | INFO     | __main__:main:253 - ✓ ALL AGGREGATIONS REFRESHED SUCCESSFULLY
+2025-11-07 01:32:53.159 | INFO     | __main__:main:254 - Recalculated from ALL cumulative base data
+2025-11-07 01:32:53.160 | INFO     | __main__:main:255 - ============================================================
+2025-11-07 01:32:53.687 | INFO     | __main__:main:804 - ============================================================
+2025-11-07 01:32:53.687 | INFO     | __main__:main:805 - QUALITY REPORT GENERATION
+2025-11-07 01:32:53.688 | INFO     | __main__:main:806 - ============================================================
+2025-11-07 01:32:53.688 | INFO     | __main__:__init__:47 - ✓ Report generator initialized
+2025-11-07 01:32:53.688 | INFO     | __main__:generate_html:330 - 🎨 Generating HTML report...
+2025-11-07 01:32:53.688 | INFO     | __main__:get_table_stats:52 - 📊 Collecting table statistics...
+2025-11-07 01:32:53.702 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:32:53.711 | INFO     | __main__:get_table_stats:71 -   customers: 10000 rows
+2025-11-07 01:32:53.715 | INFO     | __main__:get_table_stats:71 -   products: 495 rows
+2025-11-07 01:32:53.719 | INFO     | __main__:get_table_stats:71 -   orders: 50000 rows
+2025-11-07 01:32:53.725 | INFO     | __main__:get_table_stats:71 -   customer_summary: 10000 rows
+2025-11-07 01:32:53.728 | INFO     | __main__:get_table_stats:71 -   product_summary: 495 rows
+2025-11-07 01:32:53.731 | INFO     | __main__:get_table_stats:71 -   daily_sales_summary: 181 rows
+2025-11-07 01:32:53.734 | INFO     | __main__:get_table_stats:71 -   monthly_sales_summary: 7 rows
+2025-11-07 01:32:53.734 | INFO     | __main__:detect_null_values:86 - 🔍 Detecting null values...
+2025-11-07 01:32:53.760 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:32:53.781 | INFO     | __main__:detect_duplicates:141 - 🔍 Detecting duplicates...
+2025-11-07 01:32:53.794 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:32:53.815 | INFO     | __main__:detect_data_quality_issues:191 - 🔍 Detecting data quality issues...
+2025-11-07 01:32:53.837 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:32:53.841 | WARNING  | __main__:detect_data_quality_issues:251 -   🟡 WARNING: 352 orders with future dates
+2025-11-07 01:32:53.846 | INFO     | __main__:get_high_value_anomalies:283 - 🔍 Detecting high-value anomalies...
+2025-11-07 01:32:53.865 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:32:53.896 | INFO     | __main__:generate_html:768 - ✓ HTML report generated successfully
+2025-11-07 01:32:53.897 | INFO     | __main__:save_report:778 - 💾 Saving report to file...
+2025-11-07 01:32:53.899 | INFO     | __main__:save_report:790 - ✓ Report saved to C:\projects\ecommerce-data-pipeline\data\processed\quality_report_20251107_013253.html
+2025-11-07 01:32:53.899 | INFO     | __main__:main:820 - ============================================================
+2025-11-07 01:32:53.901 | INFO     | __main__:main:821 - ✓ REPORT GENERATED
+2025-11-07 01:32:53.901 | INFO     | __main__:main:822 - ============================================================
+2025-11-07 01:41:44.740 | INFO     | __main__:main:245 - ============================================================
+2025-11-07 01:41:44.740 | INFO     | __main__:main:246 - CSV TO POSTGRESQL DATA LOADER (INCREMENTAL MODE)
+2025-11-07 01:41:44.741 | INFO     | __main__:main:247 - ============================================================
+2025-11-07 01:41:44.741 | INFO     | __main__:main:256 - [1/4] LOADING CUSTOMERS (with duplicate handling)
+2025-11-07 01:41:44.741 | INFO     | __main__:load_csv_to_table:48 - 📂 Reading CSV file (chunked): C:\projects\ecommerce-data-pipeline\data\raw\customers.csv
+2025-11-07 01:41:44.755 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:41:44.758 | INFO     | __main__:load_csv_to_table:60 -   Current rows in customers: 10,000
+2025-11-07 01:41:44.783 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:41:44.784 | INFO     | __main__:load_csv_to_table:70 - → Processing data in batches of 1000...
+2025-11-07 01:41:44.877 | INFO     | __main__:load_csv_to_table:125 - → Batch 1: 1,000 rows processed
+2025-11-07 01:41:44.930 | INFO     | __main__:load_csv_to_table:125 - → Batch 2: 2,000 rows processed
+2025-11-07 01:41:45.087 | INFO     | __main__:load_csv_to_table:125 - → Batch 3: 3,000 rows processed
+2025-11-07 01:41:45.151 | INFO     | __main__:load_csv_to_table:125 - → Batch 4: 4,000 rows processed
+2025-11-07 01:41:45.267 | INFO     | __main__:load_csv_to_table:125 - → Batch 5: 5,000 rows processed
+2025-11-07 01:41:45.403 | INFO     | __main__:load_csv_to_table:125 - → Batch 6: 6,000 rows processed
+2025-11-07 01:41:45.465 | INFO     | __main__:load_csv_to_table:125 - → Batch 7: 7,000 rows processed
+2025-11-07 01:41:45.531 | INFO     | __main__:load_csv_to_table:125 - → Batch 8: 8,000 rows processed
+2025-11-07 01:41:45.600 | INFO     | __main__:load_csv_to_table:125 - → Batch 9: 9,000 rows processed
+2025-11-07 01:41:45.659 | INFO     | __main__:load_csv_to_table:125 - → Batch 10: 10,000 rows processed
+2025-11-07 01:41:45.677 | INFO     | __main__:load_csv_to_table:142 - ✓ Successfully loaded 0 NEW rows into customers
+2025-11-07 01:41:45.678 | INFO     | __main__:load_csv_to_table:144 -   Total rows in customers: 10,000
+2025-11-07 01:41:45.678 | INFO     | __main__:main:265 - [2/4] LOADING PRODUCTS (with duplicate handling)
+2025-11-07 01:41:45.679 | INFO     | __main__:load_csv_to_table:48 - 📂 Reading CSV file (chunked): C:\projects\ecommerce-data-pipeline\data\raw\products.csv
+2025-11-07 01:41:45.688 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:41:45.690 | INFO     | __main__:load_csv_to_table:60 -   Current rows in products: 495
+2025-11-07 01:41:45.712 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:41:45.713 | INFO     | __main__:load_csv_to_table:70 - → Processing data in batches of 1000...
+2025-11-07 01:41:45.742 | INFO     | __main__:load_csv_to_table:125 - → Batch 1: 495 rows processed
+2025-11-07 01:41:45.751 | INFO     | __main__:load_csv_to_table:142 - ✓ Successfully loaded 0 NEW rows into products
+2025-11-07 01:41:45.752 | INFO     | __main__:load_csv_to_table:144 -   Total rows in products: 495
+2025-11-07 01:41:45.753 | INFO     | __main__:main:274 - [3/4] LOADING ORDERS (appending new orders)
+2025-11-07 01:41:45.755 | INFO     | __main__:load_csv_to_table:48 - 📂 Reading CSV file (chunked): C:\projects\ecommerce-data-pipeline\data\raw\orders.csv
+2025-11-07 01:41:45.771 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:41:45.776 | INFO     | __main__:load_csv_to_table:60 -   Current rows in orders: 50,000
+2025-11-07 01:41:45.803 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:41:45.804 | INFO     | __main__:load_csv_to_table:70 - → Processing data in batches of 1000...
+2025-11-07 01:41:45.962 | INFO     | __main__:load_csv_to_table:125 - → Batch 1: 1,000 rows processed
+2025-11-07 01:41:46.040 | INFO     | __main__:load_csv_to_table:125 - → Batch 2: 2,000 rows processed
+2025-11-07 01:41:46.128 | INFO     | __main__:load_csv_to_table:125 - → Batch 3: 3,000 rows processed
+2025-11-07 01:41:46.280 | INFO     | __main__:load_csv_to_table:125 - → Batch 4: 4,000 rows processed
+2025-11-07 01:41:46.410 | INFO     | __main__:load_csv_to_table:125 - → Batch 5: 5,000 rows processed
+2025-11-07 01:41:46.535 | INFO     | __main__:load_csv_to_table:125 - → Batch 6: 6,000 rows processed
+2025-11-07 01:41:46.689 | INFO     | __main__:load_csv_to_table:125 - → Batch 7: 7,000 rows processed
+2025-11-07 01:41:46.831 | INFO     | __main__:load_csv_to_table:125 - → Batch 8: 8,000 rows processed
+2025-11-07 01:41:46.943 | INFO     | __main__:load_csv_to_table:125 - → Batch 9: 9,000 rows processed
+2025-11-07 01:41:47.087 | INFO     | __main__:load_csv_to_table:125 - → Batch 10: 10,000 rows processed
+2025-11-07 01:41:47.213 | INFO     | __main__:load_csv_to_table:125 - → Batch 11: 11,000 rows processed
+2025-11-07 01:41:47.372 | INFO     | __main__:load_csv_to_table:125 - → Batch 12: 12,000 rows processed
+2025-11-07 01:41:47.499 | INFO     | __main__:load_csv_to_table:125 - → Batch 13: 13,000 rows processed
+2025-11-07 01:41:47.618 | INFO     | __main__:load_csv_to_table:125 - → Batch 14: 14,000 rows processed
+2025-11-07 01:41:47.744 | INFO     | __main__:load_csv_to_table:125 - → Batch 15: 15,000 rows processed
+2025-11-07 01:41:47.869 | INFO     | __main__:load_csv_to_table:125 - → Batch 16: 16,000 rows processed
+2025-11-07 01:41:48.002 | INFO     | __main__:load_csv_to_table:125 - → Batch 17: 17,000 rows processed
+2025-11-07 01:41:48.145 | INFO     | __main__:load_csv_to_table:125 - → Batch 18: 18,000 rows processed
+2025-11-07 01:41:48.302 | INFO     | __main__:load_csv_to_table:125 - → Batch 19: 19,000 rows processed
+2025-11-07 01:41:48.416 | INFO     | __main__:load_csv_to_table:125 - → Batch 20: 20,000 rows processed
+2025-11-07 01:41:48.533 | INFO     | __main__:load_csv_to_table:125 - → Batch 21: 21,000 rows processed
+2025-11-07 01:41:48.680 | INFO     | __main__:load_csv_to_table:125 - → Batch 22: 22,000 rows processed
+2025-11-07 01:41:48.802 | INFO     | __main__:load_csv_to_table:125 - → Batch 23: 23,000 rows processed
+2025-11-07 01:41:48.926 | INFO     | __main__:load_csv_to_table:125 - → Batch 24: 24,000 rows processed
+2025-11-07 01:41:49.076 | INFO     | __main__:load_csv_to_table:125 - → Batch 25: 25,000 rows processed
+2025-11-07 01:41:49.217 | INFO     | __main__:load_csv_to_table:125 - → Batch 26: 26,000 rows processed
+2025-11-07 01:41:49.352 | INFO     | __main__:load_csv_to_table:125 - → Batch 27: 27,000 rows processed
+2025-11-07 01:41:49.502 | INFO     | __main__:load_csv_to_table:125 - → Batch 28: 28,000 rows processed
+2025-11-07 01:41:49.670 | INFO     | __main__:load_csv_to_table:125 - → Batch 29: 29,000 rows processed
+2025-11-07 01:41:49.831 | INFO     | __main__:load_csv_to_table:125 - → Batch 30: 30,000 rows processed
+2025-11-07 01:41:49.973 | INFO     | __main__:load_csv_to_table:125 - → Batch 31: 31,000 rows processed
+2025-11-07 01:41:50.137 | INFO     | __main__:load_csv_to_table:125 - → Batch 32: 32,000 rows processed
+2025-11-07 01:41:50.263 | INFO     | __main__:load_csv_to_table:125 - → Batch 33: 33,000 rows processed
+2025-11-07 01:41:50.411 | INFO     | __main__:load_csv_to_table:125 - → Batch 34: 34,000 rows processed
+2025-11-07 01:41:50.554 | INFO     | __main__:load_csv_to_table:125 - → Batch 35: 35,000 rows processed
+2025-11-07 01:41:50.672 | INFO     | __main__:load_csv_to_table:125 - → Batch 36: 36,000 rows processed
+2025-11-07 01:41:50.821 | INFO     | __main__:load_csv_to_table:125 - → Batch 37: 37,000 rows processed
+2025-11-07 01:41:50.956 | INFO     | __main__:load_csv_to_table:125 - → Batch 38: 38,000 rows processed
+2025-11-07 01:41:51.083 | INFO     | __main__:load_csv_to_table:125 - → Batch 39: 39,000 rows processed
+2025-11-07 01:41:51.223 | INFO     | __main__:load_csv_to_table:125 - → Batch 40: 40,000 rows processed
+2025-11-07 01:41:51.372 | INFO     | __main__:load_csv_to_table:125 - → Batch 41: 41,000 rows processed
+2025-11-07 01:41:51.550 | INFO     | __main__:load_csv_to_table:125 - → Batch 42: 42,000 rows processed
+2025-11-07 01:41:51.683 | INFO     | __main__:load_csv_to_table:125 - → Batch 43: 43,000 rows processed
+2025-11-07 01:41:51.804 | INFO     | __main__:load_csv_to_table:125 - → Batch 44: 44,000 rows processed
+2025-11-07 01:41:51.917 | INFO     | __main__:load_csv_to_table:125 - → Batch 45: 45,000 rows processed
+2025-11-07 01:41:52.031 | INFO     | __main__:load_csv_to_table:125 - → Batch 46: 46,000 rows processed
+2025-11-07 01:41:52.153 | INFO     | __main__:load_csv_to_table:125 - → Batch 47: 47,000 rows processed
+2025-11-07 01:41:52.267 | INFO     | __main__:load_csv_to_table:125 - → Batch 48: 48,000 rows processed
+2025-11-07 01:41:52.398 | INFO     | __main__:load_csv_to_table:125 - → Batch 49: 49,000 rows processed
+2025-11-07 01:41:52.519 | INFO     | __main__:load_csv_to_table:125 - → Batch 50: 50,000 rows processed
+2025-11-07 01:41:52.524 | INFO     | __main__:load_csv_to_table:142 - ✓ Successfully loaded 0 NEW rows into orders
+2025-11-07 01:41:52.524 | INFO     | __main__:load_csv_to_table:144 -   Total rows in orders: 50,000
+2025-11-07 01:41:52.525 | INFO     | __main__:main:284 - [4/4] VERIFYING DATA LOAD
+2025-11-07 01:41:52.526 | INFO     | __main__:verify_data_load:162 - ============================================================
+2025-11-07 01:41:52.526 | INFO     | __main__:verify_data_load:163 - DATA VERIFICATION
+2025-11-07 01:41:52.527 | INFO     | __main__:verify_data_load:164 - ============================================================
+2025-11-07 01:41:52.537 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:41:52.540 | INFO     | __main__:verify_data_load:182 - customers      : 10,000 rows
+2025-11-07 01:41:52.541 | INFO     | __main__:verify_data_load:182 - products       : 495 rows
+2025-11-07 01:41:52.544 | INFO     | __main__:verify_data_load:182 - orders         : 50,000 rows
+2025-11-07 01:41:52.545 | INFO     | __main__:verify_data_load:186 - 🔗 Checking foreign key relationships...
+2025-11-07 01:41:52.559 | INFO     | __main__:verify_data_load:218 - ✓ All foreign key relationships are valid
+2025-11-07 01:41:52.571 | INFO     | __main__:verify_data_load:228 - 💰 Total Revenue: ₹1,967,120,343.68
+2025-11-07 01:41:52.571 | INFO     | __main__:verify_data_load:229 - 📦 Total Orders: 50,000
+2025-11-07 01:41:52.572 | INFO     | __main__:main:290 - ============================================================
+2025-11-07 01:41:52.572 | INFO     | __main__:main:291 - ✓ DATA LOAD COMPLETE!
+2025-11-07 01:41:52.573 | INFO     | __main__:main:292 - ============================================================
+2025-11-07 01:41:52.573 | INFO     | __main__:main:293 - New records added:
+2025-11-07 01:41:52.574 | INFO     | __main__:main:294 -   - Customers: 0
+2025-11-07 01:41:52.574 | INFO     | __main__:main:295 -   - Products: 0
+2025-11-07 01:41:52.575 | INFO     | __main__:main:296 -   - Orders: 0
+2025-11-07 01:41:52.575 | INFO     | __main__:main:297 - End time: 2025-11-07 01:41:52
+2025-11-07 01:41:52.868 | INFO     | __main__:main:236 - ============================================================
+2025-11-07 01:41:52.869 | INFO     | __main__:main:237 - REFRESH AGGREGATIONS
+2025-11-07 01:41:52.869 | INFO     | __main__:main:238 - Started: 2025-11-07 01:41:52
+2025-11-07 01:41:52.869 | INFO     | __main__:main:239 - ============================================================
+2025-11-07 01:41:52.869 | INFO     | __main__:refresh_customer_summary:32 - ⏳ Refreshing customer_summary...
+2025-11-07 01:41:52.892 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:41:53.019 | INFO     | __main__:refresh_customer_summary:75 - ✓ Refreshed customer_summary: 10000 records
+2025-11-07 01:41:53.019 | INFO     | __main__:refresh_product_summary:89 - ⏳ Refreshing product_summary...
+2025-11-07 01:41:53.031 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:41:53.078 | INFO     | __main__:refresh_product_summary:126 - ✓ Refreshed product_summary: 495 records
+2025-11-07 01:41:53.079 | INFO     | __main__:refresh_daily_sales_summary:140 - ⏳ Refreshing daily_sales_summary...
+2025-11-07 01:41:53.096 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:41:53.154 | INFO     | __main__:refresh_daily_sales_summary:169 - ✓ Refreshed daily_sales_summary: 181 records
+2025-11-07 01:41:53.155 | INFO     | __main__:refresh_monthly_sales_summary:183 - ⏳ Refreshing monthly_sales_summary...
+2025-11-07 01:41:53.172 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:41:53.216 | INFO     | __main__:refresh_monthly_sales_summary:222 - ✓ Refreshed monthly_sales_summary: 7 records
+2025-11-07 01:41:53.218 | INFO     | __main__:main:252 - ============================================================
+2025-11-07 01:41:53.219 | INFO     | __main__:main:253 - ✓ ALL AGGREGATIONS REFRESHED SUCCESSFULLY
+2025-11-07 01:41:53.219 | INFO     | __main__:main:254 - Recalculated from ALL cumulative base data
+2025-11-07 01:41:53.220 | INFO     | __main__:main:255 - ============================================================
+2025-11-07 01:41:53.786 | INFO     | __main__:main:804 - ============================================================
+2025-11-07 01:41:53.786 | INFO     | __main__:main:805 - QUALITY REPORT GENERATION
+2025-11-07 01:41:53.786 | INFO     | __main__:main:806 - ============================================================
+2025-11-07 01:41:53.787 | INFO     | __main__:__init__:47 - ✓ Report generator initialized
+2025-11-07 01:41:53.787 | INFO     | __main__:generate_html:330 - 🎨 Generating HTML report...
+2025-11-07 01:41:53.787 | INFO     | __main__:get_table_stats:52 - 📊 Collecting table statistics...
+2025-11-07 01:41:53.801 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:41:53.811 | INFO     | __main__:get_table_stats:71 -   customers: 10000 rows
+2025-11-07 01:41:53.813 | INFO     | __main__:get_table_stats:71 -   products: 495 rows
+2025-11-07 01:41:53.818 | INFO     | __main__:get_table_stats:71 -   orders: 50000 rows
+2025-11-07 01:41:53.824 | INFO     | __main__:get_table_stats:71 -   customer_summary: 10000 rows
+2025-11-07 01:41:53.826 | INFO     | __main__:get_table_stats:71 -   product_summary: 495 rows
+2025-11-07 01:41:53.828 | INFO     | __main__:get_table_stats:71 -   daily_sales_summary: 181 rows
+2025-11-07 01:41:53.831 | INFO     | __main__:get_table_stats:71 -   monthly_sales_summary: 7 rows
+2025-11-07 01:41:53.831 | INFO     | __main__:detect_null_values:86 - 🔍 Detecting null values...
+2025-11-07 01:41:53.840 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:41:53.848 | INFO     | __main__:detect_duplicates:141 - 🔍 Detecting duplicates...
+2025-11-07 01:41:53.858 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:41:53.880 | INFO     | __main__:detect_data_quality_issues:191 - 🔍 Detecting data quality issues...
+2025-11-07 01:41:53.890 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:41:53.894 | WARNING  | __main__:detect_data_quality_issues:251 -   🟡 WARNING: 349 orders with future dates
+2025-11-07 01:41:53.899 | INFO     | __main__:get_high_value_anomalies:283 - 🔍 Detecting high-value anomalies...
+2025-11-07 01:41:53.910 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:41:53.928 | INFO     | __main__:generate_html:768 - ✓ HTML report generated successfully
+2025-11-07 01:41:53.928 | INFO     | __main__:save_report:778 - 💾 Saving report to file...
+2025-11-07 01:41:53.930 | INFO     | __main__:save_report:790 - ✓ Report saved to C:\projects\ecommerce-data-pipeline\data\processed\quality_report_20251107_014153.html
+2025-11-07 01:41:53.932 | INFO     | __main__:main:820 - ============================================================
+2025-11-07 01:41:53.934 | INFO     | __main__:main:821 - ✓ REPORT GENERATED
+2025-11-07 01:41:53.934 | INFO     | __main__:main:822 - ============================================================
+2025-11-07 01:50:26.851 | INFO     | __main__:main:245 - ============================================================
+2025-11-07 01:50:26.853 | INFO     | __main__:main:246 - CSV TO POSTGRESQL DATA LOADER (INCREMENTAL MODE)
+2025-11-07 01:50:26.853 | INFO     | __main__:main:247 - ============================================================
+2025-11-07 01:50:26.856 | INFO     | __main__:main:256 - [1/4] LOADING CUSTOMERS (with duplicate handling)
+2025-11-07 01:50:26.858 | INFO     | __main__:load_csv_to_table:48 - 📂 Reading CSV file (chunked): C:\projects\ecommerce-data-pipeline\data\raw\customers.csv
+2025-11-07 01:50:26.904 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:50:26.915 | INFO     | __main__:load_csv_to_table:60 -   Current rows in customers: 10,000
+2025-11-07 01:50:26.956 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:50:26.956 | INFO     | __main__:load_csv_to_table:70 - → Processing data in batches of 1000...
+2025-11-07 01:50:27.142 | INFO     | __main__:load_csv_to_table:125 - → Batch 1: 1,000 rows processed
+2025-11-07 01:50:27.335 | INFO     | __main__:load_csv_to_table:125 - → Batch 2: 2,000 rows processed
+2025-11-07 01:50:27.544 | INFO     | __main__:load_csv_to_table:125 - → Batch 3: 3,000 rows processed
+2025-11-07 01:50:27.685 | INFO     | __main__:load_csv_to_table:125 - → Batch 4: 4,000 rows processed
+2025-11-07 01:50:27.854 | INFO     | __main__:load_csv_to_table:125 - → Batch 5: 5,000 rows processed
+2025-11-07 01:50:28.018 | INFO     | __main__:load_csv_to_table:125 - → Batch 6: 6,000 rows processed
+2025-11-07 01:50:28.171 | INFO     | __main__:load_csv_to_table:125 - → Batch 7: 7,000 rows processed
+2025-11-07 01:50:28.330 | INFO     | __main__:load_csv_to_table:125 - → Batch 8: 8,000 rows processed
+2025-11-07 01:50:28.464 | INFO     | __main__:load_csv_to_table:125 - → Batch 9: 9,000 rows processed
+2025-11-07 01:50:28.602 | INFO     | __main__:load_csv_to_table:125 - → Batch 10: 10,000 rows processed
+2025-11-07 01:50:28.641 | INFO     | __main__:load_csv_to_table:142 - ✓ Successfully loaded 0 NEW rows into customers
+2025-11-07 01:50:28.642 | INFO     | __main__:load_csv_to_table:144 -   Total rows in customers: 10,000
+2025-11-07 01:50:28.644 | INFO     | __main__:main:265 - [2/4] LOADING PRODUCTS (with duplicate handling)
+2025-11-07 01:50:28.646 | INFO     | __main__:load_csv_to_table:48 - 📂 Reading CSV file (chunked): C:\projects\ecommerce-data-pipeline\data\raw\products.csv
+2025-11-07 01:50:28.682 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:50:28.689 | INFO     | __main__:load_csv_to_table:60 -   Current rows in products: 495
+2025-11-07 01:50:28.714 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:50:28.715 | INFO     | __main__:load_csv_to_table:70 - → Processing data in batches of 1000...
+2025-11-07 01:50:28.773 | INFO     | __main__:load_csv_to_table:125 - → Batch 1: 495 rows processed
+2025-11-07 01:50:28.786 | INFO     | __main__:load_csv_to_table:142 - ✓ Successfully loaded 0 NEW rows into products
+2025-11-07 01:50:28.787 | INFO     | __main__:load_csv_to_table:144 -   Total rows in products: 495
+2025-11-07 01:50:28.788 | INFO     | __main__:main:274 - [3/4] LOADING ORDERS (appending new orders)
+2025-11-07 01:50:28.790 | INFO     | __main__:load_csv_to_table:48 - 📂 Reading CSV file (chunked): C:\projects\ecommerce-data-pipeline\data\raw\orders.csv
+2025-11-07 01:50:28.821 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:50:28.834 | INFO     | __main__:load_csv_to_table:60 -   Current rows in orders: 50,000
+2025-11-07 01:50:28.861 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:50:28.862 | INFO     | __main__:load_csv_to_table:70 - → Processing data in batches of 1000...
+2025-11-07 01:50:29.018 | INFO     | __main__:load_csv_to_table:125 - → Batch 1: 1,000 rows processed
+2025-11-07 01:50:29.216 | INFO     | __main__:load_csv_to_table:125 - → Batch 2: 2,000 rows processed
+2025-11-07 01:50:29.439 | INFO     | __main__:load_csv_to_table:125 - → Batch 3: 3,000 rows processed
+2025-11-07 01:50:29.679 | INFO     | __main__:load_csv_to_table:125 - → Batch 4: 4,000 rows processed
+2025-11-07 01:50:29.916 | INFO     | __main__:load_csv_to_table:125 - → Batch 5: 5,000 rows processed
+2025-11-07 01:50:30.147 | INFO     | __main__:load_csv_to_table:125 - → Batch 6: 6,000 rows processed
+2025-11-07 01:50:30.372 | INFO     | __main__:load_csv_to_table:125 - → Batch 7: 7,000 rows processed
+2025-11-07 01:50:30.514 | INFO     | __main__:load_csv_to_table:125 - → Batch 8: 8,000 rows processed
+2025-11-07 01:50:30.731 | INFO     | __main__:load_csv_to_table:125 - → Batch 9: 9,000 rows processed
+2025-11-07 01:50:30.942 | INFO     | __main__:load_csv_to_table:125 - → Batch 10: 10,000 rows processed
+2025-11-07 01:50:31.164 | INFO     | __main__:load_csv_to_table:125 - → Batch 11: 11,000 rows processed
+2025-11-07 01:50:31.361 | INFO     | __main__:load_csv_to_table:125 - → Batch 12: 12,000 rows processed
+2025-11-07 01:50:31.580 | INFO     | __main__:load_csv_to_table:125 - → Batch 13: 13,000 rows processed
+2025-11-07 01:50:31.780 | INFO     | __main__:load_csv_to_table:125 - → Batch 14: 14,000 rows processed
+2025-11-07 01:50:31.980 | INFO     | __main__:load_csv_to_table:125 - → Batch 15: 15,000 rows processed
+2025-11-07 01:50:32.198 | INFO     | __main__:load_csv_to_table:125 - → Batch 16: 16,000 rows processed
+2025-11-07 01:50:32.413 | INFO     | __main__:load_csv_to_table:125 - → Batch 17: 17,000 rows processed
+2025-11-07 01:50:32.625 | INFO     | __main__:load_csv_to_table:125 - → Batch 18: 18,000 rows processed
+2025-11-07 01:50:32.862 | INFO     | __main__:load_csv_to_table:125 - → Batch 19: 19,000 rows processed
+2025-11-07 01:50:33.084 | INFO     | __main__:load_csv_to_table:125 - → Batch 20: 20,000 rows processed
+2025-11-07 01:50:33.321 | INFO     | __main__:load_csv_to_table:125 - → Batch 21: 21,000 rows processed
+2025-11-07 01:50:33.536 | INFO     | __main__:load_csv_to_table:125 - → Batch 22: 22,000 rows processed
+2025-11-07 01:50:33.742 | INFO     | __main__:load_csv_to_table:125 - → Batch 23: 23,000 rows processed
+2025-11-07 01:50:33.963 | INFO     | __main__:load_csv_to_table:125 - → Batch 24: 24,000 rows processed
+2025-11-07 01:50:34.180 | INFO     | __main__:load_csv_to_table:125 - → Batch 25: 25,000 rows processed
+2025-11-07 01:50:34.385 | INFO     | __main__:load_csv_to_table:125 - → Batch 26: 26,000 rows processed
+2025-11-07 01:50:34.596 | INFO     | __main__:load_csv_to_table:125 - → Batch 27: 27,000 rows processed
+2025-11-07 01:50:34.813 | INFO     | __main__:load_csv_to_table:125 - → Batch 28: 28,000 rows processed
+2025-11-07 01:50:34.992 | INFO     | __main__:load_csv_to_table:125 - → Batch 29: 29,000 rows processed
+2025-11-07 01:50:35.172 | INFO     | __main__:load_csv_to_table:125 - → Batch 30: 30,000 rows processed
+2025-11-07 01:50:35.369 | INFO     | __main__:load_csv_to_table:125 - → Batch 31: 31,000 rows processed
+2025-11-07 01:50:35.564 | INFO     | __main__:load_csv_to_table:125 - → Batch 32: 32,000 rows processed
+2025-11-07 01:50:35.778 | INFO     | __main__:load_csv_to_table:125 - → Batch 33: 33,000 rows processed
+2025-11-07 01:50:35.987 | INFO     | __main__:load_csv_to_table:125 - → Batch 34: 34,000 rows processed
+2025-11-07 01:50:36.177 | INFO     | __main__:load_csv_to_table:125 - → Batch 35: 35,000 rows processed
+2025-11-07 01:50:36.393 | INFO     | __main__:load_csv_to_table:125 - → Batch 36: 36,000 rows processed
+2025-11-07 01:50:36.594 | INFO     | __main__:load_csv_to_table:125 - → Batch 37: 37,000 rows processed
+2025-11-07 01:50:36.795 | INFO     | __main__:load_csv_to_table:125 - → Batch 38: 38,000 rows processed
+2025-11-07 01:50:37.018 | INFO     | __main__:load_csv_to_table:125 - → Batch 39: 39,000 rows processed
+2025-11-07 01:50:37.242 | INFO     | __main__:load_csv_to_table:125 - → Batch 40: 40,000 rows processed
+2025-11-07 01:50:37.441 | INFO     | __main__:load_csv_to_table:125 - → Batch 41: 41,000 rows processed
+2025-11-07 01:50:37.656 | INFO     | __main__:load_csv_to_table:125 - → Batch 42: 42,000 rows processed
+2025-11-07 01:50:37.856 | INFO     | __main__:load_csv_to_table:125 - → Batch 43: 43,000 rows processed
+2025-11-07 01:50:38.066 | INFO     | __main__:load_csv_to_table:125 - → Batch 44: 44,000 rows processed
+2025-11-07 01:50:38.269 | INFO     | __main__:load_csv_to_table:125 - → Batch 45: 45,000 rows processed
+2025-11-07 01:50:38.462 | INFO     | __main__:load_csv_to_table:125 - → Batch 46: 46,000 rows processed
+2025-11-07 01:50:38.673 | INFO     | __main__:load_csv_to_table:125 - → Batch 47: 47,000 rows processed
+2025-11-07 01:50:38.896 | INFO     | __main__:load_csv_to_table:125 - → Batch 48: 48,000 rows processed
+2025-11-07 01:50:39.112 | INFO     | __main__:load_csv_to_table:125 - → Batch 49: 49,000 rows processed
+2025-11-07 01:50:39.376 | INFO     | __main__:load_csv_to_table:125 - → Batch 50: 50,000 rows processed
+2025-11-07 01:50:39.387 | INFO     | __main__:load_csv_to_table:142 - ✓ Successfully loaded 0 NEW rows into orders
+2025-11-07 01:50:39.388 | INFO     | __main__:load_csv_to_table:144 -   Total rows in orders: 50,000
+2025-11-07 01:50:39.389 | INFO     | __main__:main:284 - [4/4] VERIFYING DATA LOAD
+2025-11-07 01:50:39.391 | INFO     | __main__:verify_data_load:162 - ============================================================
+2025-11-07 01:50:39.391 | INFO     | __main__:verify_data_load:163 - DATA VERIFICATION
+2025-11-07 01:50:39.392 | INFO     | __main__:verify_data_load:164 - ============================================================
+2025-11-07 01:50:39.418 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:50:39.441 | INFO     | __main__:verify_data_load:182 - customers      : 10,000 rows
+2025-11-07 01:50:39.445 | INFO     | __main__:verify_data_load:182 - products       : 495 rows
+2025-11-07 01:50:39.454 | INFO     | __main__:verify_data_load:182 - orders         : 50,000 rows
+2025-11-07 01:50:39.455 | INFO     | __main__:verify_data_load:186 - 🔗 Checking foreign key relationships...
+2025-11-07 01:50:39.494 | INFO     | __main__:verify_data_load:218 - ✓ All foreign key relationships are valid
+2025-11-07 01:50:39.512 | INFO     | __main__:verify_data_load:228 - 💰 Total Revenue: ₹1,967,120,343.68
+2025-11-07 01:50:39.512 | INFO     | __main__:verify_data_load:229 - 📦 Total Orders: 50,000
+2025-11-07 01:50:39.514 | INFO     | __main__:main:290 - ============================================================
+2025-11-07 01:50:39.515 | INFO     | __main__:main:291 - ✓ DATA LOAD COMPLETE!
+2025-11-07 01:50:39.516 | INFO     | __main__:main:292 - ============================================================
+2025-11-07 01:50:39.517 | INFO     | __main__:main:293 - New records added:
+2025-11-07 01:50:39.517 | INFO     | __main__:main:294 -   - Customers: 0
+2025-11-07 01:50:39.518 | INFO     | __main__:main:295 -   - Products: 0
+2025-11-07 01:50:39.519 | INFO     | __main__:main:296 -   - Orders: 0
+2025-11-07 01:50:39.520 | INFO     | __main__:main:297 - End time: 2025-11-07 01:50:39
+2025-11-07 01:50:40.152 | INFO     | __main__:main:236 - ============================================================
+2025-11-07 01:50:40.153 | INFO     | __main__:main:237 - REFRESH AGGREGATIONS
+2025-11-07 01:50:40.154 | INFO     | __main__:main:238 - Started: 2025-11-07 01:50:40
+2025-11-07 01:50:40.154 | INFO     | __main__:main:239 - ============================================================
+2025-11-07 01:50:40.155 | INFO     | __main__:refresh_customer_summary:32 - ⏳ Refreshing customer_summary...
+2025-11-07 01:50:40.194 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:50:40.554 | INFO     | __main__:refresh_customer_summary:75 - ✓ Refreshed customer_summary: 10000 records
+2025-11-07 01:50:40.555 | INFO     | __main__:refresh_product_summary:89 - ⏳ Refreshing product_summary...
+2025-11-07 01:50:40.599 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:50:40.726 | INFO     | __main__:refresh_product_summary:126 - ✓ Refreshed product_summary: 495 records
+2025-11-07 01:50:40.727 | INFO     | __main__:refresh_daily_sales_summary:140 - ⏳ Refreshing daily_sales_summary...
+2025-11-07 01:50:40.766 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:50:40.831 | INFO     | __main__:refresh_daily_sales_summary:169 - ✓ Refreshed daily_sales_summary: 181 records
+2025-11-07 01:50:40.832 | INFO     | __main__:refresh_monthly_sales_summary:183 - ⏳ Refreshing monthly_sales_summary...
+2025-11-07 01:50:40.862 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:50:40.939 | INFO     | __main__:refresh_monthly_sales_summary:222 - ✓ Refreshed monthly_sales_summary: 7 records
+2025-11-07 01:50:40.941 | INFO     | __main__:main:252 - ============================================================
+2025-11-07 01:50:40.942 | INFO     | __main__:main:253 - ✓ ALL AGGREGATIONS REFRESHED SUCCESSFULLY
+2025-11-07 01:50:40.943 | INFO     | __main__:main:254 - Recalculated from ALL cumulative base data
+2025-11-07 01:50:40.944 | INFO     | __main__:main:255 - ============================================================
+2025-11-07 01:50:42.597 | INFO     | __main__:main:804 - ============================================================
+2025-11-07 01:50:42.598 | INFO     | __main__:main:805 - QUALITY REPORT GENERATION
+2025-11-07 01:50:42.599 | INFO     | __main__:main:806 - ============================================================
+2025-11-07 01:50:42.600 | INFO     | __main__:__init__:47 - ✓ Report generator initialized
+2025-11-07 01:50:42.601 | INFO     | __main__:generate_html:330 - 🎨 Generating HTML report...
+2025-11-07 01:50:42.601 | INFO     | __main__:get_table_stats:52 - 📊 Collecting table statistics...
+2025-11-07 01:50:42.642 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:50:42.680 | INFO     | __main__:get_table_stats:71 -   customers: 10000 rows
+2025-11-07 01:50:42.688 | INFO     | __main__:get_table_stats:71 -   products: 495 rows
+2025-11-07 01:50:42.703 | INFO     | __main__:get_table_stats:71 -   orders: 50000 rows
+2025-11-07 01:50:42.722 | INFO     | __main__:get_table_stats:71 -   customer_summary: 10000 rows
+2025-11-07 01:50:42.730 | INFO     | __main__:get_table_stats:71 -   product_summary: 495 rows
+2025-11-07 01:50:42.738 | INFO     | __main__:get_table_stats:71 -   daily_sales_summary: 181 rows
+2025-11-07 01:50:42.752 | INFO     | __main__:get_table_stats:71 -   monthly_sales_summary: 7 rows
+2025-11-07 01:50:42.755 | INFO     | __main__:detect_null_values:86 - 🔍 Detecting null values...
+2025-11-07 01:50:42.797 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:50:42.829 | INFO     | __main__:detect_duplicates:141 - 🔍 Detecting duplicates...
+2025-11-07 01:50:42.866 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:50:42.916 | INFO     | __main__:detect_data_quality_issues:191 - 🔍 Detecting data quality issues...
+2025-11-07 01:50:42.939 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:50:42.955 | WARNING  | __main__:detect_data_quality_issues:251 -   🟡 WARNING: 348 orders with future dates
+2025-11-07 01:50:42.969 | INFO     | __main__:get_high_value_anomalies:283 - 🔍 Detecting high-value anomalies...
+2025-11-07 01:50:43.002 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:50:43.049 | INFO     | __main__:generate_html:768 - ✓ HTML report generated successfully
+2025-11-07 01:50:43.050 | INFO     | __main__:save_report:778 - 💾 Saving report to file...
+2025-11-07 01:50:43.053 | INFO     | __main__:save_report:790 - ✓ Report saved to C:\projects\ecommerce-data-pipeline\data\processed\quality_report_20251107_015043.html
+2025-11-07 01:50:43.054 | INFO     | __main__:main:820 - ============================================================
+2025-11-07 01:50:43.055 | INFO     | __main__:main:821 - ✓ REPORT GENERATED
+2025-11-07 01:50:43.055 | INFO     | __main__:main:822 - ============================================================
+2025-11-07 01:55:16.301 | INFO     | __main__:main:245 - ============================================================
+2025-11-07 01:55:16.303 | INFO     | __main__:main:246 - CSV TO POSTGRESQL DATA LOADER (INCREMENTAL MODE)
+2025-11-07 01:55:16.303 | INFO     | __main__:main:247 - ============================================================
+2025-11-07 01:55:16.305 | INFO     | __main__:main:256 - [1/4] LOADING CUSTOMERS (with duplicate handling)
+2025-11-07 01:55:16.305 | INFO     | __main__:load_csv_to_table:48 - 📂 Reading CSV file (chunked): C:\projects\ecommerce-data-pipeline\data\raw\customers.csv
+2025-11-07 01:55:16.355 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:16.377 | INFO     | __main__:load_csv_to_table:60 -   Current rows in customers: 10,000
+2025-11-07 01:55:16.404 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:16.405 | INFO     | __main__:load_csv_to_table:70 - → Processing data in batches of 1000...
+2025-11-07 01:55:16.573 | INFO     | __main__:load_csv_to_table:125 - → Batch 1: 1,000 rows processed
+2025-11-07 01:55:16.708 | INFO     | __main__:load_csv_to_table:125 - → Batch 2: 2,000 rows processed
+2025-11-07 01:55:16.859 | INFO     | __main__:load_csv_to_table:125 - → Batch 3: 3,000 rows processed
+2025-11-07 01:55:16.998 | INFO     | __main__:load_csv_to_table:125 - → Batch 4: 4,000 rows processed
+2025-11-07 01:55:17.135 | INFO     | __main__:load_csv_to_table:125 - → Batch 5: 5,000 rows processed
+2025-11-07 01:55:17.280 | INFO     | __main__:load_csv_to_table:125 - → Batch 6: 6,000 rows processed
+2025-11-07 01:55:17.423 | INFO     | __main__:load_csv_to_table:125 - → Batch 7: 7,000 rows processed
+2025-11-07 01:55:17.583 | INFO     | __main__:load_csv_to_table:125 - → Batch 8: 8,000 rows processed
+2025-11-07 01:55:17.734 | INFO     | __main__:load_csv_to_table:125 - → Batch 9: 9,000 rows processed
+2025-11-07 01:55:17.886 | INFO     | __main__:load_csv_to_table:125 - → Batch 10: 10,000 rows processed
+2025-11-07 01:55:17.911 | INFO     | __main__:load_csv_to_table:142 - ✓ Successfully loaded 10,000 NEW rows into customers
+2025-11-07 01:55:17.912 | INFO     | __main__:load_csv_to_table:144 -   Total rows in customers: 20,000
+2025-11-07 01:55:17.914 | INFO     | __main__:main:265 - [2/4] LOADING PRODUCTS (with duplicate handling)
+2025-11-07 01:55:17.916 | INFO     | __main__:load_csv_to_table:48 - 📂 Reading CSV file (chunked): C:\projects\ecommerce-data-pipeline\data\raw\products.csv
+2025-11-07 01:55:17.953 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:17.961 | INFO     | __main__:load_csv_to_table:60 -   Current rows in products: 495
+2025-11-07 01:55:18.003 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:18.004 | INFO     | __main__:load_csv_to_table:70 - → Processing data in batches of 1000...
+2025-11-07 01:55:18.078 | INFO     | __main__:load_csv_to_table:125 - → Batch 1: 495 rows processed
+2025-11-07 01:55:18.089 | INFO     | __main__:load_csv_to_table:142 - ✓ Successfully loaded 495 NEW rows into products
+2025-11-07 01:55:18.090 | INFO     | __main__:load_csv_to_table:144 -   Total rows in products: 990
+2025-11-07 01:55:18.092 | INFO     | __main__:main:274 - [3/4] LOADING ORDERS (appending new orders)
+2025-11-07 01:55:18.093 | INFO     | __main__:load_csv_to_table:48 - 📂 Reading CSV file (chunked): C:\projects\ecommerce-data-pipeline\data\raw\orders.csv
+2025-11-07 01:55:18.131 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:18.145 | INFO     | __main__:load_csv_to_table:60 -   Current rows in orders: 50,000
+2025-11-07 01:55:18.195 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:18.196 | INFO     | __main__:load_csv_to_table:70 - → Processing data in batches of 1000...
+2025-11-07 01:55:18.464 | INFO     | __main__:load_csv_to_table:125 - → Batch 1: 1,000 rows processed
+2025-11-07 01:55:18.735 | INFO     | __main__:load_csv_to_table:125 - → Batch 2: 2,000 rows processed
+2025-11-07 01:55:18.929 | INFO     | __main__:load_csv_to_table:125 - → Batch 3: 3,000 rows processed
+2025-11-07 01:55:19.159 | INFO     | __main__:load_csv_to_table:125 - → Batch 4: 4,000 rows processed
+2025-11-07 01:55:19.384 | INFO     | __main__:load_csv_to_table:125 - → Batch 5: 5,000 rows processed
+2025-11-07 01:55:19.617 | INFO     | __main__:load_csv_to_table:125 - → Batch 6: 6,000 rows processed
+2025-11-07 01:55:19.787 | INFO     | __main__:load_csv_to_table:125 - → Batch 7: 7,000 rows processed
+2025-11-07 01:55:20.002 | INFO     | __main__:load_csv_to_table:125 - → Batch 8: 8,000 rows processed
+2025-11-07 01:55:20.284 | INFO     | __main__:load_csv_to_table:125 - → Batch 9: 9,000 rows processed
+2025-11-07 01:55:20.550 | INFO     | __main__:load_csv_to_table:125 - → Batch 10: 10,000 rows processed
+2025-11-07 01:55:20.748 | INFO     | __main__:load_csv_to_table:125 - → Batch 11: 11,000 rows processed
+2025-11-07 01:55:20.988 | INFO     | __main__:load_csv_to_table:125 - → Batch 12: 12,000 rows processed
+2025-11-07 01:55:21.227 | INFO     | __main__:load_csv_to_table:125 - → Batch 13: 13,000 rows processed
+2025-11-07 01:55:21.495 | INFO     | __main__:load_csv_to_table:125 - → Batch 14: 14,000 rows processed
+2025-11-07 01:55:21.732 | INFO     | __main__:load_csv_to_table:125 - → Batch 15: 15,000 rows processed
+2025-11-07 01:55:21.951 | INFO     | __main__:load_csv_to_table:125 - → Batch 16: 16,000 rows processed
+2025-11-07 01:55:22.177 | INFO     | __main__:load_csv_to_table:125 - → Batch 17: 17,000 rows processed
+2025-11-07 01:55:22.380 | INFO     | __main__:load_csv_to_table:125 - → Batch 18: 18,000 rows processed
+2025-11-07 01:55:22.610 | INFO     | __main__:load_csv_to_table:125 - → Batch 19: 19,000 rows processed
+2025-11-07 01:55:22.843 | INFO     | __main__:load_csv_to_table:125 - → Batch 20: 20,000 rows processed
+2025-11-07 01:55:23.076 | INFO     | __main__:load_csv_to_table:125 - → Batch 21: 21,000 rows processed
+2025-11-07 01:55:23.310 | INFO     | __main__:load_csv_to_table:125 - → Batch 22: 22,000 rows processed
+2025-11-07 01:55:23.518 | INFO     | __main__:load_csv_to_table:125 - → Batch 23: 23,000 rows processed
+2025-11-07 01:55:23.743 | INFO     | __main__:load_csv_to_table:125 - → Batch 24: 24,000 rows processed
+2025-11-07 01:55:23.940 | INFO     | __main__:load_csv_to_table:125 - → Batch 25: 25,000 rows processed
+2025-11-07 01:55:24.143 | INFO     | __main__:load_csv_to_table:125 - → Batch 26: 26,000 rows processed
+2025-11-07 01:55:24.364 | INFO     | __main__:load_csv_to_table:125 - → Batch 27: 27,000 rows processed
+2025-11-07 01:55:24.540 | INFO     | __main__:load_csv_to_table:125 - → Batch 28: 28,000 rows processed
+2025-11-07 01:55:24.749 | INFO     | __main__:load_csv_to_table:125 - → Batch 29: 29,000 rows processed
+2025-11-07 01:55:24.966 | INFO     | __main__:load_csv_to_table:125 - → Batch 30: 30,000 rows processed
+2025-11-07 01:55:25.189 | INFO     | __main__:load_csv_to_table:125 - → Batch 31: 31,000 rows processed
+2025-11-07 01:55:25.420 | INFO     | __main__:load_csv_to_table:125 - → Batch 32: 32,000 rows processed
+2025-11-07 01:55:25.688 | INFO     | __main__:load_csv_to_table:125 - → Batch 33: 33,000 rows processed
+2025-11-07 01:55:25.942 | INFO     | __main__:load_csv_to_table:125 - → Batch 34: 34,000 rows processed
+2025-11-07 01:55:26.179 | INFO     | __main__:load_csv_to_table:125 - → Batch 35: 35,000 rows processed
+2025-11-07 01:55:26.395 | INFO     | __main__:load_csv_to_table:125 - → Batch 36: 36,000 rows processed
+2025-11-07 01:55:26.622 | INFO     | __main__:load_csv_to_table:125 - → Batch 37: 37,000 rows processed
+2025-11-07 01:55:26.873 | INFO     | __main__:load_csv_to_table:125 - → Batch 38: 38,000 rows processed
+2025-11-07 01:55:27.108 | INFO     | __main__:load_csv_to_table:125 - → Batch 39: 39,000 rows processed
+2025-11-07 01:55:27.367 | INFO     | __main__:load_csv_to_table:125 - → Batch 40: 40,000 rows processed
+2025-11-07 01:55:27.627 | INFO     | __main__:load_csv_to_table:125 - → Batch 41: 41,000 rows processed
+2025-11-07 01:55:27.850 | INFO     | __main__:load_csv_to_table:125 - → Batch 42: 42,000 rows processed
+2025-11-07 01:55:28.076 | INFO     | __main__:load_csv_to_table:125 - → Batch 43: 43,000 rows processed
+2025-11-07 01:55:28.297 | INFO     | __main__:load_csv_to_table:125 - → Batch 44: 44,000 rows processed
+2025-11-07 01:55:28.553 | INFO     | __main__:load_csv_to_table:125 - → Batch 45: 45,000 rows processed
+2025-11-07 01:55:28.764 | INFO     | __main__:load_csv_to_table:125 - → Batch 46: 46,000 rows processed
+2025-11-07 01:55:28.977 | INFO     | __main__:load_csv_to_table:125 - → Batch 47: 47,000 rows processed
+2025-11-07 01:55:29.204 | INFO     | __main__:load_csv_to_table:125 - → Batch 48: 48,000 rows processed
+2025-11-07 01:55:29.404 | INFO     | __main__:load_csv_to_table:125 - → Batch 49: 49,000 rows processed
+2025-11-07 01:55:29.635 | INFO     | __main__:load_csv_to_table:125 - → Batch 50: 50,000 rows processed
+2025-11-07 01:55:29.653 | INFO     | __main__:load_csv_to_table:142 - ✓ Successfully loaded 50,000 NEW rows into orders
+2025-11-07 01:55:29.653 | INFO     | __main__:load_csv_to_table:144 -   Total rows in orders: 100,000
+2025-11-07 01:55:29.654 | INFO     | __main__:main:284 - [4/4] VERIFYING DATA LOAD
+2025-11-07 01:55:29.656 | INFO     | __main__:verify_data_load:162 - ============================================================
+2025-11-07 01:55:29.657 | INFO     | __main__:verify_data_load:163 - DATA VERIFICATION
+2025-11-07 01:55:29.657 | INFO     | __main__:verify_data_load:164 - ============================================================
+2025-11-07 01:55:29.695 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:29.710 | INFO     | __main__:verify_data_load:182 - customers      : 20,000 rows
+2025-11-07 01:55:29.714 | INFO     | __main__:verify_data_load:182 - products       : 990 rows
+2025-11-07 01:55:29.731 | INFO     | __main__:verify_data_load:182 - orders         : 100,000 rows
+2025-11-07 01:55:29.732 | INFO     | __main__:verify_data_load:186 - 🔗 Checking foreign key relationships...
+2025-11-07 01:55:29.823 | INFO     | __main__:verify_data_load:218 - ✓ All foreign key relationships are valid
+2025-11-07 01:55:29.871 | INFO     | __main__:verify_data_load:228 - 💰 Total Revenue: ₹3,950,346,825.97
+2025-11-07 01:55:29.872 | INFO     | __main__:verify_data_load:229 - 📦 Total Orders: 100,000
+2025-11-07 01:55:29.873 | INFO     | __main__:main:290 - ============================================================
+2025-11-07 01:55:29.874 | INFO     | __main__:main:291 - ✓ DATA LOAD COMPLETE!
+2025-11-07 01:55:29.875 | INFO     | __main__:main:292 - ============================================================
+2025-11-07 01:55:29.875 | INFO     | __main__:main:293 - New records added:
+2025-11-07 01:55:29.876 | INFO     | __main__:main:294 -   - Customers: 10,000
+2025-11-07 01:55:29.876 | INFO     | __main__:main:295 -   - Products: 495
+2025-11-07 01:55:29.877 | INFO     | __main__:main:296 -   - Orders: 50,000
+2025-11-07 01:55:29.878 | INFO     | __main__:main:297 - End time: 2025-11-07 01:55:29
+2025-11-07 01:55:30.432 | INFO     | __main__:main:236 - ============================================================
+2025-11-07 01:55:30.433 | INFO     | __main__:main:237 - REFRESH AGGREGATIONS
+2025-11-07 01:55:30.433 | INFO     | __main__:main:238 - Started: 2025-11-07 01:55:30
+2025-11-07 01:55:30.434 | INFO     | __main__:main:239 - ============================================================
+2025-11-07 01:55:30.435 | INFO     | __main__:refresh_customer_summary:32 - ⏳ Refreshing customer_summary...
+2025-11-07 01:55:30.468 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:31.059 | INFO     | __main__:refresh_customer_summary:75 - ✓ Refreshed customer_summary: 20000 records
+2025-11-07 01:55:31.061 | INFO     | __main__:refresh_product_summary:89 - ⏳ Refreshing product_summary...
+2025-11-07 01:55:31.097 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:31.243 | INFO     | __main__:refresh_product_summary:126 - ✓ Refreshed product_summary: 990 records
+2025-11-07 01:55:31.244 | INFO     | __main__:refresh_daily_sales_summary:140 - ⏳ Refreshing daily_sales_summary...
+2025-11-07 01:55:31.274 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:31.447 | INFO     | __main__:refresh_daily_sales_summary:169 - ✓ Refreshed daily_sales_summary: 181 records
+2025-11-07 01:55:31.448 | INFO     | __main__:refresh_monthly_sales_summary:183 - ⏳ Refreshing monthly_sales_summary...
+2025-11-07 01:55:31.483 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:31.665 | INFO     | __main__:refresh_monthly_sales_summary:222 - ✓ Refreshed monthly_sales_summary: 7 records
+2025-11-07 01:55:31.666 | INFO     | __main__:main:252 - ============================================================
+2025-11-07 01:55:31.667 | INFO     | __main__:main:253 - ✓ ALL AGGREGATIONS REFRESHED SUCCESSFULLY
+2025-11-07 01:55:31.668 | INFO     | __main__:main:254 - Recalculated from ALL cumulative base data
+2025-11-07 01:55:31.669 | INFO     | __main__:main:255 - ============================================================
+2025-11-07 01:55:32.817 | INFO     | __main__:main:804 - ============================================================
+2025-11-07 01:55:32.817 | INFO     | __main__:main:805 - QUALITY REPORT GENERATION
+2025-11-07 01:55:32.818 | INFO     | __main__:main:806 - ============================================================
+2025-11-07 01:55:32.818 | INFO     | __main__:__init__:47 - ✓ Report generator initialized
+2025-11-07 01:55:32.819 | INFO     | __main__:generate_html:330 - 🎨 Generating HTML report...
+2025-11-07 01:55:32.819 | INFO     | __main__:get_table_stats:52 - 📊 Collecting table statistics...
+2025-11-07 01:55:32.858 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:32.893 | INFO     | __main__:get_table_stats:71 -   customers: 20000 rows
+2025-11-07 01:55:32.901 | INFO     | __main__:get_table_stats:71 -   products: 990 rows
+2025-11-07 01:55:32.924 | INFO     | __main__:get_table_stats:71 -   orders: 100000 rows
+2025-11-07 01:55:32.937 | INFO     | __main__:get_table_stats:71 -   customer_summary: 20000 rows
+2025-11-07 01:55:32.943 | INFO     | __main__:get_table_stats:71 -   product_summary: 990 rows
+2025-11-07 01:55:32.949 | INFO     | __main__:get_table_stats:71 -   daily_sales_summary: 181 rows
+2025-11-07 01:55:32.956 | INFO     | __main__:get_table_stats:71 -   monthly_sales_summary: 7 rows
+2025-11-07 01:55:32.957 | INFO     | __main__:detect_null_values:86 - 🔍 Detecting null values...
+2025-11-07 01:55:32.987 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:33.017 | INFO     | __main__:detect_duplicates:141 - 🔍 Detecting duplicates...
+2025-11-07 01:55:33.044 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:33.116 | INFO     | __main__:detect_data_quality_issues:191 - 🔍 Detecting data quality issues...
+2025-11-07 01:55:33.149 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:33.169 | WARNING  | __main__:detect_data_quality_issues:251 -   🟡 WARNING: 690 orders with future dates
+2025-11-07 01:55:33.192 | INFO     | __main__:get_high_value_anomalies:283 - 🔍 Detecting high-value anomalies...
+2025-11-07 01:55:33.221 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:33.272 | INFO     | __main__:generate_html:768 - ✓ HTML report generated successfully
+2025-11-07 01:55:33.273 | INFO     | __main__:save_report:778 - 💾 Saving report to file...
+2025-11-07 01:55:33.275 | INFO     | __main__:save_report:790 - ✓ Report saved to C:\projects\ecommerce-data-pipeline\data\processed\quality_report_20251107_015533.html
+2025-11-07 01:55:33.276 | INFO     | __main__:main:820 - ============================================================
+2025-11-07 01:55:33.277 | INFO     | __main__:main:821 - ✓ REPORT GENERATED
+2025-11-07 01:55:33.277 | INFO     | __main__:main:822 - ============================================================
+2025-11-07 01:55:43.298 | INFO     | __main__:main:245 - ============================================================
+2025-11-07 01:55:43.298 | INFO     | __main__:main:246 - CSV TO POSTGRESQL DATA LOADER (INCREMENTAL MODE)
+2025-11-07 01:55:43.299 | INFO     | __main__:main:247 - ============================================================
+2025-11-07 01:55:43.300 | INFO     | __main__:main:256 - [1/4] LOADING CUSTOMERS (with duplicate handling)
+2025-11-07 01:55:43.301 | INFO     | __main__:load_csv_to_table:48 - 📂 Reading CSV file (chunked): C:\projects\ecommerce-data-pipeline\data\raw\customers.csv
+2025-11-07 01:55:43.345 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:43.365 | INFO     | __main__:load_csv_to_table:60 -   Current rows in customers: 20,000
+2025-11-07 01:55:43.394 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:43.394 | INFO     | __main__:load_csv_to_table:70 - → Processing data in batches of 1000...
+2025-11-07 01:55:43.517 | INFO     | __main__:load_csv_to_table:125 - → Batch 1: 1,000 rows processed
+2025-11-07 01:55:43.696 | INFO     | __main__:load_csv_to_table:125 - → Batch 2: 2,000 rows processed
+2025-11-07 01:55:43.812 | INFO     | __main__:load_csv_to_table:125 - → Batch 3: 3,000 rows processed
+2025-11-07 01:55:43.952 | INFO     | __main__:load_csv_to_table:125 - → Batch 4: 4,000 rows processed
+2025-11-07 01:55:44.103 | INFO     | __main__:load_csv_to_table:125 - → Batch 5: 5,000 rows processed
+2025-11-07 01:55:44.245 | INFO     | __main__:load_csv_to_table:125 - → Batch 6: 6,000 rows processed
+2025-11-07 01:55:44.389 | INFO     | __main__:load_csv_to_table:125 - → Batch 7: 7,000 rows processed
+2025-11-07 01:55:44.531 | INFO     | __main__:load_csv_to_table:125 - → Batch 8: 8,000 rows processed
+2025-11-07 01:55:44.688 | INFO     | __main__:load_csv_to_table:125 - → Batch 9: 9,000 rows processed
+2025-11-07 01:55:44.819 | INFO     | __main__:load_csv_to_table:125 - → Batch 10: 10,000 rows processed
+2025-11-07 01:55:44.836 | INFO     | __main__:load_csv_to_table:142 - ✓ Successfully loaded 10,000 NEW rows into customers
+2025-11-07 01:55:44.836 | INFO     | __main__:load_csv_to_table:144 -   Total rows in customers: 30,000
+2025-11-07 01:55:44.839 | INFO     | __main__:main:265 - [2/4] LOADING PRODUCTS (with duplicate handling)
+2025-11-07 01:55:44.841 | INFO     | __main__:load_csv_to_table:48 - 📂 Reading CSV file (chunked): C:\projects\ecommerce-data-pipeline\data\raw\products.csv
+2025-11-07 01:55:44.875 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:44.883 | INFO     | __main__:load_csv_to_table:60 -   Current rows in products: 990
+2025-11-07 01:55:44.931 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:44.932 | INFO     | __main__:load_csv_to_table:70 - → Processing data in batches of 1000...
+2025-11-07 01:55:45.005 | INFO     | __main__:load_csv_to_table:125 - → Batch 1: 495 rows processed
+2025-11-07 01:55:45.018 | INFO     | __main__:load_csv_to_table:142 - ✓ Successfully loaded 0 NEW rows into products
+2025-11-07 01:55:45.019 | INFO     | __main__:load_csv_to_table:144 -   Total rows in products: 990
+2025-11-07 01:55:45.021 | INFO     | __main__:main:274 - [3/4] LOADING ORDERS (appending new orders)
+2025-11-07 01:55:45.023 | INFO     | __main__:load_csv_to_table:48 - 📂 Reading CSV file (chunked): C:\projects\ecommerce-data-pipeline\data\raw\orders.csv
+2025-11-07 01:55:45.054 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:45.076 | INFO     | __main__:load_csv_to_table:60 -   Current rows in orders: 100,000
+2025-11-07 01:55:45.125 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:45.126 | INFO     | __main__:load_csv_to_table:70 - → Processing data in batches of 1000...
+2025-11-07 01:55:45.286 | INFO     | __main__:load_csv_to_table:125 - → Batch 1: 1,000 rows processed
+2025-11-07 01:55:45.471 | INFO     | __main__:load_csv_to_table:125 - → Batch 2: 2,000 rows processed
+2025-11-07 01:55:45.671 | INFO     | __main__:load_csv_to_table:125 - → Batch 3: 3,000 rows processed
+2025-11-07 01:55:45.854 | INFO     | __main__:load_csv_to_table:125 - → Batch 4: 4,000 rows processed
+2025-11-07 01:55:45.979 | INFO     | __main__:load_csv_to_table:125 - → Batch 5: 5,000 rows processed
+2025-11-07 01:55:46.127 | INFO     | __main__:load_csv_to_table:125 - → Batch 6: 6,000 rows processed
+2025-11-07 01:55:46.307 | INFO     | __main__:load_csv_to_table:125 - → Batch 7: 7,000 rows processed
+2025-11-07 01:55:46.507 | INFO     | __main__:load_csv_to_table:125 - → Batch 8: 8,000 rows processed
+2025-11-07 01:55:46.656 | INFO     | __main__:load_csv_to_table:125 - → Batch 9: 9,000 rows processed
+2025-11-07 01:55:46.769 | INFO     | __main__:load_csv_to_table:125 - → Batch 10: 10,000 rows processed
+2025-11-07 01:55:46.909 | INFO     | __main__:load_csv_to_table:125 - → Batch 11: 11,000 rows processed
+2025-11-07 01:55:47.094 | INFO     | __main__:load_csv_to_table:125 - → Batch 12: 12,000 rows processed
+2025-11-07 01:55:47.263 | INFO     | __main__:load_csv_to_table:125 - → Batch 13: 13,000 rows processed
+2025-11-07 01:55:47.372 | INFO     | __main__:load_csv_to_table:125 - → Batch 14: 14,000 rows processed
+2025-11-07 01:55:47.477 | INFO     | __main__:load_csv_to_table:125 - → Batch 15: 15,000 rows processed
+2025-11-07 01:55:47.577 | INFO     | __main__:load_csv_to_table:125 - → Batch 16: 16,000 rows processed
+2025-11-07 01:55:47.674 | INFO     | __main__:load_csv_to_table:125 - → Batch 17: 17,000 rows processed
+2025-11-07 01:55:47.776 | INFO     | __main__:load_csv_to_table:125 - → Batch 18: 18,000 rows processed
+2025-11-07 01:55:47.891 | INFO     | __main__:load_csv_to_table:125 - → Batch 19: 19,000 rows processed
+2025-11-07 01:55:48.057 | INFO     | __main__:load_csv_to_table:125 - → Batch 20: 20,000 rows processed
+2025-11-07 01:55:48.181 | INFO     | __main__:load_csv_to_table:125 - → Batch 21: 21,000 rows processed
+2025-11-07 01:55:48.322 | INFO     | __main__:load_csv_to_table:125 - → Batch 22: 22,000 rows processed
+2025-11-07 01:55:48.433 | INFO     | __main__:load_csv_to_table:125 - → Batch 23: 23,000 rows processed
+2025-11-07 01:55:48.554 | INFO     | __main__:load_csv_to_table:125 - → Batch 24: 24,000 rows processed
+2025-11-07 01:55:48.663 | INFO     | __main__:load_csv_to_table:125 - → Batch 25: 25,000 rows processed
+2025-11-07 01:55:48.790 | INFO     | __main__:load_csv_to_table:125 - → Batch 26: 26,000 rows processed
+2025-11-07 01:55:48.890 | INFO     | __main__:load_csv_to_table:125 - → Batch 27: 27,000 rows processed
+2025-11-07 01:55:48.988 | INFO     | __main__:load_csv_to_table:125 - → Batch 28: 28,000 rows processed
+2025-11-07 01:55:49.109 | INFO     | __main__:load_csv_to_table:125 - → Batch 29: 29,000 rows processed
+2025-11-07 01:55:49.212 | INFO     | __main__:load_csv_to_table:125 - → Batch 30: 30,000 rows processed
+2025-11-07 01:55:49.343 | INFO     | __main__:load_csv_to_table:125 - → Batch 31: 31,000 rows processed
+2025-11-07 01:55:49.464 | INFO     | __main__:load_csv_to_table:125 - → Batch 32: 32,000 rows processed
+2025-11-07 01:55:49.652 | INFO     | __main__:load_csv_to_table:125 - → Batch 33: 33,000 rows processed
+2025-11-07 01:55:49.788 | INFO     | __main__:load_csv_to_table:125 - → Batch 34: 34,000 rows processed
+2025-11-07 01:55:49.938 | INFO     | __main__:load_csv_to_table:125 - → Batch 35: 35,000 rows processed
+2025-11-07 01:55:50.093 | INFO     | __main__:load_csv_to_table:125 - → Batch 36: 36,000 rows processed
+2025-11-07 01:55:50.207 | INFO     | __main__:load_csv_to_table:125 - → Batch 37: 37,000 rows processed
+2025-11-07 01:55:50.379 | INFO     | __main__:load_csv_to_table:125 - → Batch 38: 38,000 rows processed
+2025-11-07 01:55:50.511 | INFO     | __main__:load_csv_to_table:125 - → Batch 39: 39,000 rows processed
+2025-11-07 01:55:50.632 | INFO     | __main__:load_csv_to_table:125 - → Batch 40: 40,000 rows processed
+2025-11-07 01:55:50.782 | INFO     | __main__:load_csv_to_table:125 - → Batch 41: 41,000 rows processed
+2025-11-07 01:55:50.927 | INFO     | __main__:load_csv_to_table:125 - → Batch 42: 42,000 rows processed
+2025-11-07 01:55:51.059 | INFO     | __main__:load_csv_to_table:125 - → Batch 43: 43,000 rows processed
+2025-11-07 01:55:51.205 | INFO     | __main__:load_csv_to_table:125 - → Batch 44: 44,000 rows processed
+2025-11-07 01:55:51.371 | INFO     | __main__:load_csv_to_table:125 - → Batch 45: 45,000 rows processed
+2025-11-07 01:55:51.513 | INFO     | __main__:load_csv_to_table:125 - → Batch 46: 46,000 rows processed
+2025-11-07 01:55:51.645 | INFO     | __main__:load_csv_to_table:125 - → Batch 47: 47,000 rows processed
+2025-11-07 01:55:51.828 | INFO     | __main__:load_csv_to_table:125 - → Batch 48: 48,000 rows processed
+2025-11-07 01:55:51.993 | INFO     | __main__:load_csv_to_table:125 - → Batch 49: 49,000 rows processed
+2025-11-07 01:55:52.167 | INFO     | __main__:load_csv_to_table:125 - → Batch 50: 50,000 rows processed
+2025-11-07 01:55:52.184 | INFO     | __main__:load_csv_to_table:142 - ✓ Successfully loaded 2,800 NEW rows into orders
+2025-11-07 01:55:52.185 | INFO     | __main__:load_csv_to_table:144 -   Total rows in orders: 102,800
+2025-11-07 01:55:52.186 | INFO     | __main__:main:284 - [4/4] VERIFYING DATA LOAD
+2025-11-07 01:55:52.188 | INFO     | __main__:verify_data_load:162 - ============================================================
+2025-11-07 01:55:52.188 | INFO     | __main__:verify_data_load:163 - DATA VERIFICATION
+2025-11-07 01:55:52.189 | INFO     | __main__:verify_data_load:164 - ============================================================
+2025-11-07 01:55:52.213 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:52.224 | INFO     | __main__:verify_data_load:182 - customers      : 30,000 rows
+2025-11-07 01:55:52.230 | INFO     | __main__:verify_data_load:182 - products       : 990 rows
+2025-11-07 01:55:52.242 | INFO     | __main__:verify_data_load:182 - orders         : 102,800 rows
+2025-11-07 01:55:52.243 | INFO     | __main__:verify_data_load:186 - 🔗 Checking foreign key relationships...
+2025-11-07 01:55:52.314 | INFO     | __main__:verify_data_load:218 - ✓ All foreign key relationships are valid
+2025-11-07 01:55:52.369 | INFO     | __main__:verify_data_load:228 - 💰 Total Revenue: ₹4,056,048,789.36
+2025-11-07 01:55:52.370 | INFO     | __main__:verify_data_load:229 - 📦 Total Orders: 102,800
+2025-11-07 01:55:52.372 | INFO     | __main__:main:290 - ============================================================
+2025-11-07 01:55:52.373 | INFO     | __main__:main:291 - ✓ DATA LOAD COMPLETE!
+2025-11-07 01:55:52.374 | INFO     | __main__:main:292 - ============================================================
+2025-11-07 01:55:52.374 | INFO     | __main__:main:293 - New records added:
+2025-11-07 01:55:52.375 | INFO     | __main__:main:294 -   - Customers: 10,000
+2025-11-07 01:55:52.376 | INFO     | __main__:main:295 -   - Products: 0
+2025-11-07 01:55:52.377 | INFO     | __main__:main:296 -   - Orders: 2,800
+2025-11-07 01:55:52.377 | INFO     | __main__:main:297 - End time: 2025-11-07 01:55:52
+2025-11-07 01:55:52.901 | INFO     | __main__:main:236 - ============================================================
+2025-11-07 01:55:52.902 | INFO     | __main__:main:237 - REFRESH AGGREGATIONS
+2025-11-07 01:55:52.903 | INFO     | __main__:main:238 - Started: 2025-11-07 01:55:52
+2025-11-07 01:55:52.903 | INFO     | __main__:main:239 - ============================================================
+2025-11-07 01:55:52.904 | INFO     | __main__:refresh_customer_summary:32 - ⏳ Refreshing customer_summary...
+2025-11-07 01:55:52.930 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:53.445 | INFO     | __main__:refresh_customer_summary:75 - ✓ Refreshed customer_summary: 30000 records
+2025-11-07 01:55:53.447 | INFO     | __main__:refresh_product_summary:89 - ⏳ Refreshing product_summary...
+2025-11-07 01:55:53.480 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:53.658 | INFO     | __main__:refresh_product_summary:126 - ✓ Refreshed product_summary: 990 records
+2025-11-07 01:55:53.660 | INFO     | __main__:refresh_daily_sales_summary:140 - ⏳ Refreshing daily_sales_summary...
+2025-11-07 01:55:53.688 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:53.785 | INFO     | __main__:refresh_daily_sales_summary:169 - ✓ Refreshed daily_sales_summary: 181 records
+2025-11-07 01:55:53.786 | INFO     | __main__:refresh_monthly_sales_summary:183 - ⏳ Refreshing monthly_sales_summary...
+2025-11-07 01:55:53.837 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:53.942 | INFO     | __main__:refresh_monthly_sales_summary:222 - ✓ Refreshed monthly_sales_summary: 7 records
+2025-11-07 01:55:53.943 | INFO     | __main__:main:252 - ============================================================
+2025-11-07 01:55:53.943 | INFO     | __main__:main:253 - ✓ ALL AGGREGATIONS REFRESHED SUCCESSFULLY
+2025-11-07 01:55:53.943 | INFO     | __main__:main:254 - Recalculated from ALL cumulative base data
+2025-11-07 01:55:53.944 | INFO     | __main__:main:255 - ============================================================
+2025-11-07 01:55:54.833 | INFO     | __main__:main:804 - ============================================================
+2025-11-07 01:55:54.834 | INFO     | __main__:main:805 - QUALITY REPORT GENERATION
+2025-11-07 01:55:54.835 | INFO     | __main__:main:806 - ============================================================
+2025-11-07 01:55:54.836 | INFO     | __main__:__init__:47 - ✓ Report generator initialized
+2025-11-07 01:55:54.837 | INFO     | __main__:generate_html:330 - 🎨 Generating HTML report...
+2025-11-07 01:55:54.838 | INFO     | __main__:get_table_stats:52 - 📊 Collecting table statistics...
+2025-11-07 01:55:54.867 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:54.884 | INFO     | __main__:get_table_stats:71 -   customers: 30000 rows
+2025-11-07 01:55:54.889 | INFO     | __main__:get_table_stats:71 -   products: 990 rows
+2025-11-07 01:55:54.903 | INFO     | __main__:get_table_stats:71 -   orders: 102800 rows
+2025-11-07 01:55:54.916 | INFO     | __main__:get_table_stats:71 -   customer_summary: 30000 rows
+2025-11-07 01:55:54.921 | INFO     | __main__:get_table_stats:71 -   product_summary: 990 rows
+2025-11-07 01:55:54.927 | INFO     | __main__:get_table_stats:71 -   daily_sales_summary: 181 rows
+2025-11-07 01:55:54.933 | INFO     | __main__:get_table_stats:71 -   monthly_sales_summary: 7 rows
+2025-11-07 01:55:54.934 | INFO     | __main__:detect_null_values:86 - 🔍 Detecting null values...
+2025-11-07 01:55:54.969 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:55.004 | INFO     | __main__:detect_duplicates:141 - 🔍 Detecting duplicates...
+2025-11-07 01:55:55.045 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:55.143 | INFO     | __main__:detect_data_quality_issues:191 - 🔍 Detecting data quality issues...
+2025-11-07 01:55:55.188 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:55.205 | WARNING  | __main__:detect_data_quality_issues:251 -   🟡 WARNING: 712 orders with future dates
+2025-11-07 01:55:55.227 | INFO     | __main__:get_high_value_anomalies:283 - 🔍 Detecting high-value anomalies...
+2025-11-07 01:55:55.269 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:55.344 | INFO     | __main__:generate_html:768 - ✓ HTML report generated successfully
+2025-11-07 01:55:55.345 | INFO     | __main__:save_report:778 - 💾 Saving report to file...
+2025-11-07 01:55:55.347 | INFO     | __main__:save_report:790 - ✓ Report saved to C:\projects\ecommerce-data-pipeline\data\processed\quality_report_20251107_015555.html
+2025-11-07 01:55:55.349 | INFO     | __main__:main:820 - ============================================================
+2025-11-07 01:55:55.349 | INFO     | __main__:main:821 - ✓ REPORT GENERATED
+2025-11-07 01:55:55.350 | INFO     | __main__:main:822 - ============================================================

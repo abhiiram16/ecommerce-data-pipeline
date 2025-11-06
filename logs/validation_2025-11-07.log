@@ -36,3 +36,21 @@
 2025-11-07 00:29:23.424 | INFO     | __main__:main:293 - ============================================================
 2025-11-07 00:29:23.424 | INFO     | __main__:main:295 - ✓ ALL VALIDATIONS PASSED
 2025-11-07 00:29:23.425 | INFO     | __main__:main:303 - ============================================================
+2025-11-07 00:37:02.444 | INFO     | __main__:main:275 - ============================================================
+2025-11-07 00:37:02.445 | INFO     | __main__:main:276 - DATA VALIDATION
+2025-11-07 00:37:02.445 | INFO     | __main__:main:277 - ============================================================
+2025-11-07 00:37:02.446 | INFO     | __main__:validate_required_fields:42 - 🔍 Validating required fields...
+2025-11-07 00:37:02.470 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:37:02.489 | INFO     | __main__:validate_required_fields:91 - ✓ All required fields are populated
+2025-11-07 00:37:02.490 | INFO     | __main__:validate_data_types:104 - 📝 Validating data types...
+2025-11-07 00:37:02.542 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:37:02.559 | INFO     | __main__:validate_data_types:144 - ✓ All data types are valid
+2025-11-07 00:37:02.561 | INFO     | __main__:validate_foreign_keys:157 - 🔗 Validating foreign keys...
+2025-11-07 00:37:02.609 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:37:02.646 | INFO     | __main__:validate_foreign_keys:196 - ✓ All foreign keys are valid
+2025-11-07 00:37:02.648 | INFO     | __main__:validate_uniqueness:209 - 🔑 Validating uniqueness...
+2025-11-07 00:37:02.674 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:37:02.728 | INFO     | __main__:validate_uniqueness:262 - ✓ All uniqueness constraints satisfied
+2025-11-07 00:37:02.729 | INFO     | __main__:main:293 - ============================================================
+2025-11-07 00:37:02.729 | INFO     | __main__:main:295 - ✓ ALL VALIDATIONS PASSED
+2025-11-07 00:37:02.730 | INFO     | __main__:main:303 - ============================================================

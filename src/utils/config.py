@@ -12,6 +12,7 @@ Date: November 6, 2025
 import os
 from typing import Dict, Any
 from pathlib import Path
+import time
 
 # Get project root directory
 PROJECT_ROOT = Path(__file__).parent.parent.parent
@@ -51,7 +52,7 @@ class Config:
     NUM_ORDERS = int(os.getenv('NUM_ORDERS', 50000))
 
     # Random seed for reproducibility
-    RANDOM_SEED = int(os.getenv('RANDOM_SEED', 42))
+    RANDOM_SEED = int(os.getenv('RANDOM_SEED', int(time.time()) % 100000))
 
     # ========== LOGGING CONFIGURATION ==========
 

@@ -50,3 +50,192 @@ LINE 7:             c.customer_name,
 2025-11-07 00:32:55.346 | INFO     | __main__:main:277 - ============================================================
 2025-11-07 00:32:55.347 | INFO     | __main__:main:278 - ✓ ALL AGGREGATIONS REFRESHED SUCCESSFULLY
 2025-11-07 00:32:55.348 | INFO     | __main__:main:279 - ============================================================
+2025-11-07 00:37:01.433 | INFO     | __main__:main:261 - ============================================================
+2025-11-07 00:37:01.434 | INFO     | __main__:main:262 - REFRESH AGGREGATIONS
+2025-11-07 00:37:01.434 | INFO     | __main__:main:263 - Started: 2025-11-07 00:37:01
+2025-11-07 00:37:01.434 | INFO     | __main__:main:264 - ============================================================
+2025-11-07 00:37:01.435 | INFO     | __main__:refresh_customer_summary:41 - ⏳ Refreshing customer_summary...
+2025-11-07 00:37:01.477 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:37:01.742 | INFO     | __main__:refresh_customer_summary:84 - ✓ Refreshed customer_summary: 10000 records
+2025-11-07 00:37:01.743 | INFO     | __main__:refresh_product_summary:102 - ⏳ Refreshing product_summary...
+2025-11-07 00:37:01.774 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:37:01.868 | INFO     | __main__:refresh_product_summary:139 - ✓ Refreshed product_summary: 495 records
+2025-11-07 00:37:01.869 | INFO     | __main__:refresh_daily_sales_summary:157 - ⏳ Refreshing daily_sales_summary...
+2025-11-07 00:37:01.900 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:37:01.996 | INFO     | __main__:refresh_daily_sales_summary:186 - ✓ Refreshed daily_sales_summary: 181 records
+2025-11-07 00:37:01.998 | INFO     | __main__:refresh_monthly_sales_summary:204 - ⏳ Refreshing monthly_sales_summary...
+2025-11-07 00:37:02.047 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:37:02.141 | INFO     | __main__:refresh_monthly_sales_summary:243 - ✓ Refreshed monthly_sales_summary: 7 records
+2025-11-07 00:37:02.142 | INFO     | __main__:main:277 - ============================================================
+2025-11-07 00:37:02.143 | INFO     | __main__:main:278 - ✓ ALL AGGREGATIONS REFRESHED SUCCESSFULLY
+2025-11-07 00:37:02.143 | INFO     | __main__:main:279 - ============================================================
+2025-11-07 01:11:42.197 | INFO     | __main__:main:296 - ============================================================
+2025-11-07 01:11:42.198 | INFO     | __main__:main:297 - REFRESH AGGREGATIONS (INCREMENTAL MODE)
+2025-11-07 01:11:42.198 | INFO     | __main__:main:298 - Started: 2025-11-07 01:11:42
+2025-11-07 01:11:42.199 | INFO     | __main__:main:299 - ============================================================
+2025-11-07 01:11:42.199 | INFO     | __main__:refresh_customer_summary:41 - ⏳ Refreshing customer_summary...
+2025-11-07 01:11:42.213 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:11:42.223 | ERROR    | __main__:refresh_customer_summary:100 - ✗ customer_summary failed: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+2025-11-07 01:11:42.224 | ERROR    | __main__:main:323 - ✗ Refresh failed: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+2025-11-07 01:14:30.115 | INFO     | __main__:main:236 - ============================================================
+2025-11-07 01:14:30.115 | INFO     | __main__:main:237 - REFRESH AGGREGATIONS
+2025-11-07 01:14:30.115 | INFO     | __main__:main:238 - Started: 2025-11-07 01:14:30
+2025-11-07 01:14:30.115 | INFO     | __main__:main:239 - ============================================================
+2025-11-07 01:14:30.116 | INFO     | __main__:refresh_customer_summary:32 - ⏳ Refreshing customer_summary...
+2025-11-07 01:14:30.129 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:14:30.253 | INFO     | __main__:refresh_customer_summary:75 - ✓ Refreshed customer_summary: 10000 records
+2025-11-07 01:14:30.254 | INFO     | __main__:refresh_product_summary:89 - ⏳ Refreshing product_summary...
+2025-11-07 01:14:30.269 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:14:30.311 | INFO     | __main__:refresh_product_summary:126 - ✓ Refreshed product_summary: 495 records
+2025-11-07 01:14:30.311 | INFO     | __main__:refresh_daily_sales_summary:140 - ⏳ Refreshing daily_sales_summary...
+2025-11-07 01:14:30.324 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:14:30.372 | INFO     | __main__:refresh_daily_sales_summary:169 - ✓ Refreshed daily_sales_summary: 181 records
+2025-11-07 01:14:30.373 | INFO     | __main__:refresh_monthly_sales_summary:183 - ⏳ Refreshing monthly_sales_summary...
+2025-11-07 01:14:30.404 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:14:30.432 | INFO     | __main__:refresh_monthly_sales_summary:222 - ✓ Refreshed monthly_sales_summary: 7 records
+2025-11-07 01:14:30.433 | INFO     | __main__:main:252 - ============================================================
+2025-11-07 01:14:30.433 | INFO     | __main__:main:253 - ✓ ALL AGGREGATIONS REFRESHED SUCCESSFULLY
+2025-11-07 01:14:30.434 | INFO     | __main__:main:254 - Recalculated from ALL cumulative base data
+2025-11-07 01:14:30.434 | INFO     | __main__:main:255 - ============================================================
+2025-11-07 01:18:39.603 | INFO     | __main__:main:236 - ============================================================
+2025-11-07 01:18:39.605 | INFO     | __main__:main:237 - REFRESH AGGREGATIONS
+2025-11-07 01:18:39.605 | INFO     | __main__:main:238 - Started: 2025-11-07 01:18:39
+2025-11-07 01:18:39.605 | INFO     | __main__:main:239 - ============================================================
+2025-11-07 01:18:39.606 | INFO     | __main__:refresh_customer_summary:32 - ⏳ Refreshing customer_summary...
+2025-11-07 01:18:39.637 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:18:39.763 | INFO     | __main__:refresh_customer_summary:75 - ✓ Refreshed customer_summary: 10000 records
+2025-11-07 01:18:39.764 | INFO     | __main__:refresh_product_summary:89 - ⏳ Refreshing product_summary...
+2025-11-07 01:18:39.775 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:18:39.836 | INFO     | __main__:refresh_product_summary:126 - ✓ Refreshed product_summary: 495 records
+2025-11-07 01:18:39.837 | INFO     | __main__:refresh_daily_sales_summary:140 - ⏳ Refreshing daily_sales_summary...
+2025-11-07 01:18:39.887 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:18:39.923 | INFO     | __main__:refresh_daily_sales_summary:169 - ✓ Refreshed daily_sales_summary: 181 records
+2025-11-07 01:18:39.923 | INFO     | __main__:refresh_monthly_sales_summary:183 - ⏳ Refreshing monthly_sales_summary...
+2025-11-07 01:18:39.964 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:18:40.019 | INFO     | __main__:refresh_monthly_sales_summary:222 - ✓ Refreshed monthly_sales_summary: 7 records
+2025-11-07 01:18:40.020 | INFO     | __main__:main:252 - ============================================================
+2025-11-07 01:18:40.020 | INFO     | __main__:main:253 - ✓ ALL AGGREGATIONS REFRESHED SUCCESSFULLY
+2025-11-07 01:18:40.021 | INFO     | __main__:main:254 - Recalculated from ALL cumulative base data
+2025-11-07 01:18:40.021 | INFO     | __main__:main:255 - ============================================================
+2025-11-07 01:29:15.308 | INFO     | __main__:main:236 - ============================================================
+2025-11-07 01:29:15.309 | INFO     | __main__:main:237 - REFRESH AGGREGATIONS
+2025-11-07 01:29:15.309 | INFO     | __main__:main:238 - Started: 2025-11-07 01:29:15
+2025-11-07 01:29:15.309 | INFO     | __main__:main:239 - ============================================================
+2025-11-07 01:29:15.309 | INFO     | __main__:refresh_customer_summary:32 - ⏳ Refreshing customer_summary...
+2025-11-07 01:29:15.324 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:29:15.460 | INFO     | __main__:refresh_customer_summary:75 - ✓ Refreshed customer_summary: 10000 records
+2025-11-07 01:29:15.461 | INFO     | __main__:refresh_product_summary:89 - ⏳ Refreshing product_summary...
+2025-11-07 01:29:15.472 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:29:15.510 | INFO     | __main__:refresh_product_summary:126 - ✓ Refreshed product_summary: 495 records
+2025-11-07 01:29:15.510 | INFO     | __main__:refresh_daily_sales_summary:140 - ⏳ Refreshing daily_sales_summary...
+2025-11-07 01:29:15.534 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:29:15.564 | INFO     | __main__:refresh_daily_sales_summary:169 - ✓ Refreshed daily_sales_summary: 181 records
+2025-11-07 01:29:15.564 | INFO     | __main__:refresh_monthly_sales_summary:183 - ⏳ Refreshing monthly_sales_summary...
+2025-11-07 01:29:15.575 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:29:15.606 | INFO     | __main__:refresh_monthly_sales_summary:222 - ✓ Refreshed monthly_sales_summary: 7 records
+2025-11-07 01:29:15.607 | INFO     | __main__:main:252 - ============================================================
+2025-11-07 01:29:15.607 | INFO     | __main__:main:253 - ✓ ALL AGGREGATIONS REFRESHED SUCCESSFULLY
+2025-11-07 01:29:15.607 | INFO     | __main__:main:254 - Recalculated from ALL cumulative base data
+2025-11-07 01:29:15.607 | INFO     | __main__:main:255 - ============================================================
+2025-11-07 01:32:52.790 | INFO     | __main__:main:236 - ============================================================
+2025-11-07 01:32:52.790 | INFO     | __main__:main:237 - REFRESH AGGREGATIONS
+2025-11-07 01:32:52.790 | INFO     | __main__:main:238 - Started: 2025-11-07 01:32:52
+2025-11-07 01:32:52.790 | INFO     | __main__:main:239 - ============================================================
+2025-11-07 01:32:52.791 | INFO     | __main__:refresh_customer_summary:32 - ⏳ Refreshing customer_summary...
+2025-11-07 01:32:52.828 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:32:52.969 | INFO     | __main__:refresh_customer_summary:75 - ✓ Refreshed customer_summary: 10000 records
+2025-11-07 01:32:52.969 | INFO     | __main__:refresh_product_summary:89 - ⏳ Refreshing product_summary...
+2025-11-07 01:32:52.979 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:32:53.042 | INFO     | __main__:refresh_product_summary:126 - ✓ Refreshed product_summary: 495 records
+2025-11-07 01:32:53.043 | INFO     | __main__:refresh_daily_sales_summary:140 - ⏳ Refreshing daily_sales_summary...
+2025-11-07 01:32:53.059 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:32:53.100 | INFO     | __main__:refresh_daily_sales_summary:169 - ✓ Refreshed daily_sales_summary: 181 records
+2025-11-07 01:32:53.101 | INFO     | __main__:refresh_monthly_sales_summary:183 - ⏳ Refreshing monthly_sales_summary...
+2025-11-07 01:32:53.116 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:32:53.157 | INFO     | __main__:refresh_monthly_sales_summary:222 - ✓ Refreshed monthly_sales_summary: 7 records
+2025-11-07 01:32:53.158 | INFO     | __main__:main:252 - ============================================================
+2025-11-07 01:32:53.158 | INFO     | __main__:main:253 - ✓ ALL AGGREGATIONS REFRESHED SUCCESSFULLY
+2025-11-07 01:32:53.159 | INFO     | __main__:main:254 - Recalculated from ALL cumulative base data
+2025-11-07 01:32:53.160 | INFO     | __main__:main:255 - ============================================================
+2025-11-07 01:41:52.868 | INFO     | __main__:main:236 - ============================================================
+2025-11-07 01:41:52.869 | INFO     | __main__:main:237 - REFRESH AGGREGATIONS
+2025-11-07 01:41:52.869 | INFO     | __main__:main:238 - Started: 2025-11-07 01:41:52
+2025-11-07 01:41:52.869 | INFO     | __main__:main:239 - ============================================================
+2025-11-07 01:41:52.869 | INFO     | __main__:refresh_customer_summary:32 - ⏳ Refreshing customer_summary...
+2025-11-07 01:41:52.892 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:41:53.019 | INFO     | __main__:refresh_customer_summary:75 - ✓ Refreshed customer_summary: 10000 records
+2025-11-07 01:41:53.019 | INFO     | __main__:refresh_product_summary:89 - ⏳ Refreshing product_summary...
+2025-11-07 01:41:53.031 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:41:53.078 | INFO     | __main__:refresh_product_summary:126 - ✓ Refreshed product_summary: 495 records
+2025-11-07 01:41:53.079 | INFO     | __main__:refresh_daily_sales_summary:140 - ⏳ Refreshing daily_sales_summary...
+2025-11-07 01:41:53.096 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:41:53.154 | INFO     | __main__:refresh_daily_sales_summary:169 - ✓ Refreshed daily_sales_summary: 181 records
+2025-11-07 01:41:53.155 | INFO     | __main__:refresh_monthly_sales_summary:183 - ⏳ Refreshing monthly_sales_summary...
+2025-11-07 01:41:53.172 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:41:53.216 | INFO     | __main__:refresh_monthly_sales_summary:222 - ✓ Refreshed monthly_sales_summary: 7 records
+2025-11-07 01:41:53.218 | INFO     | __main__:main:252 - ============================================================
+2025-11-07 01:41:53.219 | INFO     | __main__:main:253 - ✓ ALL AGGREGATIONS REFRESHED SUCCESSFULLY
+2025-11-07 01:41:53.219 | INFO     | __main__:main:254 - Recalculated from ALL cumulative base data
+2025-11-07 01:41:53.220 | INFO     | __main__:main:255 - ============================================================
+2025-11-07 01:50:40.152 | INFO     | __main__:main:236 - ============================================================
+2025-11-07 01:50:40.153 | INFO     | __main__:main:237 - REFRESH AGGREGATIONS
+2025-11-07 01:50:40.154 | INFO     | __main__:main:238 - Started: 2025-11-07 01:50:40
+2025-11-07 01:50:40.154 | INFO     | __main__:main:239 - ============================================================
+2025-11-07 01:50:40.155 | INFO     | __main__:refresh_customer_summary:32 - ⏳ Refreshing customer_summary...
+2025-11-07 01:50:40.194 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:50:40.554 | INFO     | __main__:refresh_customer_summary:75 - ✓ Refreshed customer_summary: 10000 records
+2025-11-07 01:50:40.555 | INFO     | __main__:refresh_product_summary:89 - ⏳ Refreshing product_summary...
+2025-11-07 01:50:40.599 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:50:40.726 | INFO     | __main__:refresh_product_summary:126 - ✓ Refreshed product_summary: 495 records
+2025-11-07 01:50:40.727 | INFO     | __main__:refresh_daily_sales_summary:140 - ⏳ Refreshing daily_sales_summary...
+2025-11-07 01:50:40.766 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:50:40.831 | INFO     | __main__:refresh_daily_sales_summary:169 - ✓ Refreshed daily_sales_summary: 181 records
+2025-11-07 01:50:40.832 | INFO     | __main__:refresh_monthly_sales_summary:183 - ⏳ Refreshing monthly_sales_summary...
+2025-11-07 01:50:40.862 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:50:40.939 | INFO     | __main__:refresh_monthly_sales_summary:222 - ✓ Refreshed monthly_sales_summary: 7 records
+2025-11-07 01:50:40.941 | INFO     | __main__:main:252 - ============================================================
+2025-11-07 01:50:40.942 | INFO     | __main__:main:253 - ✓ ALL AGGREGATIONS REFRESHED SUCCESSFULLY
+2025-11-07 01:50:40.943 | INFO     | __main__:main:254 - Recalculated from ALL cumulative base data
+2025-11-07 01:50:40.944 | INFO     | __main__:main:255 - ============================================================
+2025-11-07 01:55:30.432 | INFO     | __main__:main:236 - ============================================================
+2025-11-07 01:55:30.433 | INFO     | __main__:main:237 - REFRESH AGGREGATIONS
+2025-11-07 01:55:30.433 | INFO     | __main__:main:238 - Started: 2025-11-07 01:55:30
+2025-11-07 01:55:30.434 | INFO     | __main__:main:239 - ============================================================
+2025-11-07 01:55:30.435 | INFO     | __main__:refresh_customer_summary:32 - ⏳ Refreshing customer_summary...
+2025-11-07 01:55:30.468 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:31.059 | INFO     | __main__:refresh_customer_summary:75 - ✓ Refreshed customer_summary: 20000 records
+2025-11-07 01:55:31.061 | INFO     | __main__:refresh_product_summary:89 - ⏳ Refreshing product_summary...
+2025-11-07 01:55:31.097 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:31.243 | INFO     | __main__:refresh_product_summary:126 - ✓ Refreshed product_summary: 990 records
+2025-11-07 01:55:31.244 | INFO     | __main__:refresh_daily_sales_summary:140 - ⏳ Refreshing daily_sales_summary...
+2025-11-07 01:55:31.274 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:31.447 | INFO     | __main__:refresh_daily_sales_summary:169 - ✓ Refreshed daily_sales_summary: 181 records
+2025-11-07 01:55:31.448 | INFO     | __main__:refresh_monthly_sales_summary:183 - ⏳ Refreshing monthly_sales_summary...
+2025-11-07 01:55:31.483 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:31.665 | INFO     | __main__:refresh_monthly_sales_summary:222 - ✓ Refreshed monthly_sales_summary: 7 records
+2025-11-07 01:55:31.666 | INFO     | __main__:main:252 - ============================================================
+2025-11-07 01:55:31.667 | INFO     | __main__:main:253 - ✓ ALL AGGREGATIONS REFRESHED SUCCESSFULLY
+2025-11-07 01:55:31.668 | INFO     | __main__:main:254 - Recalculated from ALL cumulative base data
+2025-11-07 01:55:31.669 | INFO     | __main__:main:255 - ============================================================
+2025-11-07 01:55:52.901 | INFO     | __main__:main:236 - ============================================================
+2025-11-07 01:55:52.902 | INFO     | __main__:main:237 - REFRESH AGGREGATIONS
+2025-11-07 01:55:52.903 | INFO     | __main__:main:238 - Started: 2025-11-07 01:55:52
+2025-11-07 01:55:52.903 | INFO     | __main__:main:239 - ============================================================
+2025-11-07 01:55:52.904 | INFO     | __main__:refresh_customer_summary:32 - ⏳ Refreshing customer_summary...
+2025-11-07 01:55:52.930 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:53.445 | INFO     | __main__:refresh_customer_summary:75 - ✓ Refreshed customer_summary: 30000 records
+2025-11-07 01:55:53.447 | INFO     | __main__:refresh_product_summary:89 - ⏳ Refreshing product_summary...
+2025-11-07 01:55:53.480 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:53.658 | INFO     | __main__:refresh_product_summary:126 - ✓ Refreshed product_summary: 990 records
+2025-11-07 01:55:53.660 | INFO     | __main__:refresh_daily_sales_summary:140 - ⏳ Refreshing daily_sales_summary...
+2025-11-07 01:55:53.688 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:53.785 | INFO     | __main__:refresh_daily_sales_summary:169 - ✓ Refreshed daily_sales_summary: 181 records
+2025-11-07 01:55:53.786 | INFO     | __main__:refresh_monthly_sales_summary:183 - ⏳ Refreshing monthly_sales_summary...
+2025-11-07 01:55:53.837 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:53.942 | INFO     | __main__:refresh_monthly_sales_summary:222 - ✓ Refreshed monthly_sales_summary: 7 records
+2025-11-07 01:55:53.943 | INFO     | __main__:main:252 - ============================================================
+2025-11-07 01:55:53.943 | INFO     | __main__:main:253 - ✓ ALL AGGREGATIONS REFRESHED SUCCESSFULLY
+2025-11-07 01:55:53.943 | INFO     | __main__:main:254 - Recalculated from ALL cumulative base data
+2025-11-07 01:55:53.944 | INFO     | __main__:main:255 - ============================================================

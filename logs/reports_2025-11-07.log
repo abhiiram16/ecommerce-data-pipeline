@@ -18,3 +18,197 @@
 2025-11-07 00:32:59.499 | INFO     | __main__:main:435 - ============================================================
 2025-11-07 00:32:59.500 | INFO     | __main__:main:436 - ✓ REPORT GENERATED
 2025-11-07 00:32:59.501 | INFO     | __main__:main:437 - ============================================================
+2025-11-07 00:37:05.535 | INFO     | __main__:main:419 - ============================================================
+2025-11-07 00:37:05.535 | INFO     | __main__:main:420 - QUALITY REPORT GENERATION
+2025-11-07 00:37:05.536 | INFO     | __main__:main:421 - ============================================================
+2025-11-07 00:37:05.537 | INFO     | __main__:__init__:48 - ✓ Report generator initialized
+2025-11-07 00:37:05.537 | INFO     | __main__:generate_html:87 - 🎨 Generating HTML report...
+2025-11-07 00:37:05.537 | INFO     | __main__:get_table_stats:53 - 📊 Collecting table statistics...
+2025-11-07 00:37:05.564 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:37:05.579 | INFO     | __main__:get_table_stats:72 -   customers: 10000 rows
+2025-11-07 00:37:05.583 | INFO     | __main__:get_table_stats:72 -   products: 495 rows
+2025-11-07 00:37:05.592 | INFO     | __main__:get_table_stats:72 -   orders: 50000 rows
+2025-11-07 00:37:05.601 | INFO     | __main__:get_table_stats:72 -   customer_summary: 10000 rows
+2025-11-07 00:37:05.605 | INFO     | __main__:get_table_stats:72 -   product_summary: 495 rows
+2025-11-07 00:37:05.610 | INFO     | __main__:get_table_stats:72 -   daily_sales_summary: 181 rows
+2025-11-07 00:37:05.614 | INFO     | __main__:get_table_stats:72 -   monthly_sales_summary: 7 rows
+2025-11-07 00:37:05.615 | INFO     | __main__:generate_html:383 - ✓ HTML report generated successfully
+2025-11-07 00:37:05.616 | INFO     | __main__:save_report:393 - 💾 Saving report to file...
+2025-11-07 00:37:05.618 | INFO     | __main__:save_report:405 - ✓ Report saved to C:\projects\ecommerce-data-pipeline\data\processed\quality_report_20251107_003705.html
+2025-11-07 00:37:05.619 | INFO     | __main__:main:435 - ============================================================
+2025-11-07 00:37:05.620 | INFO     | __main__:main:436 - ✓ REPORT GENERATED
+2025-11-07 00:37:05.621 | INFO     | __main__:main:437 - ============================================================
+2025-11-07 01:29:16.209 | INFO     | __main__:main:804 - ============================================================
+2025-11-07 01:29:16.210 | INFO     | __main__:main:805 - QUALITY REPORT GENERATION
+2025-11-07 01:29:16.210 | INFO     | __main__:main:806 - ============================================================
+2025-11-07 01:29:16.210 | INFO     | __main__:__init__:47 - ✓ Report generator initialized
+2025-11-07 01:29:16.210 | INFO     | __main__:generate_html:330 - 🎨 Generating HTML report...
+2025-11-07 01:29:16.210 | INFO     | __main__:get_table_stats:52 - 📊 Collecting table statistics...
+2025-11-07 01:29:16.255 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:29:16.269 | INFO     | __main__:get_table_stats:71 -   customers: 10000 rows
+2025-11-07 01:29:16.273 | INFO     | __main__:get_table_stats:71 -   products: 495 rows
+2025-11-07 01:29:16.280 | INFO     | __main__:get_table_stats:71 -   orders: 50000 rows
+2025-11-07 01:29:16.287 | INFO     | __main__:get_table_stats:71 -   customer_summary: 10000 rows
+2025-11-07 01:29:16.290 | INFO     | __main__:get_table_stats:71 -   product_summary: 495 rows
+2025-11-07 01:29:16.293 | INFO     | __main__:get_table_stats:71 -   daily_sales_summary: 181 rows
+2025-11-07 01:29:16.297 | INFO     | __main__:get_table_stats:71 -   monthly_sales_summary: 7 rows
+2025-11-07 01:29:16.298 | INFO     | __main__:detect_null_values:86 - 🔍 Detecting null values...
+2025-11-07 01:29:16.317 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:29:16.328 | INFO     | __main__:detect_duplicates:141 - 🔍 Detecting duplicates...
+2025-11-07 01:29:16.343 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:29:16.364 | INFO     | __main__:detect_data_quality_issues:191 - 🔍 Detecting data quality issues...
+2025-11-07 01:29:16.382 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:29:16.389 | WARNING  | __main__:detect_data_quality_issues:251 -   🟡 WARNING: 353 orders with future dates
+2025-11-07 01:29:16.394 | INFO     | __main__:get_high_value_anomalies:283 - 🔍 Detecting high-value anomalies...
+2025-11-07 01:29:16.404 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:29:16.423 | INFO     | __main__:generate_html:768 - ✓ HTML report generated successfully
+2025-11-07 01:29:16.424 | INFO     | __main__:save_report:778 - 💾 Saving report to file...
+2025-11-07 01:29:16.425 | INFO     | __main__:save_report:790 - ✓ Report saved to C:\projects\ecommerce-data-pipeline\data\processed\quality_report_20251107_012916.html
+2025-11-07 01:29:16.426 | INFO     | __main__:main:820 - ============================================================
+2025-11-07 01:29:16.426 | INFO     | __main__:main:821 - ✓ REPORT GENERATED
+2025-11-07 01:29:16.426 | INFO     | __main__:main:822 - ============================================================
+2025-11-07 01:32:53.687 | INFO     | __main__:main:804 - ============================================================
+2025-11-07 01:32:53.687 | INFO     | __main__:main:805 - QUALITY REPORT GENERATION
+2025-11-07 01:32:53.688 | INFO     | __main__:main:806 - ============================================================
+2025-11-07 01:32:53.688 | INFO     | __main__:__init__:47 - ✓ Report generator initialized
+2025-11-07 01:32:53.688 | INFO     | __main__:generate_html:330 - 🎨 Generating HTML report...
+2025-11-07 01:32:53.688 | INFO     | __main__:get_table_stats:52 - 📊 Collecting table statistics...
+2025-11-07 01:32:53.702 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:32:53.711 | INFO     | __main__:get_table_stats:71 -   customers: 10000 rows
+2025-11-07 01:32:53.715 | INFO     | __main__:get_table_stats:71 -   products: 495 rows
+2025-11-07 01:32:53.719 | INFO     | __main__:get_table_stats:71 -   orders: 50000 rows
+2025-11-07 01:32:53.725 | INFO     | __main__:get_table_stats:71 -   customer_summary: 10000 rows
+2025-11-07 01:32:53.728 | INFO     | __main__:get_table_stats:71 -   product_summary: 495 rows
+2025-11-07 01:32:53.731 | INFO     | __main__:get_table_stats:71 -   daily_sales_summary: 181 rows
+2025-11-07 01:32:53.734 | INFO     | __main__:get_table_stats:71 -   monthly_sales_summary: 7 rows
+2025-11-07 01:32:53.734 | INFO     | __main__:detect_null_values:86 - 🔍 Detecting null values...
+2025-11-07 01:32:53.760 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:32:53.781 | INFO     | __main__:detect_duplicates:141 - 🔍 Detecting duplicates...
+2025-11-07 01:32:53.794 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:32:53.815 | INFO     | __main__:detect_data_quality_issues:191 - 🔍 Detecting data quality issues...
+2025-11-07 01:32:53.837 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:32:53.841 | WARNING  | __main__:detect_data_quality_issues:251 -   🟡 WARNING: 352 orders with future dates
+2025-11-07 01:32:53.846 | INFO     | __main__:get_high_value_anomalies:283 - 🔍 Detecting high-value anomalies...
+2025-11-07 01:32:53.865 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:32:53.896 | INFO     | __main__:generate_html:768 - ✓ HTML report generated successfully
+2025-11-07 01:32:53.897 | INFO     | __main__:save_report:778 - 💾 Saving report to file...
+2025-11-07 01:32:53.899 | INFO     | __main__:save_report:790 - ✓ Report saved to C:\projects\ecommerce-data-pipeline\data\processed\quality_report_20251107_013253.html
+2025-11-07 01:32:53.899 | INFO     | __main__:main:820 - ============================================================
+2025-11-07 01:32:53.901 | INFO     | __main__:main:821 - ✓ REPORT GENERATED
+2025-11-07 01:32:53.901 | INFO     | __main__:main:822 - ============================================================
+2025-11-07 01:41:53.786 | INFO     | __main__:main:804 - ============================================================
+2025-11-07 01:41:53.786 | INFO     | __main__:main:805 - QUALITY REPORT GENERATION
+2025-11-07 01:41:53.786 | INFO     | __main__:main:806 - ============================================================
+2025-11-07 01:41:53.787 | INFO     | __main__:__init__:47 - ✓ Report generator initialized
+2025-11-07 01:41:53.787 | INFO     | __main__:generate_html:330 - 🎨 Generating HTML report...
+2025-11-07 01:41:53.787 | INFO     | __main__:get_table_stats:52 - 📊 Collecting table statistics...
+2025-11-07 01:41:53.801 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:41:53.811 | INFO     | __main__:get_table_stats:71 -   customers: 10000 rows
+2025-11-07 01:41:53.813 | INFO     | __main__:get_table_stats:71 -   products: 495 rows
+2025-11-07 01:41:53.818 | INFO     | __main__:get_table_stats:71 -   orders: 50000 rows
+2025-11-07 01:41:53.824 | INFO     | __main__:get_table_stats:71 -   customer_summary: 10000 rows
+2025-11-07 01:41:53.826 | INFO     | __main__:get_table_stats:71 -   product_summary: 495 rows
+2025-11-07 01:41:53.828 | INFO     | __main__:get_table_stats:71 -   daily_sales_summary: 181 rows
+2025-11-07 01:41:53.831 | INFO     | __main__:get_table_stats:71 -   monthly_sales_summary: 7 rows
+2025-11-07 01:41:53.831 | INFO     | __main__:detect_null_values:86 - 🔍 Detecting null values...
+2025-11-07 01:41:53.840 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:41:53.848 | INFO     | __main__:detect_duplicates:141 - 🔍 Detecting duplicates...
+2025-11-07 01:41:53.858 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:41:53.880 | INFO     | __main__:detect_data_quality_issues:191 - 🔍 Detecting data quality issues...
+2025-11-07 01:41:53.890 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:41:53.894 | WARNING  | __main__:detect_data_quality_issues:251 -   🟡 WARNING: 349 orders with future dates
+2025-11-07 01:41:53.899 | INFO     | __main__:get_high_value_anomalies:283 - 🔍 Detecting high-value anomalies...
+2025-11-07 01:41:53.910 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:41:53.928 | INFO     | __main__:generate_html:768 - ✓ HTML report generated successfully
+2025-11-07 01:41:53.928 | INFO     | __main__:save_report:778 - 💾 Saving report to file...
+2025-11-07 01:41:53.930 | INFO     | __main__:save_report:790 - ✓ Report saved to C:\projects\ecommerce-data-pipeline\data\processed\quality_report_20251107_014153.html
+2025-11-07 01:41:53.932 | INFO     | __main__:main:820 - ============================================================
+2025-11-07 01:41:53.934 | INFO     | __main__:main:821 - ✓ REPORT GENERATED
+2025-11-07 01:41:53.934 | INFO     | __main__:main:822 - ============================================================
+2025-11-07 01:50:42.597 | INFO     | __main__:main:804 - ============================================================
+2025-11-07 01:50:42.598 | INFO     | __main__:main:805 - QUALITY REPORT GENERATION
+2025-11-07 01:50:42.599 | INFO     | __main__:main:806 - ============================================================
+2025-11-07 01:50:42.600 | INFO     | __main__:__init__:47 - ✓ Report generator initialized
+2025-11-07 01:50:42.601 | INFO     | __main__:generate_html:330 - 🎨 Generating HTML report...
+2025-11-07 01:50:42.601 | INFO     | __main__:get_table_stats:52 - 📊 Collecting table statistics...
+2025-11-07 01:50:42.642 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:50:42.680 | INFO     | __main__:get_table_stats:71 -   customers: 10000 rows
+2025-11-07 01:50:42.688 | INFO     | __main__:get_table_stats:71 -   products: 495 rows
+2025-11-07 01:50:42.703 | INFO     | __main__:get_table_stats:71 -   orders: 50000 rows
+2025-11-07 01:50:42.722 | INFO     | __main__:get_table_stats:71 -   customer_summary: 10000 rows
+2025-11-07 01:50:42.730 | INFO     | __main__:get_table_stats:71 -   product_summary: 495 rows
+2025-11-07 01:50:42.738 | INFO     | __main__:get_table_stats:71 -   daily_sales_summary: 181 rows
+2025-11-07 01:50:42.752 | INFO     | __main__:get_table_stats:71 -   monthly_sales_summary: 7 rows
+2025-11-07 01:50:42.755 | INFO     | __main__:detect_null_values:86 - 🔍 Detecting null values...
+2025-11-07 01:50:42.797 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:50:42.829 | INFO     | __main__:detect_duplicates:141 - 🔍 Detecting duplicates...
+2025-11-07 01:50:42.866 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:50:42.916 | INFO     | __main__:detect_data_quality_issues:191 - 🔍 Detecting data quality issues...
+2025-11-07 01:50:42.939 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:50:42.955 | WARNING  | __main__:detect_data_quality_issues:251 -   🟡 WARNING: 348 orders with future dates
+2025-11-07 01:50:42.969 | INFO     | __main__:get_high_value_anomalies:283 - 🔍 Detecting high-value anomalies...
+2025-11-07 01:50:43.002 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:50:43.049 | INFO     | __main__:generate_html:768 - ✓ HTML report generated successfully
+2025-11-07 01:50:43.050 | INFO     | __main__:save_report:778 - 💾 Saving report to file...
+2025-11-07 01:50:43.053 | INFO     | __main__:save_report:790 - ✓ Report saved to C:\projects\ecommerce-data-pipeline\data\processed\quality_report_20251107_015043.html
+2025-11-07 01:50:43.054 | INFO     | __main__:main:820 - ============================================================
+2025-11-07 01:50:43.055 | INFO     | __main__:main:821 - ✓ REPORT GENERATED
+2025-11-07 01:50:43.055 | INFO     | __main__:main:822 - ============================================================
+2025-11-07 01:55:32.817 | INFO     | __main__:main:804 - ============================================================
+2025-11-07 01:55:32.817 | INFO     | __main__:main:805 - QUALITY REPORT GENERATION
+2025-11-07 01:55:32.818 | INFO     | __main__:main:806 - ============================================================
+2025-11-07 01:55:32.818 | INFO     | __main__:__init__:47 - ✓ Report generator initialized
+2025-11-07 01:55:32.819 | INFO     | __main__:generate_html:330 - 🎨 Generating HTML report...
+2025-11-07 01:55:32.819 | INFO     | __main__:get_table_stats:52 - 📊 Collecting table statistics...
+2025-11-07 01:55:32.858 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:32.893 | INFO     | __main__:get_table_stats:71 -   customers: 20000 rows
+2025-11-07 01:55:32.901 | INFO     | __main__:get_table_stats:71 -   products: 990 rows
+2025-11-07 01:55:32.924 | INFO     | __main__:get_table_stats:71 -   orders: 100000 rows
+2025-11-07 01:55:32.937 | INFO     | __main__:get_table_stats:71 -   customer_summary: 20000 rows
+2025-11-07 01:55:32.943 | INFO     | __main__:get_table_stats:71 -   product_summary: 990 rows
+2025-11-07 01:55:32.949 | INFO     | __main__:get_table_stats:71 -   daily_sales_summary: 181 rows
+2025-11-07 01:55:32.956 | INFO     | __main__:get_table_stats:71 -   monthly_sales_summary: 7 rows
+2025-11-07 01:55:32.957 | INFO     | __main__:detect_null_values:86 - 🔍 Detecting null values...
+2025-11-07 01:55:32.987 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:33.017 | INFO     | __main__:detect_duplicates:141 - 🔍 Detecting duplicates...
+2025-11-07 01:55:33.044 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:33.116 | INFO     | __main__:detect_data_quality_issues:191 - 🔍 Detecting data quality issues...
+2025-11-07 01:55:33.149 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:33.169 | WARNING  | __main__:detect_data_quality_issues:251 -   🟡 WARNING: 690 orders with future dates
+2025-11-07 01:55:33.192 | INFO     | __main__:get_high_value_anomalies:283 - 🔍 Detecting high-value anomalies...
+2025-11-07 01:55:33.221 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:33.272 | INFO     | __main__:generate_html:768 - ✓ HTML report generated successfully
+2025-11-07 01:55:33.273 | INFO     | __main__:save_report:778 - 💾 Saving report to file...
+2025-11-07 01:55:33.275 | INFO     | __main__:save_report:790 - ✓ Report saved to C:\projects\ecommerce-data-pipeline\data\processed\quality_report_20251107_015533.html
+2025-11-07 01:55:33.276 | INFO     | __main__:main:820 - ============================================================
+2025-11-07 01:55:33.277 | INFO     | __main__:main:821 - ✓ REPORT GENERATED
+2025-11-07 01:55:33.277 | INFO     | __main__:main:822 - ============================================================
+2025-11-07 01:55:54.833 | INFO     | __main__:main:804 - ============================================================
+2025-11-07 01:55:54.834 | INFO     | __main__:main:805 - QUALITY REPORT GENERATION
+2025-11-07 01:55:54.835 | INFO     | __main__:main:806 - ============================================================
+2025-11-07 01:55:54.836 | INFO     | __main__:__init__:47 - ✓ Report generator initialized
+2025-11-07 01:55:54.837 | INFO     | __main__:generate_html:330 - 🎨 Generating HTML report...
+2025-11-07 01:55:54.838 | INFO     | __main__:get_table_stats:52 - 📊 Collecting table statistics...
+2025-11-07 01:55:54.867 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:54.884 | INFO     | __main__:get_table_stats:71 -   customers: 30000 rows
+2025-11-07 01:55:54.889 | INFO     | __main__:get_table_stats:71 -   products: 990 rows
+2025-11-07 01:55:54.903 | INFO     | __main__:get_table_stats:71 -   orders: 102800 rows
+2025-11-07 01:55:54.916 | INFO     | __main__:get_table_stats:71 -   customer_summary: 30000 rows
+2025-11-07 01:55:54.921 | INFO     | __main__:get_table_stats:71 -   product_summary: 990 rows
+2025-11-07 01:55:54.927 | INFO     | __main__:get_table_stats:71 -   daily_sales_summary: 181 rows
+2025-11-07 01:55:54.933 | INFO     | __main__:get_table_stats:71 -   monthly_sales_summary: 7 rows
+2025-11-07 01:55:54.934 | INFO     | __main__:detect_null_values:86 - 🔍 Detecting null values...
+2025-11-07 01:55:54.969 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:55.004 | INFO     | __main__:detect_duplicates:141 - 🔍 Detecting duplicates...
+2025-11-07 01:55:55.045 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:55.143 | INFO     | __main__:detect_data_quality_issues:191 - 🔍 Detecting data quality issues...
+2025-11-07 01:55:55.188 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:55.205 | WARNING  | __main__:detect_data_quality_issues:251 -   🟡 WARNING: 712 orders with future dates
+2025-11-07 01:55:55.227 | INFO     | __main__:get_high_value_anomalies:283 - 🔍 Detecting high-value anomalies...
+2025-11-07 01:55:55.269 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 01:55:55.344 | INFO     | __main__:generate_html:768 - ✓ HTML report generated successfully
+2025-11-07 01:55:55.345 | INFO     | __main__:save_report:778 - 💾 Saving report to file...
+2025-11-07 01:55:55.347 | INFO     | __main__:save_report:790 - ✓ Report saved to C:\projects\ecommerce-data-pipeline\data\processed\quality_report_20251107_015555.html
+2025-11-07 01:55:55.349 | INFO     | __main__:main:820 - ============================================================
+2025-11-07 01:55:55.349 | INFO     | __main__:main:821 - ✓ REPORT GENERATED
+2025-11-07 01:55:55.350 | INFO     | __main__:main:822 - ============================================================
