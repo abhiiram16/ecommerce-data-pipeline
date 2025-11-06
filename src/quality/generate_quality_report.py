@@ -1,17 +1,16 @@
 """
-HTML Quality Report Generator
-==============================
+HTML Quality Report Generator with Issue Tracking
+==================================================
 
-Generates comprehensive HTML data quality report.
-
-Creates professional dashboard with:
+Generates comprehensive HTML data quality report with:
 - Quality scores (4 dimensions)
+- Detailed issue detection
+- Remediation guidance
 - Data statistics
-- Table summaries
 - Executive summary
 
 Author: Abhiiram
-Date: November 6, 2025
+Date: November 7, 2025
 """
 
 from src.utils.db_connector import get_connection
@@ -27,7 +26,6 @@ from loguru import logger
 # Add parent directory to path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../'))
 
-
 # Configure logging
 logger.add(
     f"{Config.LOGS_DIR}/reports_{{time:YYYY-MM-DD}}.log",
@@ -40,11 +38,12 @@ logger.add(
 
 
 class QualityReportGenerator:
-    """Generate HTML quality reports."""
+    """Generate HTML quality reports with issue tracking."""
 
     def __init__(self):
         """Initialize report generator."""
         self.timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        self.issues = []
         logger.info("✓ Report generator initialized")
 
     def get_table_stats(self) -> dict:
@@ -81,13 +80,269 @@ class QualityReportGenerator:
             logger.error(f"✗ Table stats collection failed: {e}")
             raise
 
-    def generate_html(self, quality_score: float = 95.0, anomalies: int = 5) -> str:
-        """Generate comprehensive HTML report."""
+    def detect_null_values(self) -> list:
+        """Detect null values in critical columns."""
+
+        logger.info("🔍 Detecting null values...")
+        issues = []
+
+        try:
+            conn = get_connection()
+            cursor = conn.cursor()
+
+            null_checks = [
+                ("customers", "email"),
+                ("customers", "first_name"),
+                ("customers", "last_name"),
+                ("products", "product_name"),
+                ("products", "price"),
+                ("orders", "customer_id"),
+                ("orders", "total_amount"),
+            ]
+
+            for table, column in null_checks:
+                cursor.execute(f"""
+                    SELECT COUNT(*) FROM {table} WHERE {column} IS NULL
+                """)
+                null_count = cursor.fetchone()[0]
+
+                if null_count > 0:
+                    cursor.execute(f"SELECT COUNT(*) FROM {table}")
+                    total_count = cursor.fetchone()[0]
+                    pct = (null_count / total_count *
+                           100) if total_count > 0 else 0
+
+                    severity = "🔴 CRITICAL" if null_count > 100 else "🟡 WARNING"
+
+                    issue = {
+                        'type': 'Null Values',
+                        'table': table,
+                        'column': column,
+                        'count': null_count,
+                        'percentage': pct,
+                        'severity': severity,
+                        'fix': f"UPDATE {table} SET {column} = 'UNKNOWN' WHERE {column} IS NULL"
+                    }
+                    issues.append(issue)
+                    logger.warning(
+                        f"  {severity}: {table}.{column} has {null_count} nulls")
+
+            cursor.close()
+            conn.close()
+
+        except Exception as e:
+            logger.error(f"✗ Null detection failed: {e}")
+
+        return issues
+
+    def detect_duplicates(self) -> list:
+        """Detect duplicate records."""
+
+        logger.info("🔍 Detecting duplicates...")
+        issues = []
+
+        try:
+            conn = get_connection()
+            cursor = conn.cursor()
+
+            dup_checks = [
+                ("orders", "order_id"),
+                ("customers", "customer_id"),
+                ("products", "product_id"),
+            ]
+
+            for table, key_col in dup_checks:
+                cursor.execute(f"""
+                    SELECT COUNT(*) FROM (
+                        SELECT {key_col} FROM {table} 
+                        GROUP BY {key_col} HAVING COUNT(*) > 1
+                    ) t
+                """)
+
+                dup_count = cursor.fetchone()[0]
+
+                if dup_count > 0:
+                    issue = {
+                        'type': 'Duplicate Records',
+                        'table': table,
+                        'column': key_col,
+                        'count': dup_count,
+                        'percentage': 0,
+                        'severity': '🔴 CRITICAL',
+                        'fix': f"""DELETE FROM {table} WHERE {key_col} IN 
+                                  (SELECT {key_col} FROM {table} 
+                                  GROUP BY {key_col} HAVING COUNT(*) > 1)"""
+                    }
+                    issues.append(issue)
+                    logger.warning(
+                        f"  🔴 CRITICAL: {table} has {dup_count} duplicate {key_col}s")
+
+            cursor.close()
+            conn.close()
+
+        except Exception as e:
+            logger.error(f"✗ Duplicate detection failed: {e}")
+
+        return issues
+
+    def detect_data_quality_issues(self) -> list:
+        """Detect data quality issues."""
+
+        logger.info("🔍 Detecting data quality issues...")
+        issues = []
+
+        try:
+            conn = get_connection()
+            cursor = conn.cursor()
+
+            # Check for negative amounts
+            cursor.execute(
+                "SELECT COUNT(*) FROM orders WHERE total_amount < 0")
+            neg_orders = cursor.fetchone()[0]
+
+            if neg_orders > 0:
+                issue = {
+                    'type': 'Negative Order Amounts',
+                    'table': 'orders',
+                    'column': 'total_amount',
+                    'count': neg_orders,
+                    'percentage': 0,
+                    'severity': '🔴 CRITICAL',
+                    'fix': 'DELETE FROM orders WHERE total_amount < 0'
+                }
+                issues.append(issue)
+                logger.warning(
+                    f"  🔴 CRITICAL: {neg_orders} orders with negative amounts")
+
+            # Check for invalid prices
+            cursor.execute("SELECT COUNT(*) FROM products WHERE price <= 0")
+            invalid_prices = cursor.fetchone()[0]
+
+            if invalid_prices > 0:
+                issue = {
+                    'type': 'Invalid Product Prices',
+                    'table': 'products',
+                    'column': 'price',
+                    'count': invalid_prices,
+                    'percentage': 0,
+                    'severity': '🔴 CRITICAL',
+                    'fix': 'UPDATE products SET price = 1000 WHERE price <= 0'
+                }
+                issues.append(issue)
+                logger.warning(
+                    f"  🔴 CRITICAL: {invalid_prices} products with invalid prices")
+
+            # Check for future dates
+            cursor.execute(
+                "SELECT COUNT(*) FROM orders WHERE order_date > NOW()")
+            future_orders = cursor.fetchone()[0]
+
+            if future_orders > 0:
+                issue = {
+                    'type': 'Future Order Dates',
+                    'table': 'orders',
+                    'column': 'order_date',
+                    'count': future_orders,
+                    'percentage': 0,
+                    'severity': '🟡 WARNING',
+                    'fix': 'UPDATE orders SET order_date = NOW() WHERE order_date > NOW()'
+                }
+                issues.append(issue)
+                logger.warning(
+                    f"  🟡 WARNING: {future_orders} orders with future dates")
+
+            # Check for zero quantity orders
+            cursor.execute("SELECT COUNT(*) FROM orders WHERE quantity <= 0")
+            zero_qty = cursor.fetchone()[0]
+
+            if zero_qty > 0:
+                issue = {
+                    'type': 'Zero/Negative Quantities',
+                    'table': 'orders',
+                    'column': 'quantity',
+                    'count': zero_qty,
+                    'percentage': 0,
+                    'severity': '🔴 CRITICAL',
+                    'fix': 'DELETE FROM orders WHERE quantity <= 0'
+                }
+                issues.append(issue)
+                logger.warning(
+                    f"  🔴 CRITICAL: {zero_qty} orders with zero/negative quantities")
+
+            cursor.close()
+            conn.close()
+
+        except Exception as e:
+            logger.error(f"✗ Quality issue detection failed: {e}")
+
+        return issues
+
+    def get_high_value_anomalies(self) -> list:
+        """Get high-value anomalies for review."""
+
+        logger.info("🔍 Detecting high-value anomalies...")
+        anomalies = []
+
+        try:
+            conn = get_connection()
+
+            query = """
+            SELECT order_id, total_amount, customer_id 
+            FROM orders 
+            WHERE total_amount > (SELECT AVG(total_amount) + 3*STDDEV(total_amount) 
+                                 FROM orders)
+            LIMIT 10
+            """
+
+            df = pd.read_sql(query, conn)
+
+            for idx, row in df.iterrows():
+                anomalies.append({
+                    'order_id': row['order_id'],
+                    'amount': row['total_amount'],
+                    'customer_id': row['customer_id'],
+                    'action': 'Manual review required'
+                })
+
+            conn.close()
+
+        except Exception as e:
+            logger.error(f"✗ Anomaly detection failed: {e}")
+
+        return anomalies
+
+    def calculate_quality_score(self, issues: list) -> float:
+        """Calculate quality score based on issues."""
+
+        base_score = 100.0
+
+        for issue in issues:
+            if '🔴' in issue['severity']:
+                base_score -= 5
+            elif '🟡' in issue['severity']:
+                base_score -= 2
+
+        return max(0, base_score)
+
+    def generate_html(self) -> str:
+        """Generate comprehensive HTML report with issue details."""
 
         logger.info("🎨 Generating HTML report...")
 
         try:
             table_stats = self.get_table_stats()
+
+            # Collect all issues
+            all_issues = []
+            all_issues.extend(self.detect_null_values())
+            all_issues.extend(self.detect_duplicates())
+            all_issues.extend(self.detect_data_quality_issues())
+
+            # Get anomalies
+            anomalies = self.get_high_value_anomalies()
+
+            # Calculate quality score
+            quality_score = self.calculate_quality_score(all_issues)
 
             # Quality grade
             if quality_score >= 95:
@@ -102,6 +357,85 @@ class QualityReportGenerator:
             else:
                 grade = "C (Needs Attention)"
                 grade_color = "#e74c3c"
+
+            # Generate issues table HTML
+            issues_html = ""
+            if all_issues:
+                issues_html = """
+                <div class="issues-section">
+                    <h2>⚠️ Detected Issues & Remediation</h2>
+                    <table class="issues-table">
+                        <thead>
+                            <tr>
+                                <th>Severity</th>
+                                <th>Issue Type</th>
+                                <th>Table.Column</th>
+                                <th>Count</th>
+                                <th>% Impact</th>
+                                <th>Remediation SQL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                """
+
+                for issue in all_issues:
+                    issues_html += f"""
+                        <tr>
+                            <td>{issue['severity']}</td>
+                            <td>{issue['type']}</td>
+                            <td>{issue['table']}.{issue['column']}</td>
+                            <td>{issue['count']}</td>
+                            <td>{issue['percentage']:.2f}%</td>
+                            <td><code>{issue['fix']}</code></td>
+                        </tr>
+                    """
+
+                issues_html += """
+                        </tbody>
+                    </table>
+                </div>
+                """
+            else:
+                issues_html = """
+                <div class="no-issues-section">
+                    <h2>✅ No Issues Detected</h2>
+                    <p>Your data pipeline is clean and ready for production!</p>
+                </div>
+                """
+
+            # Generate anomalies table
+            anomalies_html = ""
+            if anomalies:
+                anomalies_html = f"""
+                <div class="anomalies-section">
+                    <h2>🚨 High-Value Anomalies ({len(anomalies)} found)</h2>
+                    <table class="anomalies-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Amount</th>
+                                <th>Customer ID</th>
+                                <th>Required Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                """
+
+                for anom in anomalies:
+                    anomalies_html += f"""
+                        <tr>
+                            <td>#{anom['order_id']}</td>
+                            <td>₹{anom['amount']:,.2f}</td>
+                            <td>{anom['customer_id']}</td>
+                            <td>{anom['action']}</td>
+                        </tr>
+                    """
+
+                anomalies_html += """
+                        </tbody>
+                    </table>
+                </div>
+                """
 
             html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -119,7 +453,7 @@ class QualityReportGenerator:
         }}
         
         .container {{
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             background: white;
             border-radius: 10px;
@@ -209,7 +543,8 @@ class QualityReportGenerator:
         table {{
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
+            margin: 20px 0;
+            border: 1px solid #dee2e6;
         }}
         
         th {{
@@ -238,6 +573,58 @@ class QualityReportGenerator:
             font-weight: bold;
         }}
         
+        code {{
+            background: #f4f4f4;
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-family: monospace;
+            font-size: 0.85em;
+            word-break: break-all;
+        }}
+        
+        .issues-section {{
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 5px;
+        }}
+        
+        .issues-table {{
+            background: white;
+        }}
+        
+        .issues-table thead tr {{
+            background: #ffc107 !important;
+            color: black;
+        }}
+        
+        .anomalies-section {{
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 5px;
+        }}
+        
+        .anomalies-table thead tr {{
+            background: #dc3545 !important;
+            color: white;
+        }}
+        
+        .no-issues-section {{
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 5px;
+        }}
+        
+        .no-issues-section h2 {{
+            color: #28a745;
+            margin-top: 0;
+        }}
+        
         footer {{
             background: #f8f9fa;
             padding: 20px;
@@ -252,7 +639,7 @@ class QualityReportGenerator:
     <div class="container">
         <header>
             <h1>📊 Data Quality Report</h1>
-            <p>E-Commerce Data Pipeline</p>
+            <p>E-Commerce Data Pipeline - SimMart</p>
             <p>Generated: {self.timestamp}</p>
         </header>
         
@@ -272,7 +659,7 @@ class QualityReportGenerator:
                     </div>
                     <div class="stat">
                         <span class="stat-label">Validity</span>
-                        <span class="stat-value">100%</span>
+                        <span class="stat-value">{100 if len([i for i in all_issues if '🔴' in i['severity']]) == 0 else 85}%</span>
                     </div>
                     <div class="stat">
                         <span class="stat-label">Consistency</span>
@@ -280,23 +667,23 @@ class QualityReportGenerator:
                     </div>
                     <div class="stat">
                         <span class="stat-label">Uniqueness</span>
-                        <span class="stat-value">100%</span>
+                        <span class="stat-value">{100 if len([i for i in all_issues if 'Duplicate' in i['type']]) == 0 else 80}%</span>
                     </div>
                 </div>
                 
                 <div class="card">
-                    <h3>📈 Anomalies</h3>
+                    <h3>📈 Issues & Anomalies</h3>
                     <div class="stat">
-                        <span class="stat-label">Total Found</span>
-                        <span class="stat-value">{anomalies}</span>
+                        <span class="stat-label">Issues Found</span>
+                        <span class="stat-value">{len(all_issues)}</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-label">Severity</span>
-                        <span class="stat-value">INFO</span>
+                        <span class="stat-label">Critical Issues</span>
+                        <span class="stat-value {{'check-fail' if len([i for i in all_issues if '🔴' in i['severity']]) > 0 else ''}}">{len([i for i in all_issues if '🔴' in i['severity']])}</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-label">Status</span>
-                        <span class="stat-value check-pass">✓ Monitored</span>
+                        <span class="stat-label">Anomalies</span>
+                        <span class="stat-value">{len(anomalies)}</span>
                     </div>
                 </div>
                 
@@ -317,10 +704,8 @@ class QualityReportGenerator:
                 </div>
             </div>
             
-            <div style="background: #e8f5e9; border-left: 4px solid #27ae60; padding: 15px; border-radius: 4px; margin: 30px 0;">
-                <p style="margin: 0;"><strong>✓ Status: READY FOR ANALYTICS</strong></p>
-                <p style="margin: 5px 0 0 0; color: #555;">Your e-commerce data pipeline demonstrates excellent data quality with a score of {quality_score:.1f}%. All critical data quality checks have passed, including completeness, validity, consistency, and uniqueness validations. The data is production-ready.</p>
-            </div>
+            {issues_html}
+            {anomalies_html}
             
             <h3>📊 Table Statistics</h3>
             <table>
@@ -427,7 +812,7 @@ def main():
         generator = QualityReportGenerator()
 
         # Generate HTML report
-        html_content = generator.generate_html(quality_score=95.0, anomalies=5)
+        html_content = generator.generate_html()
 
         # Save report
         report_file = generator.save_report(html_content)
