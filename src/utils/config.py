@@ -30,7 +30,7 @@ class Config:
     # ========== DATABASE CONFIGURATION ==========
 
     # Primary E-commerce Database (from .env)
-    ECOMMERCE_DB_HOST = os.getenv('ECOMMERCE_DB_HOST', 'ecommerce-postgres')
+    ECOMMERCE_DB_HOST = os.getenv('ECOMMERCE_DB_HOST', 'localhost')
     ECOMMERCE_DB_PORT = int(os.getenv('ECOMMERCE_DB_PORT', 5432))
     ECOMMERCE_DB_NAME = os.getenv('ECOMMERCE_DB_NAME', 'ecommerce_db')
     ECOMMERCE_DB_USER = os.getenv('ECOMMERCE_DB_USER', 'dataeng')

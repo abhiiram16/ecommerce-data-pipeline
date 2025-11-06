@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+ecommerce_data_pipeline.egg-info/PKG-INFO
+ecommerce_data_pipeline.egg-info/SOURCES.txt
+ecommerce_data_pipeline.egg-info/dependency_links.txt
+ecommerce_data_pipeline.egg-info/requires.txt
+ecommerce_data_pipeline.egg-info/top_level.txt
+src/__init__.py
+src/generate_ecommerce_data.py

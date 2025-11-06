@@ -1,34 +1,26 @@
 # ============================================
-# PHASE 2: Data Generation (Install NOW)
+# E-Commerce Data Pipeline - Python 3.14 Compatible
 # ============================================
-faker==30.8.2
+
+# Core Data Processing
 pandas==2.2.3
 numpy==2.2.0
 python-dateutil==2.9.0.post0
+
+# Data Generation
+faker==30.8.2
+
+# Database Connectivity
+psycopg2-binary==2.9.10
+sqlalchemy==2.0.36
+
+# Configuration & Logging
 python-dotenv==1.0.1
 loguru==0.7.3
 
-# ============================================
-# PHASE 3+: Database & Advanced (Install LATER)
-# ============================================
+# Optional: Testing (uncomment when needed)
+# pytest==8.3.4
+# requests==2.32.3
 
-
-psycopg2-binary==2.9.10  # PostgreSQL adapter (use Docker PostgreSQL instead)
-
-# sqlalchemy==2.0.36       # Database ORM (install later)
-
-# ============================================
-# PHASE 6+: Testing & Workflow (Install LATER)
-# ============================================
-# pytest==8.3.4            # Testing framework
-# requests==2.32.3         # HTTP library
-
-# ============================================
-# PHASE 7+: Data Quality (Install LATER)
-# ============================================
-# great-expectations==0.18.8  # Data quality checks (Python 3.14 issues)
-
-# ============================================
-# NOTE: Apache Airflow installed via Docker
-# ============================================
-# apache-airflow==2.8.0  # Installed in Docker container, not locally
+# Note: Apache Airflow runs in Docker container
+# Airflow dependencies managed in docker-compose-airflow.yml

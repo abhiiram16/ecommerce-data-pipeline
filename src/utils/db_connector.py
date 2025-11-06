@@ -19,7 +19,8 @@ import sys
 import os
 
 # Import config from same directory
-from config import Config, get_db_config
+from .config import Config, get_db_config
+
 
 # Configure logging
 logger.add(

@@ -1,496 +1,496 @@
 product_id,product_name,category,subcategory,brand,price,cost,stock_quantity,supplier
-2001,Samsung Galaxy,Electronics,Smartphones,Samsung,77199.72,62395.88,166,Prime Products
-2002,Xiaomi Redmi Max,Electronics,Smartphones,Xiaomi,29228.84,21080.07,129,Style Distributors
-2003,Oppo Classic,Electronics,Smartphones,Oppo,111725.57,79625.25,102,Elite Electronics
-2004,iPhone,Electronics,Smartphones,iPhone,9487.85,7348.5,54,Prime Products
-2005,Oppo Lite,Electronics,Smartphones,Oppo,113385.41,93929.62,141,Mega Suppliers
-2006,Oppo Premium,Electronics,Smartphones,Oppo,116485.8,93646.52,197,Elite Electronics
-2007,Oppo,Electronics,Smartphones,Oppo,135390.92,96972.48,111,Elite Electronics
-2008,Oppo Classic,Electronics,Smartphones,Oppo,100169.9,80298.57,49,Mega Suppliers
-2009,Realme Pro,Electronics,Smartphones,Realme,30002.07,25306.34,29,Prime Products
-2010,OnePlus,Electronics,Smartphones,OnePlus,15762.22,11985.3,178,Fashion Hub Pvt Ltd
-2011,OnePlus Lite,Electronics,Smartphones,OnePlus,83223.45,69832.79,165,Elite Electronics
-2012,Oppo Max,Electronics,Smartphones,Oppo,130822.95,108582.33,85,Kitchen World
-2013,OnePlus Classic,Electronics,Smartphones,OnePlus,56098.02,41053.61,52,Fashion Hub Pvt Ltd
-2014,OnePlus Ultra,Electronics,Smartphones,OnePlus,47708.88,33996.78,179,Kitchen World
-2015,Vivo Pro,Electronics,Smartphones,Vivo,137211.03,104322.09,173,Elite Electronics
-2016,iPhone,Electronics,Smartphones,iPhone,41862.49,29800.67,131,Kitchen World
-2017,Realme,Electronics,Smartphones,Realme,76390.69,57475.13,188,Mega Suppliers
-2018,Realme Lite,Electronics,Smartphones,Realme,108589.81,76224.93,130,Elite Electronics
-2019,Xiaomi Redmi Pro,Electronics,Smartphones,Xiaomi,100412.19,71248.01,55,Smart Solutions Ltd
-2020,Oppo Premium,Electronics,Smartphones,Oppo,49360.23,39771.5,148,Fashion Hub Pvt Ltd
-2021,Samsung Galaxy Premium,Electronics,Smartphones,Samsung,125496.82,106324.08,195,Mega Suppliers
-2022,Realme Plus,Electronics,Smartphones,Realme,126260.43,91133.49,90,Kitchen World
-2023,iPhone Premium,Electronics,Smartphones,iPhone,134261.48,110202.17,169,Mega Suppliers
-2024,iPhone Plus,Electronics,Smartphones,iPhone,9057.21,7211.92,161,Style Distributors
-2025,Samsung Galaxy Lite,Electronics,Smartphones,Samsung,28520.18,22113.66,32,Kitchen World
-2026,Xiaomi Redmi,Electronics,Smartphones,Xiaomi,87467.9,63717.52,47,Fashion Hub Pvt Ltd
-2027,iPhone Classic,Electronics,Smartphones,iPhone,15579.39,12545.37,159,Kitchen World
-2028,Vivo Classic,Electronics,Smartphones,Vivo,54284.75,42992.92,161,Fashion Hub Pvt Ltd
-2029,Realme Ultra,Electronics,Smartphones,Realme,46672.29,32778.78,81,Smart Solutions Ltd
-2030,Oppo Classic,Electronics,Smartphones,Oppo,58155.66,43394.46,37,Home Essentials Co
-2031,Xiaomi Redmi,Electronics,Smartphones,Xiaomi,105601.3,79825.48,150,Prime Products
-2032,OnePlus Premium,Electronics,Smartphones,OnePlus,13244.51,10064.06,59,Elite Electronics
-2033,Samsung Galaxy,Electronics,Smartphones,Samsung,126383.11,95908.92,21,Style Distributors
-2034,Lenovo IdeaPad Classic,Electronics,Laptops,Lenovo,107802.49,81294.58,44,Home Essentials Co
-2035,MacBook Plus,Electronics,Laptops,MacBook,112112.32,79363.78,121,Kitchen World
-2036,Asus VivoBook Classic,Electronics,Laptops,Asus,104451.68,86377.99,112,Tech Supplies India
-2037,Lenovo IdeaPad,Electronics,Laptops,Lenovo,104270.55,86324.09,184,Kitchen World
-2038,MacBook Premium,Electronics,Laptops,MacBook,65678.9,50750.42,167,Elite Electronics
-2039,Asus VivoBook Plus,Electronics,Laptops,Asus,80445.56,67494.79,98,Prime Products
-2040,Lenovo IdeaPad Plus,Electronics,Laptops,Lenovo,68858.57,57252.54,171,Tech Supplies India
-2041,MacBook Plus,Electronics,Laptops,MacBook,55932.61,40431.5,197,Mega Suppliers
-2042,HP Pavilion Pro,Electronics,Laptops,HP,27556.12,21172.34,89,Prime Products
-2043,HP Pavilion Ultra,Electronics,Laptops,HP,42792.73,34291.37,78,Home Essentials Co
-2044,HP Pavilion Pro,Electronics,Laptops,HP,32055.63,25479.48,32,Home Essentials Co
-2045,Asus VivoBook Classic,Electronics,Laptops,Asus,97381.86,70119.69,144,Prime Products
-2046,Dell Inspiron Pro,Electronics,Laptops,Dell,99364.89,83690.73,83,Tech Supplies India
-2047,Acer Aspire Plus,Electronics,Laptops,Acer,34285.18,25353.07,61,Elite Electronics
-2048,Asus VivoBook,Electronics,Laptops,Asus,44692.09,33871.31,70,Home Essentials Co
-2049,Acer Aspire Premium,Electronics,Laptops,Acer,50105.57,36226.9,113,Mega Suppliers
-2050,Lenovo IdeaPad Classic,Electronics,Laptops,Lenovo,116618.89,97505.3,120,Mega Suppliers
-2051,Acer Aspire,Electronics,Laptops,Acer,96052.25,81045.59,161,Tech Supplies India
-2052,HP Pavilion,Electronics,Laptops,HP,92975.29,77737.84,167,Kitchen World
-2053,MacBook Plus,Electronics,Laptops,MacBook,76725.19,57478.21,115,Tech Supplies India
-2054,HP Pavilion Lite,Electronics,Laptops,HP,50608.09,40622.59,196,Kitchen World
-2055,Asus VivoBook Pro,Electronics,Laptops,Asus,78182.67,55306.3,143,Prime Products
-2056,Acer Aspire Ultra,Electronics,Laptops,Acer,83826.2,67781.73,47,Style Distributors
-2057,Acer Aspire Pro,Electronics,Laptops,Acer,58017.54,47206.2,182,Fashion Hub Pvt Ltd
-2058,Lenovo IdeaPad Ultra,Electronics,Laptops,Lenovo,65630.16,46853.27,172,Kitchen World
-2059,Lenovo IdeaPad Pro,Electronics,Laptops,Lenovo,68143.69,48063.79,124,Kitchen World
-2060,Asus VivoBook Max,Electronics,Laptops,Asus,111516.45,84600.09,157,Smart Solutions Ltd
-2061,Lenovo IdeaPad Ultra,Electronics,Laptops,Lenovo,106383.86,79474.63,105,Elite Electronics
-2062,MacBook Classic,Electronics,Laptops,MacBook,45884.04,38527.64,147,Mega Suppliers
-2063,Asus VivoBook Lite,Electronics,Laptops,Asus,82426.6,68695.78,178,Tech Supplies India
-2064,Dell Inspiron Plus,Electronics,Laptops,Dell,51175.54,42906.23,53,Elite Electronics
-2065,Acer Aspire Pro,Electronics,Laptops,Acer,104300.99,75842.55,117,Mega Suppliers
-2066,Lenovo IdeaPad Ultra,Electronics,Laptops,Lenovo,83320.81,59670.83,185,Mega Suppliers
-2067,iPad Ultra,Electronics,Tablets,iPad,36944.91,26749.06,152,Elite Electronics
-2068,Amazon Fire Plus,Electronics,Tablets,Amazon,59863.08,46730.59,35,Kitchen World
-2069,Samsung Galaxy Tab Plus,Electronics,Tablets,Samsung,16069.17,12118.0,181,Elite Electronics
-2070,iPad Plus,Electronics,Tablets,iPad,34185.55,24512.83,47,Prime Products
-2071,iPad Max,Electronics,Tablets,iPad,43960.27,32681.36,68,Style Distributors
-2072,Lenovo Tab Premium,Electronics,Tablets,Lenovo,78462.11,61721.88,69,Prime Products
-2073,Samsung Galaxy Tab Max,Electronics,Tablets,Samsung,25866.38,20514.34,48,Prime Products
-2074,Amazon Fire Pro,Electronics,Tablets,Amazon,52710.49,44582.87,124,Smart Solutions Ltd
-2075,Samsung Galaxy Tab Max,Electronics,Tablets,Samsung,34237.1,26771.45,190,Smart Solutions Ltd
-2076,Lenovo Tab Plus,Electronics,Tablets,Lenovo,18408.41,14638.16,100,Prime Products
-2077,Lenovo Tab,Electronics,Tablets,Lenovo,46940.64,35023.2,90,Tech Supplies India
-2078,Amazon Fire Plus,Electronics,Tablets,Amazon,52705.61,38091.52,180,Mega Suppliers
-2079,iPad Premium,Electronics,Tablets,iPad,34304.9,25770.95,144,Tech Supplies India
-2080,Amazon Fire Pro,Electronics,Tablets,Amazon,45475.0,33489.49,94,Style Distributors
-2081,Samsung Galaxy Tab Lite,Electronics,Tablets,Samsung,18702.56,14511.42,172,Kitchen World
-2082,Lenovo Tab Lite,Electronics,Tablets,Lenovo,31925.97,25149.82,189,Home Essentials Co
-2083,Lenovo Tab Pro,Electronics,Tablets,Lenovo,35839.08,25782.8,130,Elite Electronics
-2084,Lenovo Tab Ultra,Electronics,Tablets,Lenovo,10424.5,8802.66,42,Prime Products
-2085,iPad Classic,Electronics,Tablets,iPad,27634.38,23116.67,97,Style Distributors
-2086,Lenovo Tab Plus,Electronics,Tablets,Lenovo,79953.14,61870.79,109,Home Essentials Co
-2087,iPad Pro,Electronics,Tablets,iPad,67329.88,50980.53,44,Style Distributors
-2088,Amazon Fire Pro,Electronics,Tablets,Amazon,36571.95,30784.99,39,Kitchen World
-2089,Amazon Fire Plus,Electronics,Tablets,Amazon,23145.24,17678.77,152,Style Distributors
-2090,iPad Pro,Electronics,Tablets,iPad,24112.5,17138.09,145,Smart Solutions Ltd
-2091,iPad,Electronics,Tablets,iPad,53305.29,41207.36,166,Kitchen World
-2092,Amazon Fire Pro,Electronics,Tablets,Amazon,55989.11,41704.27,108,Fashion Hub Pvt Ltd
-2093,Lenovo Tab Lite,Electronics,Tablets,Lenovo,16904.66,13310.1,196,Kitchen World
-2094,Lenovo Tab Plus,Electronics,Tablets,Lenovo,47984.44,39760.94,118,Smart Solutions Ltd
-2095,iPad Premium,Electronics,Tablets,iPad,22238.76,16881.59,39,Smart Solutions Ltd
-2096,iPad Ultra,Electronics,Tablets,iPad,26887.06,20919.99,37,Mega Suppliers
-2097,Mi Pad Ultra,Electronics,Tablets,Mi,47062.4,38997.75,63,Elite Electronics
-2098,iPad,Electronics,Tablets,iPad,41897.24,29437.96,99,Mega Suppliers
-2099,Lenovo Tab Ultra,Electronics,Tablets,Lenovo,33826.96,24876.87,189,Tech Supplies India
-2100,OnePlus Buds,Electronics,Headphones,OnePlus,6912.04,5577.89,51,Tech Supplies India
-2101,Noise ColorFit Pro,Electronics,Headphones,Noise,21046.62,16246.12,74,Tech Supplies India
-2102,Sony WH Max,Electronics,Headphones,Sony,12578.03,10359.52,81,Home Essentials Co
-2103,OnePlus Buds Max,Electronics,Headphones,OnePlus,4575.03,3739.29,76,Mega Suppliers
-2104,Noise ColorFit Lite,Electronics,Headphones,Noise,1951.64,1609.46,57,Mega Suppliers
-2105,Sony WH Lite,Electronics,Headphones,Sony,14835.88,10964.53,79,Kitchen World
-2106,JBL Lite,Electronics,Headphones,JBL,21162.15,15335.06,188,Kitchen World
-2107,boAt Rockerz Plus,Electronics,Headphones,boAt,1784.33,1461.49,108,Elite Electronics
-2108,Noise ColorFit Premium,Electronics,Headphones,Noise,22271.34,18158.49,114,Fashion Hub Pvt Ltd
-2109,JBL Lite,Electronics,Headphones,JBL,20329.15,16021.62,95,Home Essentials Co
-2110,OnePlus Buds,Electronics,Headphones,OnePlus,16019.66,13193.72,26,Smart Solutions Ltd
-2111,Noise ColorFit Premium,Electronics,Headphones,Noise,4330.21,3196.95,22,Kitchen World
-2112,Sony WH Ultra,Electronics,Headphones,Sony,16540.77,12179.85,119,Style Distributors
-2113,Sony WH Pro,Electronics,Headphones,Sony,15396.26,12751.08,199,Elite Electronics
-2114,OnePlus Buds Lite,Electronics,Headphones,OnePlus,10787.29,8711.58,184,Home Essentials Co
-2115,Realme Buds Lite,Electronics,Headphones,Realme,23143.11,19273.19,64,Mega Suppliers
-2116,Sony WH,Electronics,Headphones,Sony,10612.11,8288.09,185,Home Essentials Co
-2117,JBL Plus,Electronics,Headphones,JBL,13255.89,9684.05,138,Elite Electronics
-2118,Noise ColorFit Lite,Electronics,Headphones,Noise,23132.97,17236.19,163,Home Essentials Co
-2119,JBL Lite,Electronics,Headphones,JBL,2063.01,1593.44,144,Kitchen World
-2120,JBL Ultra,Electronics,Headphones,JBL,15755.45,12112.21,121,Kitchen World
-2121,boAt Rockerz Pro,Electronics,Headphones,boAt,4478.64,3703.39,151,Kitchen World
-2122,OnePlus Buds Plus,Electronics,Headphones,OnePlus,13633.73,10419.22,124,Mega Suppliers
-2123,boAt Rockerz Premium,Electronics,Headphones,boAt,1926.58,1371.81,20,Fashion Hub Pvt Ltd
-2124,JBL Max,Electronics,Headphones,JBL,15871.49,11694.25,184,Smart Solutions Ltd
-2125,OnePlus Buds Lite,Electronics,Headphones,OnePlus,19757.64,15730.06,194,Style Distributors
-2126,JBL Pro,Electronics,Headphones,JBL,7882.0,6388.87,74,Kitchen World
-2127,boAt Rockerz Lite,Electronics,Headphones,boAt,18985.8,14583.19,164,Smart Solutions Ltd
-2128,Noise ColorFit Plus,Electronics,Headphones,Noise,15651.58,13035.19,71,Smart Solutions Ltd
-2129,Realme Buds Max,Electronics,Headphones,Realme,9369.42,7080.91,93,Elite Electronics
-2130,Sony WH Plus,Electronics,Headphones,Sony,23486.74,18868.95,106,Home Essentials Co
-2131,Sony WH Lite,Electronics,Headphones,Sony,2047.7,1493.5,93,Mega Suppliers
-2132,OnePlus Buds,Electronics,Headphones,OnePlus,23538.0,18003.82,156,Home Essentials Co
-2133,Noise ColorFit Ultra,Electronics,Smart Watches,Noise,24570.34,20746.53,141,Kitchen World
-2134,Amazfit Pro,Electronics,Smart Watches,Amazfit,2824.89,1997.09,39,Tech Supplies India
-2135,Samsung Galaxy Watch,Electronics,Smart Watches,Samsung,9792.07,8161.92,55,Elite Electronics
-2136,boAt Storm Lite,Electronics,Smart Watches,boAt,48136.48,34465.31,44,Mega Suppliers
-2137,boAt Storm Plus,Electronics,Smart Watches,boAt,8547.12,6179.51,110,Style Distributors
-2138,Apple Watch Ultra,Electronics,Smart Watches,Apple,48856.64,41055.3,124,Elite Electronics
-2139,Noise ColorFit Max,Electronics,Smart Watches,Noise,21798.09,18525.56,52,Fashion Hub Pvt Ltd
-2140,Fitbit Ultra,Electronics,Smart Watches,Fitbit,17332.57,14494.79,47,Kitchen World
-2141,Noise ColorFit,Electronics,Smart Watches,Noise,14800.26,10636.88,178,Mega Suppliers
-2142,Amazfit Premium,Electronics,Smart Watches,Amazfit,25699.62,19917.37,28,Fashion Hub Pvt Ltd
-2143,Noise ColorFit Pro,Electronics,Smart Watches,Noise,32665.62,26597.44,45,Elite Electronics
-2144,Samsung Galaxy Watch Classic,Electronics,Smart Watches,Samsung,27763.17,20209.66,64,Mega Suppliers
-2145,Samsung Galaxy Watch Lite,Electronics,Smart Watches,Samsung,19055.89,14107.22,176,Tech Supplies India
-2146,Samsung Galaxy Watch Plus,Electronics,Smart Watches,Samsung,36428.74,29994.23,164,Elite Electronics
-2147,Apple Watch,Electronics,Smart Watches,Apple,44066.57,36483.3,133,Fashion Hub Pvt Ltd
-2148,boAt Storm Premium,Electronics,Smart Watches,boAt,13872.4,10127.38,160,Fashion Hub Pvt Ltd
-2149,Fitbit Ultra,Electronics,Smart Watches,Fitbit,18355.25,13227.65,163,Prime Products
-2150,Amazfit Max,Electronics,Smart Watches,Amazfit,32240.13,22599.99,66,Elite Electronics
-2151,Fitbit Classic,Electronics,Smart Watches,Fitbit,15640.76,13265.19,169,Elite Electronics
-2152,Apple Watch Classic,Electronics,Smart Watches,Apple,26423.8,22373.9,173,Kitchen World
-2153,Apple Watch Premium,Electronics,Smart Watches,Apple,35401.42,27099.57,165,Mega Suppliers
-2154,boAt Storm Plus,Electronics,Smart Watches,boAt,34058.32,28697.71,165,Fashion Hub Pvt Ltd
-2155,Noise ColorFit Ultra,Electronics,Smart Watches,Noise,28974.06,23837.21,194,Prime Products
-2156,Fitbit Classic,Electronics,Smart Watches,Fitbit,7650.07,5624.12,188,Fashion Hub Pvt Ltd
-2157,boAt Storm,Electronics,Smart Watches,boAt,3733.61,2775.42,112,Kitchen World
-2158,Apple Watch Premium,Electronics,Smart Watches,Apple,42708.16,31989.72,121,Elite Electronics
-2159,Amazfit Plus,Electronics,Smart Watches,Amazfit,17995.34,13143.89,141,Tech Supplies India
-2160,Samsung Galaxy Watch Classic,Electronics,Smart Watches,Samsung,21603.24,16530.2,130,Smart Solutions Ltd
-2161,Fitbit Ultra,Electronics,Smart Watches,Fitbit,12201.46,8703.72,61,Fashion Hub Pvt Ltd
-2162,Apple Watch Classic,Electronics,Smart Watches,Apple,19017.5,15732.16,41,Style Distributors
-2163,Noise ColorFit Ultra,Electronics,Smart Watches,Noise,42433.94,31019.71,177,Mega Suppliers
-2164,Noise ColorFit Lite,Electronics,Smart Watches,Noise,34851.71,25913.19,71,Fashion Hub Pvt Ltd
-2165,Apple Watch Lite,Electronics,Smart Watches,Apple,18976.0,14692.94,189,Tech Supplies India
-2166,Formal Shirt - Grey - M,Fashion,Mens Clothing,Formal,2574.27,2023.35,71,Smart Solutions Ltd
-2167,Jacket - Green - XL,Fashion,Mens Clothing,Jacket,3244.21,2566.77,219,Smart Solutions Ltd
-2168,T-Shirt - Blue - M,Fashion,Mens Clothing,T-Shirt,1347.53,996.18,191,Kitchen World
-2169,Formal Shirt - White - L,Fashion,Mens Clothing,Formal,3682.41,3110.86,330,Mega Suppliers
-2170,Casual Shirt - White - S,Fashion,Mens Clothing,Casual,3904.67,3257.69,105,Smart Solutions Ltd
-2171,Casual Shirt - Black - XXL,Fashion,Mens Clothing,Casual,4427.61,3577.88,422,Fashion Hub Pvt Ltd
-2172,T-Shirt - Blue - S,Fashion,Mens Clothing,T-Shirt,1813.15,1366.65,80,Smart Solutions Ltd
-2173,T-Shirt - Grey - S,Fashion,Mens Clothing,T-Shirt,3668.16,2938.84,295,Style Distributors
-2174,Jacket - Green - XL,Fashion,Mens Clothing,Jacket,4589.93,3752.45,180,Fashion Hub Pvt Ltd
-2175,Formal Shirt - Red - L,Fashion,Mens Clothing,Formal,2535.06,1896.33,186,Elite Electronics
-2176,Jacket - Blue - L,Fashion,Mens Clothing,Jacket,1453.47,1219.79,253,Tech Supplies India
-2177,Sweater - White - L,Fashion,Mens Clothing,Sweater,617.75,520.86,282,Style Distributors
-2178,Jacket - White - L,Fashion,Mens Clothing,Jacket,3527.13,2960.55,408,Mega Suppliers
-2179,Chinos - Grey - M,Fashion,Mens Clothing,Chinos,2534.92,2083.6,271,Smart Solutions Ltd
-2180,Sweater - Black - XXL,Fashion,Mens Clothing,Sweater,940.54,749.73,102,Home Essentials Co
-2181,Formal Shirt - Red - XL,Fashion,Mens Clothing,Formal,1053.18,778.25,131,Smart Solutions Ltd
-2182,Casual Shirt - Black - M,Fashion,Mens Clothing,Casual,536.05,436.49,289,Tech Supplies India
-2183,Chinos - Grey - M,Fashion,Mens Clothing,Chinos,2110.77,1766.87,475,Kitchen World
-2184,Chinos - Black - XL,Fashion,Mens Clothing,Chinos,2037.1,1491.12,110,Prime Products
-2185,Casual Shirt - Grey - L,Fashion,Mens Clothing,Casual,4528.9,3332.76,356,Prime Products
-2186,Casual Shirt - Black - L,Fashion,Mens Clothing,Casual,4541.54,3339.62,440,Prime Products
-2187,T-Shirt - White - L,Fashion,Mens Clothing,T-Shirt,1392.41,992.74,120,Tech Supplies India
-2188,Jacket - Blue - M,Fashion,Mens Clothing,Jacket,1580.57,1112.28,152,Home Essentials Co
-2189,T-Shirt - Green - XL,Fashion,Mens Clothing,T-Shirt,1722.23,1402.8,84,Elite Electronics
-2190,Formal Shirt - Black - L,Fashion,Mens Clothing,Formal,911.47,694.71,166,Style Distributors
-2191,Chinos - White - M,Fashion,Mens Clothing,Chinos,2355.14,1801.34,94,Kitchen World
-2192,T-Shirt - Black - XXL,Fashion,Mens Clothing,T-Shirt,4462.31,3535.19,155,Style Distributors
-2193,Jacket - White - S,Fashion,Mens Clothing,Jacket,2101.02,1590.78,225,Elite Electronics
-2194,Sweater - Red - XL,Fashion,Mens Clothing,Sweater,895.81,680.94,264,Elite Electronics
-2195,T-Shirt - Grey - L,Fashion,Mens Clothing,T-Shirt,1961.7,1427.26,436,Home Essentials Co
-2196,Formal Shirt - Blue - M,Fashion,Mens Clothing,Formal,4238.25,3291.96,214,Home Essentials Co
-2197,Sweater - Green - XXL,Fashion,Mens Clothing,Sweater,1452.77,1072.65,484,Mega Suppliers
-2198,T-Shirt - Red - L,Fashion,Mens Clothing,T-Shirt,2974.01,2527.25,163,Kitchen World
-2199,Kurti - Grey - XXL,Fashion,Womens Clothing,Kurti,4271.87,3617.82,248,Style Distributors
-2200,Saree - Blue - S,Fashion,Womens Clothing,Saree,1663.13,1396.11,452,Fashion Hub Pvt Ltd
-2201,Dress - Black - M,Fashion,Womens Clothing,Dress,2880.46,2439.73,307,Elite Electronics
-2202,Saree - Blue - S,Fashion,Womens Clothing,Saree,1392.18,1015.63,304,Tech Supplies India
-2203,Kurti - Green - S,Fashion,Womens Clothing,Kurti,2469.92,2049.66,395,Kitchen World
-2204,Kurti - Green - XL,Fashion,Womens Clothing,Kurti,2087.45,1751.97,202,Home Essentials Co
-2205,Top - Grey - S,Fashion,Womens Clothing,Top,1987.48,1651.71,183,Kitchen World
-2206,Dress - Red - XL,Fashion,Womens Clothing,Dress,3694.52,2945.2,443,Prime Products
-2207,Jeans - Red - L,Fashion,Womens Clothing,Jeans,3485.04,2768.64,145,Mega Suppliers
-2208,Jeans - Grey - M,Fashion,Womens Clothing,Jeans,635.27,519.77,403,Elite Electronics
-2209,Kurti - White - XL,Fashion,Womens Clothing,Kurti,5151.36,4039.39,460,Smart Solutions Ltd
-2210,Kurti - Red - S,Fashion,Womens Clothing,Kurti,1865.52,1571.7,391,Prime Products
-2211,Saree - Black - L,Fashion,Womens Clothing,Saree,6939.77,5152.55,98,Smart Solutions Ltd
-2212,Dress - Blue - XL,Fashion,Womens Clothing,Dress,3224.68,2717.22,262,Tech Supplies India
-2213,Lehenga - Green - L,Fashion,Womens Clothing,Lehenga,4915.39,3681.34,403,Home Essentials Co
-2214,Top - Red - XXL,Fashion,Womens Clothing,Top,7116.98,5879.35,306,Prime Products
-2215,Jeans - Grey - XL,Fashion,Womens Clothing,Jeans,1130.07,923.04,435,Tech Supplies India
-2216,Jeans - Red - S,Fashion,Womens Clothing,Jeans,5575.87,4211.41,136,Elite Electronics
-2217,Kurti - Red - XXL,Fashion,Womens Clothing,Kurti,5033.3,4211.19,308,Kitchen World
-2218,Lehenga - Red - XXL,Fashion,Womens Clothing,Lehenga,710.5,503.2,410,Elite Electronics
-2219,Dress - Grey - S,Fashion,Womens Clothing,Dress,1179.8,834.58,290,Elite Electronics
-2220,Saree - White - XXL,Fashion,Womens Clothing,Saree,5227.41,4411.65,376,Kitchen World
-2221,Palazzo - Grey - M,Fashion,Womens Clothing,Palazzo,4984.8,3604.55,68,Prime Products
-2222,Kurti - White - S,Fashion,Womens Clothing,Kurti,6441.55,4743.42,426,Smart Solutions Ltd
-2223,Kurti - White - XXL,Fashion,Womens Clothing,Kurti,4602.98,3688.65,84,Fashion Hub Pvt Ltd
-2224,Palazzo - White - XXL,Fashion,Womens Clothing,Palazzo,4910.97,3999.81,290,Elite Electronics
-2225,Jeans - Green - M,Fashion,Womens Clothing,Jeans,3848.63,3266.29,249,Prime Products
-2226,Jeans - White - XL,Fashion,Womens Clothing,Jeans,656.9,514.16,200,Home Essentials Co
-2227,Kurti - Red - L,Fashion,Womens Clothing,Kurti,1369.98,1011.54,183,Smart Solutions Ltd
-2228,Top - Red - L,Fashion,Womens Clothing,Top,2064.86,1723.66,129,Tech Supplies India
-2229,Top - Blue - XXL,Fashion,Womens Clothing,Top,5306.13,4358.58,364,Fashion Hub Pvt Ltd
-2230,Jeans - White - S,Fashion,Womens Clothing,Jeans,1881.51,1483.62,90,Fashion Hub Pvt Ltd
-2231,Kurti - Black - XXL,Fashion,Womens Clothing,Kurti,2610.47,2188.39,161,Fashion Hub Pvt Ltd
-2232,Kids Dress - Green - XXL,Fashion,Kids Clothing,Kids,497.52,422.14,408,Prime Products
-2233,Kids Sweater - White - M,Fashion,Kids Clothing,Kids,335.95,252.18,50,Prime Products
-2234,Kids Dress - Black - L,Fashion,Kids Clothing,Kids,780.88,645.82,137,Prime Products
-2235,Kids T-Shirt - Green - XXL,Fashion,Kids Clothing,Kids,1807.62,1526.92,122,Smart Solutions Ltd
-2236,Kids Dress - Black - XL,Fashion,Kids Clothing,Kids,447.0,338.23,159,Mega Suppliers
-2237,Kids Jeans - Black - XXL,Fashion,Kids Clothing,Kids,1559.66,1271.13,492,Fashion Hub Pvt Ltd
-2238,Kids Shorts - White - M,Fashion,Kids Clothing,Kids,1160.09,846.14,57,Kitchen World
-2239,Kids Shorts - Black - S,Fashion,Kids Clothing,Kids,712.93,542.99,131,Home Essentials Co
-2240,Kids Shorts - Green - L,Fashion,Kids Clothing,Kids,507.7,380.24,234,Smart Solutions Ltd
-2241,Kids Jeans - Black - XL,Fashion,Kids Clothing,Kids,698.26,540.43,87,Fashion Hub Pvt Ltd
-2242,Kids Shorts - Blue - XL,Fashion,Kids Clothing,Kids,997.92,773.45,462,Prime Products
-2243,Kids T-Shirt - White - XXL,Fashion,Kids Clothing,Kids,399.79,333.93,447,Tech Supplies India
-2244,Kids Jeans - Blue - XXL,Fashion,Kids Clothing,Kids,1613.02,1352.61,395,Kitchen World
-2245,Kids T-Shirt - Green - L,Fashion,Kids Clothing,Kids,1193.61,999.48,473,Tech Supplies India
-2246,Kids T-Shirt - Red - S,Fashion,Kids Clothing,Kids,523.79,426.83,239,Elite Electronics
-2247,Kids Dress - Green - M,Fashion,Kids Clothing,Kids,1167.42,819.78,451,Style Distributors
-2248,Kids T-Shirt - White - M,Fashion,Kids Clothing,Kids,872.21,640.35,91,Mega Suppliers
-2249,Kids Shorts - Red - S,Fashion,Kids Clothing,Kids,542.86,387.74,337,Home Essentials Co
-2250,Kids Shorts - Red - XXL,Fashion,Kids Clothing,Kids,1611.5,1319.1,95,Smart Solutions Ltd
-2251,Kids T-Shirt - Green - M,Fashion,Kids Clothing,Kids,822.19,658.1,277,Tech Supplies India
-2252,Kids Dress - Black - L,Fashion,Kids Clothing,Kids,1106.35,938.97,371,Smart Solutions Ltd
-2253,Kids T-Shirt - Green - M,Fashion,Kids Clothing,Kids,1900.71,1391.96,410,Fashion Hub Pvt Ltd
-2254,Kids Dress - Blue - S,Fashion,Kids Clothing,Kids,1712.71,1276.2,169,Tech Supplies India
-2255,Kids Dress - Blue - XL,Fashion,Kids Clothing,Kids,1264.05,985.81,351,Style Distributors
-2256,Kids Jeans - Green - XL,Fashion,Kids Clothing,Kids,675.81,531.83,478,Tech Supplies India
-2257,Kids T-Shirt - Green - XL,Fashion,Kids Clothing,Kids,1013.65,819.04,361,Elite Electronics
-2258,Kids Jeans - Blue - S,Fashion,Kids Clothing,Kids,404.01,289.11,236,Fashion Hub Pvt Ltd
-2259,Kids T-Shirt - Grey - S,Fashion,Kids Clothing,Kids,664.61,509.42,249,Mega Suppliers
-2260,Kids T-Shirt - Black - XL,Fashion,Kids Clothing,Kids,1494.83,1070.21,400,Mega Suppliers
-2261,Kids Sweater - Red - L,Fashion,Kids Clothing,Kids,1653.51,1291.01,119,Tech Supplies India
-2262,Kids Sweater - White - XXL,Fashion,Kids Clothing,Kids,826.19,643.18,476,Fashion Hub Pvt Ltd
-2263,Kids Sweater - Green - XL,Fashion,Kids Clothing,Kids,1275.96,1008.84,165,Style Distributors
-2264,Kids Dress - Black - L,Fashion,Kids Clothing,Kids,928.8,669.97,208,Prime Products
-2265,Boots - Black - M,Fashion,Footwear,Boots,6419.77,4888.58,150,Mega Suppliers
-2266,Formal Shoes - Grey - XXL,Fashion,Footwear,Formal,1335.54,936.4,388,Style Distributors
-2267,Slippers - Black - XL,Fashion,Footwear,Slippers,6096.37,4411.55,149,Fashion Hub Pvt Ltd
-2268,Slippers - Black - XL,Fashion,Footwear,Slippers,1202.43,986.33,266,Smart Solutions Ltd
-2269,Boots - Red - M,Fashion,Footwear,Boots,1519.07,1187.66,235,Smart Solutions Ltd
-2270,Slippers - Blue - XXL,Fashion,Footwear,Slippers,7572.4,6126.05,434,Tech Supplies India
-2271,Sandals - Black - L,Fashion,Footwear,Sandals,5795.62,4133.74,461,Home Essentials Co
-2272,Boots - Red - L,Fashion,Footwear,Boots,3565.51,2980.86,192,Fashion Hub Pvt Ltd
-2273,Sports Shoes - Blue - XL,Fashion,Footwear,Sports,3606.24,2771.87,221,Prime Products
-2274,Sneakers - Black - M,Fashion,Footwear,Sneakers,1080.66,836.56,103,Smart Solutions Ltd
-2275,Sports Shoes - Grey - L,Fashion,Footwear,Sports,5307.23,4326.48,148,Kitchen World
-2276,Slippers - Red - XXL,Fashion,Footwear,Slippers,6619.88,5432.28,259,Home Essentials Co
-2277,Sandals - White - L,Fashion,Footwear,Sandals,4115.08,2928.81,64,Elite Electronics
-2278,Formal Shoes - Green - XXL,Fashion,Footwear,Formal,5448.41,4251.54,480,Smart Solutions Ltd
-2279,Boots - Green - XL,Fashion,Footwear,Boots,5640.53,4514.55,375,Smart Solutions Ltd
-2280,Sports Shoes - Black - L,Fashion,Footwear,Sports,2269.91,1913.67,132,Prime Products
-2281,Slippers - White - M,Fashion,Footwear,Slippers,6748.54,4849.37,403,Tech Supplies India
-2282,Sneakers - White - XXL,Fashion,Footwear,Sneakers,4717.76,3887.25,54,Tech Supplies India
-2283,Sandals - Black - M,Fashion,Footwear,Sandals,4327.91,3557.48,265,Kitchen World
-2284,Slippers - Grey - XXL,Fashion,Footwear,Slippers,5562.01,3906.67,205,Tech Supplies India
-2285,Sandals - Blue - S,Fashion,Footwear,Sandals,1866.0,1404.71,330,Prime Products
-2286,Sneakers - Green - L,Fashion,Footwear,Sneakers,5196.21,3748.82,286,Tech Supplies India
-2287,Sandals - White - XL,Fashion,Footwear,Sandals,5153.37,3659.92,354,Fashion Hub Pvt Ltd
-2288,Slippers - Green - XL,Fashion,Footwear,Slippers,7142.42,5568.19,326,Elite Electronics
-2289,Boots - Red - XXL,Fashion,Footwear,Boots,7347.59,5600.33,261,Elite Electronics
-2290,Boots - Grey - XL,Fashion,Footwear,Boots,7175.35,5512.91,413,Prime Products
-2291,Sandals - Green - XL,Fashion,Footwear,Sandals,5954.16,4776.21,411,Style Distributors
-2292,Sports Shoes - Grey - XL,Fashion,Footwear,Sports,5284.04,3982.2,189,Smart Solutions Ltd
-2293,Sports Shoes - Green - XXL,Fashion,Footwear,Sports,6048.06,4842.94,185,Fashion Hub Pvt Ltd
-2294,Sports Shoes - Blue - L,Fashion,Footwear,Sports,6793.42,5565.43,435,Prime Products
-2295,Sneakers - Black - XXL,Fashion,Footwear,Sneakers,6593.4,5082.66,223,Tech Supplies India
-2296,Sandals - White - L,Fashion,Footwear,Sandals,2926.1,2409.53,91,Smart Solutions Ltd
-2297,Sports Shoes - Red - XXL,Fashion,Footwear,Sports,7718.72,6231.66,492,Tech Supplies India
-2298,Watch - Green - S,Fashion,Accessories,Watch,4624.67,3376.63,286,Tech Supplies India
-2299,Sunglasses - Grey - S,Fashion,Accessories,Sunglasses,1704.39,1236.08,101,Elite Electronics
-2300,Wallet - White - XXL,Fashion,Accessories,Wallet,4928.98,4002.69,329,Fashion Hub Pvt Ltd
-2301,Wallet - Blue - XL,Fashion,Accessories,Wallet,1131.42,872.57,273,Elite Electronics
-2302,Scarf - Red - M,Fashion,Accessories,Scarf,1313.61,1050.2,296,Elite Electronics
-2303,Belt - Green - XXL,Fashion,Accessories,Belt,354.1,264.11,447,Style Distributors
-2304,Wallet - Grey - XXL,Fashion,Accessories,Wallet,1631.57,1363.07,439,Home Essentials Co
-2305,Scarf - Grey - S,Fashion,Accessories,Scarf,4366.8,3445.75,201,Mega Suppliers
-2306,Cap - Black - XL,Fashion,Accessories,Cap,2464.33,1990.42,146,Tech Supplies India
-2307,Scarf - Green - S,Fashion,Accessories,Scarf,2992.61,2128.94,495,Smart Solutions Ltd
-2308,Scarf - Red - XL,Fashion,Accessories,Scarf,2271.05,1748.27,355,Kitchen World
-2309,Watch - Black - M,Fashion,Accessories,Watch,3659.33,2754.25,423,Home Essentials Co
-2310,Wallet - Grey - XL,Fashion,Accessories,Wallet,925.08,655.43,421,Tech Supplies India
-2311,Belt - Blue - XL,Fashion,Accessories,Belt,3863.1,3202.98,409,Kitchen World
-2312,Wallet - Black - S,Fashion,Accessories,Wallet,3896.25,2901.43,87,Kitchen World
-2313,Sunglasses - Grey - M,Fashion,Accessories,Sunglasses,493.94,413.0,422,Prime Products
-2314,Belt - Blue - XL,Fashion,Accessories,Belt,1027.36,855.42,495,Home Essentials Co
-2315,Watch - Black - XL,Fashion,Accessories,Watch,1800.79,1414.05,471,Smart Solutions Ltd
-2316,Belt - Blue - M,Fashion,Accessories,Belt,2459.57,1765.06,166,Prime Products
-2317,Bag - Grey - S,Fashion,Accessories,Bag,4843.13,3873.32,144,Tech Supplies India
-2318,Bag - White - L,Fashion,Accessories,Bag,2741.24,2168.8,475,Home Essentials Co
-2319,Belt - Red - L,Fashion,Accessories,Belt,2276.09,1755.73,188,Mega Suppliers
-2320,Sunglasses - White - M,Fashion,Accessories,Sunglasses,1603.24,1354.96,200,Smart Solutions Ltd
-2321,Wallet - Red - XXL,Fashion,Accessories,Wallet,3140.32,2656.34,422,Tech Supplies India
-2322,Sunglasses - Blue - XL,Fashion,Accessories,Sunglasses,4380.65,3681.05,273,Kitchen World
-2323,Cap - Grey - XL,Fashion,Accessories,Cap,2880.98,2187.16,203,Kitchen World
-2324,Watch - Blue - M,Fashion,Accessories,Watch,2407.68,1772.8,247,Smart Solutions Ltd
-2325,Bag - Grey - XXL,Fashion,Accessories,Bag,3441.61,2900.94,96,Mega Suppliers
-2326,Wallet - White - XXL,Fashion,Accessories,Wallet,2605.51,2169.69,217,Fashion Hub Pvt Ltd
-2327,Watch - Red - XXL,Fashion,Accessories,Watch,2148.54,1587.64,371,Fashion Hub Pvt Ltd
-2328,Wallet - Green - XL,Fashion,Accessories,Wallet,3426.15,2625.11,277,Mega Suppliers
-2329,Scarf - Green - XL,Fashion,Accessories,Scarf,3397.0,2417.31,59,Elite Electronics
-2330,Watch - White - XL,Fashion,Accessories,Watch,2586.32,2030.98,264,Tech Supplies India
-2331,Bookshelf Classic,Home & Kitchen,Furniture,Bookshelf,34366.2,26662.24,297,Mega Suppliers
-2332,Wardrobe Ultra,Home & Kitchen,Furniture,Wardrobe,37330.04,27109.36,34,Kitchen World
-2333,Chair,Home & Kitchen,Furniture,Chair,34239.91,28289.1,270,Smart Solutions Ltd
-2334,Dining Table Classic,Home & Kitchen,Furniture,Dining,11245.82,9260.25,237,Elite Electronics
-2335,Dining Table Classic,Home & Kitchen,Furniture,Dining,18531.59,14448.91,237,Kitchen World
-2336,Bookshelf Pro,Home & Kitchen,Furniture,Bookshelf,19268.51,13736.21,62,Style Distributors
-2337,Sofa Plus,Home & Kitchen,Furniture,Sofa,36477.76,26220.34,286,Prime Products
-2338,Study Table,Home & Kitchen,Furniture,Study,27987.39,23079.16,250,Smart Solutions Ltd
-2339,Wardrobe Lite,Home & Kitchen,Furniture,Wardrobe,40028.47,33548.22,159,Mega Suppliers
-2340,Bookshelf Classic,Home & Kitchen,Furniture,Bookshelf,40965.24,33489.09,82,Prime Products
-2341,Sofa Lite,Home & Kitchen,Furniture,Sofa,29633.62,23473.16,267,Tech Supplies India
-2342,Sofa Lite,Home & Kitchen,Furniture,Sofa,20370.82,16908.99,124,Mega Suppliers
-2343,Dining Table Pro,Home & Kitchen,Furniture,Dining,37684.37,27865.5,227,Kitchen World
-2344,Dining Table Max,Home & Kitchen,Furniture,Dining,35349.13,29703.03,214,Prime Products
-2345,Study Table Premium,Home & Kitchen,Furniture,Study,48401.88,40909.93,130,Kitchen World
-2346,Sofa Classic,Home & Kitchen,Furniture,Sofa,28520.89,20561.74,122,Home Essentials Co
-2347,Bookshelf Premium,Home & Kitchen,Furniture,Bookshelf,36680.25,26130.32,71,Smart Solutions Ltd
-2348,Sofa,Home & Kitchen,Furniture,Sofa,9726.91,7898.33,295,Tech Supplies India
-2349,Sofa Ultra,Home & Kitchen,Furniture,Sofa,23813.62,19119.14,200,Kitchen World
-2350,Wardrobe Premium,Home & Kitchen,Furniture,Wardrobe,14590.17,11715.87,140,Home Essentials Co
-2351,Study Table Max,Home & Kitchen,Furniture,Study,13757.8,10881.92,126,Home Essentials Co
-2352,Chair Pro,Home & Kitchen,Furniture,Chair,28840.44,23750.0,153,Mega Suppliers
-2353,Wardrobe Ultra,Home & Kitchen,Furniture,Wardrobe,32312.94,23825.78,292,Tech Supplies India
-2354,Study Table Ultra,Home & Kitchen,Furniture,Study,21332.0,16583.33,284,Elite Electronics
-2355,Bed Premium,Home & Kitchen,Furniture,Bed,44950.02,34906.89,201,Mega Suppliers
-2356,Bed Premium,Home & Kitchen,Furniture,Bed,8030.35,6401.57,268,Tech Supplies India
-2357,Chair Max,Home & Kitchen,Furniture,Chair,15192.78,11316.02,298,Style Distributors
-2358,Dining Table,Home & Kitchen,Furniture,Dining,31289.19,23684.05,44,Style Distributors
-2359,Wardrobe Plus,Home & Kitchen,Furniture,Wardrobe,48761.43,40104.16,105,Mega Suppliers
-2360,Dining Table Classic,Home & Kitchen,Furniture,Dining,36863.43,27637.98,285,Home Essentials Co
-2361,Dining Table Ultra,Home & Kitchen,Furniture,Dining,38679.82,29331.91,154,Fashion Hub Pvt Ltd
-2362,Bed Ultra,Home & Kitchen,Furniture,Bed,40444.48,32480.95,51,Home Essentials Co
-2363,Wardrobe Ultra,Home & Kitchen,Furniture,Wardrobe,30537.75,24516.36,52,Smart Solutions Ltd
-2364,Mixer Grinder Pro,Home & Kitchen,Kitchen Appliances,Mixer,7014.69,4950.33,67,Kitchen World
-2365,Toaster Pro,Home & Kitchen,Kitchen Appliances,Toaster,39527.29,31495.91,289,Kitchen World
-2366,Mixer Grinder Plus,Home & Kitchen,Kitchen Appliances,Mixer,16256.36,12059.51,196,Style Distributors
-2367,Mixer Grinder Classic,Home & Kitchen,Kitchen Appliances,Mixer,27264.79,19760.85,147,Prime Products
-2368,Mixer Grinder,Home & Kitchen,Kitchen Appliances,Mixer,31006.36,25702.47,261,Prime Products
-2369,Induction Cooktop Lite,Home & Kitchen,Kitchen Appliances,Induction,4476.34,3169.66,53,Elite Electronics
-2370,Microwave Max,Home & Kitchen,Kitchen Appliances,Microwave,38613.31,29525.16,273,Elite Electronics
-2371,Refrigerator Premium,Home & Kitchen,Kitchen Appliances,Refrigerator,21114.87,15689.2,112,Mega Suppliers
-2372,Induction Cooktop Ultra,Home & Kitchen,Kitchen Appliances,Induction,35405.23,26427.76,169,Elite Electronics
-2373,Mixer Grinder,Home & Kitchen,Kitchen Appliances,Mixer,32956.05,27959.33,101,Elite Electronics
-2374,Microwave Lite,Home & Kitchen,Kitchen Appliances,Microwave,32723.56,24097.82,252,Prime Products
-2375,Microwave,Home & Kitchen,Kitchen Appliances,Microwave,30259.09,23668.58,119,Fashion Hub Pvt Ltd
-2376,Electric Kettle Classic,Home & Kitchen,Kitchen Appliances,Electric,35589.78,26394.93,204,Mega Suppliers
-2377,Electric Kettle Max,Home & Kitchen,Kitchen Appliances,Electric,6835.95,4996.43,99,Fashion Hub Pvt Ltd
-2378,Microwave Lite,Home & Kitchen,Kitchen Appliances,Microwave,38176.94,28817.99,286,Smart Solutions Ltd
-2379,Electric Kettle Plus,Home & Kitchen,Kitchen Appliances,Electric,29814.76,21623.46,135,Tech Supplies India
-2380,Induction Cooktop Pro,Home & Kitchen,Kitchen Appliances,Induction,11788.54,8477.62,198,Prime Products
-2381,Mixer Grinder Classic,Home & Kitchen,Kitchen Appliances,Mixer,18845.49,13357.19,285,Home Essentials Co
-2382,Refrigerator Ultra,Home & Kitchen,Kitchen Appliances,Refrigerator,36059.31,29666.63,183,Prime Products
-2383,Refrigerator Premium,Home & Kitchen,Kitchen Appliances,Refrigerator,4171.92,3064.62,86,Kitchen World
-2384,Toaster Classic,Home & Kitchen,Kitchen Appliances,Toaster,32315.96,26663.05,137,Fashion Hub Pvt Ltd
-2385,Toaster,Home & Kitchen,Kitchen Appliances,Toaster,6524.92,4721.41,181,Kitchen World
-2386,Electric Kettle Classic,Home & Kitchen,Kitchen Appliances,Electric,35612.44,27983.67,173,Mega Suppliers
-2387,Electric Kettle Ultra,Home & Kitchen,Kitchen Appliances,Electric,15790.5,11559.58,80,Tech Supplies India
-2388,Electric Kettle,Home & Kitchen,Kitchen Appliances,Electric,8906.49,6697.05,206,Smart Solutions Ltd
-2389,Toaster Premium,Home & Kitchen,Kitchen Appliances,Toaster,6706.79,4886.3,125,Prime Products
-2390,Refrigerator,Home & Kitchen,Kitchen Appliances,Refrigerator,33780.03,26133.29,66,Home Essentials Co
-2391,Induction Cooktop Ultra,Home & Kitchen,Kitchen Appliances,Induction,8593.94,6977.29,118,Elite Electronics
-2392,Electric Kettle Premium,Home & Kitchen,Kitchen Appliances,Electric,32842.7,27568.23,294,Smart Solutions Ltd
-2393,Mixer Grinder Premium,Home & Kitchen,Kitchen Appliances,Mixer,11102.58,9396.99,187,Prime Products
-2394,Mixer Grinder Classic,Home & Kitchen,Kitchen Appliances,Mixer,26473.32,21804.73,31,Fashion Hub Pvt Ltd
-2395,Electric Kettle Classic,Home & Kitchen,Kitchen Appliances,Electric,27026.63,22232.17,142,Elite Electronics
-2396,Refrigerator Classic,Home & Kitchen,Kitchen Appliances,Refrigerator,7026.52,5531.08,43,Home Essentials Co
-2397,Wall Clock Pro,Home & Kitchen,Home Decor,Wall,4337.8,3610.79,290,Prime Products
-2398,Wall Clock,Home & Kitchen,Home Decor,Wall,4810.56,3396.32,101,Home Essentials Co
-2399,Photo Frame,Home & Kitchen,Home Decor,Photo,1922.93,1383.91,115,Tech Supplies India
-2400,Vase Plus,Home & Kitchen,Home Decor,Vase,2964.13,2234.67,55,Smart Solutions Ltd
-2401,Vase,Home & Kitchen,Home Decor,Vase,1599.04,1211.19,258,Fashion Hub Pvt Ltd
-2402,Cushion,Home & Kitchen,Home Decor,Cushion,4349.54,3231.28,122,Style Distributors
-2403,Cushion Premium,Home & Kitchen,Home Decor,Cushion,4157.32,3469.45,81,Fashion Hub Pvt Ltd
-2404,Carpet Plus,Home & Kitchen,Home Decor,Carpet,2925.1,2394.43,244,Kitchen World
-2405,Wall Clock Classic,Home & Kitchen,Home Decor,Wall,2671.51,2122.35,287,Kitchen World
-2406,Carpet Classic,Home & Kitchen,Home Decor,Carpet,3938.44,2864.91,130,Fashion Hub Pvt Ltd
-2407,Carpet,Home & Kitchen,Home Decor,Carpet,1345.4,1141.04,57,Home Essentials Co
-2408,Lamp Ultra,Home & Kitchen,Home Decor,Lamp,4518.61,3393.66,231,Elite Electronics
-2409,Photo Frame Premium,Home & Kitchen,Home Decor,Photo,3966.06,3342.13,208,Home Essentials Co
-2410,Cushion Ultra,Home & Kitchen,Home Decor,Cushion,4591.46,3669.29,248,Style Distributors
-2411,Cushion Lite,Home & Kitchen,Home Decor,Cushion,2270.1,1691.15,242,Mega Suppliers
-2412,Carpet Classic,Home & Kitchen,Home Decor,Carpet,3911.6,3285.18,160,Mega Suppliers
-2413,Vase Pro,Home & Kitchen,Home Decor,Vase,1534.65,1238.68,186,Tech Supplies India
-2414,Wall Clock,Home & Kitchen,Home Decor,Wall,4685.83,3867.26,86,Elite Electronics
-2415,Cushion Premium,Home & Kitchen,Home Decor,Cushion,1462.84,1122.15,168,Prime Products
-2416,Lamp Pro,Home & Kitchen,Home Decor,Lamp,282.76,218.07,289,Home Essentials Co
-2417,Photo Frame Max,Home & Kitchen,Home Decor,Photo,906.9,750.06,144,Elite Electronics
-2418,Carpet Classic,Home & Kitchen,Home Decor,Carpet,3945.89,3296.93,102,Elite Electronics
-2419,Lamp Plus,Home & Kitchen,Home Decor,Lamp,1489.14,1052.32,205,Style Distributors
-2420,Wall Clock Premium,Home & Kitchen,Home Decor,Wall,2570.3,1941.51,245,Mega Suppliers
-2421,Wall Clock,Home & Kitchen,Home Decor,Wall,3551.91,2513.22,39,Kitchen World
-2422,Vase Pro,Home & Kitchen,Home Decor,Vase,4291.77,3083.15,225,Home Essentials Co
-2423,Lamp Ultra,Home & Kitchen,Home Decor,Lamp,2597.97,2111.69,140,Elite Electronics
-2424,Curtain Pro,Home & Kitchen,Home Decor,Curtain,1568.83,1128.4,229,Elite Electronics
-2425,Wall Clock Lite,Home & Kitchen,Home Decor,Wall,4856.68,3652.93,209,Smart Solutions Ltd
-2426,Wall Clock,Home & Kitchen,Home Decor,Wall,2616.2,1976.75,203,Prime Products
-2427,Curtain Pro,Home & Kitchen,Home Decor,Curtain,4745.28,3472.59,290,Elite Electronics
-2428,Lamp Max,Home & Kitchen,Home Decor,Lamp,4701.05,3637.11,173,Style Distributors
-2429,Curtain Classic,Home & Kitchen,Home Decor,Curtain,2772.77,2206.38,38,Fashion Hub Pvt Ltd
-2430,Quilt Plus,Home & Kitchen,Bedding,Quilt,5232.6,3731.61,289,Kitchen World
-2431,Quilt Ultra,Home & Kitchen,Bedding,Quilt,6894.59,5394.15,188,Home Essentials Co
-2432,Mattress Plus,Home & Kitchen,Bedding,Mattress,1706.3,1297.54,173,Kitchen World
-2433,Blanket,Home & Kitchen,Bedding,Blanket,992.94,823.42,259,Elite Electronics
-2434,Pillow Premium,Home & Kitchen,Bedding,Pillow,5458.29,3875.48,246,Kitchen World
-2435,Pillow Classic,Home & Kitchen,Bedding,Pillow,831.66,618.9,279,Fashion Hub Pvt Ltd
-2436,Pillow Premium,Home & Kitchen,Bedding,Pillow,4832.03,3439.69,49,Smart Solutions Ltd
-2437,Pillow Classic,Home & Kitchen,Bedding,Pillow,1737.71,1385.31,269,Kitchen World
-2438,Blanket,Home & Kitchen,Bedding,Blanket,3757.06,2642.36,89,Smart Solutions Ltd
-2439,Blanket Classic,Home & Kitchen,Bedding,Blanket,580.14,490.48,226,Mega Suppliers
-2440,Bedsheet Pro,Home & Kitchen,Bedding,Bedsheet,6648.95,5511.73,125,Smart Solutions Ltd
-2441,Mattress Max,Home & Kitchen,Bedding,Mattress,6976.57,5622.57,276,Kitchen World
-2442,Mattress Classic,Home & Kitchen,Bedding,Mattress,2781.66,2097.81,151,Tech Supplies India
-2443,Mattress Premium,Home & Kitchen,Bedding,Mattress,2913.32,2471.36,223,Elite Electronics
-2444,Bedsheet Ultra,Home & Kitchen,Bedding,Bedsheet,4836.9,4098.26,98,Smart Solutions Ltd
-2445,Quilt Classic,Home & Kitchen,Bedding,Quilt,7913.69,5651.7,236,Fashion Hub Pvt Ltd
-2446,Quilt Premium,Home & Kitchen,Bedding,Quilt,2898.23,2200.35,251,Elite Electronics
-2447,Comforter Lite,Home & Kitchen,Bedding,Comforter,5446.87,4465.28,225,Style Distributors
-2448,Quilt Max,Home & Kitchen,Bedding,Quilt,1794.07,1367.81,108,Kitchen World
-2449,Comforter Plus,Home & Kitchen,Bedding,Comforter,908.53,662.97,209,Smart Solutions Ltd
-2450,Bedsheet Premium,Home & Kitchen,Bedding,Bedsheet,3261.79,2589.73,155,Style Distributors
-2451,Quilt Ultra,Home & Kitchen,Bedding,Quilt,5128.29,4142.91,50,Smart Solutions Ltd
-2452,Mattress Lite,Home & Kitchen,Bedding,Mattress,6821.1,5071.75,152,Fashion Hub Pvt Ltd
-2453,Mattress Max,Home & Kitchen,Bedding,Mattress,3804.89,3227.61,261,Prime Products
-2454,Mattress Plus,Home & Kitchen,Bedding,Mattress,2664.17,2063.41,126,Home Essentials Co
-2455,Mattress Pro,Home & Kitchen,Bedding,Mattress,7541.5,5379.65,272,Fashion Hub Pvt Ltd
-2456,Blanket Premium,Home & Kitchen,Bedding,Blanket,5491.02,3941.9,145,Style Distributors
-2457,Bedsheet Max,Home & Kitchen,Bedding,Bedsheet,899.52,753.31,142,Mega Suppliers
-2458,Bedsheet Premium,Home & Kitchen,Bedding,Bedsheet,2831.77,2175.51,163,Fashion Hub Pvt Ltd
-2459,Blanket Pro,Home & Kitchen,Bedding,Blanket,4264.78,3394.02,32,Tech Supplies India
-2460,Bedsheet,Home & Kitchen,Bedding,Bedsheet,6137.49,5103.15,76,Elite Electronics
-2461,Pillow,Home & Kitchen,Bedding,Pillow,6751.37,5421.94,116,Fashion Hub Pvt Ltd
-2462,Comforter,Home & Kitchen,Bedding,Comforter,2414.49,1693.05,77,Elite Electronics
-2463,Drawer Max,Home & Kitchen,Storage,Drawer,812.03,648.87,69,Home Essentials Co
-2464,Cabinet Premium,Home & Kitchen,Storage,Cabinet,4713.48,3487.9,157,Prime Products
-2465,Drawer Classic,Home & Kitchen,Storage,Drawer,4767.69,3567.88,68,Smart Solutions Ltd
-2466,Drawer Ultra,Home & Kitchen,Storage,Drawer,2303.51,1810.59,80,Kitchen World
-2467,Drawer Plus,Home & Kitchen,Storage,Drawer,1269.89,964.58,198,Prime Products
-2468,Rack Premium,Home & Kitchen,Storage,Rack,4454.62,3739.97,83,Style Distributors
-2469,Basket Premium,Home & Kitchen,Storage,Basket,3788.01,3042.32,124,Tech Supplies India
-2470,Basket Plus,Home & Kitchen,Storage,Basket,1347.07,1048.46,97,Mega Suppliers
-2471,Rack Classic,Home & Kitchen,Storage,Rack,870.06,670.4,223,Smart Solutions Ltd
-2472,Storage Box Max,Home & Kitchen,Storage,Storage,2071.88,1578.18,90,Mega Suppliers
-2473,Drawer Max,Home & Kitchen,Storage,Drawer,3724.92,3153.94,261,Tech Supplies India
-2474,Drawer Classic,Home & Kitchen,Storage,Drawer,3571.34,2701.81,263,Style Distributors
-2475,Basket Classic,Home & Kitchen,Storage,Basket,2044.44,1614.23,256,Kitchen World
-2476,Basket Premium,Home & Kitchen,Storage,Basket,2605.08,2012.06,289,Tech Supplies India
-2477,Storage Box Premium,Home & Kitchen,Storage,Storage,1795.08,1453.75,240,Smart Solutions Ltd
-2478,Organizer Plus,Home & Kitchen,Storage,Organizer,3381.58,2493.0,273,Elite Electronics
-2479,Organizer Plus,Home & Kitchen,Storage,Organizer,1611.51,1314.75,77,Home Essentials Co
-2480,Cabinet Premium,Home & Kitchen,Storage,Cabinet,2943.23,2238.77,202,Prime Products
-2481,Storage Box Premium,Home & Kitchen,Storage,Storage,1455.66,1197.81,218,Style Distributors
-2482,Cabinet,Home & Kitchen,Storage,Cabinet,3796.23,3087.44,109,Fashion Hub Pvt Ltd
-2483,Cabinet Plus,Home & Kitchen,Storage,Cabinet,935.9,690.02,31,Kitchen World
-2484,Basket Premium,Home & Kitchen,Storage,Basket,3498.06,2754.96,290,Smart Solutions Ltd
-2485,Storage Box Max,Home & Kitchen,Storage,Storage,4920.96,4017.27,110,Kitchen World
-2486,Rack Premium,Home & Kitchen,Storage,Rack,2172.25,1767.1,58,Smart Solutions Ltd
-2487,Basket Plus,Home & Kitchen,Storage,Basket,2641.38,2119.84,254,Fashion Hub Pvt Ltd
-2488,Drawer,Home & Kitchen,Storage,Drawer,2261.93,1647.28,72,Kitchen World
-2489,Drawer Ultra,Home & Kitchen,Storage,Drawer,1356.79,1012.14,70,Prime Products
-2490,Rack Premium,Home & Kitchen,Storage,Rack,314.35,245.79,176,Smart Solutions Ltd
-2491,Drawer Classic,Home & Kitchen,Storage,Drawer,2593.55,1858.98,255,Home Essentials Co
-2492,Rack Lite,Home & Kitchen,Storage,Rack,4195.01,3173.82,161,Elite Electronics
-2493,Cabinet Lite,Home & Kitchen,Storage,Cabinet,4202.75,3555.92,54,Style Distributors
-2494,Storage Box Classic,Home & Kitchen,Storage,Storage,4687.37,3724.92,230,Prime Products
-2495,Organizer Ultra,Home & Kitchen,Storage,Organizer,350.93,277.6,113,Smart Solutions Ltd
+2001,Smartphones Plus,Electronics,Smartphones,Smartphones,56126.39,43577.78,93,Mega Suppliers
+2002,Smartphones Lite,Electronics,Smartphones,Smartphones,128795.98,98773.25,91,Prime Products
+2003,Smartphones Lite,Electronics,Smartphones,Smartphones,78554.85,65172.81,152,Tech Supplies India
+2004,Smartphones Plus,Electronics,Smartphones,Smartphones,99751.22,76701.53,36,Fashion Hub Pvt Ltd
+2005,Smartphones Ultra,Electronics,Smartphones,Smartphones,83063.7,66020.68,91,Tech Supplies India
+2006,Smartphones Pro,Electronics,Smartphones,Smartphones,30173.1,23326.89,86,Smart Solutions Ltd
+2007,Smartphones Lite,Electronics,Smartphones,Smartphones,44279.43,32829.98,79,Prime Products
+2008,Smartphones Lite,Electronics,Smartphones,Smartphones,125257.65,95308.81,129,Tech Supplies India
+2009,Smartphones Plus,Electronics,Smartphones,Smartphones,51957.28,42260.36,137,Fashion Hub Pvt Ltd
+2010,Smartphones Pro,Electronics,Smartphones,Smartphones,84476.38,60096.77,37,Smart Solutions Ltd
+2011,Smartphones Max,Electronics,Smartphones,Smartphones,113055.4,91295.3,185,Elite Electronics
+2012,Smartphones Plus,Electronics,Smartphones,Smartphones,124955.36,96159.1,170,Mega Suppliers
+2013,Smartphones Ultra,Electronics,Smartphones,Smartphones,146078.5,118488.39,115,Home Essentials Co
+2014,Smartphones Ultra,Electronics,Smartphones,Smartphones,135228.92,108689.14,82,Fashion Hub Pvt Ltd
+2015,Smartphones Lite,Electronics,Smartphones,Smartphones,125793.36,105105.7,46,Kitchen World
+2016,Smartphones Ultra,Electronics,Smartphones,Smartphones,78362.1,64902.97,50,Elite Electronics
+2017,Smartphones Plus,Electronics,Smartphones,Smartphones,47374.57,38616.06,182,Kitchen World
+2018,Smartphones Plus,Electronics,Smartphones,Smartphones,101986.37,80525.97,183,Tech Supplies India
+2019,Smartphones Ultra,Electronics,Smartphones,Smartphones,93360.18,75423.59,141,Prime Products
+2020,Smartphones Pro,Electronics,Smartphones,Smartphones,126204.23,100286.54,115,Kitchen World
+2021,Smartphones Max,Electronics,Smartphones,Smartphones,11805.7,8298.89,144,Elite Electronics
+2022,Smartphones Pro,Electronics,Smartphones,Smartphones,118223.69,87406.14,58,Prime Products
+2023,Smartphones Max,Electronics,Smartphones,Smartphones,144538.47,113919.82,47,Home Essentials Co
+2024,Smartphones Lite,Electronics,Smartphones,Smartphones,96942.68,73056.64,134,Home Essentials Co
+2025,Smartphones Plus,Electronics,Smartphones,Smartphones,15421.8,11641.98,185,Home Essentials Co
+2026,Smartphones Plus,Electronics,Smartphones,Smartphones,128880.15,92238.34,140,Style Distributors
+2027,Smartphones Lite,Electronics,Smartphones,Smartphones,58440.9,43720.08,186,Mega Suppliers
+2028,Smartphones Plus,Electronics,Smartphones,Smartphones,137579.94,111975.61,89,Elite Electronics
+2029,Smartphones Ultra,Electronics,Smartphones,Smartphones,51708.2,40114.85,54,Home Essentials Co
+2030,Smartphones Pro,Electronics,Smartphones,Smartphones,34246.78,24236.21,38,Tech Supplies India
+2031,Smartphones Ultra,Electronics,Smartphones,Smartphones,49545.0,38923.81,30,Prime Products
+2032,Smartphones Max,Electronics,Smartphones,Smartphones,61390.76,44413.62,35,Fashion Hub Pvt Ltd
+2033,Smartphones Plus,Electronics,Smartphones,Smartphones,80923.81,61737.26,179,Mega Suppliers
+2034,Laptops Ultra,Electronics,Laptops,Laptops,115306.66,88309.7,115,Tech Supplies India
+2035,Laptops Pro,Electronics,Laptops,Laptops,79489.88,67462.85,50,Kitchen World
+2036,Laptops Ultra,Electronics,Laptops,Laptops,93463.87,79303.83,69,Home Essentials Co
+2037,Laptops Pro,Electronics,Laptops,Laptops,60575.91,42412.86,108,Tech Supplies India
+2038,Laptops Ultra,Electronics,Laptops,Laptops,109890.67,83323.52,180,Fashion Hub Pvt Ltd
+2039,Laptops Plus,Electronics,Laptops,Laptops,111950.95,87095.09,89,Kitchen World
+2040,Laptops Max,Electronics,Laptops,Laptops,45654.98,33670.86,87,Fashion Hub Pvt Ltd
+2041,Laptops Pro,Electronics,Laptops,Laptops,111020.04,78167.87,28,Home Essentials Co
+2042,Laptops Pro,Electronics,Laptops,Laptops,76088.04,57544.97,123,Tech Supplies India
+2043,Laptops Plus,Electronics,Laptops,Laptops,30555.24,25007.06,56,Elite Electronics
+2044,Laptops Max,Electronics,Laptops,Laptops,34176.17,25782.04,198,Prime Products
+2045,Laptops Plus,Electronics,Laptops,Laptops,36837.85,27865.85,171,Home Essentials Co
+2046,Laptops Lite,Electronics,Laptops,Laptops,63735.71,47839.93,130,Kitchen World
+2047,Laptops Max,Electronics,Laptops,Laptops,32658.43,24186.56,74,Style Distributors
+2048,Laptops Max,Electronics,Laptops,Laptops,42052.05,32560.46,31,Style Distributors
+2049,Laptops Max,Electronics,Laptops,Laptops,32473.62,26067.3,136,Prime Products
+2050,Laptops Max,Electronics,Laptops,Laptops,40767.09,31969.7,84,Kitchen World
+2051,Laptops Lite,Electronics,Laptops,Laptops,78809.07,63841.72,144,Style Distributors
+2052,Laptops Max,Electronics,Laptops,Laptops,76370.03,58012.65,41,Prime Products
+2053,Laptops Ultra,Electronics,Laptops,Laptops,118525.49,95252.18,140,Smart Solutions Ltd
+2054,Laptops Ultra,Electronics,Laptops,Laptops,115764.81,96760.14,152,Tech Supplies India
+2055,Laptops Pro,Electronics,Laptops,Laptops,34863.96,28622.69,28,Kitchen World
+2056,Laptops Max,Electronics,Laptops,Laptops,90268.77,71048.76,73,Smart Solutions Ltd
+2057,Laptops Max,Electronics,Laptops,Laptops,59590.44,50339.49,57,Elite Electronics
+2058,Laptops Ultra,Electronics,Laptops,Laptops,71910.69,50814.64,93,Smart Solutions Ltd
+2059,Laptops Pro,Electronics,Laptops,Laptops,62765.63,46215.79,67,Style Distributors
+2060,Laptops Plus,Electronics,Laptops,Laptops,77274.65,61156.62,160,Style Distributors
+2061,Laptops Ultra,Electronics,Laptops,Laptops,28291.12,23386.45,63,Mega Suppliers
+2062,Laptops Pro,Electronics,Laptops,Laptops,62621.58,50819.67,103,Style Distributors
+2063,Laptops Max,Electronics,Laptops,Laptops,69372.89,51137.86,188,Prime Products
+2064,Laptops Pro,Electronics,Laptops,Laptops,37566.09,31299.74,96,Mega Suppliers
+2065,Laptops Pro,Electronics,Laptops,Laptops,95420.05,75563.0,28,Style Distributors
+2066,Laptops Ultra,Electronics,Laptops,Laptops,88592.29,62982.83,58,Mega Suppliers
+2067,Tablets Plus,Electronics,Tablets,Tablets,28447.64,20265.57,31,Style Distributors
+2068,Tablets Max,Electronics,Tablets,Tablets,44249.71,36728.63,62,Mega Suppliers
+2069,Tablets Ultra,Electronics,Tablets,Tablets,74724.17,52675.48,22,Elite Electronics
+2070,Tablets Plus,Electronics,Tablets,Tablets,38948.74,32095.47,63,Elite Electronics
+2071,Tablets Ultra,Electronics,Tablets,Tablets,67226.52,56944.51,90,Mega Suppliers
+2072,Tablets Plus,Electronics,Tablets,Tablets,64013.51,54240.2,121,Tech Supplies India
+2073,Tablets Plus,Electronics,Tablets,Tablets,47610.48,39734.81,111,Fashion Hub Pvt Ltd
+2074,Tablets Pro,Electronics,Tablets,Tablets,50960.37,35912.06,123,Kitchen World
+2075,Tablets Ultra,Electronics,Tablets,Tablets,61243.42,44486.68,67,Mega Suppliers
+2076,Tablets Ultra,Electronics,Tablets,Tablets,52364.15,42628.44,39,Prime Products
+2077,Tablets Lite,Electronics,Tablets,Tablets,33574.97,24407.52,174,Home Essentials Co
+2078,Tablets Ultra,Electronics,Tablets,Tablets,22498.23,19013.95,39,Mega Suppliers
+2079,Tablets Lite,Electronics,Tablets,Tablets,30381.86,21903.58,57,Home Essentials Co
+2080,Tablets Lite,Electronics,Tablets,Tablets,19942.25,15001.01,159,Style Distributors
+2081,Tablets Pro,Electronics,Tablets,Tablets,48637.13,36456.08,142,Mega Suppliers
+2082,Tablets Pro,Electronics,Tablets,Tablets,44297.16,33495.52,144,Home Essentials Co
+2083,Tablets Max,Electronics,Tablets,Tablets,56892.22,47187.8,113,Smart Solutions Ltd
+2084,Tablets Lite,Electronics,Tablets,Tablets,78380.23,65172.27,131,Mega Suppliers
+2085,Tablets Pro,Electronics,Tablets,Tablets,44975.58,35258.33,80,Style Distributors
+2086,Tablets Pro,Electronics,Tablets,Tablets,45964.34,37229.36,69,Prime Products
+2087,Tablets Lite,Electronics,Tablets,Tablets,25269.88,20911.89,48,Kitchen World
+2088,Tablets Lite,Electronics,Tablets,Tablets,22775.5,17272.01,153,Mega Suppliers
+2089,Tablets Ultra,Electronics,Tablets,Tablets,55111.46,38773.08,25,Prime Products
+2090,Tablets Lite,Electronics,Tablets,Tablets,35845.41,26897.87,33,Tech Supplies India
+2091,Tablets Pro,Electronics,Tablets,Tablets,23049.1,16629.19,113,Tech Supplies India
+2092,Tablets Lite,Electronics,Tablets,Tablets,24119.93,18364.31,24,Style Distributors
+2093,Tablets Ultra,Electronics,Tablets,Tablets,71160.71,56417.55,163,Tech Supplies India
+2094,Tablets Max,Electronics,Tablets,Tablets,72634.82,55775.59,42,Style Distributors
+2095,Tablets Max,Electronics,Tablets,Tablets,57755.05,42299.11,140,Style Distributors
+2096,Tablets Ultra,Electronics,Tablets,Tablets,67681.26,52441.01,165,Elite Electronics
+2097,Tablets Lite,Electronics,Tablets,Tablets,22279.69,16076.62,124,Smart Solutions Ltd
+2098,Tablets Lite,Electronics,Tablets,Tablets,29482.51,23161.07,86,Home Essentials Co
+2099,Tablets Ultra,Electronics,Tablets,Tablets,67625.89,54859.07,52,Elite Electronics
+2100,Headphones Max,Electronics,Headphones,Headphones,23527.27,19048.72,150,Elite Electronics
+2101,Headphones Max,Electronics,Headphones,Headphones,18924.1,13331.4,140,Home Essentials Co
+2102,Headphones Lite,Electronics,Headphones,Headphones,2594.07,2201.9,108,Smart Solutions Ltd
+2103,Headphones Pro,Electronics,Headphones,Headphones,15950.31,12761.23,39,Smart Solutions Ltd
+2104,Headphones Pro,Electronics,Headphones,Headphones,14943.36,11594.93,27,Smart Solutions Ltd
+2105,Headphones Lite,Electronics,Headphones,Headphones,18233.86,13482.41,179,Elite Electronics
+2106,Headphones Max,Electronics,Headphones,Headphones,10153.89,7377.3,57,Style Distributors
+2107,Headphones Plus,Electronics,Headphones,Headphones,8568.09,6160.92,143,Kitchen World
+2108,Headphones Lite,Electronics,Headphones,Headphones,6845.3,5191.86,79,Home Essentials Co
+2109,Headphones Ultra,Electronics,Headphones,Headphones,4896.5,4085.38,46,Kitchen World
+2110,Headphones Plus,Electronics,Headphones,Headphones,6333.76,4737.73,44,Mega Suppliers
+2111,Headphones Lite,Electronics,Headphones,Headphones,21694.72,15796.78,67,Prime Products
+2112,Headphones Plus,Electronics,Headphones,Headphones,9356.54,6669.36,190,Mega Suppliers
+2113,Headphones Plus,Electronics,Headphones,Headphones,20462.92,17358.76,37,Mega Suppliers
+2114,Headphones Pro,Electronics,Headphones,Headphones,13892.83,10086.52,95,Kitchen World
+2115,Headphones Pro,Electronics,Headphones,Headphones,6006.08,4727.74,129,Tech Supplies India
+2116,Headphones Plus,Electronics,Headphones,Headphones,20784.55,15558.4,58,Mega Suppliers
+2117,Headphones Ultra,Electronics,Headphones,Headphones,18724.84,15654.23,142,Fashion Hub Pvt Ltd
+2118,Headphones Pro,Electronics,Headphones,Headphones,13044.89,9546.64,54,Tech Supplies India
+2119,Headphones Ultra,Electronics,Headphones,Headphones,4298.56,3484.08,50,Fashion Hub Pvt Ltd
+2120,Headphones Lite,Electronics,Headphones,Headphones,6945.68,5278.32,113,Tech Supplies India
+2121,Headphones Ultra,Electronics,Headphones,Headphones,23462.91,17946.65,197,Smart Solutions Ltd
+2122,Headphones Plus,Electronics,Headphones,Headphones,24923.95,20391.91,116,Prime Products
+2123,Headphones Ultra,Electronics,Headphones,Headphones,16395.72,12364.01,178,Fashion Hub Pvt Ltd
+2124,Headphones Lite,Electronics,Headphones,Headphones,9787.76,8062.29,169,Prime Products
+2125,Headphones Ultra,Electronics,Headphones,Headphones,2005.33,1459.01,70,Mega Suppliers
+2126,Headphones Plus,Electronics,Headphones,Headphones,24594.32,19326.59,166,Kitchen World
+2127,Headphones Pro,Electronics,Headphones,Headphones,21264.88,15633.4,190,Tech Supplies India
+2128,Headphones Plus,Electronics,Headphones,Headphones,5329.0,4273.75,59,Style Distributors
+2129,Headphones Lite,Electronics,Headphones,Headphones,3037.88,2317.03,130,Elite Electronics
+2130,Headphones Pro,Electronics,Headphones,Headphones,12687.56,9774.58,89,Style Distributors
+2131,Headphones Max,Electronics,Headphones,Headphones,4937.11,3529.12,67,Style Distributors
+2132,Headphones Max,Electronics,Headphones,Headphones,24193.04,17326.02,171,Prime Products
+2133,Smart Watches Max,Electronics,Smart Watches,Smart,48717.77,34779.45,194,Tech Supplies India
+2134,Smart Watches Max,Electronics,Smart Watches,Smart,14353.93,10486.99,136,Kitchen World
+2135,Smart Watches Pro,Electronics,Smart Watches,Smart,3500.24,2542.92,113,Smart Solutions Ltd
+2136,Smart Watches Max,Electronics,Smart Watches,Smart,36979.6,27699.17,149,Elite Electronics
+2137,Smart Watches Max,Electronics,Smart Watches,Smart,10078.0,7207.47,96,Kitchen World
+2138,Smart Watches Max,Electronics,Smart Watches,Smart,37330.26,27937.74,75,Kitchen World
+2139,Smart Watches Ultra,Electronics,Smart Watches,Smart,37129.51,31474.89,95,Elite Electronics
+2140,Smart Watches Pro,Electronics,Smart Watches,Smart,35445.11,29931.82,174,Fashion Hub Pvt Ltd
+2141,Smart Watches Ultra,Electronics,Smart Watches,Smart,13051.2,10714.53,109,Style Distributors
+2142,Smart Watches Ultra,Electronics,Smart Watches,Smart,32154.48,25891.95,86,Elite Electronics
+2143,Smart Watches Max,Electronics,Smart Watches,Smart,46965.75,37340.77,62,Kitchen World
+2144,Smart Watches Plus,Electronics,Smart Watches,Smart,7172.11,5882.0,159,Home Essentials Co
+2145,Smart Watches Max,Electronics,Smart Watches,Smart,3565.07,2989.16,54,Style Distributors
+2146,Smart Watches Plus,Electronics,Smart Watches,Smart,39079.79,31387.42,64,Smart Solutions Ltd
+2147,Smart Watches Plus,Electronics,Smart Watches,Smart,18635.44,13376.04,162,Mega Suppliers
+2148,Smart Watches Lite,Electronics,Smart Watches,Smart,47799.34,40486.78,164,Smart Solutions Ltd
+2149,Smart Watches Pro,Electronics,Smart Watches,Smart,22506.57,16348.76,95,Elite Electronics
+2150,Smart Watches Pro,Electronics,Smart Watches,Smart,46173.49,34553.31,127,Kitchen World
+2151,Smart Watches Pro,Electronics,Smart Watches,Smart,11614.8,9734.33,131,Fashion Hub Pvt Ltd
+2152,Smart Watches Max,Electronics,Smart Watches,Smart,21885.15,17592.37,118,Fashion Hub Pvt Ltd
+2153,Smart Watches Ultra,Electronics,Smart Watches,Smart,6822.42,5621.03,101,Style Distributors
+2154,Smart Watches Max,Electronics,Smart Watches,Smart,12872.81,10327.76,143,Elite Electronics
+2155,Smart Watches Ultra,Electronics,Smart Watches,Smart,24541.76,17646.95,199,Style Distributors
+2156,Smart Watches Ultra,Electronics,Smart Watches,Smart,2194.94,1735.81,115,Elite Electronics
+2157,Smart Watches Pro,Electronics,Smart Watches,Smart,10355.83,7953.43,155,Style Distributors
+2158,Smart Watches Pro,Electronics,Smart Watches,Smart,33826.19,25646.36,135,Home Essentials Co
+2159,Smart Watches Lite,Electronics,Smart Watches,Smart,22456.84,19041.0,33,Style Distributors
+2160,Smart Watches Pro,Electronics,Smart Watches,Smart,28621.34,20763.51,70,Fashion Hub Pvt Ltd
+2161,Smart Watches Lite,Electronics,Smart Watches,Smart,38283.79,27405.72,116,Prime Products
+2162,Smart Watches Lite,Electronics,Smart Watches,Smart,46429.32,36907.65,100,Smart Solutions Ltd
+2163,Smart Watches Ultra,Electronics,Smart Watches,Smart,35131.95,27181.94,86,Tech Supplies India
+2164,Smart Watches Pro,Electronics,Smart Watches,Smart,31161.58,22485.36,113,Kitchen World
+2165,Smart Watches Max,Electronics,Smart Watches,Smart,44097.07,33864.68,105,Kitchen World
+2166,Mens Clothing Pro,Fashion,Mens Clothing,Mens,1672.24,1380.75,272,Fashion Hub Pvt Ltd
+2167,Mens Clothing Plus,Fashion,Mens Clothing,Mens,3677.01,2872.57,425,Style Distributors
+2168,Mens Clothing Pro,Fashion,Mens Clothing,Mens,1520.13,1263.16,114,Mega Suppliers
+2169,Mens Clothing Ultra,Fashion,Mens Clothing,Mens,2013.35,1513.75,264,Tech Supplies India
+2170,Mens Clothing Lite,Fashion,Mens Clothing,Mens,1824.23,1347.56,232,Tech Supplies India
+2171,Mens Clothing Lite,Fashion,Mens Clothing,Mens,2086.85,1522.34,396,Tech Supplies India
+2172,Mens Clothing Max,Fashion,Mens Clothing,Mens,2792.54,2225.51,132,Smart Solutions Ltd
+2173,Mens Clothing Lite,Fashion,Mens Clothing,Mens,1337.2,959.28,157,Home Essentials Co
+2174,Mens Clothing Lite,Fashion,Mens Clothing,Mens,3288.49,2512.82,312,Elite Electronics
+2175,Mens Clothing Plus,Fashion,Mens Clothing,Mens,1412.03,1064.44,408,Kitchen World
+2176,Mens Clothing Lite,Fashion,Mens Clothing,Mens,3105.27,2579.6,287,Prime Products
+2177,Mens Clothing Ultra,Fashion,Mens Clothing,Mens,1612.55,1216.34,250,Home Essentials Co
+2178,Mens Clothing Max,Fashion,Mens Clothing,Mens,2003.47,1596.91,188,Elite Electronics
+2179,Mens Clothing Ultra,Fashion,Mens Clothing,Mens,3615.42,2637.17,257,Home Essentials Co
+2180,Mens Clothing Lite,Fashion,Mens Clothing,Mens,2737.96,1948.12,465,Fashion Hub Pvt Ltd
+2181,Mens Clothing Ultra,Fashion,Mens Clothing,Mens,2169.11,1587.41,376,Kitchen World
+2182,Mens Clothing Lite,Fashion,Mens Clothing,Mens,3908.23,2939.24,149,Style Distributors
+2183,Mens Clothing Plus,Fashion,Mens Clothing,Mens,4130.55,3154.7,340,Smart Solutions Ltd
+2184,Mens Clothing Lite,Fashion,Mens Clothing,Mens,2015.98,1646.58,115,Style Distributors
+2185,Mens Clothing Lite,Fashion,Mens Clothing,Mens,2358.53,1927.55,81,Prime Products
+2186,Mens Clothing Max,Fashion,Mens Clothing,Mens,2842.29,2128.28,371,Style Distributors
+2187,Mens Clothing Pro,Fashion,Mens Clothing,Mens,2510.03,1833.97,476,Style Distributors
+2188,Mens Clothing Max,Fashion,Mens Clothing,Mens,883.18,737.07,410,Fashion Hub Pvt Ltd
+2189,Mens Clothing Plus,Fashion,Mens Clothing,Mens,1215.0,863.48,179,Style Distributors
+2190,Mens Clothing Pro,Fashion,Mens Clothing,Mens,3109.07,2392.09,249,Home Essentials Co
+2191,Mens Clothing Plus,Fashion,Mens Clothing,Mens,4594.01,3594.98,234,Prime Products
+2192,Mens Clothing Plus,Fashion,Mens Clothing,Mens,648.47,456.13,448,Kitchen World
+2193,Mens Clothing Max,Fashion,Mens Clothing,Mens,3850.68,3095.05,375,Prime Products
+2194,Mens Clothing Pro,Fashion,Mens Clothing,Mens,1404.77,1036.33,286,Mega Suppliers
+2195,Mens Clothing Ultra,Fashion,Mens Clothing,Mens,4702.64,3856.08,168,Tech Supplies India
+2196,Mens Clothing Ultra,Fashion,Mens Clothing,Mens,4052.09,3236.95,276,Prime Products
+2197,Mens Clothing Plus,Fashion,Mens Clothing,Mens,846.13,674.12,348,Tech Supplies India
+2198,Mens Clothing Ultra,Fashion,Mens Clothing,Mens,3667.97,2762.15,468,Fashion Hub Pvt Ltd
+2199,Womens Clothing Lite,Fashion,Womens Clothing,Womens,6896.14,4851.21,136,Elite Electronics
+2200,Womens Clothing Plus,Fashion,Womens Clothing,Womens,7634.52,5811.56,235,Tech Supplies India
+2201,Womens Clothing Plus,Fashion,Womens Clothing,Womens,1475.74,1196.92,305,Tech Supplies India
+2202,Womens Clothing Lite,Fashion,Womens Clothing,Womens,1731.76,1251.6,76,Home Essentials Co
+2203,Womens Clothing Plus,Fashion,Womens Clothing,Womens,1251.5,1007.46,366,Tech Supplies India
+2204,Womens Clothing Pro,Fashion,Womens Clothing,Womens,1927.09,1547.91,72,Fashion Hub Pvt Ltd
+2205,Womens Clothing Pro,Fashion,Womens Clothing,Womens,2848.49,2103.63,395,Prime Products
+2206,Womens Clothing Max,Fashion,Womens Clothing,Womens,5165.06,3658.01,227,Kitchen World
+2207,Womens Clothing Plus,Fashion,Womens Clothing,Womens,1536.46,1186.51,146,Tech Supplies India
+2208,Womens Clothing Plus,Fashion,Womens Clothing,Womens,5137.66,4301.7,226,Prime Products
+2209,Womens Clothing Plus,Fashion,Womens Clothing,Womens,2918.48,2449.3,194,Style Distributors
+2210,Womens Clothing Max,Fashion,Womens Clothing,Womens,6702.73,4925.06,157,Elite Electronics
+2211,Womens Clothing Lite,Fashion,Womens Clothing,Womens,4625.87,3451.5,423,Mega Suppliers
+2212,Womens Clothing Plus,Fashion,Womens Clothing,Womens,1089.95,913.2,156,Style Distributors
+2213,Womens Clothing Lite,Fashion,Womens Clothing,Womens,2078.74,1471.67,120,Style Distributors
+2214,Womens Clothing Pro,Fashion,Womens Clothing,Womens,2142.56,1537.56,456,Tech Supplies India
+2215,Womens Clothing Ultra,Fashion,Womens Clothing,Womens,5497.51,4499.6,388,Style Distributors
+2216,Womens Clothing Lite,Fashion,Womens Clothing,Womens,903.55,682.11,431,Elite Electronics
+2217,Womens Clothing Plus,Fashion,Womens Clothing,Womens,7461.74,5356.14,298,Prime Products
+2218,Womens Clothing Max,Fashion,Womens Clothing,Womens,2108.79,1703.36,383,Elite Electronics
+2219,Womens Clothing Pro,Fashion,Womens Clothing,Womens,7682.67,6188.63,282,Fashion Hub Pvt Ltd
+2220,Womens Clothing Lite,Fashion,Womens Clothing,Womens,5925.86,4283.09,101,Smart Solutions Ltd
+2221,Womens Clothing Max,Fashion,Womens Clothing,Womens,1280.96,970.25,58,Mega Suppliers
+2222,Womens Clothing Max,Fashion,Womens Clothing,Womens,4810.43,4061.15,84,Smart Solutions Ltd
+2223,Womens Clothing Ultra,Fashion,Womens Clothing,Womens,4013.66,3191.72,316,Fashion Hub Pvt Ltd
+2224,Womens Clothing Pro,Fashion,Womens Clothing,Womens,5494.49,4525.3,328,Tech Supplies India
+2225,Womens Clothing Max,Fashion,Womens Clothing,Womens,7448.27,5476.94,327,Smart Solutions Ltd
+2226,Womens Clothing Max,Fashion,Womens Clothing,Womens,7166.19,6088.28,398,Prime Products
+2227,Womens Clothing Pro,Fashion,Womens Clothing,Womens,6300.63,4543.16,480,Kitchen World
+2228,Womens Clothing Ultra,Fashion,Womens Clothing,Womens,5100.3,3812.32,450,Kitchen World
+2229,Womens Clothing Ultra,Fashion,Womens Clothing,Womens,2891.11,2309.72,85,Elite Electronics
+2230,Womens Clothing Plus,Fashion,Womens Clothing,Womens,2760.66,2255.57,405,Home Essentials Co
+2231,Womens Clothing Lite,Fashion,Womens Clothing,Womens,3491.12,2753.71,339,Mega Suppliers
+2232,Kids Clothing Max,Fashion,Kids Clothing,Kids,820.48,576.39,130,Elite Electronics
+2233,Kids Clothing Lite,Fashion,Kids Clothing,Kids,1494.06,1262.74,123,Tech Supplies India
+2234,Kids Clothing Max,Fashion,Kids Clothing,Kids,419.54,333.56,368,Fashion Hub Pvt Ltd
+2235,Kids Clothing Plus,Fashion,Kids Clothing,Kids,845.32,668.72,357,Tech Supplies India
+2236,Kids Clothing Max,Fashion,Kids Clothing,Kids,1357.57,1024.67,295,Home Essentials Co
+2237,Kids Clothing Lite,Fashion,Kids Clothing,Kids,1821.47,1443.25,364,Kitchen World
+2238,Kids Clothing Max,Fashion,Kids Clothing,Kids,1279.74,1018.51,499,Fashion Hub Pvt Ltd
+2239,Kids Clothing Pro,Fashion,Kids Clothing,Kids,951.01,768.12,165,Elite Electronics
+2240,Kids Clothing Max,Fashion,Kids Clothing,Kids,1863.45,1355.93,246,Kitchen World
+2241,Kids Clothing Max,Fashion,Kids Clothing,Kids,1911.66,1422.89,392,Tech Supplies India
+2242,Kids Clothing Max,Fashion,Kids Clothing,Kids,1476.83,1161.49,250,Smart Solutions Ltd
+2243,Kids Clothing Lite,Fashion,Kids Clothing,Kids,1277.21,926.86,335,Kitchen World
+2244,Kids Clothing Lite,Fashion,Kids Clothing,Kids,886.65,664.7,143,Tech Supplies India
+2245,Kids Clothing Pro,Fashion,Kids Clothing,Kids,302.75,253.83,374,Kitchen World
+2246,Kids Clothing Plus,Fashion,Kids Clothing,Kids,814.65,607.91,484,Style Distributors
+2247,Kids Clothing Ultra,Fashion,Kids Clothing,Kids,1310.88,918.39,188,Tech Supplies India
+2248,Kids Clothing Plus,Fashion,Kids Clothing,Kids,478.24,386.98,403,Smart Solutions Ltd
+2249,Kids Clothing Ultra,Fashion,Kids Clothing,Kids,323.67,235.73,118,Home Essentials Co
+2250,Kids Clothing Pro,Fashion,Kids Clothing,Kids,1528.38,1173.5,218,Tech Supplies India
+2251,Kids Clothing Max,Fashion,Kids Clothing,Kids,885.47,653.19,371,Smart Solutions Ltd
+2252,Kids Clothing Max,Fashion,Kids Clothing,Kids,1276.09,898.25,156,Home Essentials Co
+2253,Kids Clothing Pro,Fashion,Kids Clothing,Kids,1474.93,1055.86,76,Elite Electronics
+2254,Kids Clothing Ultra,Fashion,Kids Clothing,Kids,523.11,425.96,78,Home Essentials Co
+2255,Kids Clothing Lite,Fashion,Kids Clothing,Kids,1071.6,845.83,468,Prime Products
+2256,Kids Clothing Plus,Fashion,Kids Clothing,Kids,1989.04,1656.26,108,Home Essentials Co
+2257,Kids Clothing Ultra,Fashion,Kids Clothing,Kids,664.83,470.95,78,Prime Products
+2258,Kids Clothing Lite,Fashion,Kids Clothing,Kids,1024.79,859.84,385,Elite Electronics
+2259,Kids Clothing Max,Fashion,Kids Clothing,Kids,1493.31,1223.79,131,Kitchen World
+2260,Kids Clothing Pro,Fashion,Kids Clothing,Kids,1093.83,836.14,477,Smart Solutions Ltd
+2261,Kids Clothing Lite,Fashion,Kids Clothing,Kids,1338.97,960.99,134,Prime Products
+2262,Kids Clothing Plus,Fashion,Kids Clothing,Kids,1010.42,722.25,156,Elite Electronics
+2263,Kids Clothing Plus,Fashion,Kids Clothing,Kids,919.52,766.5,227,Smart Solutions Ltd
+2264,Kids Clothing Max,Fashion,Kids Clothing,Kids,1386.28,1167.31,253,Kitchen World
+2265,Footwear Ultra,Fashion,Footwear,Footwear,1949.26,1534.08,137,Kitchen World
+2266,Footwear Lite,Fashion,Footwear,Footwear,1036.72,865.07,340,Style Distributors
+2267,Footwear Plus,Fashion,Footwear,Footwear,1340.61,998.46,236,Elite Electronics
+2268,Footwear Ultra,Fashion,Footwear,Footwear,3878.68,2829.09,281,Smart Solutions Ltd
+2269,Footwear Max,Fashion,Footwear,Footwear,3311.72,2525.56,199,Smart Solutions Ltd
+2270,Footwear Plus,Fashion,Footwear,Footwear,4712.46,3941.79,304,Mega Suppliers
+2271,Footwear Ultra,Fashion,Footwear,Footwear,5001.61,4175.33,215,Prime Products
+2272,Footwear Ultra,Fashion,Footwear,Footwear,6004.98,4493.13,337,Mega Suppliers
+2273,Footwear Plus,Fashion,Footwear,Footwear,7575.65,5362.34,287,Mega Suppliers
+2274,Footwear Plus,Fashion,Footwear,Footwear,7023.0,4986.28,241,Tech Supplies India
+2275,Footwear Plus,Fashion,Footwear,Footwear,5236.96,4352.05,481,Kitchen World
+2276,Footwear Ultra,Fashion,Footwear,Footwear,4422.17,3097.36,496,Home Essentials Co
+2277,Footwear Ultra,Fashion,Footwear,Footwear,2688.85,2268.35,305,Kitchen World
+2278,Footwear Pro,Fashion,Footwear,Footwear,6906.16,5399.37,452,Style Distributors
+2279,Footwear Ultra,Fashion,Footwear,Footwear,3732.07,2616.22,371,Mega Suppliers
+2280,Footwear Max,Fashion,Footwear,Footwear,4451.97,3638.73,474,Home Essentials Co
+2281,Footwear Lite,Fashion,Footwear,Footwear,3473.22,2804.29,102,Mega Suppliers
+2282,Footwear Max,Fashion,Footwear,Footwear,6293.78,4717.41,489,Home Essentials Co
+2283,Footwear Pro,Fashion,Footwear,Footwear,5403.67,3910.56,221,Home Essentials Co
+2284,Footwear Pro,Fashion,Footwear,Footwear,2127.99,1737.1,164,Smart Solutions Ltd
+2285,Footwear Pro,Fashion,Footwear,Footwear,2056.82,1691.84,419,Style Distributors
+2286,Footwear Plus,Fashion,Footwear,Footwear,5839.56,4422.52,499,Home Essentials Co
+2287,Footwear Ultra,Fashion,Footwear,Footwear,3521.84,2636.55,418,Fashion Hub Pvt Ltd
+2288,Footwear Plus,Fashion,Footwear,Footwear,4482.76,3315.15,486,Prime Products
+2289,Footwear Pro,Fashion,Footwear,Footwear,3068.83,2193.08,394,Kitchen World
+2290,Footwear Plus,Fashion,Footwear,Footwear,3461.86,2841.57,356,Elite Electronics
+2291,Footwear Lite,Fashion,Footwear,Footwear,3054.66,2549.53,493,Elite Electronics
+2292,Footwear Plus,Fashion,Footwear,Footwear,4401.61,3517.39,342,Fashion Hub Pvt Ltd
+2293,Footwear Ultra,Fashion,Footwear,Footwear,5050.81,3704.4,228,Kitchen World
+2294,Footwear Max,Fashion,Footwear,Footwear,1760.99,1421.69,383,Kitchen World
+2295,Footwear Pro,Fashion,Footwear,Footwear,1734.2,1215.76,404,Tech Supplies India
+2296,Footwear Pro,Fashion,Footwear,Footwear,4747.09,3676.53,204,Prime Products
+2297,Footwear Max,Fashion,Footwear,Footwear,6316.25,4537.44,197,Mega Suppliers
+2298,Accessories Max,Fashion,Accessories,Accessories,1286.77,1064.92,339,Smart Solutions Ltd
+2299,Accessories Lite,Fashion,Accessories,Accessories,3674.55,3084.41,77,Kitchen World
+2300,Accessories Pro,Fashion,Accessories,Accessories,1624.62,1379.78,214,Mega Suppliers
+2301,Accessories Pro,Fashion,Accessories,Accessories,3206.72,2462.26,382,Style Distributors
+2302,Accessories Pro,Fashion,Accessories,Accessories,431.59,347.74,365,Prime Products
+2303,Accessories Plus,Fashion,Accessories,Accessories,3949.75,2888.02,394,Style Distributors
+2304,Accessories Plus,Fashion,Accessories,Accessories,3122.03,2313.06,95,Tech Supplies India
+2305,Accessories Plus,Fashion,Accessories,Accessories,1065.68,854.02,200,Fashion Hub Pvt Ltd
+2306,Accessories Lite,Fashion,Accessories,Accessories,1178.75,936.02,258,Kitchen World
+2307,Accessories Plus,Fashion,Accessories,Accessories,2980.29,2458.66,330,Prime Products
+2308,Accessories Max,Fashion,Accessories,Accessories,1824.83,1286.91,241,Style Distributors
+2309,Accessories Pro,Fashion,Accessories,Accessories,1872.59,1559.93,360,Tech Supplies India
+2310,Accessories Lite,Fashion,Accessories,Accessories,1263.79,954.73,279,Prime Products
+2311,Accessories Pro,Fashion,Accessories,Accessories,4916.83,4072.26,474,Mega Suppliers
+2312,Accessories Pro,Fashion,Accessories,Accessories,4938.66,3962.11,97,Mega Suppliers
+2313,Accessories Lite,Fashion,Accessories,Accessories,1595.3,1167.26,236,Fashion Hub Pvt Ltd
+2314,Accessories Max,Fashion,Accessories,Accessories,4140.59,3061.48,491,Smart Solutions Ltd
+2315,Accessories Max,Fashion,Accessories,Accessories,2085.42,1647.78,447,Kitchen World
+2316,Accessories Lite,Fashion,Accessories,Accessories,4199.92,3278.94,131,Prime Products
+2317,Accessories Ultra,Fashion,Accessories,Accessories,3764.19,3026.32,348,Home Essentials Co
+2318,Accessories Max,Fashion,Accessories,Accessories,2254.53,1861.84,106,Kitchen World
+2319,Accessories Ultra,Fashion,Accessories,Accessories,2947.76,2360.3,178,Tech Supplies India
+2320,Accessories Ultra,Fashion,Accessories,Accessories,4466.16,3696.36,380,Home Essentials Co
+2321,Accessories Ultra,Fashion,Accessories,Accessories,2296.17,1614.01,136,Elite Electronics
+2322,Accessories Plus,Fashion,Accessories,Accessories,4127.0,3296.25,63,Style Distributors
+2323,Accessories Plus,Fashion,Accessories,Accessories,4965.66,4003.67,246,Fashion Hub Pvt Ltd
+2324,Accessories Plus,Fashion,Accessories,Accessories,4771.96,3676.32,410,Style Distributors
+2325,Accessories Lite,Fashion,Accessories,Accessories,1528.36,1114.48,227,Mega Suppliers
+2326,Accessories Max,Fashion,Accessories,Accessories,1261.23,950.69,493,Smart Solutions Ltd
+2327,Accessories Plus,Fashion,Accessories,Accessories,3083.61,2197.85,424,Smart Solutions Ltd
+2328,Accessories Ultra,Fashion,Accessories,Accessories,4485.82,3495.85,495,Tech Supplies India
+2329,Accessories Pro,Fashion,Accessories,Accessories,2937.46,2095.25,451,Fashion Hub Pvt Ltd
+2330,Accessories Pro,Fashion,Accessories,Accessories,3688.03,2710.88,292,Kitchen World
+2331,Furniture Max,Home & Kitchen,Furniture,Furniture,12797.76,9138.42,150,Home Essentials Co
+2332,Furniture Plus,Home & Kitchen,Furniture,Furniture,6832.27,5710.31,36,Prime Products
+2333,Furniture Pro,Home & Kitchen,Furniture,Furniture,9793.92,7595.02,243,Elite Electronics
+2334,Furniture Max,Home & Kitchen,Furniture,Furniture,38046.92,29402.54,50,Smart Solutions Ltd
+2335,Furniture Pro,Home & Kitchen,Furniture,Furniture,12023.15,10125.01,118,Tech Supplies India
+2336,Furniture Lite,Home & Kitchen,Furniture,Furniture,47097.02,34246.95,57,Style Distributors
+2337,Furniture Plus,Home & Kitchen,Furniture,Furniture,27395.78,21884.33,152,Kitchen World
+2338,Furniture Pro,Home & Kitchen,Furniture,Furniture,31375.04,24385.81,80,Mega Suppliers
+2339,Furniture Plus,Home & Kitchen,Furniture,Furniture,30548.06,23563.91,47,Style Distributors
+2340,Furniture Max,Home & Kitchen,Furniture,Furniture,34424.95,25856.8,38,Tech Supplies India
+2341,Furniture Max,Home & Kitchen,Furniture,Furniture,27026.89,19583.94,170,Fashion Hub Pvt Ltd
+2342,Furniture Ultra,Home & Kitchen,Furniture,Furniture,5054.48,3632.45,144,Fashion Hub Pvt Ltd
+2343,Furniture Max,Home & Kitchen,Furniture,Furniture,26237.94,21026.95,137,Style Distributors
+2344,Furniture Pro,Home & Kitchen,Furniture,Furniture,13535.76,11281.47,60,Kitchen World
+2345,Furniture Ultra,Home & Kitchen,Furniture,Furniture,29976.74,22476.98,76,Prime Products
+2346,Furniture Max,Home & Kitchen,Furniture,Furniture,13479.33,11299.19,296,Fashion Hub Pvt Ltd
+2347,Furniture Max,Home & Kitchen,Furniture,Furniture,22199.77,16083.6,113,Tech Supplies India
+2348,Furniture Pro,Home & Kitchen,Furniture,Furniture,32524.02,24399.55,109,Prime Products
+2349,Furniture Lite,Home & Kitchen,Furniture,Furniture,22667.43,17118.5,177,Mega Suppliers
+2350,Furniture Max,Home & Kitchen,Furniture,Furniture,6822.66,5170.25,261,Tech Supplies India
+2351,Furniture Pro,Home & Kitchen,Furniture,Furniture,22601.92,15969.01,100,Fashion Hub Pvt Ltd
+2352,Furniture Max,Home & Kitchen,Furniture,Furniture,15587.92,11980.24,223,Mega Suppliers
+2353,Furniture Plus,Home & Kitchen,Furniture,Furniture,36794.61,29267.18,139,Mega Suppliers
+2354,Furniture Max,Home & Kitchen,Furniture,Furniture,41922.13,30149.57,155,Kitchen World
+2355,Furniture Pro,Home & Kitchen,Furniture,Furniture,32750.35,23418.52,152,Style Distributors
+2356,Furniture Plus,Home & Kitchen,Furniture,Furniture,46428.74,35125.5,197,Tech Supplies India
+2357,Furniture Lite,Home & Kitchen,Furniture,Furniture,9231.48,7242.22,299,Style Distributors
+2358,Furniture Lite,Home & Kitchen,Furniture,Furniture,47203.42,39630.09,161,Kitchen World
+2359,Furniture Plus,Home & Kitchen,Furniture,Furniture,34424.27,27822.42,172,Prime Products
+2360,Furniture Max,Home & Kitchen,Furniture,Furniture,19534.64,15040.29,105,Tech Supplies India
+2361,Furniture Plus,Home & Kitchen,Furniture,Furniture,26006.3,21274.0,186,Home Essentials Co
+2362,Furniture Pro,Home & Kitchen,Furniture,Furniture,24045.11,18132.61,148,Style Distributors
+2363,Furniture Lite,Home & Kitchen,Furniture,Furniture,3089.09,2284.17,226,Kitchen World
+2364,Kitchen Appliances Pro,Home & Kitchen,Kitchen Appliances,Kitchen,35110.32,26162.75,186,Mega Suppliers
+2365,Kitchen Appliances Plus,Home & Kitchen,Kitchen Appliances,Kitchen,20172.14,15684.28,179,Kitchen World
+2366,Kitchen Appliances Max,Home & Kitchen,Kitchen Appliances,Kitchen,13707.34,11041.22,291,Smart Solutions Ltd
+2367,Kitchen Appliances Lite,Home & Kitchen,Kitchen Appliances,Kitchen,27154.14,20612.32,224,Kitchen World
+2368,Kitchen Appliances Pro,Home & Kitchen,Kitchen Appliances,Kitchen,35563.99,28150.91,42,Style Distributors
+2369,Kitchen Appliances Max,Home & Kitchen,Kitchen Appliances,Kitchen,39276.26,30295.7,180,Home Essentials Co
+2370,Kitchen Appliances Pro,Home & Kitchen,Kitchen Appliances,Kitchen,10647.43,8405.0,144,Mega Suppliers
+2371,Kitchen Appliances Lite,Home & Kitchen,Kitchen Appliances,Kitchen,25271.98,19582.94,163,Smart Solutions Ltd
+2372,Kitchen Appliances Max,Home & Kitchen,Kitchen Appliances,Kitchen,25186.99,19473.36,277,Home Essentials Co
+2373,Kitchen Appliances Ultra,Home & Kitchen,Kitchen Appliances,Kitchen,29905.78,25413.8,158,Home Essentials Co
+2374,Kitchen Appliances Max,Home & Kitchen,Kitchen Appliances,Kitchen,11409.35,8267.5,192,Tech Supplies India
+2375,Kitchen Appliances Max,Home & Kitchen,Kitchen Appliances,Kitchen,34294.68,27490.96,170,Fashion Hub Pvt Ltd
+2376,Kitchen Appliances Max,Home & Kitchen,Kitchen Appliances,Kitchen,12586.92,9070.34,147,Prime Products
+2377,Kitchen Appliances Max,Home & Kitchen,Kitchen Appliances,Kitchen,3177.33,2365.93,65,Prime Products
+2378,Kitchen Appliances Plus,Home & Kitchen,Kitchen Appliances,Kitchen,9836.59,7590.17,56,Mega Suppliers
+2379,Kitchen Appliances Max,Home & Kitchen,Kitchen Appliances,Kitchen,7706.01,6082.85,280,Prime Products
+2380,Kitchen Appliances Max,Home & Kitchen,Kitchen Appliances,Kitchen,10205.39,7714.5,79,Tech Supplies India
+2381,Kitchen Appliances Lite,Home & Kitchen,Kitchen Appliances,Kitchen,14646.64,11415.83,265,Kitchen World
+2382,Kitchen Appliances Plus,Home & Kitchen,Kitchen Appliances,Kitchen,27771.86,21715.12,121,Mega Suppliers
+2383,Kitchen Appliances Max,Home & Kitchen,Kitchen Appliances,Kitchen,7626.01,5438.42,173,Kitchen World
+2384,Kitchen Appliances Pro,Home & Kitchen,Kitchen Appliances,Kitchen,29499.54,23113.36,207,Smart Solutions Ltd
+2385,Kitchen Appliances Lite,Home & Kitchen,Kitchen Appliances,Kitchen,28674.48,22560.04,77,Smart Solutions Ltd
+2386,Kitchen Appliances Pro,Home & Kitchen,Kitchen Appliances,Kitchen,36609.11,30014.02,168,Home Essentials Co
+2387,Kitchen Appliances Lite,Home & Kitchen,Kitchen Appliances,Kitchen,6124.04,5038.16,150,Style Distributors
+2388,Kitchen Appliances Max,Home & Kitchen,Kitchen Appliances,Kitchen,31531.07,22081.54,160,Elite Electronics
+2389,Kitchen Appliances Max,Home & Kitchen,Kitchen Appliances,Kitchen,26833.89,21151.4,193,Kitchen World
+2390,Kitchen Appliances Max,Home & Kitchen,Kitchen Appliances,Kitchen,32714.13,23859.07,175,Prime Products
+2391,Kitchen Appliances Pro,Home & Kitchen,Kitchen Appliances,Kitchen,31093.15,23839.79,36,Style Distributors
+2392,Kitchen Appliances Pro,Home & Kitchen,Kitchen Appliances,Kitchen,33403.03,27749.68,140,Home Essentials Co
+2393,Kitchen Appliances Plus,Home & Kitchen,Kitchen Appliances,Kitchen,7210.2,5885.52,46,Tech Supplies India
+2394,Kitchen Appliances Lite,Home & Kitchen,Kitchen Appliances,Kitchen,26340.7,21127.96,265,Elite Electronics
+2395,Kitchen Appliances Pro,Home & Kitchen,Kitchen Appliances,Kitchen,15982.93,11719.2,180,Elite Electronics
+2396,Kitchen Appliances Pro,Home & Kitchen,Kitchen Appliances,Kitchen,26819.89,21410.32,284,Home Essentials Co
+2397,Home Decor Plus,Home & Kitchen,Home Decor,Home,1421.56,1102.29,44,Prime Products
+2398,Home Decor Pro,Home & Kitchen,Home Decor,Home,4498.87,3205.6,115,Kitchen World
+2399,Home Decor Ultra,Home & Kitchen,Home Decor,Home,3173.23,2478.15,251,Fashion Hub Pvt Ltd
+2400,Home Decor Pro,Home & Kitchen,Home Decor,Home,903.15,747.55,287,Home Essentials Co
+2401,Home Decor Ultra,Home & Kitchen,Home Decor,Home,3873.13,3290.06,178,Kitchen World
+2402,Home Decor Max,Home & Kitchen,Home Decor,Home,4997.96,3828.93,69,Kitchen World
+2403,Home Decor Max,Home & Kitchen,Home Decor,Home,4117.36,3215.93,73,Fashion Hub Pvt Ltd
+2404,Home Decor Lite,Home & Kitchen,Home Decor,Home,2424.86,1881.72,212,Fashion Hub Pvt Ltd
+2405,Home Decor Ultra,Home & Kitchen,Home Decor,Home,2147.31,1778.34,58,Fashion Hub Pvt Ltd
+2406,Home Decor Lite,Home & Kitchen,Home Decor,Home,431.92,326.47,181,Tech Supplies India
+2407,Home Decor Max,Home & Kitchen,Home Decor,Home,2440.5,1851.07,89,Home Essentials Co
+2408,Home Decor Max,Home & Kitchen,Home Decor,Home,667.06,480.71,271,Kitchen World
+2409,Home Decor Pro,Home & Kitchen,Home Decor,Home,317.62,223.94,140,Mega Suppliers
+2410,Home Decor Ultra,Home & Kitchen,Home Decor,Home,3801.93,2860.28,189,Elite Electronics
+2411,Home Decor Lite,Home & Kitchen,Home Decor,Home,3937.89,3338.84,151,Smart Solutions Ltd
+2412,Home Decor Plus,Home & Kitchen,Home Decor,Home,4316.55,3313.62,76,Smart Solutions Ltd
+2413,Home Decor Plus,Home & Kitchen,Home Decor,Home,4049.26,3056.85,68,Mega Suppliers
+2414,Home Decor Max,Home & Kitchen,Home Decor,Home,4332.74,3634.66,84,Home Essentials Co
+2415,Home Decor Lite,Home & Kitchen,Home Decor,Home,4063.67,3171.26,128,Mega Suppliers
+2416,Home Decor Max,Home & Kitchen,Home Decor,Home,4915.18,3790.52,98,Kitchen World
+2417,Home Decor Pro,Home & Kitchen,Home Decor,Home,648.18,511.65,296,Tech Supplies India
+2418,Home Decor Max,Home & Kitchen,Home Decor,Home,4784.15,3865.65,56,Home Essentials Co
+2419,Home Decor Ultra,Home & Kitchen,Home Decor,Home,933.85,715.42,215,Tech Supplies India
+2420,Home Decor Ultra,Home & Kitchen,Home Decor,Home,3955.18,3168.14,119,Kitchen World
+2421,Home Decor Max,Home & Kitchen,Home Decor,Home,4346.1,3141.63,111,Kitchen World
+2422,Home Decor Plus,Home & Kitchen,Home Decor,Home,4274.53,3506.09,202,Style Distributors
+2423,Home Decor Ultra,Home & Kitchen,Home Decor,Home,2005.08,1647.7,251,Fashion Hub Pvt Ltd
+2424,Home Decor Plus,Home & Kitchen,Home Decor,Home,1978.8,1652.11,57,Elite Electronics
+2425,Home Decor Ultra,Home & Kitchen,Home Decor,Home,1823.97,1373.91,174,Home Essentials Co
+2426,Home Decor Max,Home & Kitchen,Home Decor,Home,2316.65,1965.04,160,Mega Suppliers
+2427,Home Decor Ultra,Home & Kitchen,Home Decor,Home,2369.1,1794.82,94,Home Essentials Co
+2428,Home Decor Ultra,Home & Kitchen,Home Decor,Home,4575.26,3533.36,67,Prime Products
+2429,Home Decor Plus,Home & Kitchen,Home Decor,Home,3291.28,2594.21,172,Kitchen World
+2430,Bedding Plus,Home & Kitchen,Bedding,Bedding,7547.67,6139.42,180,Home Essentials Co
+2431,Bedding Pro,Home & Kitchen,Bedding,Bedding,3200.16,2615.36,163,Home Essentials Co
+2432,Bedding Plus,Home & Kitchen,Bedding,Bedding,2667.31,2047.12,56,Mega Suppliers
+2433,Bedding Plus,Home & Kitchen,Bedding,Bedding,2220.59,1582.09,233,Tech Supplies India
+2434,Bedding Max,Home & Kitchen,Bedding,Bedding,2675.38,2174.04,291,Prime Products
+2435,Bedding Max,Home & Kitchen,Bedding,Bedding,1018.21,778.15,92,Kitchen World
+2436,Bedding Ultra,Home & Kitchen,Bedding,Bedding,6844.03,5031.61,219,Home Essentials Co
+2437,Bedding Pro,Home & Kitchen,Bedding,Bedding,1219.01,989.01,192,Style Distributors
+2438,Bedding Max,Home & Kitchen,Bedding,Bedding,2413.01,1722.91,41,Style Distributors
+2439,Bedding Max,Home & Kitchen,Bedding,Bedding,6804.64,5238.19,61,Smart Solutions Ltd
+2440,Bedding Ultra,Home & Kitchen,Bedding,Bedding,6783.06,4775.36,292,Elite Electronics
+2441,Bedding Plus,Home & Kitchen,Bedding,Bedding,4454.77,3618.4,210,Smart Solutions Ltd
+2442,Bedding Max,Home & Kitchen,Bedding,Bedding,3703.69,2770.74,259,Kitchen World
+2443,Bedding Lite,Home & Kitchen,Bedding,Bedding,3867.13,3034.82,277,Style Distributors
+2444,Bedding Max,Home & Kitchen,Bedding,Bedding,3120.81,2321.47,112,Tech Supplies India
+2445,Bedding Plus,Home & Kitchen,Bedding,Bedding,2097.47,1635.04,274,Kitchen World
+2446,Bedding Ultra,Home & Kitchen,Bedding,Bedding,4363.49,3437.46,283,Smart Solutions Ltd
+2447,Bedding Plus,Home & Kitchen,Bedding,Bedding,962.98,774.16,261,Smart Solutions Ltd
+2448,Bedding Ultra,Home & Kitchen,Bedding,Bedding,7305.51,5641.18,122,Kitchen World
+2449,Bedding Max,Home & Kitchen,Bedding,Bedding,925.45,718.83,200,Smart Solutions Ltd
+2450,Bedding Pro,Home & Kitchen,Bedding,Bedding,4575.0,3479.78,254,Smart Solutions Ltd
+2451,Bedding Lite,Home & Kitchen,Bedding,Bedding,2461.54,1763.07,143,Home Essentials Co
+2452,Bedding Plus,Home & Kitchen,Bedding,Bedding,3595.46,2555.13,109,Prime Products
+2453,Bedding Plus,Home & Kitchen,Bedding,Bedding,1783.09,1365.61,84,Tech Supplies India
+2454,Bedding Pro,Home & Kitchen,Bedding,Bedding,5928.93,4797.86,218,Mega Suppliers
+2455,Bedding Max,Home & Kitchen,Bedding,Bedding,2886.26,2367.43,278,Kitchen World
+2456,Bedding Ultra,Home & Kitchen,Bedding,Bedding,916.91,669.88,122,Tech Supplies India
+2457,Bedding Lite,Home & Kitchen,Bedding,Bedding,5887.46,4453.51,143,Tech Supplies India
+2458,Bedding Pro,Home & Kitchen,Bedding,Bedding,2663.83,2187.14,170,Fashion Hub Pvt Ltd
+2459,Bedding Lite,Home & Kitchen,Bedding,Bedding,7683.45,5560.18,177,Fashion Hub Pvt Ltd
+2460,Bedding Pro,Home & Kitchen,Bedding,Bedding,2084.96,1613.68,37,Mega Suppliers
+2461,Bedding Lite,Home & Kitchen,Bedding,Bedding,6354.89,4660.17,298,Style Distributors
+2462,Bedding Pro,Home & Kitchen,Bedding,Bedding,1031.34,736.08,69,Elite Electronics
+2463,Storage Pro,Home & Kitchen,Storage,Storage,3826.98,3224.01,278,Tech Supplies India
+2464,Storage Lite,Home & Kitchen,Storage,Storage,2461.55,1918.42,240,Prime Products
+2465,Storage Lite,Home & Kitchen,Storage,Storage,568.25,437.43,149,Prime Products
+2466,Storage Max,Home & Kitchen,Storage,Storage,4864.17,3481.95,243,Home Essentials Co
+2467,Storage Ultra,Home & Kitchen,Storage,Storage,1921.67,1394.0,188,Mega Suppliers
+2468,Storage Pro,Home & Kitchen,Storage,Storage,696.38,489.16,234,Prime Products
+2469,Storage Ultra,Home & Kitchen,Storage,Storage,1672.67,1171.28,266,Tech Supplies India
+2470,Storage Pro,Home & Kitchen,Storage,Storage,2714.08,1953.7,233,Mega Suppliers
+2471,Storage Pro,Home & Kitchen,Storage,Storage,2857.64,2162.35,31,Smart Solutions Ltd
+2472,Storage Plus,Home & Kitchen,Storage,Storage,3996.28,3283.41,50,Tech Supplies India
+2473,Storage Ultra,Home & Kitchen,Storage,Storage,593.09,417.0,33,Home Essentials Co
+2474,Storage Max,Home & Kitchen,Storage,Storage,922.32,661.77,232,Smart Solutions Ltd
+2475,Storage Max,Home & Kitchen,Storage,Storage,4407.66,3709.43,51,Kitchen World
+2476,Storage Pro,Home & Kitchen,Storage,Storage,4270.88,3012.52,69,Smart Solutions Ltd
+2477,Storage Pro,Home & Kitchen,Storage,Storage,3749.51,2943.15,167,Fashion Hub Pvt Ltd
+2478,Storage Pro,Home & Kitchen,Storage,Storage,3979.62,3332.47,253,Smart Solutions Ltd
+2479,Storage Ultra,Home & Kitchen,Storage,Storage,4262.51,3009.12,86,Style Distributors
+2480,Storage Lite,Home & Kitchen,Storage,Storage,1733.1,1234.37,247,Elite Electronics
+2481,Storage Max,Home & Kitchen,Storage,Storage,2925.62,2374.29,215,Fashion Hub Pvt Ltd
+2482,Storage Lite,Home & Kitchen,Storage,Storage,2091.33,1706.42,198,Smart Solutions Ltd
+2483,Storage Ultra,Home & Kitchen,Storage,Storage,871.25,668.17,85,Fashion Hub Pvt Ltd
+2484,Storage Ultra,Home & Kitchen,Storage,Storage,392.88,321.15,197,Style Distributors
+2485,Storage Plus,Home & Kitchen,Storage,Storage,3997.46,3155.04,191,Kitchen World
+2486,Storage Pro,Home & Kitchen,Storage,Storage,4868.69,3923.76,110,Fashion Hub Pvt Ltd
+2487,Storage Lite,Home & Kitchen,Storage,Storage,3417.87,2798.95,196,Style Distributors
+2488,Storage Lite,Home & Kitchen,Storage,Storage,536.89,431.82,206,Kitchen World
+2489,Storage Pro,Home & Kitchen,Storage,Storage,4919.52,3569.58,102,Style Distributors
+2490,Storage Max,Home & Kitchen,Storage,Storage,2268.97,1671.7,221,Home Essentials Co
+2491,Storage Max,Home & Kitchen,Storage,Storage,842.23,648.05,194,Style Distributors
+2492,Storage Lite,Home & Kitchen,Storage,Storage,2380.37,2002.97,129,Home Essentials Co
+2493,Storage Pro,Home & Kitchen,Storage,Storage,1026.49,780.23,135,Home Essentials Co
+2494,Storage Pro,Home & Kitchen,Storage,Storage,1405.0,1147.49,242,Prime Products
+2495,Storage Ultra,Home & Kitchen,Storage,Storage,4209.0,3442.44,266,Style Distributors

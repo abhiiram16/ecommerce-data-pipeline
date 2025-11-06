@@ -1,0 +1,52 @@
+2025-11-07 00:23:15.010 | INFO     | __main__:main:216 - ============================================================
+2025-11-07 00:23:15.011 | INFO     | __main__:main:217 - REFRESH AGGREGATIONS
+2025-11-07 00:23:15.012 | INFO     | __main__:main:218 - ============================================================
+2025-11-07 00:23:15.013 | INFO     | __main__:refresh_customer_summary:36 - ⏳ Refreshing customer_summary...
+2025-11-07 00:23:16.044 | ERROR    | src.utils.db_connector:get_connection:54 - ✗ Database connection failed: could not translate host name "ecommerce-postgres" to address: Name or service not known
+
+2025-11-07 00:23:16.045 | ERROR    | __main__:refresh_customer_summary:75 - ✗ customer_summary failed: could not translate host name "ecommerce-postgres" to address: Name or service not known
+
+2025-11-07 00:23:16.048 | ERROR    | __main__:main:247 - ✗ Refresh failed: could not translate host name "ecommerce-postgres" to address: Name or service not known
+
+2025-11-07 00:23:57.762 | INFO     | __main__:main:216 - ============================================================
+2025-11-07 00:23:57.763 | INFO     | __main__:main:217 - REFRESH AGGREGATIONS
+2025-11-07 00:23:57.763 | INFO     | __main__:main:218 - ============================================================
+2025-11-07 00:23:57.764 | INFO     | __main__:refresh_customer_summary:36 - ⏳ Refreshing customer_summary...
+2025-11-07 00:23:58.779 | ERROR    | src.utils.db_connector:get_connection:54 - ✗ Database connection failed: could not translate host name "ecommerce-postgres" to address: Name or service not known
+
+2025-11-07 00:23:58.780 | ERROR    | __main__:refresh_customer_summary:75 - ✗ customer_summary failed: could not translate host name "ecommerce-postgres" to address: Name or service not known
+
+2025-11-07 00:23:58.781 | ERROR    | __main__:main:247 - ✗ Refresh failed: could not translate host name "ecommerce-postgres" to address: Name or service not known
+
+2025-11-07 00:29:22.570 | INFO     | __main__:main:216 - ============================================================
+2025-11-07 00:29:22.571 | INFO     | __main__:main:217 - REFRESH AGGREGATIONS
+2025-11-07 00:29:22.572 | INFO     | __main__:main:218 - ============================================================
+2025-11-07 00:29:22.573 | INFO     | __main__:refresh_customer_summary:36 - ⏳ Refreshing customer_summary...
+2025-11-07 00:29:22.617 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:29:22.669 | ERROR    | __main__:refresh_customer_summary:75 - ✗ customer_summary failed: column c.customer_name does not exist
+LINE 7:             c.customer_name,
+                    ^
+
+2025-11-07 00:29:22.670 | ERROR    | __main__:main:247 - ✗ Refresh failed: column c.customer_name does not exist
+LINE 7:             c.customer_name,
+                    ^
+
+2025-11-07 00:32:54.602 | INFO     | __main__:main:261 - ============================================================
+2025-11-07 00:32:54.602 | INFO     | __main__:main:262 - REFRESH AGGREGATIONS
+2025-11-07 00:32:54.603 | INFO     | __main__:main:263 - Started: 2025-11-07 00:32:54
+2025-11-07 00:32:54.603 | INFO     | __main__:main:264 - ============================================================
+2025-11-07 00:32:54.603 | INFO     | __main__:refresh_customer_summary:41 - ⏳ Refreshing customer_summary...
+2025-11-07 00:32:54.646 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:32:54.958 | INFO     | __main__:refresh_customer_summary:84 - ✓ Refreshed customer_summary: 10000 records
+2025-11-07 00:32:54.959 | INFO     | __main__:refresh_product_summary:102 - ⏳ Refreshing product_summary...
+2025-11-07 00:32:54.992 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:32:55.090 | INFO     | __main__:refresh_product_summary:139 - ✓ Refreshed product_summary: 495 records
+2025-11-07 00:32:55.091 | INFO     | __main__:refresh_daily_sales_summary:157 - ⏳ Refreshing daily_sales_summary...
+2025-11-07 00:32:55.118 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:32:55.217 | INFO     | __main__:refresh_daily_sales_summary:186 - ✓ Refreshed daily_sales_summary: 181 records
+2025-11-07 00:32:55.219 | INFO     | __main__:refresh_monthly_sales_summary:204 - ⏳ Refreshing monthly_sales_summary...
+2025-11-07 00:32:55.244 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:32:55.345 | INFO     | __main__:refresh_monthly_sales_summary:243 - ✓ Refreshed monthly_sales_summary: 7 records
+2025-11-07 00:32:55.346 | INFO     | __main__:main:277 - ============================================================
+2025-11-07 00:32:55.347 | INFO     | __main__:main:278 - ✓ ALL AGGREGATIONS REFRESHED SUCCESSFULLY
+2025-11-07 00:32:55.348 | INFO     | __main__:main:279 - ============================================================

@@ -1,0 +1,48 @@
+2025-11-07 00:32:56.710 | INFO     | __main__:__init__:51 - ✓ Anomaly detector initialized
+2025-11-07 00:32:56.711 | INFO     | __main__:run_all_detections:343 - ============================================================
+2025-11-07 00:32:56.711 | INFO     | __main__:run_all_detections:344 - ANOMALY DETECTION
+2025-11-07 00:32:56.712 | INFO     | __main__:run_all_detections:345 - Started: 2025-11-07 00:32:56
+2025-11-07 00:32:56.712 | INFO     | __main__:run_all_detections:346 - ============================================================
+2025-11-07 00:32:56.713 | INFO     | __main__:detect_order_amount_anomalies:86 - 💰 ORDER AMOUNT ANOMALIES
+2025-11-07 00:32:56.747 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:32:57.288 | INFO     | __main__:z_score_outliers:75 - ✓ Z-score analysis: 914 outliers found (threshold=3.0)
+2025-11-07 00:32:57.288 | INFO     | __main__:detect_order_amount_anomalies:108 -  Found 914 unusual order amounts (Z-score > 3.0)
+2025-11-07 00:32:57.300 | INFO     | __main__:detect_order_amount_anomalies:115 -   Order 40853: ₹730,392.50 (Z-score: 10.23)
+2025-11-07 00:32:57.302 | INFO     | __main__:detect_order_amount_anomalies:115 -   Order 35643: ₹722,692.35 (Z-score: 10.11)
+2025-11-07 00:32:57.303 | INFO     | __main__:detect_order_amount_anomalies:115 -   Order 45281: ₹687,899.70 (Z-score: 9.60)
+2025-11-07 00:32:57.304 | INFO     | __main__:detect_order_amount_anomalies:115 -   Order 50263: ₹687,899.70 (Z-score: 9.60)
+2025-11-07 00:32:57.306 | INFO     | __main__:detect_order_amount_anomalies:115 -   Order 4347: ₹676,144.60 (Z-score: 9.43)
+2025-11-07 00:32:57.308 | INFO     | __main__:detect_quantity_anomalies:135 - 📦 ORDER QUANTITY ANOMALIES
+2025-11-07 00:32:57.351 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:32:57.506 | INFO     | __main__:detect_quantity_anomalies:173 -  ✓ No unusual quantities detected
+2025-11-07 00:32:57.510 | INFO     | __main__:detect_customer_spending_anomalies:183 - 👤 CUSTOMER SPENDING ANOMALIES
+2025-11-07 00:32:57.535 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:32:57.734 | INFO     | __main__:z_score_outliers:75 - ✓ Z-score analysis: 341 outliers found (threshold=2.5)
+2025-11-07 00:32:57.734 | INFO     | __main__:detect_customer_spending_anomalies:198 -  Found 341 customers with unusual spending (Z-score > 2.5)
+2025-11-07 00:32:57.739 | INFO     | __main__:detect_customer_spending_anomalies:207 -   Charan Jani: ₹1,512,715.49 (13 orders, Z-score: 7.07)
+2025-11-07 00:32:57.741 | INFO     | __main__:detect_customer_spending_anomalies:207 -   Azaan Som: ₹1,479,261.74 (9 orders, Z-score: 6.89)
+2025-11-07 00:32:57.743 | INFO     | __main__:detect_customer_spending_anomalies:207 -   Anthony Thaman: ₹1,448,829.35 (14 orders, Z-score: 6.74)
+2025-11-07 00:32:57.744 | INFO     | __main__:detect_customer_spending_anomalies:207 -   Advika Murty: ₹1,394,654.21 (17 orders, Z-score: 6.46)
+2025-11-07 00:32:57.745 | INFO     | __main__:detect_customer_spending_anomalies:207 -   Ekaraj Bath: ₹1,385,886.24 (16 orders, Z-score: 6.41)
+2025-11-07 00:32:57.749 | INFO     | __main__:detect_daily_sales_anomalies:227 - 📊 DAILY SALES ANOMALIES
+2025-11-07 00:32:57.788 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:32:57.808 | INFO     | __main__:z_score_outliers:75 - ✓ Z-score analysis: 8 outliers found (threshold=2.0)
+2025-11-07 00:32:57.809 | INFO     | __main__:detect_daily_sales_anomalies:247 -  Found 8 days with unusual sales (Z-score > 2.0)
+2025-11-07 00:32:57.813 | INFO     | __main__:detect_daily_sales_anomalies:255 -   2025-08-02: ₹11,616,410.70 (231 orders, Z-score: 3.33)
+2025-11-07 00:32:57.814 | INFO     | __main__:detect_daily_sales_anomalies:255 -   2025-10-15: ₹10,522,840.28 (223 orders, Z-score: 2.28)
+2025-11-07 00:32:57.816 | INFO     | __main__:detect_daily_sales_anomalies:255 -   2025-09-09: ₹10,518,096.50 (236 orders, Z-score: 2.28)
+2025-11-07 00:32:57.817 | INFO     | __main__:detect_daily_sales_anomalies:255 -   2025-05-14: ₹10,384,455.60 (209 orders, Z-score: 2.15)
+2025-11-07 00:32:57.819 | INFO     | __main__:detect_daily_sales_anomalies:255 -   2025-09-22: ₹6,024,825.47 (210 orders, Z-score: 2.02)
+2025-11-07 00:32:57.821 | INFO     | __main__:detect_business_rule_violations:275 - ⚠️ BUSINESS RULE VIOLATIONS
+2025-11-07 00:32:57.852 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:32:57.863 | WARNING  | __main__:detect_business_rule_violations:294 - ⚠️ 1362 orders exceed ₹2 Lakh (potential review needed)
+2025-11-07 00:32:57.869 | INFO     | __main__:detect_business_rule_violations:322 -  ✓ No zero-revenue orders
+2025-11-07 00:32:57.870 | INFO     | __main__:run_all_detections:361 - ============================================================
+2025-11-07 00:32:57.871 | INFO     | __main__:run_all_detections:362 - ANOMALY SUMMARY
+2025-11-07 00:32:57.871 | INFO     | __main__:run_all_detections:363 - ------------------------------------------------------------
+2025-11-07 00:32:57.872 | INFO     | __main__:run_all_detections:370 - Total anomaly types detected: 4
+2025-11-07 00:32:57.873 | INFO     | __main__:run_all_detections:376 - • Order Amount Outliers: 914 instances (INFO)
+2025-11-07 00:32:57.874 | INFO     | __main__:run_all_detections:376 - • High-Value Customers: 341 instances (INFO)
+2025-11-07 00:32:57.874 | INFO     | __main__:run_all_detections:376 - • Daily Sales Spikes: 8 instances (INFO)
+2025-11-07 00:32:57.875 | INFO     | __main__:run_all_detections:376 - • Business Rule Violations: 1 instances (WARNING)
+2025-11-07 00:32:57.876 | INFO     | __main__:run_all_detections:382 - ============================================================

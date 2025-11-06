@@ -2,22 +2,32 @@ version: '3.8'
 
 x-airflow-common:
   &airflow-common
-  image: apache/airflow:2.7.3-python3.11
+  image: apache/airflow:2.8.0-python3.14
   environment:
     &airflow-common-env
+    # Airflow Configuration
     AIRFLOW__CORE__EXECUTOR: LocalExecutor
     AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres-airflow/airflow
-    AIRFLOW__CORE__FERNET_KEY: ''
+    AIRFLOW__CORE__FERNET_KEY: 'jH8KdVxL9mQpR3sT6uW2yZ5bC8eF1gJ4'
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
     AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth'
     AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK: 'true'
+    
+    # E-commerce Database Connection (for DAGs)
+    ECOMMERCE_DB_HOST: ${ECOMMERCE_DB_HOST:-ecommerce-postgres}
+    ECOMMERCE_DB_PORT: ${ECOMMERCE_DB_PORT:-5432}
+    ECOMMERCE_DB_USER: ${ECOMMERCE_DB_USER:-dataeng}
+    ECOMMERCE_DB_PASSWORD: ${ECOMMERCE_DB_PASSWORD:-pipeline123}
+    ECOMMERCE_DB_NAME: ${ECOMMERCE_DB_NAME:-ecommerce_db}
+    
   volumes:
     - ./airflow/dags:/opt/airflow/dags
     - ./airflow/logs:/opt/airflow/logs
     - ./airflow/plugins:/opt/airflow/plugins
     - ./src:/opt/airflow/src
     - ./data:/opt/airflow/data
+    - ./requirements.txt:/opt/airflow/requirements.txt
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
     &airflow-common-depends-on
@@ -25,8 +35,10 @@ x-airflow-common:
       condition: service_healthy
 
 services:
+  # Airflow Metadata Database
   postgres-airflow:
     image: postgres:15
+    container_name: airflow-postgres
     environment:
       POSTGRES_USER: airflow
       POSTGRES_PASSWORD: airflow
@@ -40,10 +52,14 @@ services:
       interval: 10s
       retries: 5
       start_period: 5s
-    restart: always
+    restart: unless-stopped
+    networks:
+      - airflow-network
 
+  # Airflow Webserver
   airflow-webserver:
     <<: *airflow-common
+    container_name: airflow-webserver
     command: webserver
     ports:
       - "8080:8080"
@@ -53,14 +69,18 @@ services:
       timeout: 10s
       retries: 5
       start_period: 30s
-    restart: always
+    restart: unless-stopped
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
+    networks:
+      - airflow-network
 
+  # Airflow Scheduler
   airflow-scheduler:
     <<: *airflow-common
+    container_name: airflow-scheduler
     command: scheduler
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost:8974/health"]
@@ -68,30 +88,41 @@ services:
       timeout: 10s
       retries: 5
       start_period: 30s
-    restart: always
+    restart: unless-stopped
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
+    networks:
+      - airflow-network
 
+  # Airflow Initialization
   airflow-init:
     <<: *airflow-common
+    container_name: airflow-init
     entrypoint: /bin/bash
     command:
       - -c
       - |
         mkdir -p /sources/logs /sources/dags /sources/plugins
         chown -R "${AIRFLOW_UID:-50000}:0" /sources/{logs,dags,plugins}
+        pip install -r /opt/airflow/requirements.txt
         exec /entrypoint airflow version
     environment:
       <<: *airflow-common-env
       _AIRFLOW_DB_UPGRADE: 'true'
       _AIRFLOW_WWW_USER_CREATE: 'true'
-      _AIRFLOW_WWW_USER_USERNAME: admin
-      _AIRFLOW_WWW_USER_PASSWORD: admin
+      _AIRFLOW_WWW_USER_USERNAME: ${AIRFLOW_ADMIN_USER:-admin}
+      _AIRFLOW_WWW_USER_PASSWORD: ${AIRFLOW_ADMIN_PASSWORD:-admin}
     user: "0:0"
     volumes:
       - ./airflow:/sources
+    networks:
+      - airflow-network
 
 volumes:
   postgres-airflow-db-volume:
+
+networks:
+  airflow-network:
+    driver: bridge

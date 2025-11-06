@@ -1,43 +1,21 @@
-# Python
-__pycache__/
-*.py[cod]
-*.so
-*.egg-info/
-venv/
-env/
-
-# Data files (never commit large data to Git)
-data/raw/*
-data/processed/*
-data/archive/*
-*.csv
-*.xlsx
-*.parquet
-
-# Logs
-logs/*
-*.log
-
-# Environment variables (contains secrets)
+# Environment Variables
 .env
 *.env
+
+# Airflow
+airflow/logs/
+airflow/plugins/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
 
 # IDE
 .vscode/
 .idea/
 
-# Docker
-*.log
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Outputs
-outputs/*
-
-# Keep folder structure (but ignore contents)
-!.gitkeep
-!data/raw/.gitkeep
-!data/processed/.gitkeep
-!data/archive/.gitkeep
+# Data
+data/raw/*.csv
+data/processed/*.html

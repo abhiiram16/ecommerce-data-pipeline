@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ecommerce-data-pipeline"
+version = "1.0.0"
+description = "SimMart E-Commerce Data Pipeline - Production Ready"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=1.5.0",
+    "psycopg2-binary>=2.9.0",
+    "faker>=15.0.0",
+    "loguru>=0.6.0",
+    "numpy>=1.24.0",
+]
+
+[tool.setuptools]
+packages = ["src"]

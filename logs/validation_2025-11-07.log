@@ -1,0 +1,38 @@
+2025-11-07 00:23:16.653 | INFO     | __main__:main:275 - ============================================================
+2025-11-07 00:23:16.654 | INFO     | __main__:main:276 - DATA VALIDATION
+2025-11-07 00:23:16.655 | INFO     | __main__:main:277 - ============================================================
+2025-11-07 00:23:16.656 | INFO     | __main__:validate_required_fields:42 - 🔍 Validating required fields...
+2025-11-07 00:23:17.679 | ERROR    | src.utils.db_connector:get_connection:54 - ✗ Database connection failed: could not translate host name "ecommerce-postgres" to address: Name or service not known
+
+2025-11-07 00:23:17.680 | ERROR    | __main__:validate_required_fields:97 - ✗ Required field validation failed: could not translate host name "ecommerce-postgres" to address: Name or service not known
+
+2025-11-07 00:23:17.694 | ERROR    | __main__:main:310 - ✗ Critical error: could not translate host name "ecommerce-postgres" to address: Name or service not known
+
+2025-11-07 00:23:59.127 | INFO     | __main__:main:275 - ============================================================
+2025-11-07 00:23:59.128 | INFO     | __main__:main:276 - DATA VALIDATION
+2025-11-07 00:23:59.128 | INFO     | __main__:main:277 - ============================================================
+2025-11-07 00:23:59.129 | INFO     | __main__:validate_required_fields:42 - 🔍 Validating required fields...
+2025-11-07 00:24:00.151 | ERROR    | src.utils.db_connector:get_connection:54 - ✗ Database connection failed: could not translate host name "ecommerce-postgres" to address: Name or service not known
+
+2025-11-07 00:24:00.152 | ERROR    | __main__:validate_required_fields:97 - ✗ Required field validation failed: could not translate host name "ecommerce-postgres" to address: Name or service not known
+
+2025-11-07 00:24:00.152 | ERROR    | __main__:main:310 - ✗ Critical error: could not translate host name "ecommerce-postgres" to address: Name or service not known
+
+2025-11-07 00:29:23.152 | INFO     | __main__:main:275 - ============================================================
+2025-11-07 00:29:23.153 | INFO     | __main__:main:276 - DATA VALIDATION
+2025-11-07 00:29:23.153 | INFO     | __main__:main:277 - ============================================================
+2025-11-07 00:29:23.154 | INFO     | __main__:validate_required_fields:42 - 🔍 Validating required fields...
+2025-11-07 00:29:23.190 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:29:23.212 | INFO     | __main__:validate_required_fields:91 - ✓ All required fields are populated
+2025-11-07 00:29:23.213 | INFO     | __main__:validate_data_types:104 - 📝 Validating data types...
+2025-11-07 00:29:23.244 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:29:23.262 | INFO     | __main__:validate_data_types:144 - ✓ All data types are valid
+2025-11-07 00:29:23.264 | INFO     | __main__:validate_foreign_keys:157 - 🔗 Validating foreign keys...
+2025-11-07 00:29:23.293 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:29:23.338 | INFO     | __main__:validate_foreign_keys:196 - ✓ All foreign keys are valid
+2025-11-07 00:29:23.340 | INFO     | __main__:validate_uniqueness:209 - 🔑 Validating uniqueness...
+2025-11-07 00:29:23.363 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:29:23.423 | INFO     | __main__:validate_uniqueness:262 - ✓ All uniqueness constraints satisfied
+2025-11-07 00:29:23.424 | INFO     | __main__:main:293 - ============================================================
+2025-11-07 00:29:23.424 | INFO     | __main__:main:295 - ✓ ALL VALIDATIONS PASSED
+2025-11-07 00:29:23.425 | INFO     | __main__:main:303 - ============================================================

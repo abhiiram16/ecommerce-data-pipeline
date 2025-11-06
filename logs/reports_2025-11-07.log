@@ -1,0 +1,20 @@
+2025-11-07 00:32:59.372 | INFO     | __main__:main:419 - ============================================================
+2025-11-07 00:32:59.373 | INFO     | __main__:main:420 - QUALITY REPORT GENERATION
+2025-11-07 00:32:59.374 | INFO     | __main__:main:421 - ============================================================
+2025-11-07 00:32:59.375 | INFO     | __main__:__init__:48 - ✓ Report generator initialized
+2025-11-07 00:32:59.375 | INFO     | __main__:generate_html:87 - 🎨 Generating HTML report...
+2025-11-07 00:32:59.376 | INFO     | __main__:get_table_stats:53 - 📊 Collecting table statistics...
+2025-11-07 00:32:59.413 | INFO     | src.utils.db_connector:get_connection:49 - ✓ Connected to ecommerce_db@localhost
+2025-11-07 00:32:59.438 | INFO     | __main__:get_table_stats:72 -   customers: 10000 rows
+2025-11-07 00:32:59.446 | INFO     | __main__:get_table_stats:72 -   products: 495 rows
+2025-11-07 00:32:59.463 | INFO     | __main__:get_table_stats:72 -   orders: 50000 rows
+2025-11-07 00:32:59.473 | INFO     | __main__:get_table_stats:72 -   customer_summary: 10000 rows
+2025-11-07 00:32:59.480 | INFO     | __main__:get_table_stats:72 -   product_summary: 495 rows
+2025-11-07 00:32:59.487 | INFO     | __main__:get_table_stats:72 -   daily_sales_summary: 181 rows
+2025-11-07 00:32:59.493 | INFO     | __main__:get_table_stats:72 -   monthly_sales_summary: 7 rows
+2025-11-07 00:32:59.494 | INFO     | __main__:generate_html:383 - ✓ HTML report generated successfully
+2025-11-07 00:32:59.495 | INFO     | __main__:save_report:393 - 💾 Saving report to file...
+2025-11-07 00:32:59.497 | INFO     | __main__:save_report:405 - ✓ Report saved to C:\projects\ecommerce-data-pipeline\data\processed\quality_report_20251107_003259.html
+2025-11-07 00:32:59.499 | INFO     | __main__:main:435 - ============================================================
+2025-11-07 00:32:59.500 | INFO     | __main__:main:436 - ✓ REPORT GENERATED
+2025-11-07 00:32:59.501 | INFO     | __main__:main:437 - ============================================================
