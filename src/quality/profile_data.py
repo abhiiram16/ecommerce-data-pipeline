@@ -1,139 +1,166 @@
 """
-Data Profiling Script
-=====================
-Analyzes data quality metrics across all tables.
+Data Profiling
+==============
 
-Generates statistics on:
-- Null value percentages
-- Data type distributions
-- Value ranges (min/max)
+Statistical profiling of e-commerce data.
+
+Generates:
+- Row counts
 - Unique value counts
-- Data completeness scores
+- Data type information
+- Sample values
 
 Author: Abhiiram
-Date: November 5, 2025
+Date: November 6, 2025
 """
 
-import psycopg2
-import pandas as pd
+from src.utils.db_connector import get_connection
+from src.utils.config import Config
+import sys
+import os
 from datetime import datetime
-import json
+from loguru import logger
 
-# Database connection
-DB_CONFIG = {
-    'host': 'localhost',
-    'port': 5432,
-    'database': 'ecommerce_db',
-    'user': 'dataeng',
-    'password': 'pipeline123'
-}
+# Add parent directory to path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../'))
 
 
-def connect_db():
-    """Connect to PostgreSQL database."""
-    return psycopg2.connect(**DB_CONFIG)
+# Configure logging
+logger.add(
+    f"{Config.LOGS_DIR}/profiling_{{time:YYYY-MM-DD}}.log",
+    level=Config.LOG_LEVEL
+)
+
+# ========================================
+# PROFILING FUNCTIONS
+# ========================================
 
 
-def profile_table(conn, table_name):
-    """
-    Profile a single table.
+def profile_table(table_name: str) -> dict:
+    """Profile a single table."""
 
-    Returns:
-        dict: Profiling statistics
-    """
-    print(f"\n📊 Profiling: {table_name}")
-    print("-" * 60)
+    logger.info(f"📊 Profiling {table_name}...")
 
-    # Get table data
-    df = pd.read_sql(f"SELECT * FROM {table_name}", conn)
+    try:
+        conn = get_connection()
+        cursor = conn.cursor()
 
-    profile = {
-        'table_name': table_name,
-        'row_count': len(df),
-        'column_count': len(df.columns),
-        'columns': {}
-    }
-
-    # Profile each column
-    for col in df.columns:
-        col_profile = {
-            'dtype': str(df[col].dtype),
-            'null_count': int(df[col].isnull().sum()),
-            'null_percentage': round(df[col].isnull().sum() / len(df) * 100, 2),
-            'unique_count': int(df[col].nunique()),
-            'uniqueness_percentage': round(df[col].nunique() / len(df) * 100, 2)
+        profile = {
+            'table_name': table_name,
+            'timestamp': datetime.now().isoformat()
         }
 
-        # Numeric columns: add min/max/mean
-        if pd.api.types.is_numeric_dtype(df[col]):
-            col_profile.update({
-                'min': float(df[col].min()) if pd.notna(df[col].min()) else None,
-                'max': float(df[col].max()) if pd.notna(df[col].max()) else None,
-                'mean': round(float(df[col].mean()), 2) if pd.notna(df[col].mean()) else None
-            })
+        # Row count
+        cursor.execute(f"SELECT COUNT(*) FROM {table_name}")
+        profile['total_rows'] = cursor.fetchone()[0]
+        logger.info(f"  Total rows: {profile['total_rows']:,}")
 
-        # String columns: add sample values
-        elif df[col].dtype == 'object':
-            top_values = df[col].value_counts().head(5).to_dict()
-            col_profile['top_5_values'] = {
-                str(k): int(v) for k, v in top_values.items()}
+        # Column information
+        cursor.execute(f"""
+            SELECT column_name, data_type, is_nullable
+            FROM information_schema.columns
+            WHERE table_name = %s
+            ORDER BY ordinal_position
+        """, (table_name,))
 
-        profile['columns'][col] = col_profile
+        profile['columns'] = []
+        for col_name, data_type, nullable in cursor.fetchall():
+            # Count unique values
+            cursor.execute(
+                f"SELECT COUNT(DISTINCT {col_name}) FROM {table_name}")
+            unique_count = cursor.fetchone()[0]
 
-        # Print summary
-        print(f"  {col:30} | {col_profile['dtype']:15} | "
-              f"Nulls: {col_profile['null_percentage']:>5}% | "
-              f"Unique: {col_profile['uniqueness_percentage']:>5}%")
+            # Count nulls
+            cursor.execute(
+                f"SELECT COUNT(*) FROM {table_name} WHERE {col_name} IS NULL")
+            null_count = cursor.fetchone()[0]
 
-    # Overall completeness score
-    total_cells = len(df) * len(df.columns)
-    null_cells = df.isnull().sum().sum()
-    completeness = round((1 - null_cells / total_cells) * 100, 2)
+            column_info = {
+                'name': col_name,
+                'type': data_type,
+                'nullable': nullable == 'YES',
+                'unique_values': unique_count,
+                'null_count': null_count,
+                'null_percentage': round((null_count / profile['total_rows'] * 100), 2) if profile['total_rows'] > 0 else 0
+            }
 
-    profile['completeness_score'] = completeness
+            profile['columns'].append(column_info)
+            logger.info(
+                f"    {col_name} ({data_type}): {unique_count} unique, {null_count} nulls")
 
-    print(f"\n  Total Rows: {profile['row_count']:,}")
-    print(f"  Total Columns: {profile['column_count']}")
-    print(f"  Completeness Score: {completeness}%")
+        cursor.close()
+        conn.close()
 
-    return profile
+        return profile
+
+    except Exception as e:
+        logger.error(f"✗ Table profiling failed for {table_name}: {e}")
+        raise
 
 
-def profile_all_tables():
-    """Profile all main tables."""
-    conn = connect_db()
+def print_profile(profile: dict) -> None:
+    """Print profile information."""
 
-    tables = ['customers', 'products', 'orders',
-              'customer_summary', 'product_summary',
-              'daily_sales_summary', 'monthly_sales_summary']
+    print(f"\n📊 TABLE: {profile['table_name'].upper()}")
+    print("-" * 60)
+    print(f"Total Rows: {profile['total_rows']:,}")
+    print(f"Timestamp: {profile['timestamp']}")
+    print(f"\nColumns:")
+    print(f"{'Name':<20} {'Type':<15} {'Unique':<10} {'Nulls':<10}")
+    print("-" * 60)
+
+    for col in profile['columns']:
+        print(
+            f"{col['name']:<20} {col['type']:<15} {col['unique_values']:<10} {col['null_count']:<10}")
+
+
+def main():
+    """Main entry point."""
+
+    logger.info("=" * 60)
+    logger.info("DATA PROFILING")
+    logger.info("=" * 60)
 
     print("=" * 60)
-    print("DATA PROFILING REPORT")
-    print(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print("DATA PROFILING")
     print("=" * 60)
 
-    profiles = {}
+    try:
+        tables = [
+            'customers',
+            'products',
+            'orders',
+            'customer_summary',
+            'product_summary',
+            'daily_sales_summary',
+            'monthly_sales_summary'
+        ]
 
-    for table in tables:
-        try:
-            profile = profile_table(conn, table)
-            profiles[table] = profile
-        except Exception as e:
-            print(f"  ✗ Error profiling {table}: {e}")
+        profiles = []
 
-    conn.close()
+        for table in tables:
+            try:
+                profile = profile_table(table)
+                profiles.append(profile)
+                print_profile(profile)
+            except Exception as e:
+                logger.warning(f"⚠️ Could not profile {table}: {e}")
+                print(f"\n⚠️ Could not profile {table}")
 
-    # Save to JSON
-    output_file = 'data_profile_report.json'
-    with open(output_file, 'w') as f:
-        json.dump(profiles, f, indent=2)
+        logger.info("=" * 60)
+        logger.info("✓ PROFILING COMPLETE")
+        logger.info("=" * 60)
 
-    print("\n" + "=" * 60)
-    print(f"✓ Profile saved to: {output_file}")
-    print("=" * 60)
+        print("\n" + "=" * 60)
+        print("✓ PROFILING COMPLETE")
+        print("=" * 60)
 
-    return profiles
+    except Exception as e:
+        logger.error(f"✗ Critical error: {e}")
+        print(f"\n✗ Critical error: {e}")
+        sys.exit(1)
 
 
 if __name__ == "__main__":
-    profile_all_tables()
+    Config.create_directories()
+    main()
