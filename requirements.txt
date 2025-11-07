@@ -1,26 +1,26 @@
 # ============================================
-# E-Commerce Data Pipeline - Python 3.14 Compatible
+# E-Commerce Data Pipeline - Python 3.11+ Compatible
+# Tested on Python 3.14.0
 # ============================================
 
 # Core Data Processing
-pandas==2.2.3
-numpy==2.2.0
-python-dateutil==2.9.0.post0
+pandas>=2.2.0,<3.0.0
+numpy>=2.1.0,<3.0.0
+python-dateutil>=2.9.0
 
 # Data Generation
-faker==30.8.2
+faker>=30.0.0,<31.0.0
 
 # Database Connectivity
-psycopg2-binary==2.9.10
-sqlalchemy==2.0.36
+psycopg2-binary>=2.9.9,<3.0.0
+sqlalchemy>=2.0.30,<3.0.0
 
 # Configuration & Logging
-python-dotenv==1.0.1
-loguru==0.7.3
+python-dotenv>=1.0.0,<2.0.0
+loguru>=0.7.2,<1.0.0
 
-# Optional: Testing (uncomment when needed)
-# pytest==8.3.4
-# requests==2.32.3
+# Testing (recommended)
+pytest>=8.3.0,<9.0.0
 
 # Note: Apache Airflow runs in Docker container
 # Airflow dependencies managed in docker-compose-airflow.yml
